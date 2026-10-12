@@ -1,0 +1,21 @@
+{
+  "provider": "Codex subscription / gen_images.sh; one sweep, no fallback",
+  "original": "招式特效/第3批/原图/zenheadbutt.png",
+  "originalSHA256": "44ae1390e149b60d6f51888aaf9666308d92aa200a946a4f7a4af6e7397b4e81",
+  "prompt": "俯视斜角16位掌机像素即时战斗游戏独立特效精灵图。主体：包住真实头部的很薄粉紫念力护层，右前方短弯曲亮边，中央至少百分之八十透明，没有第二个头或额外角。 四帧动画，严格2列2行相同尺度相同锚点，每格独立留百分之十安全边；方向朝右，根部在左侧，四帧仅纹理连续变化不整体位移。 清楚方形像素颗粒、克制分层色块、亮暗边缘符合参考图。RGBA实际透明背景，不是黑白底或棋盘。 不画角色、地面、风景、界面。无文字、无数字、无水印、无logo。不画程序方块、几何logo、满屏光污染。",
+  "time": "2026-10-11T15:45:21.012727+00:00",
+  "processingTime": "2026-10-11T16:47:36.623631+00:00",
+  "processing": {
+    "frameSize": [
+      384,
+      351
+    ],
+    "anchorPx": [
+      192.0,
+      175.5
+    ],
+    "method": "union alpha>=80 bounds / nearest resize / 4 vertical frames",
+    "output": "招式特效/第3批/zenheadbutt/动画.png",
+    "outputSHA256": "08e8e8568624eacb1e6f879316f566d4dc8fc1eedbb5ae97ec24e3edfd5f1075"
+  }
+}

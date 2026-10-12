@@ -1,0 +1,21 @@
+{
+  "provider": "Codex subscription / gen_images.sh; one sweep, no fallback",
+  "original": "招式特效/第3批/原图/absorb.png",
+  "originalSHA256": "031fbc6c5ee504851693942b2558b1101b14697edc9299869ccf6347e2767075",
+  "prompt": "俯视斜角16位掌机像素即时战斗游戏独立特效精灵图。主体：三到五颗小绿金生命光粒，形状不规则像微小叶光，整体从右侧接触点朝左回流，没有圆环和弧线。 四帧动画，严格2列2行相同尺度相同锚点，每格独立留百分之十安全边；方向朝右，根部在左侧，四帧仅纹理连续变化不整体位移。 清楚方形像素颗粒、克制分层色块、亮暗边缘符合参考图。RGBA实际透明背景，不是黑白底或棋盘。 不画角色、地面、风景、界面。无文字、无数字、无水印、无logo。不画程序方块、几何logo、满屏光污染。",
+  "time": "2026-10-11T15:41:57.205378+00:00",
+  "processingTime": "2026-10-11T16:47:36.056414+00:00",
+  "processing": {
+    "frameSize": [
+      384,
+      186
+    ],
+    "anchorPx": [
+      192.0,
+      93.0
+    ],
+    "method": "union alpha>=80 bounds / nearest resize / 4 vertical frames",
+    "output": "招式特效/第3批/absorb/动画.png",
+    "outputSHA256": "c7bf1dc5fddc969fb85f1228e432352bbaeb4add593bc370d09a9987c54a3dae"
+  }
+}

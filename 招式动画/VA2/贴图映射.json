@@ -1,0 +1,117 @@
+{
+  "va2-bubble": {
+    "source": "bubble.png",
+    "width": 16,
+    "height": 16
+  },
+  "va2-flame": {
+    "source": "flame.png",
+    "width": 12,
+    "height": 17
+  },
+  "va2-leaf": {
+    "source": "leaf.png",
+    "width": 5,
+    "height": 12
+  },
+  "va2-razor": {
+    "source": "razor.png",
+    "width": 32,
+    "height": 16
+  },
+  "va2-gust": {
+    "source": "gust.png",
+    "width": 32,
+    "height": 63
+  },
+  "va2-needle": {
+    "source": "needle.png",
+    "width": 8,
+    "height": 24
+  },
+  "va2-star": {
+    "source": "star.png",
+    "width": 28,
+    "height": 16
+  },
+  "va2-triangle": {
+    "source": "triangle.png",
+    "width": 46,
+    "height": 46
+  },
+  "va2-crescent": {
+    "source": "crescent.png",
+    "width": 32,
+    "height": 16
+  },
+  "va2-ice": {
+    "source": "ice.png",
+    "width": 12,
+    "height": 16
+  },
+  "va2-spikes": {
+    "source": "spikes.png",
+    "width": 8,
+    "height": 12
+  },
+  "va2-orb": {
+    "source": "orb.png",
+    "width": 12,
+    "height": 12
+  },
+  "va2-water": {
+    "source": "water.png",
+    "width": 16,
+    "height": 16
+  },
+  "va2-ring": {
+    "source": "ring.png",
+    "width": 16,
+    "height": 32
+  },
+  "va2-red": {
+    "source": "red.png",
+    "width": 8,
+    "height": 8
+  },
+  "va2-green": {
+    "source": "green.png",
+    "width": 8,
+    "height": 8
+  },
+  "va2-sap": {
+    "source": "sap.png",
+    "width": 12,
+    "height": 12
+  },
+  "va2-silver": {
+    "source": "silver.png",
+    "width": 12,
+    "height": 12
+  },
+  "va2-heal": {
+    "source": "heal.png",
+    "width": 25,
+    "height": 26
+  },
+  "va2-breath": {
+    "source": "breath.png",
+    "width": 12,
+    "height": 17
+  },
+  "va2-dragon-flare": {
+    "source": "dragon-flare.png",
+    "width": 12,
+    "height": 17
+  },
+  "va2-electric": {
+    "source": "electric.png",
+    "width": 30,
+    "height": 32
+  },
+  "va2-poison": {
+    "source": "poison.png",
+    "width": 12,
+    "height": 12
+  }
+}

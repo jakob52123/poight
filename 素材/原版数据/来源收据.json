@@ -1,0 +1,9 @@
+{
+  "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/moves.ts",
+  "downloadDate": "2026-10-11",
+  "license": "MIT",
+  "sha256": "738b8cfc1ca491537c0188546ab697942aaa313c5e6be83a5432edd5dd8997f7",
+  "rows": 29,
+  "moves": 27,
+  "policy": "命中后条件概率；tox→psn；三重攻击20%内等概率三选一；不导入畏缩/睡眠/混乱。"
+}

@@ -1,0 +1,34 @@
+{
+  "generator": "~/.claude/skills/codex-image/scripts/gen_images.sh",
+  "source": "招式特效/第2批/原图/gust.png",
+  "originalSHA256": "44a6593366cf667cde9c22517a7feee20f8a6e46ae7fbef564f081b037e4a340",
+  "prompt": "生成可直接裁切的四帧特效图集，正方形画布，2×2等大小格子，无分隔线；四格主体各自居中并有足够透明留白，主体不跨格。背景真正透明RGBA，不绘制棋盘格。每帧朝右，四帧尺寸和中心相同。一股独立短小旋风，浅灰蓝空气螺旋、透明核心，斜向右推进，四帧气流绕核心卷动。不画蓝球、不画几何环或箭头。",
+  "style": "严格参考已认可喷射火焰与水枪的掌机像素特效风格，只借画风不借形状；清晰像素边、有限色阶、无文字无水印，无角色无背景无UI。",
+  "time": "2026-10-11T15:47:30.415097+00:00",
+  "styleAnchorSHA256": {
+    "招式特效/生图重做/首批/喷射火焰/result.png": "dd8c683eb442aa68626279d229ec422181a29d4475bcc1a71d4ed38334817e1a",
+    "招式特效/生图重做/首批/水枪/result.png": "65ce65aaa42b5c21eae92aba41c3f6282f5b8b54c54fc9658cc61f81f287587a"
+  },
+  "processing": "Only quadrant/slot crops, common alpha>16 bounds (ignore near-zero-alpha export noise for bounding only), nearest resize and transparent alignment.",
+  "cropBounds": [
+    [
+      50,
+      170,
+      607,
+      586
+    ]
+  ],
+  "slotCutsPx": [
+    0,
+    627
+  ],
+  "output": "招式特效/第2批/gust/gust-动画.png",
+  "outputSHA256": "91d5a2109d3addb4a587654ffa3d3407fe57e3fdb342fc55bea2786ffe9528b5",
+  "drawing": {
+    "fw": 96,
+    "fh": 72,
+    "ax": 48,
+    "ay": 36,
+    "columns": 1
+  }
+}

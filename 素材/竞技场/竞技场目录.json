@@ -1,0 +1,9 @@
+{
+  "default": "arena-formal",
+  "world": {"width": 2100, "height": 1400},
+  "assetFolder": "扩建",
+  "scenes": [
+    {"id": "arena-formal", "name": "正规场", "variant": "A", "enabled": true},
+    {"id": "arena-natural", "name": "自然场", "variant": "A", "enabled": true}
+  ]
+}

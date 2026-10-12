@@ -1,0 +1,47 @@
+[
+  {
+    "file": "spark_0__ANIM_TAG_SPARK.png",
+    "source": "./project",
+    "sha256": "f85b6be7e4d328f7901be9b5c1331dc8bbca7d5100b13bc4a1d1ff32c092ea22"
+  },
+  {
+    "file": "spark_1__ANIM_TAG_SPARK.png",
+    "source": "./project",
+    "sha256": "b190483f547e2ea155147320711b7b21daef7a709b26bfc208f3e722bbee9fb6"
+  },
+  {
+    "file": "spark_2__ANIM_TAG_SPARK.png",
+    "source": "./project",
+    "sha256": "64ba0284533a7508920c5537028cc338efc474c7eee4044127b881ef64d28edd"
+  },
+  {
+    "file": "spark_h__ANIM_TAG_SPARK.png",
+    "source": "./project",
+    "sha256": "03656b8023395d26bd4b813931e2b4a54703f85549ceb738effecf3db498d2bc"
+  },
+  {
+    "file": "shock_3__ANIM_TAG_SHOCK_3.png",
+    "source": "./project",
+    "sha256": "366b0e91970008a986c5d149557d315943ef0b0af64d45fe41cb57b70d7ea222"
+  },
+  {
+    "file": "small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "source": "./project",
+    "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599"
+  },
+  {
+    "file": "claw_slash__ANIM_TAG_CLAW_SLASH.png",
+    "source": "./project",
+    "sha256": "783f37276111d92d2dcfbf14a9d9fe9eb2a01ecd9f33050757afe7311ee9fcf0"
+  },
+  {
+    "file": "air_wave_2__ANIM_TAG_AIR_WAVE_2.png",
+    "source": "./project",
+    "sha256": "ef7b3d6d08d6b06051407382caf3d0efba1b3c178e279aa4ebfe404f2e6f58ce"
+  },
+  {
+    "file": "lightning__ANIM_TAG_LIGHTNING.png",
+    "source": "./project",
+    "sha256": "32f6ff91fce8aa2e2a70d4d285e7a7475530af10c4e2118b74f45bfdaef76be2"
+  }
+]

@@ -1,0 +1,529 @@
+/* Scoped variants: no selector below changes the comparison/default HUD. */
+html[data-hud] header,
+html[data-hud] .status {
+  display: none;
+}
+html[data-hud] .hud {
+  left: auto;
+  right: 18px;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  transform: none;
+  width: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  flex-wrap: nowrap;
+}
+#battleMenuButton {
+  pointer-events: auto;
+  position: absolute;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  z-index: 6;
+  padding: 9px 12px;
+  color: #fff0ce;
+  background: #101e30bd;
+  border: 2px solid #cab57f;
+  border-radius: 2px;
+  font-size: 12px;
+  box-shadow: 2px 3px #0005;
+}
+#battleMenu {
+  pointer-events: auto;
+  position: absolute;
+  z-index: 7;
+  top: 58px;
+  right: 12px;
+  width: min(310px, calc(100% - 24px));
+  padding: 12px;
+  color: #eee6ce;
+  background: #101e30f5;
+  border: 2px solid #cab57f;
+  box-shadow: 4px 5px #0005;
+  max-height: calc(100dvh - 110px);
+  overflow: auto;
+}
+#battleMenu .buttons,
+#battleMenu .readout {
+  position: static;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+  pointer-events: auto;
+}
+#battleMenu button,
+#battleMenu .readout span {
+  border: 1px solid #667e93;
+  border-radius: 1px;
+  background: #22364b;
+  color: #f1e7c9;
+  padding: 10px 6px;
+  font-size: 11px;
+  box-shadow: none;
+  white-space: normal;
+}
+#battleMenu .readout span {
+  display: grid;
+  place-items: center;
+}
+#battleMoveHints {
+  width: 100%;
+}
+html[data-hud] #app:has(#helpPanel:not([hidden])) .hud {
+  display: none;
+}
+html[data-hud] .help-panel {
+  top: 108px;
+  max-height: calc(100dvh - 128px);
+  z-index: 8;
+}
+#battleRail {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  top: max(14px, env(safe-area-inset-top));
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 76px;
+  color: #fff2d0;
+  text-shadow: 1px 2px #0008;
+}
+.battle-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(470px, 43%);
+  padding: 8px 12px;
+  border: 2px solid #aa9971;
+  border-radius: 1px;
+  background: linear-gradient(110deg, #10273de8, #0b1628dc);
+  box-shadow: 3px 4px #0005;
+}
+.battle-card.enemy {
+  flex-direction: row-reverse;
+  background: linear-gradient(250deg, #3b202ce8, #0b1628dc);
+}
+.battle-avatar {
+  position: relative;
+  flex: none;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  background: #ffffff0b;
+}
+.battle-avatar .mon-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.battle-info {
+  flex: 1;
+  min-width: 0;
+}
+.battle-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.battle-name span {
+  color: #80d8ff;
+  font: bold 11px ui-monospace, monospace;
+}
+.enemy .battle-name span {
+  color: #ff969b;
+}
+.battle-hp,
+.battle-sp {
+  background: #040b16;
+  border: 1px solid #60717b;
+  overflow: hidden;
+  height: 7px;
+}
+.battle-hp i,
+.battle-sp i {
+  display: block;
+  height: 100%;
+  background: #48d878;
+}
+.battle-sp {
+  height: 15px;
+  margin-top: 4px;
+  border-color: #c7a656;
+}
+.battle-sp i {
+  background: repeating-linear-gradient(90deg, #ffd45e 0 16px, #e7ac39 16px 18px);
+}
+.battle-sp-label {
+  display: block;
+  color: #ffd45e;
+  font: bold 10px ui-monospace, monospace;
+  margin-top: 3px;
+}
+.sp-arc {
+  display: none;
+}
+html[data-hud] .skill {
+  flex: none;
+  width: 88px;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  padding: 5px;
+  border: 3px solid var(--move);
+  color: #fff6dc;
+  background: radial-gradient(circle at 35% 25%, #334b61, #0e192d 85%);
+  border-radius: 50%;
+  box-shadow: 0 3px #060d18, inset 0 0 0 2px #ffffff30;
+  text-align: center;
+  isolation: isolate;
+  opacity: 1;
+}
+html[data-hud] .skill::before {
+  inset: 0;
+  transform: none;
+  background: conic-gradient(from -90deg, #020918bf calc(var(--cool, 0) * 1turn), transparent 0);
+  z-index: 0;
+}
+html[data-hud] .skill::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  right: 14px;
+  top: 12px;
+  background: var(--move);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 1px #fff6;
+}
+html[data-hud] .skill kbd {
+  color: #111e2f;
+  background: var(--move);
+  border: 0;
+  border-radius: 1px;
+  font-size: 12px;
+  margin: 0;
+  min-width: 20px;
+  padding: 1px 4px;
+}
+html[data-hud] .skill strong {
+  font-size: 11px;
+  text-shadow: 1px 1px #000;
+}
+html[data-hud] .skill small {
+  color: #fff2ce;
+  font-size: 10px;
+}
+html[data-hud] .skill.active {
+  box-shadow: 0 0 0 3px #fff6bd, 0 0 18px var(--move);
+}
+html[data-hud] .skill.insufficient {
+  filter: grayscale(1);
+  opacity: 0.65;
+}
+html[data-hud="1"] #battleMenuButton {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  padding: 8px;
+}
+html[data-hud="1"] #battleMenu {
+  top: 100px;
+}
+html[data-hud="1"] .hud {
+  left: max(18px, env(safe-area-inset-left));
+  right: auto;
+}
+html[data-hud="1"] .skills {
+  flex-direction: column;
+  gap: 10px;
+}
+html[data-hud="2"] .skills {
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  gap: 10px;
+}
+html[data-hud="2"] .skills:has(.skill:only-child) {
+  grid-template-columns: auto;
+}
+html[data-hud="2"] .skill {
+  width: 80px;
+  height: 80px;
+  border-radius: 2px;
+  border-width: 3px;
+  background: linear-gradient(135deg, #243c50, #111d2f);
+  box-shadow: 3px 4px #050c17, inset 0 0 0 2px #ffffff18;
+}
+html[data-hud="2"] .skill::before {
+  background: #020918bf;
+  transform: scaleY(var(--cool, 0));
+  transform-origin: bottom;
+}
+html[data-hud="3"] #battleRail {
+  right: auto;
+  width: 250px;
+  gap: 6px;
+  flex-direction: column;
+}
+html[data-hud="3"] .battle-card {
+  width: 100%;
+  padding: 4px 8px;
+  gap: 8px;
+  border-color: #859dae;
+  background: #0d1e30d9;
+}
+html[data-hud="3"] .battle-card.enemy {
+  flex-direction: row;
+}
+html[data-hud="3"] .battle-name {
+  font-size: 12px;
+}
+html[data-hud="3"] .battle-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+}
+html[data-hud="3"] .battle-sp {
+  display: none;
+}
+html[data-hud="3"] .enemy .battle-sp-label {
+  display: none;
+}
+html[data-hud="3"] .enemy .battle-avatar {
+  height: 40px;
+}
+html[data-hud="3"] .enemy .mon-icon {
+  transform: translate(-50%, -50%) scale(0.75);
+}
+html[data-hud="3"] .player .sp-arc {
+  display: block;
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 225deg,
+    #ffd45e calc(var(--sp, 1) * 270deg),
+    #3e3a29 0 270deg,
+    transparent 0
+  );
+  mask: radial-gradient(circle, transparent 60%, #000 63%);
+}
+html[data-hud="3"] .skills {
+  position: relative;
+  width: 260px;
+  height: 240px;
+  display: block;
+}
+html[data-hud="3"] .skill {
+  position: absolute;
+  width: 82px;
+  height: 82px;
+}
+html[data-hud="3"] .skill:nth-child(1) {
+  width: 110px;
+  height: 110px;
+  right: 0;
+  bottom: 0;
+  border-width: 4px;
+}
+html[data-hud="3"] .skill:nth-child(1) strong {
+  font-size: 14px;
+}
+html[data-hud="3"] .skill:nth-child(2) {
+  right: 120px;
+  bottom: 0;
+}
+html[data-hud="3"] .skill:nth-child(3) {
+  right: 142px;
+  bottom: 100px;
+}
+html[data-hud="3"] .skill:nth-child(4) {
+  right: 42px;
+  bottom: 144px;
+}
+@media (max-width: 600px) {
+  #battleRail {
+    left: 8px;
+    right: 8px;
+    gap: 60px;
+    top: 10px;
+  }
+  .battle-card {
+    width: calc((100% - 60px) / 2);
+    padding: 5px;
+    gap: 3px;
+  }
+  .battle-avatar {
+    width: 28px;
+    height: 36px;
+  }
+  .battle-avatar .mon-icon {
+    transform: translate(-50%, -50%) scale(0.65);
+  }
+  .battle-name {
+    font-size: 11px;
+  }
+  .battle-name span {
+    font-size: 8px;
+  }
+  .battle-sp {
+    height: 12px;
+  }
+  .battle-sp-label {
+    font-size: 8px;
+  }
+  html[data-hud="1"] .skill {
+    width: 76px;
+    height: 76px;
+  }
+  html[data-hud="1"] .hud {
+    left: 10px;
+  }
+  html[data-hud="3"] #battleRail {
+    width: 210px;
+  }
+  html[data-hud="3"] .battle-avatar .mon-icon {
+    transform: translate(-50%, -50%);
+  }
+  html[data-hud="3"] .enemy .battle-avatar .mon-icon {
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+  html[data-hud="3"] .skills {
+    width: 236px;
+    height: 222px;
+  }
+  html[data-hud="3"] .skill {
+    width: 74px;
+    height: 74px;
+  }
+  html[data-hud="3"] .skill:nth-child(1) {
+    width: 100px;
+    height: 100px;
+  }
+  html[data-hud="3"] .skill:nth-child(2) {
+    right: 112px;
+  }
+  html[data-hud="3"] .skill:nth-child(3) {
+    right: 130px;
+    bottom: 90px;
+  }
+  html[data-hud="3"] .skill:nth-child(4) {
+    right: 36px;
+    bottom: 134px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  html[data-hud] #battleMenu {
+    top: 72px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  #battleRail {
+    top: 8px;
+    left: 12px;
+    right: 12px;
+  }
+  .battle-card {
+    padding: 4px 8px;
+    gap: 6px;
+    width: min(330px, 43%);
+  }
+  .battle-avatar {
+    height: 42px;
+    width: 42px;
+  }
+  .battle-avatar .mon-icon {
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  .battle-name {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  .battle-sp {
+    height: 10px;
+  }
+  .battle-sp-label {
+    font-size: 8px;
+  }
+  html[data-hud] .hud {
+    bottom: 10px;
+    right: 12px;
+  }
+  html[data-hud="1"] .hud {
+    left: 12px;
+    right: auto;
+  }
+  html[data-hud="1"] .skills {
+    flex-direction: row;
+    gap: 8px;
+    width: auto;
+  }
+  html[data-hud="1"] .skill {
+    width: 66px;
+    height: 66px;
+    gap: 1px;
+  }
+  html[data-hud="1"] .skill:nth-child(2),
+  html[data-hud="1"] .skill:nth-child(3) {
+    transform: translateY(-14px);
+  }
+  html[data-hud] .skill strong {
+    font-size: 10px;
+  }
+  html[data-hud] .skill small {
+    font-size: 8px;
+  }
+  html[data-hud="2"] .skills {
+    grid-template-columns: repeat(2, 66px);
+    gap: 8px;
+  }
+  html[data-hud="2"] .skill {
+    width: 66px;
+    height: 66px;
+  }
+  html[data-hud="3"] #battleRail {
+    width: 216px;
+  }
+  html[data-hud="3"] .battle-avatar {
+    width: 48px;
+    height: 48px;
+  }
+  html[data-hud="3"] .enemy .battle-avatar {
+    height: 30px;
+  }
+  html[data-hud="3"] .skills {
+    width: 220px;
+    height: 198px;
+  }
+  html[data-hud="3"] .skill {
+    width: 64px;
+    height: 64px;
+  }
+  html[data-hud="3"] .skill:nth-child(1) {
+    width: 88px;
+    height: 88px;
+  }
+  html[data-hud="3"] .skill:nth-child(2) {
+    right: 98px;
+  }
+  html[data-hud="3"] .skill:nth-child(3) {
+    right: 116px;
+    bottom: 78px;
+  }
+  html[data-hud="3"] .skill:nth-child(4) {
+    right: 32px;
+    bottom: 124px;
+  }
+}

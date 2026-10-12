@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "image": "自然场-B.png",
+  "coordinateSystem": {
+    "origin": "top-left",
+    "units": "normalized",
+    "xAxis": "right",
+    "yAxis": "down",
+    "rectFormat": "x,y,width,height"
+  },
+  "annotationMethod": "P1b逐张读最终成图，人工量取实体像素包围盒并核对Pillow叠加预览；不采用提示词坐标。",
+  "notes": [
+    "obstacles是不可走实体；连片外围树丛/低岩壁采用保守整带包围盒，投影不另设障碍。",
+    "grassRegions是可走的藏身高草区，不放入obstacles；矩形包含草叶边缘少量空隙。",
+    "battleArea内可通行集合为battleArea减去obstacles；草丛仍可通行。",
+    "出生点未按角色身体半径膨胀障碍；本轮不接入游戏。"
+  ],
+  "obstacles": [
+    {
+      "id": "自然场-B-trees_and_bushes-01",
+      "kind": "trees_and_bushes",
+      "type": "rect",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1.0,
+      "height": 0.1005859375
+    },
+    {
+      "id": "自然场-B-trees_and_bushes-02",
+      "kind": "trees_and_bushes",
+      "type": "rect",
+      "x": 0.0,
+      "y": 0.8818359375,
+      "width": 1.0,
+      "height": 0.1181640625
+    },
+    {
+      "id": "自然场-B-trees_and_bushes-03",
+      "kind": "trees_and_bushes",
+      "type": "rect",
+      "x": 0.0,
+      "y": 0.1005859375,
+      "width": 0.06901041666666667,
+      "height": 0.78125
+    },
+    {
+      "id": "自然场-B-trees_and_bushes-04",
+      "kind": "trees_and_bushes",
+      "type": "rect",
+      "x": 0.9322916666666666,
+      "y": 0.1005859375,
+      "width": 0.06770833333333333,
+      "height": 0.78125
+    },
+    {
+      "id": "自然场-B-rock-01",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.2994791666666667,
+      "y": 0.296875,
+      "width": 0.064453125,
+      "height": 0.083984375
+    },
+    {
+      "id": "自然场-B-rock-02",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.6647135416666666,
+      "y": 0.3818359375,
+      "width": 0.06575520833333333,
+      "height": 0.083984375
+    },
+    {
+      "id": "自然场-B-rock-03",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.4583333333333333,
+      "y": 0.7080078125,
+      "width": 0.06510416666666667,
+      "height": 0.0849609375
+    },
+    {
+      "id": "自然场-B-water-01",
+      "kind": "water",
+      "type": "rect",
+      "x": 0.8385416666666666,
+      "y": 0.1376953125,
+      "width": 0.11458333333333333,
+      "height": 0.1689453125
+    }
+  ],
+  "grassRegions": [
+    {
+      "id": "自然场-B-grass-01",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.4420572916666667,
+      "y": 0.1875,
+      "width": 0.11067708333333333,
+      "height": 0.0927734375,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-02",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.2786458333333333,
+      "y": 0.583984375,
+      "width": 0.09700520833333333,
+      "height": 0.09765625,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-03",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.6575520833333334,
+      "y": 0.6630859375,
+      "width": 0.09765625,
+      "height": 0.0947265625,
+      "walkable": true,
+      "conceals": true
+    }
+  ],
+  "battleArea": {
+    "type": "rect",
+    "x": 0.07291666666666667,
+    "y": 0.109375,
+    "width": 0.8541666666666666,
+    "height": 0.765625
+  },
+  "spawns": [
+    {
+      "side": "left",
+      "x": 0.12,
+      "y": 0.5
+    },
+    {
+      "side": "right",
+      "x": 0.88,
+      "y": 0.5
+    }
+  ]
+}

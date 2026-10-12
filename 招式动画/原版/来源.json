@@ -1,0 +1,90 @@
+{
+  "v1p": "4634ea4",
+  "palette": "招式动画/色板映射.tsv",
+  "files": [
+    {
+      "file": "招式动画/原版/ice_crystals_2__ANIM_TAG_ICE_CRYSTALS.png",
+      "sha256": "0a1fea7b8140506fa2b3dd838d55c2230f745dd81f761d51052cdd3aaf83de15",
+      "reference": "ref-moves/还原贴图/ice_crystals_2__ANIM_TAG_ICE_CRYSTALS.png",
+      "tag": "ANIM_TAG_ICE_CRYSTALS",
+      "original": {
+        "path": "pokeemerald/graphics/battle_anims/sprites/ice_crystals_2.png",
+        "url": "https://raw.githubusercontent.com/pret/pokeemerald/master/graphics/battle_anims/sprites/ice_crystals_2.png",
+        "sha256": "350558e14c29c0c4d34fe147b3287ce8794b797ef14df69268445e0d3160436f",
+        "downloaded_at": "2026-10-11T18:34:04.008547+00:00"
+      }
+    },
+    {
+      "file": "招式动画/原版/flying_dirt__ANIM_TAG_FLYING_DIRT.png",
+      "sha256": "b6246515aeda41b1f2006589cb98db156c6c772515569024d97981fee7c73523",
+      "reference": "ref-moves/还原贴图/flying_dirt__ANIM_TAG_FLYING_DIRT.png",
+      "tag": "ANIM_TAG_FLYING_DIRT",
+      "original": {
+        "path": "pokeemerald/graphics/battle_anims/sprites/flying_dirt.png",
+        "url": "https://raw.githubusercontent.com/pret/pokeemerald/master/graphics/battle_anims/sprites/flying_dirt.png",
+        "sha256": "f80c97253031f42ad734b0da132cd3cb5cd883e2689dd0172bf60113c447ddf2",
+        "downloaded_at": "2026-10-11T18:34:00.104315+00:00"
+      }
+    },
+    {
+      "file": "招式动画/原版/water_impact__ANIM_TAG_WATER_IMPACT.png",
+      "sha256": "797bdfd9e792351ba3efd72740bc72ff6e920e4b766a07203b9f6c34c57ecb36",
+      "reference": "ref-moves/还原贴图/water_impact__ANIM_TAG_WATER_IMPACT.png",
+      "tag": "ANIM_TAG_WATER_IMPACT",
+      "original": {
+        "path": "pokeemerald/graphics/battle_anims/sprites/water_impact.png",
+        "url": "https://raw.githubusercontent.com/pret/pokeemerald/master/graphics/battle_anims/sprites/water_impact.png",
+        "sha256": "6b3c7506300d794a87bbb618c97bcd9de74b00c6c85168ef689afce2eae820af",
+        "downloaded_at": "2026-10-11T18:34:21.694221+00:00"
+      }
+    },
+    {
+      "file": "招式动画/原版/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
+      "sha256": "5571dd9d34a946a3de23dd30881642d1630d346550f95eef386233991a3c99f8",
+      "reference": "ref-moves/还原贴图/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
+      "tag": "ANIM_TAG_ICE_CRYSTALS",
+      "original": {
+        "path": "pokeemerald/graphics/battle_anims/sprites/ice_crystals_0.png",
+        "url": "https://raw.githubusercontent.com/pret/pokeemerald/master/graphics/battle_anims/sprites/ice_crystals_0.png",
+        "sha256": "79adc6a4936a0f9c47a50982975dd4e3ef3f27d035469cdce2f9dc5673814d53",
+        "downloaded_at": "2026-10-11T18:34:03.772258+00:00"
+      }
+    },
+    {
+      "file": "招式动画/原版/impact__ANIM_TAG_IMPACT.png",
+      "sha256": "8d4030536514e032dafa2f53f0b3128d5f05500689343fc96786e13af870d41e",
+      "reference": "ref-moves/还原贴图/impact__ANIM_TAG_IMPACT.png",
+      "tag": "ANIM_TAG_IMPACT",
+      "original": {
+        "path": "pokeemerald/graphics/battle_anims/sprites/impact.png",
+        "url": "https://raw.githubusercontent.com/pret/pokeemerald/master/graphics/battle_anims/sprites/impact.png",
+        "sha256": "8f2a0eb54120d2cc50d24ccd92e2934d9b5c94c13f008198b6306c193fd8721d",
+        "downloaded_at": "2026-10-11T18:34:04.966281+00:00"
+      }
+    },
+    {
+      "file": "招式动画/原版/small_bubbles__ANIM_TAG_SMALL_BUBBLES.png",
+      "sha256": "2829fcea0ffa781951e5a4272dc2916fa0c370248b5e58a69c65471c16763a0c",
+      "reference": "ref-moves/还原贴图/small_bubbles__ANIM_TAG_SMALL_BUBBLES.png",
+      "tag": "ANIM_TAG_SMALL_BUBBLES",
+      "original": {
+        "path": "pokeemerald/graphics/battle_anims/sprites/small_bubbles.png",
+        "url": "https://raw.githubusercontent.com/pret/pokeemerald/master/graphics/battle_anims/sprites/small_bubbles.png",
+        "sha256": "26d441082a5bc09ac38b6d37813df5a012464f402dc604d5276d38e8d5f2dfe2",
+        "downloaded_at": "2026-10-11T18:34:15.003105+00:00"
+      }
+    },
+    {
+      "file": "招式动画/原版/ice_crystals_1__ANIM_TAG_ICE_CRYSTALS.png",
+      "sha256": "719cc49917741cc187551ebda1e0cb3406559657d9c8d25643ef0f6e2cf34714",
+      "reference": "ref-moves/还原贴图/ice_crystals_1__ANIM_TAG_ICE_CRYSTALS.png",
+      "tag": "ANIM_TAG_ICE_CRYSTALS",
+      "original": {
+        "path": "pokeemerald/graphics/battle_anims/sprites/ice_crystals_1.png",
+        "url": "https://raw.githubusercontent.com/pret/pokeemerald/master/graphics/battle_anims/sprites/ice_crystals_1.png",
+        "sha256": "76f726ab0fff23fcf65f4abba01a508d7c89bab02495e89c1ef60f704ff6df9b",
+        "downloaded_at": "2026-10-11T18:34:03.788792+00:00"
+      }
+    }
+  ]
+}

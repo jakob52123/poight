@@ -1,0 +1,82 @@
+[
+  {
+    "file": "招式动画/VB1原版/hands_and_feet__ANIM_TAG_HANDS_AND_FEET.png",
+    "source": "./project",
+    "sha256": "43d4d3c3d8cf8463583ce3d47aaa0b8e2e606205ac88e53add472e8febe67f06"
+  },
+  {
+    "file": "招式动画/VB1原版/slam_hit__ANIM_TAG_WHIP_HIT.png",
+    "source": "./project",
+    "sha256": "3f6646dde1c54e22a7213a4b44dd228de3e23c003cdfd5d48a4476e00e016088"
+  },
+  {
+    "file": "招式动画/VB1原版/scratch__ANIM_TAG_SCRATCH.png",
+    "source": "./project",
+    "sha256": "19399f7f70a7eff31609c446d795c0dbed2615a4cf018c0a2f27cd8f3f563492"
+  },
+  {
+    "file": "招式动画/VB1原版/claw_slash__ANIM_TAG_CLAW_SLASH.png",
+    "source": "./project",
+    "sha256": "783f37276111d92d2dcfbf14a9d9fe9eb2a01ecd9f33050757afe7311ee9fcf0"
+  },
+  {
+    "file": "招式动画/VB1原版/lick__ANIM_TAG_LICK.png",
+    "source": "./project",
+    "sha256": "7b63734fbae5e25842d204a47290fd5e7af559481bb19eda3f4cc3b1685d1003"
+  },
+  {
+    "file": "招式动画/VB1原版/gust__ANIM_TAG_GUST.png",
+    "source": "./project",
+    "sha256": "5607c973e729853b1bed0fc743584078710307cc61640eef278f92373d27d6f5"
+  },
+  {
+    "file": "招式动画/VB1原版/cross_impact__ANIM_TAG_CROSS_IMPACT.png",
+    "source": "./project",
+    "sha256": "5242434704ec85453c951e427756d850f3db0092bd9962b10c61ab9b6cec6109"
+  },
+  {
+    "file": "招式动画/VB1原版/leaf__ANIM_TAG_LEAF.png",
+    "source": "./project",
+    "sha256": "d34dd53bfe5868e71d232713e2d34b086ac6bc3ea8ab64f7354989634ccbb163"
+  },
+  {
+    "file": "招式动画/VB1原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "source": "./project",
+    "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599"
+  },
+  {
+    "file": "招式动画/VB1原版/lightning__ANIM_TAG_LIGHTNING.png",
+    "source": "./project",
+    "sha256": "32f6ff91fce8aa2e2a70d4d285e7a7475530af10c4e2118b74f45bfdaef76be2"
+  },
+  {
+    "file": "招式动画/VB1原版/orbs__ANIM_TAG_ORBS.png",
+    "source": "./project",
+    "sha256": "33618b641a599eb9302c75581c9eb5d9337fdf28d02e40ddef676e6ccc503973"
+  },
+  {
+    "file": "招式动画/VB1原版/magenta_heart__ANIM_TAG_PINK_HEART.png",
+    "source": "./project",
+    "sha256": "5b96ae9cecbffb5622cd04abe484c6bf14bfe171d127d050bb4ee95d75b614ec"
+  },
+  {
+    "file": "招式动画/VB1原版/gray_orb__ANIM_TAG_BLUE_ORB.png",
+    "source": "./project",
+    "sha256": "456d12cb7c7d92e6d52af3fbe0719a712e4e5e2bd1d265018679e41b8d26d546"
+  },
+  {
+    "file": "招式动画/VB1原版/green_light_wall__ANIM_TAG_BLUE_LIGHT_WALL.png",
+    "source": "./project",
+    "sha256": "c9efdcd0b525f8422750f90a9ea2b050e61967b0d0a1cb5e611568b20b514188"
+  },
+  {
+    "file": "招式动画/VB1原版/torn_metal__ANIM_TAG_TORN_METAL.png",
+    "source": "./project",
+    "sha256": "9366aef73445c1d0d7880c4c6171db61949ca082eb750d11f7532a0aa4b419aa"
+  },
+  {
+    "file": "招式动画/VB1原版/impact__ANIM_TAG_IMPACT.png",
+    "source": "./project",
+    "sha256": "8d4030536514e032dafa2f53f0b3128d5f05500689343fc96786e13af870d41e"
+  }
+]

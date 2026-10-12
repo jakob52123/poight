@@ -1,0 +1,26 @@
+from pathlib import Path
+import json,base64,hashlib
+from playwright.sync_api import sync_playwright
+from PIL import Image,ImageDraw,ImageFont
+from io import BytesIO
+ROOT=Path(__file__).resolve().parent;HTML=ROOT/'招式特效-57招.html';OUT=ROOT/'招式特效';errors=[];requests=[]
+with sync_playwright() as p:
+ browser=p.chromium.launch();page=browser.new_page(viewport={'width':1440,'height':980},device_scale_factor=1);page.on('pageerror',lambda e:errors.append(str(e)));page.on('request',lambda req:requests.append(req.url));page.goto(HTML.as_uri());page.evaluate('ScenePreview.ready');page.locator('.move').first.wait_for();assert page.locator('.move').count()==57;assert page.locator('select').count()==0
+ result=page.evaluate('''()=>{const failures=[],checks=[],surface=document.createElement('canvas');surface.width=960;surface.height=540;const c=surface.getContext('2d',{willReadFrequently:true});let depth=0,bad=false;for(const name of ['save','restore','arc','ellipse','fillRect','strokeRect','moveTo','lineTo','translate','rotate','scale','bezierCurveTo','quadraticCurveTo']){const fn=c[name].bind(c);c[name]=(...args)=>{if(name==='save')depth++;if(name==='restore')depth--;if(depth<0)throw Error('unbalanced restore');if(args.some(x=>typeof x==='number'&&!Number.isFinite(x)))throw Error('nonfinite '+name);return fn(...args);};}for(const id of __lab.ids){const m=__lab.moves[id];let count=0,visible=0,missImpact=0;for(const phase of ['charge','action','impact','recover'])for(const hit of [false,true])for(const u of [0,.25,.5,.75,1]){try{c.clearRect(0,0,960,540);const source={x:['melee','spin','rush'].includes(m.kind)?650:200,y:260},s={m,phase,u,t:phase==='charge'?.55*u:phase==='action'?.55+.6*u:phase==='impact'?1.15+.45*u:1.6+1.2*u,source,target:{x:730,y:260},hit,seed:21};MoveFX[id].draw(c,s);if(depth!==0)throw Error('unbalanced save');const tr=c.getTransform();if(tr.a!==1||tr.d!==1||tr.e!==0||tr.f!==0||c.globalAlpha!==1)throw Error('state leaked');if(u===.5&&(phase==='action'||phase==='impact')){const data=c.getImageData(0,0,960,540).data;let px=0;for(let i=3;i<data.length;i+=4)if(data[i])px++;if(phase==='action'&&hit)visible=px;if(phase==='impact'&&!hit&&!['heal','guard','buff'].includes(m.kind))missImpact=px;}count++;}catch(e){failures.push({id,phase,u,hit,error:String(e)});}}checks.push({id,count,visible,missImpact,label:MoveFX[id].label});if(!visible)failures.push({id,error:'empty action'});if(missImpact)failures.push({id,error:'miss caused impact',pixels:missImpact});}return{checks,failures};}''')
+ assert not result['failures'],result['failures']
+ tiles=[]
+ try:font=ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial Unicode.ttf',15)
+ except OSError:font=ImageFont.load_default()
+ for id in page.evaluate('__lab.ids'):
+  page.evaluate('async(id)=>{__lab.select(id);await ScenePreview.prepare(id);__lab.seek(.86);}',id)
+  png=page.evaluate('document.querySelector("#view").toDataURL().split(",")[1]')
+  image=Image.open(BytesIO(base64.b64decode(png))).convert('RGB').resize((320,180));tile=Image.new('RGB',(320,205),'#0b1624');tile.paste(image,(0,25));name=page.evaluate('(id)=>__lab.moves[id].name',id);ImageDraw.Draw(tile).text((8,4),name+' / '+id,font=font,fill='#eee0b5');tiles.append(tile)
+ for part in range(3):
+  subset=tiles[part*20:(part+1)*20];sheet=Image.new('RGB',(1280,205*((len(subset)+3)//4)),'#0b1624')
+  for i,im in enumerate(subset):sheet.paste(im,(i%4*320,i//4*205))
+  sheet.save(OUT/f'全招式动作抽帧-{part+1}.jpg',quality=87)
+ page.evaluate('async()=>{__lab.select("bravebird");await ScenePreview.prepare("bravebird");__lab.seek(.86)}');page.screenshot(path=str(OUT/'展台总览.png'))
+ page.locator('#search').fill('燕返');assert page.locator('.move').count()==1;page.locator('.move').click();assert page.locator('#moveName').inner_text()=='燕返';page.locator('#search').fill('');page.locator('#categories button[data-category="support"]').click();assert page.locator('.move').count()==3;page.locator('.move[data-move="recover"]').click();assert page.locator('#hit').is_disabled();page.locator('#categories button[data-category="all"]').click();page.locator('.move[data-move="fireblast"]').click();page.locator('#time').fill('1.3');assert not page.evaluate('__lab.snapshot().playing');page.locator('#miss').click();assert not page.evaluate('__lab.snapshot().hit');page.locator('#slow').click();assert page.evaluate('__lab.snapshot().speed')==.25
+ page.set_viewport_size({'width':390,'height':844});page.locator('#mobileList').click();assert page.locator('#search').is_visible();page.locator('#search').fill('守住');page.locator('.move').click();assert page.locator('#moveName').inner_text()=='守住';assert not page.locator('#sidebar').is_visible();page.screenshot(path=str(OUT/'展台手机.png'))
+ assert not errors,errors;assert not [r for r in requests if r.startswith(('http:','https:'))],requests
+ report={'sha256':hashlib.sha256(HTML.read_bytes()).hexdigest(),'moves':len(result['checks']),'frameChecks':sum(c['count'] for c in result['checks']),'failures':result['failures'],'browserErrors':errors,'externalRequests':0,'ui':'搜索/分类/切招/辅助按钮/慢放/拖时间条/手机通过','checks':result['checks'],'caveat':'逐招绘制与抽帧验证，不等于用户审美通过或已接入游戏'};(OUT/'展台验收.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps({k:v for k,v in report.items() if k!='checks'},ensure_ascii=False,indent=2));browser.close()

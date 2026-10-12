@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 2,
+  "image": "正规场-B.png",
+  "world": {
+    "width": 2100,
+    "height": 1400
+  },
+  "artPixelWorldSize": 2,
+  "logoDiameter": 480,
+  "annotationMethod": "扩建竞技场.py: exact composited pixel coordinates",
+  "battleArea": {
+    "id": "battle",
+    "kind": "battle",
+    "type": "rect",
+    "x": 0.02857142857142857,
+    "y": 0.04285714285714286,
+    "width": 0.9428571428571428,
+    "height": 0.9142857142857143
+  },
+  "obstacles": [
+    {
+      "id": "正规场-B-border-0",
+      "kind": "stands",
+      "type": "rect",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1.0,
+      "height": 0.04285714285714286,
+      "perimeter": true
+    },
+    {
+      "id": "正规场-B-border-1",
+      "kind": "stands",
+      "type": "rect",
+      "x": 0.0,
+      "y": 0.9571428571428572,
+      "width": 1.0,
+      "height": 0.04285714285714286,
+      "perimeter": true
+    },
+    {
+      "id": "正规场-B-border-2",
+      "kind": "stands",
+      "type": "rect",
+      "x": 0.0,
+      "y": 0.04285714285714286,
+      "width": 0.02857142857142857,
+      "height": 0.9142857142857143,
+      "perimeter": true
+    },
+    {
+      "id": "正规场-B-border-3",
+      "kind": "stands",
+      "type": "rect",
+      "x": 0.9714285714285714,
+      "y": 0.04285714285714286,
+      "width": 0.02857142857142857,
+      "height": 0.9142857142857143,
+      "perimeter": true
+    },
+    {
+      "id": "正规场-B-flag-0",
+      "kind": "flag",
+      "type": "rect",
+      "x": 0.02857142857142857,
+      "y": 0.04,
+      "width": 0.02857142857142857,
+      "height": 0.05714285714285714,
+      "perimeter": true
+    },
+    {
+      "id": "正规场-B-flag-1",
+      "kind": "flag",
+      "type": "rect",
+      "x": 0.9428571428571428,
+      "y": 0.04,
+      "width": 0.02857142857142857,
+      "height": 0.05714285714285714,
+      "perimeter": true
+    },
+    {
+      "id": "正规场-B-flag-2",
+      "kind": "flag",
+      "type": "rect",
+      "x": 0.02857142857142857,
+      "y": 0.9,
+      "width": 0.02857142857142857,
+      "height": 0.05714285714285714,
+      "perimeter": true
+    },
+    {
+      "id": "正规场-B-flag-3",
+      "kind": "flag",
+      "type": "rect",
+      "x": 0.9428571428571428,
+      "y": 0.9,
+      "width": 0.02857142857142857,
+      "height": 0.05714285714285714,
+      "perimeter": true
+    }
+  ],
+  "grassRegions": [],
+  "spawns": [
+    {
+      "side": "left",
+      "x": 0.275,
+      "y": 0.5
+    },
+    {
+      "side": "right",
+      "x": 0.725,
+      "y": 0.5
+    }
+  ]
+}

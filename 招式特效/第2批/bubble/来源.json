@@ -1,0 +1,34 @@
+{
+  "generator": "~/.claude/skills/codex-image/scripts/gen_images.sh",
+  "source": "招式特效/第2批/原图/bubble.png",
+  "originalSHA256": "1eb0b213b5236a82d5145dda79fc2d8c118bd274b91279491277013fbaaeebb6",
+  "prompt": "生成可直接裁切的四帧特效图集，正方形画布，2×2等大小格子，无分隔线；四格主体各自居中并有足够透明留白，主体不跨格。背景真正透明RGBA，不绘制棋盘格。每帧朝右，四帧尺寸和中心相同。一颗独立透明水泡，圆润但非几何圆圈；极薄青蓝边与弯月白高光，泡内完全透明，四帧轻轻浮动变形。不画一束泡泡，不画速度线。",
+  "style": "严格参考已认可喷射火焰与水枪的掌机像素特效风格，只借画风不借形状；清晰像素边、有限色阶、无文字无水印，无角色无背景无UI。",
+  "time": "2026-10-11T15:38:39.803451+00:00",
+  "styleAnchorSHA256": {
+    "招式特效/生图重做/首批/喷射火焰/result.png": "dd8c683eb442aa68626279d229ec422181a29d4475bcc1a71d4ed38334817e1a",
+    "招式特效/生图重做/首批/水枪/result.png": "65ce65aaa42b5c21eae92aba41c3f6282f5b8b54c54fc9658cc61f81f287587a"
+  },
+  "processing": "Only quadrant/slot crops, common alpha>16 bounds (ignore near-zero-alpha export noise for bounding only), nearest resize and transparent alignment.",
+  "cropBounds": [
+    [
+      102,
+      133,
+      563,
+      546
+    ]
+  ],
+  "slotCutsPx": [
+    0,
+    627
+  ],
+  "output": "招式特效/第2批/bubble/bubble-动画.png",
+  "outputSHA256": "8345c4c493860cfb37e45631300fed68f88dd069385be9f4233a551ec6e04673",
+  "drawing": {
+    "fw": 96,
+    "fh": 86,
+    "ax": 48,
+    "ay": 43,
+    "columns": 1
+  }
+}

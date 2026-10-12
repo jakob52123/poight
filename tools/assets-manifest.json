@@ -1,0 +1,2761 @@
+{
+  "schemaVersion": 1,
+  "spriteCommit": "7f6ea6cc6892bbdd1376f803b3a1d7f376418895",
+  "emeraldCommit": "731ad5bfd6e6f265508d0efcca0ba42f9dcf5881",
+  "downloads": [
+    {
+      "path": "素材/角色库/原始/0001/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0001/credits.txt",
+      "sha256": "2f679733e9ac56ed51dd2cb1efd9376abc3b69f1993cc1d5f1fadec402faec47",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0002/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0002/credits.txt",
+      "sha256": "e88df37b264785baaa6cb9755bb5d32bb7b2b6e8834957a9fa062f50f92ebcdd",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0003/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0003/credits.txt",
+      "sha256": "a0f0cc61b3bb93661a1eda2d526f07660bb1d735d298fb74a091ea46aeb5b608",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0004/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0004/credits.txt",
+      "sha256": "cc37827c20b6eff5f8fb6218cda14d008257980c4db66d9ef49527484bb7e2cf",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0005/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0005/credits.txt",
+      "sha256": "d55df22912ec9d65baec27efab03f777ab1488396b5abc3ecfd859e1a8873b7d",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0006/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0006/credits.txt",
+      "sha256": "3a275f456ec2bc3fa899ce4b84bd584f27daab8d5e04101435b2db5c39088088",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0007/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0007/credits.txt",
+      "sha256": "b21862e27005032445b4c380713439f4908e72fbd2c6f881c9585931b03af0fb",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0008/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0008/credits.txt",
+      "sha256": "f6584e33621120bc23eb53a95cc370c460465744b3296555faf239d96dba52c9",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0009/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0009/credits.txt",
+      "sha256": "2fc33440148a7c3cc3211c2ad517af3613750b3ff8cb3cb44db8200e9cb04276",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0021/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0021/credits.txt",
+      "sha256": "0e76044a3c91ddd9969c508fc0cf122a1f35ac171c6b5e8ea9047b6fd5eeff04",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0025/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0025/credits.txt",
+      "sha256": "e5868696fdb34c89de896f1b6b0c4e7c874281ce8de8e1853186e44b337860e9",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0026/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0026/credits.txt",
+      "sha256": "08c60c70039e35d247d06e181bc9f800bd932c518faf085741f1174bde12927a",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0054/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0054/credits.txt",
+      "sha256": "1867720cd98b0685c28743bc8bc8bce82b09326cd8a1bd083c1e1a11196434bb",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0063/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0063/credits.txt",
+      "sha256": "cda14edb16346a1602a1297745f3d51933893003ef0a8cc138801ebe5f707ed8",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0065/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0065/credits.txt",
+      "sha256": "1353007bbf4de6233a149b9758f52221e5be5064ff3f6fe59db0e54a622cca10",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0066/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0066/credits.txt",
+      "sha256": "37ce381c6366ae82c4e84014218788e852376612f4e585eccab600ad124e2305",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0067/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0067/credits.txt",
+      "sha256": "df258ccb5d3ceba778ce9aeee0273398a1df61092ade82723023a47a0b47e1f4",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0068/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0068/credits.txt",
+      "sha256": "9ddf1801bea9fd4d20fceefaad843350ae72f9d2a2193db47745b19511b5c72f",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0092/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0092/credits.txt",
+      "sha256": "7c23ffa99b6376d5650df4b47ba248844e4dd93046b09cef19c021d99a1dacca",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0093/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0093/credits.txt",
+      "sha256": "9739f3b33b30a7697acf7ba7bcb9502d3ed28dbd35050721ba47b0df6eccb143",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0094/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0094/credits.txt",
+      "sha256": "b585d7d7c723801ec276f228f44610d390c42d04f873985d6ffe83303d89ef47",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0095/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0095/credits.txt",
+      "sha256": "1975948437d6b6b148172cfb79dcec512dfac58ce90e7e79b740c63cec2b8df7",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0123/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0123/credits.txt",
+      "sha256": "12513c82cb6470b80aab06105ba0710cd46f19a5e3fd70d45b94eae352a16ac7",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0129/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0129/credits.txt",
+      "sha256": "82fa0eae97287b86c49f2cd2c0e1a2a6d7577960cd6701ca3a363368c3751905",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0130/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0130/credits.txt",
+      "sha256": "e9c2ff0fba42ad3d36907c873c922bb9e17e9d4e2c611d7051a41c83b2bae4bb",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0133/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0133/credits.txt",
+      "sha256": "b60cb07a46c6f701f6098300f2860e09e5619dd71eef529fd4643f22536942ca",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0134/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0134/credits.txt",
+      "sha256": "e63220ddc9a129a74d7f7f5ea5d081d0429f09e8ef83d355929708e2a97bfe00",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0135/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0135/credits.txt",
+      "sha256": "24e47e1fa7f38c9c0fbc4901162d7b39b1d25044cf9752be44f4eec23cbed83d",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0136/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0136/credits.txt",
+      "sha256": "bc58f8c33c99a26f19a79cadfd6da68b738c41b6cbab3ade3b8b162ebf23955f",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0143/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0143/credits.txt",
+      "sha256": "d28bdc9fa1236c8fe59e37b2923bd0568b504cc43e7bf5893ea00d18b0ccc11e",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0144/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0144/credits.txt",
+      "sha256": "90f1a456a6f9467b25e5061e03e8c8cb1017eb40bd9dc53e773846330cac10d0",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0145/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0145/credits.txt",
+      "sha256": "c3d9318bdc898b08ad05c1d2de5f725190104fc5bf7742825097bf9998282b2e",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0146/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0146/credits.txt",
+      "sha256": "667c182aa24b795143964040b0588910ccef8005b2b5fc7ed82b2d304d797d99",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0147/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0147/credits.txt",
+      "sha256": "34c4f794a14cc323451a2ab19d45bb6a5aa8362913aebd930c3469f82e9087aa",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0148/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0148/credits.txt",
+      "sha256": "32e76183cfaa614b3047c0f9cc66407bc2c1ab8181cd2983cf152b2d11bc4588",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0149/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0149/credits.txt",
+      "sha256": "8d6fd3fcecdbbcbb447fc6d03cdc49512c2f86c78ec2b1efffe409c357de41a4",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0150/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0150/credits.txt",
+      "sha256": "fb1d1fc3a5759e211ff1c2c371ce9941869d4dec9401b5c45cf384158c41cef4",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0151/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0151/credits.txt",
+      "sha256": "a907150b862c95dc217e93f12cbcf3b32a21f646bcfddd9ecf5dd6cfd619fea9",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0196/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0196/credits.txt",
+      "sha256": "e598e506af985ac315687bcc5d20f47a05baf1cb87b5385399b1561df941344d",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0197/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0197/credits.txt",
+      "sha256": "aa0eef43b57c468b536fb43c70c3c14c8ed469c542e1ed6c5f5c78f71a3574c9",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0208/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0208/credits.txt",
+      "sha256": "f247b69c39b9984aa276418db97cc7808dc3019962afdfc64026dc9627e56c13",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0212/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0212/credits.txt",
+      "sha256": "1fa60e94bbd56bb95f6b2eca386afd57eab4aa8619311225855a559f128e6fee",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0280/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0280/credits.txt",
+      "sha256": "5e5ceb4ae2efbd5e8dc32d85e3fa1b996ec1cd671756f2358c0d8709edd621ec",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0281/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0281/credits.txt",
+      "sha256": "07095c585632748cdfc74b94df97e5b86a13d497e07fa16000b25bd41cea0b9f",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0282/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0282/credits.txt",
+      "sha256": "6a0472287930f8ea3632836254b6a26adf3a4a6d2e4fa5cdf0050f874717ae83",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0448/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0448/credits.txt",
+      "sha256": "505858e577152b35c5bf637fe1a63c2573cf2bcf9e0d27af662f1fb960c34c39",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0470/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0470/credits.txt",
+      "sha256": "93f75f19df6dd4dd58459bc16cbad9ae3f145edd923083040a4f1fe934144529",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0471/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0471/credits.txt",
+      "sha256": "946faf0ef3bd248128891a312be7cfcb9243a4961d254e6b90c74ad5618796da",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0658/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0658/credits.txt",
+      "sha256": "42b06e328c5fcdeec3ed8efe388cd46a63d3023b67569d4c34c217ab685d94f7",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/角色库/原始/0700/credits.txt",
+      "url": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/7f6ea6cc6892bbdd1376f803b3a1d7f376418895/sprite/0700/credits.txt",
+      "sha256": "0ae2a68ff72b1b94b2d00bccc579d52317f3347d0a9f57a71df458dba2b3a23e",
+      "baseline": "pinned upstream credits; source snapshot absent"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_crystals_0.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_crystals_0.png",
+      "sha256": "79adc6a4936a0f9c47a50982975dd4e3ef3f27d035469cdce2f9dc5673814d53",
+      "baseline": "pinned upstream; conversion checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_cube_0.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_cube_0.png",
+      "sha256": "2571b4f908faab5f92ee4d39d9f5eca4c55e6d19ecf92c74206715aced229a1e",
+      "baseline": "pinned upstream; conversion checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_cube_1.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_cube_1.png",
+      "sha256": "ef534272d231c4528306bd02754aa20d5415c434748699bcef1e4899a4ad7f8d",
+      "baseline": "pinned upstream; conversion checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_cube_2.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_cube_2.png",
+      "sha256": "a3940b2f41f43348bd88fe23036e058bebf5a4b4a4e85c9900156760c5487dfc",
+      "baseline": "pinned upstream; conversion checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_cube_3.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_cube_3.png",
+      "sha256": "99510e4752c17a11b1d1d054d00dfbc6384e195e88db4cfbe7d91f7382bf85d3",
+      "baseline": "pinned upstream; conversion checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/poison_bubble.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/poison_bubble.png",
+      "sha256": "d66d2dfb3b2953f3159044988a87b6328acb524dd169ac84d990a1d116d3ce88",
+      "baseline": "pinned upstream; conversion checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/small_ember.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/small_ember.png",
+      "sha256": "86d8864ee76b1c0e844f6c8de6d1ed689061d2925090d512d5f03a989eb9ed8b",
+      "baseline": "pinned upstream; conversion checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/spark_2.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/spark_2.png",
+      "sha256": "4d38447f0cf77a6c62b6387ece82b348a4b16d84588aee4d2733d24f6622e13a",
+      "baseline": "pinned upstream; conversion checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/air_slash.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/air_slash.png",
+      "sha256": "8861ecaa802ecd38c459fa7338c8915c8d0c1a27352d26cd6fcc7e8cb5cd08a4",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/claw_slash.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/claw_slash.png",
+      "sha256": "a89d375ec58f5194540719ea505e1b5c6d8dabbd5ddbe3c55e21d2825b858ce3",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/claw_slash_2.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/claw_slash_2.png",
+      "sha256": "81a2e1cd9bf4ab8a2f8850eaf5ff4bb329c48bebed570e0f47c508704e476537",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/electricity.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/electricity.png",
+      "sha256": "47e031374352a8d36214ad7c59c3944bcd8eb8450302131491e9ebfeef62bc6b",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/electric_orbs.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/electric_orbs.png",
+      "sha256": "48ac380aae38e0f774914490d1637e291f311c7a3771b434d5aee3a8c430e6ea",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/fangs.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/fangs.png",
+      "sha256": "e6f72d00cc042407ca731d2bf67f956ffe17d079363ec5366c21ed861b5726db",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/fire.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/fire.png",
+      "sha256": "6d547fd21ab13be12e64c7a40689dc9941cea28e77ff032238627f0e3dc27e82",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/impact.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/impact.png",
+      "sha256": "8f2a0eb54120d2cc50d24ccd92e2934d9b5c94c13f008198b6306c193fd8721d",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/lightning.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/lightning.png",
+      "sha256": "26a0fbf2622cf32ddff6193e8bfaccfa5a655ad85737292b0d1466caba934763",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/lightning_2.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/lightning_2.png",
+      "sha256": "cb5e1dfa65772cfc06c2868802ec92055f86a3946f0c82a9d57f92d05e8faa19",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/air_wave_2.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/air_wave_2.png",
+      "sha256": "2e8e7582fe6c55f49a92169bb2c12277e86619ba6b7080f1592069925217df4e",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/blue_star.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/blue_star.png",
+      "sha256": "d1675d7ef89ce38c40197a8795255ee2c9e296ebca54e84adfd0b85de3f404e9",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/bubble.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/bubble.png",
+      "sha256": "de27df738f681bcf962f36dd991f95fe4099c07ad9c36dbacfa72b2c847c3900",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/rain_drops.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/rain_drops.png",
+      "sha256": "fdb20e688d955ceb44cf19d98ef2abc3712dd54a2ed17c0d531dc5b625c10fb5",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/glowy_red_orb.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/glowy_red_orb.png",
+      "sha256": "17d0717cde31181e3ec94125f64f627f2664cfe6464ad9169f0985b4246c6ef5",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/glowy_green_orb.pal",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/glowy_green_orb.pal",
+      "sha256": "b709a547357a32c4347331597d18610c60ee17586eb3f3235c0c40904aa4cd58",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/gold_ring.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/gold_ring.png",
+      "sha256": "3cfe9860c48bf65fdfae03d04710704d2363ef41ffda01bc2fdc9ca632a9ac84",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/gust.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/gust.png",
+      "sha256": "c92e411445f06f2f292e3ab0e0c7551d5535734763697d3754619b06bc280a8a",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_crystals.pal",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_crystals.pal",
+      "sha256": "4876a48eeb7e0bf033a3c58bc45f5a37111f218b91b6085b791593e11f873a24",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_spikes.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_spikes.png",
+      "sha256": "26dda6bf91d657bc27964e372fa3a9468f6a77aef821ee17b8738ca17a15e841",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/leaf.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/leaf.png",
+      "sha256": "3d5157878012e1a14a75c5c8f9b3c777a2b8c0bd54de39d308708da306c6b7d3",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/needle.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/needle.png",
+      "sha256": "979862f33b2ccba13214f26234add6f43234d93e9f8adc44ae4413200e6aedc6",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/orbs.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/orbs.png",
+      "sha256": "91c48d207d5e6e0c2e5ca6804e431df390a8dddc9db6b20e30c0ba9d52e6b2d5",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/razor_leaf.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/razor_leaf.png",
+      "sha256": "be3f0557a9c412e809297b8096aa4adfde9c6ccbef241f7414a6c4d6c01aa391",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/tri_attack_triangle.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/tri_attack_triangle.png",
+      "sha256": "a5f87f24a739b5142af31846afd98527ab105da5e6443b001456f583c8b4752b",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/water_orb.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/water_orb.png",
+      "sha256": "a99f3c4c09c6dbdad9339e6848352c6b329d91c106bd7c682c9dbfb0f9ece228",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/water_impact.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/water_impact.png",
+      "sha256": "6b3c7506300d794a87bbb618c97bcd9de74b00c6c85168ef689afce2eae820af",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/yellow_star.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/yellow_star.png",
+      "sha256": "9bf8f24cd34432fc1254a8d8a9aae101b14c2f47a76f4a0939fc291b83497bdc",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/cross_impact.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/cross_impact.png",
+      "sha256": "98b6560114359b9a5092e1e52c3dc5c4488dbd996557f4c59359dfc825fb470f",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/gray_orb.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/gray_orb.png",
+      "sha256": "56c51eb86ec7e73e3c4138d3896c80d05776de84964295e58d538320cdbbbb3f",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/blue_orb.pal",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/blue_orb.pal",
+      "sha256": "72982b0cecbce3e6933cd65d89bbf454103fa9cbbb5395486313e3aa0f899385",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/green_light_wall.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/green_light_wall.png",
+      "sha256": "1cc8b5d3fdddd08083a8971696e97854baa705679178471ac003aaa943050643",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/blue_light_wall.pal",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/blue_light_wall.pal",
+      "sha256": "41987051c9397584362180ff42db22c9e31e03bb2bb2f7849aea1a0abec370ae",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/hands_and_feet.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/hands_and_feet.png",
+      "sha256": "d3196d88d1c4793ad3e10ff5d4744cb4c076b055966591cfa0a384ab1b1a267c",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/lick.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/lick.png",
+      "sha256": "3ef40f2ad263b21eb4cf0c5b8ad7681ffd6b2fb76fded5ba4414b9c103fdca34",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/magenta_heart.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/magenta_heart.png",
+      "sha256": "2ce9ca44723f53979525b78384b65c407eabd097747a9946fc10aa723a062db9",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/pink_heart.pal",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/pink_heart.pal",
+      "sha256": "51b4b1adcae0f6b19b5f1d3cbce58b751a366d8f29756f0e152a6bce342ee4c6",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/scratch.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/scratch.png",
+      "sha256": "7e23319bb67eb8acc6f44a9ac0da7e6c68aea76ebab1f965dbca0aa61104d37d",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/slam_hit.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/slam_hit.png",
+      "sha256": "63184f14d20914da4627b5b0b4a71afc5ac662d346efd7e1426d21f08ca637b8",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/whip_hit.pal",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/whip_hit.pal",
+      "sha256": "946cca50a1f8ec154ea9339f27dc0b6ad102a5f0218bf6bc3194cbfa5a05e0a2",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/torn_metal.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/torn_metal.png",
+      "sha256": "9dbcfc24863f9a12ddb7e50db29c90e4988825cb7a4b4152c420313bb7b0e082",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/flying_dirt.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/flying_dirt.png",
+      "sha256": "f80c97253031f42ad734b0da132cd3cb5cd883e2689dd0172bf60113c447ddf2",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_crystals_1.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_crystals_1.png",
+      "sha256": "76f726ab0fff23fcf65f4abba01a508d7c89bab02495e89c1ef60f704ff6df9b",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_crystals_2.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_crystals_2.png",
+      "sha256": "350558e14c29c0c4d34fe147b3287ce8794b797ef14df69268445e0d3160436f",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/shock_3.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/shock_3.png",
+      "sha256": "0b2f821cfd692cd10567fe6ec8a6af3f2158f2e1881dafbee090cccb1a5b21ab",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/small_bubbles.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/small_bubbles.png",
+      "sha256": "26d441082a5bc09ac38b6d37813df5a012464f402dc604d5276d38e8d5f2dfe2",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/spark_0.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/spark_0.png",
+      "sha256": "91c7188c44ac12ed1ea131f9886bd644baf6229e0b8cff734a6e25b3e681620e",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/spark.pal",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/spark.pal",
+      "sha256": "403a3ee73cde7f1519f3a390cc543acf561c70e1cb50ecd6594fbc3b7e72dc61",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/spark_1.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/spark_1.png",
+      "sha256": "db178625fbbcdbee39341468acd54bd5bc4ad566d7482334a9c9cae5e343f57e",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/spark_h.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/spark_h.png",
+      "sha256": "f35405ce576d6f616b57fedd6582ebf807b38e7f38dda8777828019310f328eb",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/立绘/0001-bulbasaur.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/bulbasaur.png",
+      "sha256": "3d095faebdb4171e16683b503f97760ff0575d90d1e06e017c052c9f4c2015da",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0001-bulbasaur.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/bulbasaur.gif",
+      "sha256": "e1a6800e8e26a6d2ae85c85c359110d75f3508a82371b3fe1842ebbacc9b2c9c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0002-ivysaur.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/ivysaur.png",
+      "sha256": "f54557cd88aaeeea87ed5398443270b192b67664f69f132db3f9c5345b6da9d5",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0002-ivysaur.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/ivysaur.gif",
+      "sha256": "1ce929acbe3aa60af6160cb4029484ff720548657f4049d211e430d0088c64cb",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0003-venusaur.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/venusaur.png",
+      "sha256": "b59fed943479add5943cc41141af9e1d0cf1f2c5a65c719a3569d622aad6181e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0003-venusaur.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/venusaur.gif",
+      "sha256": "39249bf8a695bbaeec4613654f9211ac455057466bf91ae7595f00f1671a9e44",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0004-charmander.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/charmander.png",
+      "sha256": "1a37594af877f71308a639e41d7da2463c70018f3eee051f8ed3888bd9d685e4",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0004-charmander.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/charmander.gif",
+      "sha256": "1c0c6dfe583825e5c6009b2cc32cbdb39115c905f4812f06553b7fefd8e2e83a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0005-charmeleon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/charmeleon.png",
+      "sha256": "988762c902ac77d7f48ee64994c1504bd31927ee6f5533aed9fd412f2ec1870a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0005-charmeleon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/charmeleon.gif",
+      "sha256": "febea821f0da480c7a6793c87d603db44eae0612c8f296e664a86328fdb6cb32",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0006-charizard.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/charizard.png",
+      "sha256": "d4b2802dd40b22ba668107e5dd4c0ac4eee33128d251502883c9148abd6a38f7",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0006-charizard.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/charizard.gif",
+      "sha256": "ca7c8dc34156aeef6188cd9cb2384122d70dd2e20cb00b9968acedddc1b7459d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0007-squirtle.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/squirtle.png",
+      "sha256": "c43bfecdd2304d242b3311a2340339c80949b68fbaa3458beb3d6e4cf3473f4a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0007-squirtle.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/squirtle.gif",
+      "sha256": "8d44a2685fe6b1b1ebc6bc7cf509ac79dd9d869821775f6281a49f0a12138d45",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0008-wartortle.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/wartortle.png",
+      "sha256": "55749c6dc654bb7ed499232e0a1a504f14e593ebbf6d87779bbdd7c4cc2ec284",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0008-wartortle.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/wartortle.gif",
+      "sha256": "5fcb535291214996055581f2901644711dc9d289c35644dcbbd0c824864e56b4",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0009-blastoise.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/blastoise.png",
+      "sha256": "052a87a7be155f154392f1e14e281a2245a4ccc611e1ee543497c056d1ec4350",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0009-blastoise.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif",
+      "sha256": "d6323dc2a62aaf72b088f1e02aadf65d4e3261c6ed870d05a319bf506f6c5c44",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0021-spearow.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/spearow.png",
+      "sha256": "5f49d8edb12d88cd59deb385c5240cb77cc0149490604ede62ee3b0211a4e5da",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0021-spearow.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/spearow.gif",
+      "sha256": "5ea4dba69e64a4f6266839d15001c9795c3dcabdec3aed4c01eb298b25e7af66",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0025-pikachu.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/pikachu.png",
+      "sha256": "dd519d3bab2b8fd5710ea618c616ec5011dd0907586f9bd8c23bebe94333df56",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0025-pikachu.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/pikachu.gif",
+      "sha256": "326dc427fccebad97ad4ab6fe42a1ec5734556b2200b306ef520c76672a5e58b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0026-raichu.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/raichu.png",
+      "sha256": "3a5ab73e2d0b6e3e4ffecf39024d94505eb567ef27989a45f852fdeef04d8ec2",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0026-raichu.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/raichu.gif",
+      "sha256": "abf9970168fdfb7e0ab84c631e7f1ba7e153fa7342069d3a330e1b3093d508a5",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0054-psyduck.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/psyduck.png",
+      "sha256": "bcacd8841fbb3099dafdc73c747e3cfa3e24bfb91c66662ee100370c8f77cd32",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0054-psyduck.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/psyduck.gif",
+      "sha256": "670eb6887dd84b8cb5a7cfd8a1a93b467baedf989a6a485a49d69d7f4ee60989",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0063-abra.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/abra.png",
+      "sha256": "ed1b057696011786a4d1bc601154216b78f41ddd1295ffb622520110a5615f3f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0063-abra.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/abra.gif",
+      "sha256": "035b1db2b9e7be1852fe6b3abd4aa8b7b82888def4bf009e80e59d6e25b3550f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0065-alakazam.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/alakazam.png",
+      "sha256": "4733821af7974ebb45f418659ad67f95cabc3853c86cc0aae07bc88eb6f11580",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0065-alakazam.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/alakazam.gif",
+      "sha256": "8ed59a978621527b23831b59d098000e3c87aa875a326c8d5f2d4384163d4ffb",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0066-machop.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/machop.png",
+      "sha256": "46cb49db49913791dc520346d9252937a5dd7d0fba991da7add90c6f6b3631c6",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0066-machop.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/machop.gif",
+      "sha256": "e0a8a93065ee6d9c64bf50a2492c0f6a732381885b6c92556e74c258c58ee714",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0067-machoke.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/machoke.png",
+      "sha256": "7c266c63f9a6ab05474c292edf473c7f17097a05a549a427926eaf9d4db660d2",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0067-machoke.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/machoke.gif",
+      "sha256": "9c61b1cb9c52ccfa0cb419822ff2d6980a5799eb738fc0573a75dc55f45ab1b3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0068-machamp.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/machamp.png",
+      "sha256": "132efceee2c7754fb714b7b72a03199ca3f38dc2e14fed4246f893b72a3614a3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0068-machamp.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/machamp.gif",
+      "sha256": "f129fb3f5d1cca47acc8c61b6405844533d60243962fa8351edba86d9a965817",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0092-gastly.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/gastly.png",
+      "sha256": "45c1927245c8d4a721714ce3f03e31fab019db329b7b4cfa69d37fa07bbf562d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0092-gastly.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/gastly.gif",
+      "sha256": "a1b70cd7e870d1385c67d7d3c0fe9dabc3fc2189eb6933085dbdde076a4a52e5",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0093-haunter.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/haunter.png",
+      "sha256": "a1f468b1318cf939b654c64094e153caa980b95c484d5d92a78d63b8febe2566",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0093-haunter.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/haunter.gif",
+      "sha256": "dc55c5d5b3eee25df157c6ebbaf96fe78ce77e1fa3a62c5be7cf2b6b760d13ba",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0094-gengar.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/gengar.png",
+      "sha256": "3145d4f8b51202a3c4353efb5b8d75693b9a248b2c419425259b105cad91d195",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0094-gengar.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/gengar.gif",
+      "sha256": "2359600e5579a3bb9f341d7cb3979af1deeb44026a7632da0606fbaa75b6f27b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0095-onix.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/onix.png",
+      "sha256": "576e2accd4e2d9d7226ec670c586102f88a939cb35f688abbdb6034d95572608",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0095-onix.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/onix.gif",
+      "sha256": "b946c49b157c39f2e8dc1ec6f0d38091982b50541f51d1332eaa9aad999382bb",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0123-scyther.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/scyther.png",
+      "sha256": "0a62933b5e24fd7a422b263dfb21ef51f175f30a4f8f590e9121ee7584c5525b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0123-scyther.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/scyther.gif",
+      "sha256": "d1993f110b8d9755b3d80d3e40f9d098997792fba868adf45878278e6f360875",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0129-magikarp.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/magikarp.png",
+      "sha256": "69fceda25b9fa934c86af6cb57ba76579bcbf917ad374c5ddfb8e336c08e3ef3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0129-magikarp.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/magikarp.gif",
+      "sha256": "c525be2da4a5198d91488fa790b0536014434caa5db9d7cf5a2b32eb2fc0b86f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0130-gyarados.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/gyarados.png",
+      "sha256": "10582ca1f3c38ef6c9c5d9fecb25efbe5761503db173127f381219e8de428ea3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0130-gyarados.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/gyarados.gif",
+      "sha256": "f947439db16c6592c9734a101a0d3b285a6f5418c9142279674625aaa275fd5a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0133-eevee.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/eevee.png",
+      "sha256": "578c4f6d2608cb1c6e025bf848ca68fd8ee3d61226dd35b741ee616486c85afe",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0133-eevee.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/eevee.gif",
+      "sha256": "c86b9ea6fff23b73b2c955d05eb3bd3334d8c607b9f461c953a8b02ce6cb56d8",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0134-vaporeon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/vaporeon.png",
+      "sha256": "75bce3c17ee617fbee47f9a8756e6b121ee50cd95f464d99d0e4686bc8ede504",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0134-vaporeon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/vaporeon.gif",
+      "sha256": "da1da43e3e69076e9a3f3bf7362ff3bfff38bc669bed6b49ca587bce868cb3cd",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0135-jolteon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/jolteon.png",
+      "sha256": "b7f63afe0b38febcff1dda72cbe6020fb4774cf0d02741bbfae1a45a49a6cb6a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0135-jolteon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/jolteon.gif",
+      "sha256": "16b7ef4c84c7319a3e43bdc8ff41b0a513e2020aaa80af8c5f7e28eba4743f8f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0136-flareon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/flareon.png",
+      "sha256": "8cc21974e3720c7ff09022e3c0490041080acdecf73d5d09fd672bc866fa3a6a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0136-flareon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/flareon.gif",
+      "sha256": "7986903ade97b8428e3b5c81b638ef1a0af9c702344fc21b18626825d4da80f1",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0143-snorlax.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/snorlax.png",
+      "sha256": "0225610dc45ff23d91a9403596ca2b4cf1c4216ffff90d11d510f887f6ebef37",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0143-snorlax.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/snorlax.gif",
+      "sha256": "55aad0c3ae0d7c3f9c2c210a42cb57ad0d490927fb5fadd704d862e7048d6143",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0144-articuno.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/articuno.png",
+      "sha256": "96760ad3c8cee17fae013dec1e5bf0cd8c7b102b400e28913818b5698fbe89bd",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0144-articuno.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/articuno.gif",
+      "sha256": "0635d3e0f2e9327fc9b1b469002db65c165825bdb7f39d780c319b37ae20f1ec",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0145-zapdos.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/zapdos.png",
+      "sha256": "c23964b8cfcb44cfaf57e1bbc4ddb452d626158ddb067b677c25fbd7bd4daadd",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0145-zapdos.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/zapdos.gif",
+      "sha256": "a496c108082a0f722b67abfcf21b22214766ba95518a511c161947066706feef",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0146-moltres.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/moltres.png",
+      "sha256": "88a075e1c383c43045a5ae9fb2ff57a2bd282dbc266adee071b2ca8b18d1e0cc",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0146-moltres.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/moltres.gif",
+      "sha256": "66ea7b6b34548d5c0f6cdce15d4f245742fc40f4817f7a1789a152e148b321ca",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0147-dratini.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/dratini.png",
+      "sha256": "c8c6327319a793745eb70c11e9636a9a1ead4ce28711d8d6fd2d600ed03e7b2f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0147-dratini.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/dratini.gif",
+      "sha256": "a84352accbb6fe12f47f8fb93fa7ba0b13cdb91625b8b145fda0bfa8576d2134",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0148-dragonair.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/dragonair.png",
+      "sha256": "c898f7cd8d4f167a95aa74fd6f523fa4fc0f1206a54b042a38172959b58d0ea0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0148-dragonair.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/dragonair.gif",
+      "sha256": "e1eb4977825a8da202ec7bc402ba76a4be5ad7cc632de5fa5c2b91ec55deae00",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0149-dragonite.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/dragonite.png",
+      "sha256": "c97ebd19b812b5a2eca5319870fb74598805f698dd8249fa88b2d73f324a59be",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0149-dragonite.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/dragonite.gif",
+      "sha256": "527321433e3b4fe08203a8cbbcb7ba50aa659113adfc5cf442ad54b2c9226ecb",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0150-mewtwo.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/mewtwo.png",
+      "sha256": "c2256a90c93116d04fab63db3c4e1158be41bfcfba57bec1206fe6c42d9970b3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0150-mewtwo.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/mewtwo.gif",
+      "sha256": "5df5ce7b01af650c948fae25e3400d5a09ef0e8f372ae52e0d26eb539bf1c0a0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0151-mew.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/mew.png",
+      "sha256": "35c92269fb59d3a380eeada2d487475e64a3cd664677c842aab7a3aff3b9cfd7",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0151-mew.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/mew.gif",
+      "sha256": "42d89a9365d7a265b8c06c23d1702470f49c1b1442b4afc384782430942416ca",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0196-espeon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/espeon.png",
+      "sha256": "6428869926fb641dfba6a33b513f803ad4732878686b7598354e4c4e76cc957d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0196-espeon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/espeon.gif",
+      "sha256": "7f0f184a7959e7a9a173b306cb26c7c7489f9ae3577475f37a8538067c512039",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0197-umbreon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/umbreon.png",
+      "sha256": "438afb6112f5363984e5514e4bcd2451b6d0943dd0cc0f0007a09b21bdaf46fb",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0197-umbreon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/umbreon.gif",
+      "sha256": "b1e8a520cdcf798a4f7af7517e0d89f5a9799484f947645da72ac5fd13791586",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0208-steelix.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/steelix.png",
+      "sha256": "e30ab24cedc95ee517509878e056bbd69b05b28b5234166ffbe7d1420f52d7dd",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0208-steelix.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/steelix.gif",
+      "sha256": "0cd0353ac8d29bb794f0e7fe55db2c168d2e88466b312c1353cffba9c1825446",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0212-scizor.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/scizor.png",
+      "sha256": "8ffbdc521220c5fcea42e311ba448c19799fec8cb6dcdec342913e1ba387646a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0212-scizor.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/scizor.gif",
+      "sha256": "e6ab6238406c65e8635b83bf1b185ec73b06bf38a6e3b4ea4363cfd8db412b3c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0280-ralts.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/ralts.png",
+      "sha256": "5b6df942bc9c596cff75f56256f3de363559785ba2dc5a7a258c0836b89094e7",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0280-ralts.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/ralts.gif",
+      "sha256": "91927fc93ce4d5a816d994761f94e83720305ccf59607e8ab92400fe92d04eb9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0281-kirlia.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/kirlia.png",
+      "sha256": "bb14574c31efad9aecec581c83b1ae5440db921853f64acf699464d226ebf1b9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0281-kirlia.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/kirlia.gif",
+      "sha256": "4d08309b76bef5f850bd333f940e46daa62ec81e322b483aaa88b12fddb84f6f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0282-gardevoir.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/gardevoir.png",
+      "sha256": "0cf5f1e59eb1821350d50044baa1f3f7fe7fdfbba28a5d7a85b4938d3ffb6b28",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0282-gardevoir.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/gardevoir.gif",
+      "sha256": "44c7e85e2bd99c82cfecf0d5e04bef3b499fdcd7eb8e8d9f394d8d39c59cf8bc",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0448-lucario.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/lucario.png",
+      "sha256": "6648151b971eaf3aa2d6d437ac04f8eb0fa0ceff7675469ec5d206b89cfe1f41",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0448-lucario.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/lucario.gif",
+      "sha256": "35f3a34300f5698fd515ac64087c52381231ec79dbcad936dea211251d0c79c0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0470-leafeon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/leafeon.png",
+      "sha256": "61c891a4ab655c55fc312c7656417e3be05fb528ff2b50658a84a4acff91997b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0470-leafeon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/leafeon.gif",
+      "sha256": "d8bf5434a96a220e78decc53362cdea155ac8a5f332981281cce91a499332ce0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0471-glaceon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/glaceon.png",
+      "sha256": "a63b37c412e19fd10ae9771d535de40e8eb4f1ad190d4940b0db5c04fbdd82d7",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0471-glaceon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/glaceon.gif",
+      "sha256": "f3278b851274aaa9b23a2105d5380c1e081bfd7c7bb3cf8a68cb9bc489f74975",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0658-greninja.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/greninja.png",
+      "sha256": "7d4986d5646a61ee426e7eb5eabfe7f9d656b34d6d95792336d10af07198d071",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0658-greninja.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/greninja.gif",
+      "sha256": "27cdc8440b6333622f5c87aaef44cfa8d55bb9a8a6adac3185e3b60ace9c5f17",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0700-sylveon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/sylveon.png",
+      "sha256": "49c1dcbd61d2a15b78b9d33373821b32759dfc31f9dbf3356ecbbdf85c0ca1ab",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0700-sylveon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/sylveon.gif",
+      "sha256": "12c2ace0ba31ecc527ae1df491c14d0f29ee502091bdea76e80083e49f395a78",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/原版战斗动画/sharp_teeth.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/sharp_teeth.png",
+      "sha256": "82743abdabb1bb8bf1b2861ac44a2f21d4b645bf3be97d9e12b800a77fbe5308",
+      "baseline": "source Git blob and pinned upstream"
+    },
+    {
+      "path": "素材/原版战斗动画/impact.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/impact.png",
+      "sha256": "8f2a0eb54120d2cc50d24ccd92e2934d9b5c94c13f008198b6306c193fd8721d",
+      "baseline": "source Git blob and pinned upstream"
+    },
+    {
+      "path": "vendor/showdown/fx/alpha.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/alpha.png",
+      "sha256": "c8832cd9b8a201981abbe5ca2bb2576f89d80041511967e4d4d0efeec50ac597",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/angry.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/angry.png",
+      "sha256": "5ea8b4f3f01f9461870d545c4c34f3fd8e448daa53d7ec9994a5d22ade6afc3d",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/blackwisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/blackwisp.png",
+      "sha256": "67386ed656053c716951ee9e0fc74d62b1bac650b4f25d7adcc055459ddef94e",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/bluefireball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bluefireball.png",
+      "sha256": "b3cac70933b333c2997142bba6069ebbb3b5f52d3facd73b1d83a62e4327dab2",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/bone.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bone.png",
+      "sha256": "8a58a73e81f001416740442a46be3f37f286377a4f8361e07024c30265856a6f",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/caltrop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/caltrop.png",
+      "sha256": "8855c6342bffe354ad742142ecd3546a1a64e699b94adc36fe93a011a41e07ee",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/energyball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/energyball.png",
+      "sha256": "3e69c9ef298a14a124242ae56ac4f54351b62e05269dcbc096df676c45744156",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/feather.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/feather.png",
+      "sha256": "112b309c114c9d81ff1d1164839a3b48275d6b0578bb9241e8b5c06065259bf8",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/fist.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/fist.png",
+      "sha256": "6f4d45f65e3ad9c3667a79b3bd9f5b2af837647de4e1479386886c88c150050a",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/fist1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/fist1.png",
+      "sha256": "836a2b203fcc6ebfcc713e2f73369714bc6715e253bac81b1aac0b524327db34",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/flareball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/flareball.png",
+      "sha256": "bb713056ebb2d6d9eee563d5d8a3ec7a33617c58f06a92a89efc19a86c192a06",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/foot.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/foot.png",
+      "sha256": "478e0c97418137fa9290d468cd990bbd724214e88d83ec3df681662bf114667e",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/gear.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/gear.png",
+      "sha256": "139a80c8e7cac4c63574c6c5a2bd5997e29de8c2aeab5c23772f71657d5f129e",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/greenmetal1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/greenmetal1.png",
+      "sha256": "978c308877a89cf1a89e8f7d0d73b5d80a4e7e94c3196e92e1a4283ccd09b209",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/greenmetal2.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/greenmetal2.png",
+      "sha256": "9771787ffb15d15858c9864eac8947ed84cf3a4f6d71c828684b227ce41b5797",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/heart.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/heart.png",
+      "sha256": "62afb3c9c0ea6e4477114577353602711ddbcab6c5258c67be2563c901e08b2b",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/hitmarker.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hitmarker.png",
+      "sha256": "ea594f5f29f78232038ea4b2e5de0f70ea96401569a6d6ad240a2189d65d2f7f",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/iceball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/iceball.png",
+      "sha256": "6b66ab6fc33fbd06ad16afb77c23e7cda7ebb41a5075a0903143f4f9279a29d8",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/icicle-pink.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/icicle-pink.png",
+      "sha256": "2d816f5f9e6a0b1eff10a9381cf912b90954fb3af829b4a3a3453726b79b9857",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/icicle.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/icicle.png",
+      "sha256": "81046c6c2f6c4da88da4f6d466f51366745c086eb7edc61b2da4fb89395029f3",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/leaf1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/leaf1.png",
+      "sha256": "608a387738675f34f9228be3e4f5a10089360c18a43f7df2809975657f34f15e",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/leaf2.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/leaf2.png",
+      "sha256": "82a732a9e732f20e53578c34f1fb1dc3a1e6214c0c2e36c4598a4ef7a0b20057",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/leftchop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/leftchop.png",
+      "sha256": "b1cd8c5dea9c977b2de61cf8aa25763ed06e5555c9a860dba5eaf0e64496458a",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/mistball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mistball.png",
+      "sha256": "4ea7bbf58196f6a60be073fde13f126b41e2796752112ff73e69714d6951d406",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/moon.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/moon.png",
+      "sha256": "bfbb583832854456f50f0e272d3e2e3cdecb28040617ba0d38394aee0e46945e",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/mudwisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mudwisp.png",
+      "sha256": "1fd09f0213c7bbd3133ef6f989ecd41a7c9269fa86c38b3676278f151ecf1538",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/omega.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/omega.png",
+      "sha256": "8a684ee41e92fd31ef6567d8c50599d109925e7457351d22b9f442816b87b79a",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/petal.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/petal.png",
+      "sha256": "81bfa521d66da0fda30a6db44a7685838d496da76f306af999c97f4646c7eb3c",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/pointer.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/pointer.png",
+      "sha256": "a89ddbff81e1479cadaf09e8a77d4d4ef5beb23b87e3e8dda55e38e7d9a84448",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/poisoncaltrop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/poisoncaltrop.png",
+      "sha256": "afbc88bd51ccbb34c952679ad2e6ea2c35b07b1d4a24088ace7b1326585feb7e",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/pokeball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/pokeball.png",
+      "sha256": "0e3d568fd7c206b2768b1396f4b50e13c1c2034b64dc96718bd8199453965084",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/purplewisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/purplewisp.png",
+      "sha256": "eeff3b5c5fa35796e272f94aa066355a5c57bcd639131dd2b3dad6e671722a90",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/rainbow.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rainbow.png",
+      "sha256": "9e783194f5aecac013895930293b8a5a30d3633dde2fef0e0885801bff2b2daf",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/rightchop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rightchop.png",
+      "sha256": "cce9fd8c4debf3f4bab2c9c4f498264eebbd4dc6cb105bcf5af21098ae24abdc",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/rock1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rock1.png",
+      "sha256": "66f60b5c1ba066f6388e7cdbf8515ad1e5a95eb95347014c9d973eee2b3a9f97",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/rock2.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rock2.png",
+      "sha256": "8c403a0a38b9e745329eddedce5c1eb9676be36f7aa8040732b0a8d5c90c516a",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/rock3.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rock3.png",
+      "sha256": "320099aa3d9be7eec716ba22bcff2b6d5f38d91d8ee7e2ae88a5f8697d6f794a",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/rocks.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rocks.png",
+      "sha256": "132c0725f1afd584ac5b754c337cca7568c5d5d49058c476601f0af37a98e6b8",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/shadowball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/shadowball.png",
+      "sha256": "095793124bd03f8fb03449b865f8b6dba95bb6325105510eed5f598367c997d5",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/shell.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/shell.png",
+      "sha256": "69cf5ebc38af7365f5246e14250628d51db2afcc0cbd0ab34d08d065ebcd56be",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/shine.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/shine.png",
+      "sha256": "22d78fd51531fa27d9710c456c1962ec144b0b04ddd245fb19b379100f43b950",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/stare.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/stare.png",
+      "sha256": "1e5824f30205d4c89bb8907fd04647335ba441c518d2e2c4b4a5564f008edb99",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/sword.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/sword.png",
+      "sha256": "ead33650edcd6c00b726f42202ffb40702b3d5f06e7f93fe2e1766dff0782bbf",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/ultra.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/ultra.png",
+      "sha256": "a6805ae5b30137ece1a50800cd3f1375bdc509ebfba8d295dedda7f5500ef50a",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/waterwisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/waterwisp.png",
+      "sha256": "264d200ffb493324c3b49b0e3802fc74c2c596a75d7ed5d8512da1dc68fd5ee7",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/web.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/web.png",
+      "sha256": "71974312c14157cb0302448d821d172c5620c5a4c48fb70fc678d26995f2778c",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/wisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/wisp.png",
+      "sha256": "5418f62c9134de754fa2dcda890486ea7d14b7d0c3f2fedb895587a23c1ff42c",
+      "baseline": "source Git blob and pinned upstream receipt"
+    },
+    {
+      "path": "vendor/showdown/fx/z-symbol.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/z-symbol.png",
+      "sha256": "95fd24fcce5cfc6e01cd92b39400d376107355e262186ff5cc139bdf06a46eac",
+      "baseline": "source Git blob and pinned upstream receipt"
+    }
+  ],
+  "conversions": [
+    {
+      "path": "素材/原版数据/状态贴图/par.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/spark_2.png"
+      ],
+      "sha256": "64ba0284533a7508920c5537028cc338efc474c7eee4044127b881ef64d28edd",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/原版数据/状态贴图/brn.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/small_ember.png"
+      ],
+      "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/原版数据/状态贴图/psn.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/poison_bubble.png"
+      ],
+      "sha256": "011f5bd96b180fa8aae430514c99fb33aac0f71933d7577833384f45f7d4001f",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/原版数据/状态贴图/crystal.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/ice_crystals_0.png"
+      ],
+      "sha256": "5571dd9d34a946a3de23dd30881642d1630d346550f95eef386233991a3c99f8",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/原版数据/状态贴图/frz.png",
+      "operation": "ice-cube-96",
+      "inputs": [
+        "素材/原版数据/下载/ice_cube_0.png",
+        "素材/原版数据/下载/ice_cube_1.png",
+        "素材/原版数据/下载/ice_cube_2.png",
+        "素材/原版数据/下载/ice_cube_3.png"
+      ],
+      "sha256": "5ef5f737fda88cdb6d00e8d82333a891b1219eea0a3eb45ee4dca6aedc95f73d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/V1p素材/air_slash.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/air_slash.png"
+      ],
+      "sha256": "8c16b0013c864738f53789758661249c7126d2e9248bcddb6072b0a538c728ba",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/V1p素材/claw_slash.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/claw_slash.png"
+      ],
+      "sha256": "783f37276111d92d2dcfbf14a9d9fe9eb2a01ecd9f33050757afe7311ee9fcf0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/V1p素材/claw_slash_2.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/claw_slash_2.png"
+      ],
+      "sha256": "cc8d4699520d411c003e5f22e062b99bfa5f84daa680b002f0352d19a67ba267",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/V1p素材/electricity.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/electricity.png"
+      ],
+      "sha256": "20c5b3b7015033215f727dfad35a09bcd4f910c98f9e8eb558b8f83093e90c7f",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/electric_orbs.png"
+    },
+    {
+      "path": "招式动画/V1p素材/fangs.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/fangs.png"
+      ],
+      "sha256": "ad629150c6a3dfa1223db1341aa28edaae8a0526232e67093a4ff3e5c40baa03",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/V1p素材/fire.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/fire.png"
+      ],
+      "sha256": "bc1f80aa3a02e00649012c804a6549af9ae96ae5713b37db2d562d1c6363d25d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/V1p素材/impact.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/impact.png"
+      ],
+      "sha256": "8d4030536514e032dafa2f53f0b3128d5f05500689343fc96786e13af870d41e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/V1p素材/lightning.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/lightning.png"
+      ],
+      "sha256": "32f6ff91fce8aa2e2a70d4d285e7a7475530af10c4e2118b74f45bfdaef76be2",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/lightning_2.png"
+    },
+    {
+      "path": "招式动画/VA2/原版/air_wave_2__ANIM_TAG_AIR_WAVE_2.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/air_wave_2.png"
+      ],
+      "sha256": "ef7b3d6d08d6b06051407382caf3d0efba1b3c178e279aa4ebfe404f2e6f58ce",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/blue_star__ANIM_TAG_BLUE_STAR.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/blue_star.png"
+      ],
+      "sha256": "868e22db9f787805880f193058749509c7a3344d6829bf224ebe7e4ba19190d5",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/bubble__ANIM_TAG_BUBBLE.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/bubble.png"
+      ],
+      "sha256": "c2034190a0ee205b8e69f75855d37194a0588b55f4536ddef00e6baff3fc02ce",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/rain_drops.png"
+    },
+    {
+      "path": "招式动画/VA2/原版/glowy_red_orb__ANIM_TAG_GLOWY_GREEN_ORB.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/glowy_red_orb.png"
+      ],
+      "sha256": "f3973ac9d8d36ebc9c8b95eab8aa17fbbda58e09effaac11f30ae2ac16c102c1",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/glowy_green_orb.pal"
+    },
+    {
+      "path": "招式动画/VA2/原版/glowy_red_orb__ANIM_TAG_GLOWY_RED_ORB.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/glowy_red_orb.png"
+      ],
+      "sha256": "7756185c8aedb00fb20679e0b6c75bc872640b8f4ff77047a82257fd871cfc2e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/gold_ring__ANIM_TAG_GOLD_RING.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/gold_ring.png"
+      ],
+      "sha256": "f159e6de4adfac37c4b5a6c3b864f6ff30906504dd035833fed5e97072c039aa",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/gust__ANIM_TAG_GUST.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/gust.png"
+      ],
+      "sha256": "5607c973e729853b1bed0fc743584078710307cc61640eef278f92373d27d6f5",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/ice_crystals_0.png"
+      ],
+      "sha256": "5571dd9d34a946a3de23dd30881642d1630d346550f95eef386233991a3c99f8",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/ice_crystals.pal"
+    },
+    {
+      "path": "招式动画/VA2/原版/ice_spikes__ANIM_TAG_ICE_SPIKES.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/ice_spikes.png"
+      ],
+      "sha256": "f4ab94225c530cece2ecdcf275c7cfb3be6b79d5e4acc25b7c37ed13ec7b1b0d",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/ice_crystals.pal"
+    },
+    {
+      "path": "招式动画/VA2/原版/leaf__ANIM_TAG_LEAF.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/leaf.png"
+      ],
+      "sha256": "d34dd53bfe5868e71d232713e2d34b086ac6bc3ea8ab64f7354989634ccbb163",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/lightning__ANIM_TAG_LIGHTNING.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/lightning.png"
+      ],
+      "sha256": "32f6ff91fce8aa2e2a70d4d285e7a7475530af10c4e2118b74f45bfdaef76be2",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/lightning_2.png"
+    },
+    {
+      "path": "招式动画/VA2/原版/needle__ANIM_TAG_NEEDLE.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/needle.png"
+      ],
+      "sha256": "4ce65ddaaca284ccdc470fb292fd2c018abc03d63a4ec92272a68f1bfad433bf",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/orbs__ANIM_TAG_ORBS.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/orbs.png"
+      ],
+      "sha256": "33618b641a599eb9302c75581c9eb5d9337fdf28d02e40ddef676e6ccc503973",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/poison_bubble__ANIM_TAG_POISON_BUBBLE.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/poison_bubble.png"
+      ],
+      "sha256": "011f5bd96b180fa8aae430514c99fb33aac0f71933d7577833384f45f7d4001f",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/razor_leaf__ANIM_TAG_RAZOR_LEAF.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/razor_leaf.png"
+      ],
+      "sha256": "f9fa295154ad5ac0a98fac64c7f6eb6be416060a4f2a1fcf91da472ffa714ee0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/small_ember.png"
+      ],
+      "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/tri_attack_triangle__ANIM_TAG_TRI_ATTACK_TRIANGLE.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/tri_attack_triangle.png"
+      ],
+      "sha256": "e9b6aae7c3ccb8ab050f897856c57edc69d9f0a5be8b68d846b094d32eb7d43d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VA2/原版/water_orb__ANIM_TAG_WATER_ORB.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/water_orb.png"
+      ],
+      "sha256": "c12ddcc23266c5d457d136805d39c51eec6056b74f07e6403f50ba8ff1239f20",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/water_impact.png"
+    },
+    {
+      "path": "招式动画/VA2/原版/yellow_star__ANIM_TAG_YELLOW_STAR.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/yellow_star.png"
+      ],
+      "sha256": "82ea22365794912c7d992f95237fd9bd5df09746c054e1963806530445b51a3a",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/claw_slash__ANIM_TAG_CLAW_SLASH.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/claw_slash.png"
+      ],
+      "sha256": "783f37276111d92d2dcfbf14a9d9fe9eb2a01ecd9f33050757afe7311ee9fcf0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/cross_impact__ANIM_TAG_CROSS_IMPACT.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/cross_impact.png"
+      ],
+      "sha256": "5242434704ec85453c951e427756d850f3db0092bd9962b10c61ab9b6cec6109",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/gray_orb__ANIM_TAG_BLUE_ORB.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/gray_orb.png"
+      ],
+      "sha256": "456d12cb7c7d92e6d52af3fbe0719a712e4e5e2bd1d265018679e41b8d26d546",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/blue_orb.pal"
+    },
+    {
+      "path": "招式动画/VB1原版/green_light_wall__ANIM_TAG_BLUE_LIGHT_WALL.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/green_light_wall.png"
+      ],
+      "sha256": "c9efdcd0b525f8422750f90a9ea2b050e61967b0d0a1cb5e611568b20b514188",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/blue_light_wall.pal"
+    },
+    {
+      "path": "招式动画/VB1原版/gust__ANIM_TAG_GUST.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/gust.png"
+      ],
+      "sha256": "5607c973e729853b1bed0fc743584078710307cc61640eef278f92373d27d6f5",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/hands_and_feet__ANIM_TAG_HANDS_AND_FEET.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/hands_and_feet.png"
+      ],
+      "sha256": "43d4d3c3d8cf8463583ce3d47aaa0b8e2e606205ac88e53add472e8febe67f06",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/impact__ANIM_TAG_IMPACT.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/impact.png"
+      ],
+      "sha256": "8d4030536514e032dafa2f53f0b3128d5f05500689343fc96786e13af870d41e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/leaf__ANIM_TAG_LEAF.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/leaf.png"
+      ],
+      "sha256": "d34dd53bfe5868e71d232713e2d34b086ac6bc3ea8ab64f7354989634ccbb163",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/lick__ANIM_TAG_LICK.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/lick.png"
+      ],
+      "sha256": "7b63734fbae5e25842d204a47290fd5e7af559481bb19eda3f4cc3b1685d1003",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/lightning__ANIM_TAG_LIGHTNING.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/lightning.png"
+      ],
+      "sha256": "32f6ff91fce8aa2e2a70d4d285e7a7475530af10c4e2118b74f45bfdaef76be2",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/lightning_2.png"
+    },
+    {
+      "path": "招式动画/VB1原版/magenta_heart__ANIM_TAG_PINK_HEART.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/magenta_heart.png"
+      ],
+      "sha256": "5b96ae9cecbffb5622cd04abe484c6bf14bfe171d127d050bb4ee95d75b614ec",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/pink_heart.pal"
+    },
+    {
+      "path": "招式动画/VB1原版/orbs__ANIM_TAG_ORBS.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/orbs.png"
+      ],
+      "sha256": "33618b641a599eb9302c75581c9eb5d9337fdf28d02e40ddef676e6ccc503973",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/scratch__ANIM_TAG_SCRATCH.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/scratch.png"
+      ],
+      "sha256": "19399f7f70a7eff31609c446d795c0dbed2615a4cf018c0a2f27cd8f3f563492",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/impact.png"
+    },
+    {
+      "path": "招式动画/VB1原版/slam_hit__ANIM_TAG_WHIP_HIT.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/slam_hit.png"
+      ],
+      "sha256": "3f6646dde1c54e22a7213a4b44dd228de3e23c003cdfd5d48a4476e00e016088",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/whip_hit.pal"
+    },
+    {
+      "path": "招式动画/VB1原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/small_ember.png"
+      ],
+      "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VB1原版/torn_metal__ANIM_TAG_TORN_METAL.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/torn_metal.png"
+      ],
+      "sha256": "9366aef73445c1d0d7880c4c6171db61949ca082eb750d11f7532a0aa4b419aa",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/blue_light_wall.pal"
+    },
+    {
+      "path": "招式动画/原版/air_wave_2__ANIM_TAG_AIR_WAVE_2.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/air_wave_2.png"
+      ],
+      "sha256": "ef7b3d6d08d6b06051407382caf3d0efba1b3c178e279aa4ebfe404f2e6f58ce",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/原版/claw_slash__ANIM_TAG_CLAW_SLASH.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/claw_slash.png"
+      ],
+      "sha256": "783f37276111d92d2dcfbf14a9d9fe9eb2a01ecd9f33050757afe7311ee9fcf0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/原版/flying_dirt__ANIM_TAG_FLYING_DIRT.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/flying_dirt.png"
+      ],
+      "sha256": "b6246515aeda41b1f2006589cb98db156c6c772515569024d97981fee7c73523",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/原版/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/ice_crystals_0.png"
+      ],
+      "sha256": "5571dd9d34a946a3de23dd30881642d1630d346550f95eef386233991a3c99f8",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/ice_crystals.pal"
+    },
+    {
+      "path": "招式动画/原版/ice_crystals_1__ANIM_TAG_ICE_CRYSTALS.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/ice_crystals_1.png"
+      ],
+      "sha256": "719cc49917741cc187551ebda1e0cb3406559657d9c8d25643ef0f6e2cf34714",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/ice_crystals.pal"
+    },
+    {
+      "path": "招式动画/原版/ice_crystals_2__ANIM_TAG_ICE_CRYSTALS.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/ice_crystals_2.png"
+      ],
+      "sha256": "0a1fea7b8140506fa2b3dd838d55c2230f745dd81f761d51052cdd3aaf83de15",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/ice_crystals.pal"
+    },
+    {
+      "path": "招式动画/原版/impact__ANIM_TAG_IMPACT.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/impact.png"
+      ],
+      "sha256": "8d4030536514e032dafa2f53f0b3128d5f05500689343fc96786e13af870d41e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/原版/lightning__ANIM_TAG_LIGHTNING.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/lightning.png"
+      ],
+      "sha256": "32f6ff91fce8aa2e2a70d4d285e7a7475530af10c4e2118b74f45bfdaef76be2",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/lightning_2.png"
+    },
+    {
+      "path": "招式动画/原版/shock_3__ANIM_TAG_SHOCK_3.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/shock_3.png"
+      ],
+      "sha256": "366b0e91970008a986c5d149557d315943ef0b0af64d45fe41cb57b70d7ea222",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/原版/small_bubbles__ANIM_TAG_SMALL_BUBBLES.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/small_bubbles.png"
+      ],
+      "sha256": "2829fcea0ffa781951e5a4272dc2916fa0c370248b5e58a69c65471c16763a0c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/small_ember.png"
+      ],
+      "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/原版/spark_0__ANIM_TAG_SPARK.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/spark_0.png"
+      ],
+      "sha256": "f85b6be7e4d328f7901be9b5c1331dc8bbca7d5100b13bc4a1d1ff32c092ea22",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/spark.pal"
+    },
+    {
+      "path": "招式动画/原版/spark_1__ANIM_TAG_SPARK.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/spark_1.png"
+      ],
+      "sha256": "b190483f547e2ea155147320711b7b21daef7a709b26bfc208f3e722bbee9fb6",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/spark.pal"
+    },
+    {
+      "path": "招式动画/原版/spark_2__ANIM_TAG_SPARK.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/spark_2.png"
+      ],
+      "sha256": "64ba0284533a7508920c5537028cc338efc474c7eee4044127b881ef64d28edd",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/spark.pal"
+    },
+    {
+      "path": "招式动画/原版/spark_h__ANIM_TAG_SPARK.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/spark_h.png"
+      ],
+      "sha256": "03656b8023395d26bd4b813931e2b4a54703f85549ceb738effecf3db498d2bc",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/spark.pal"
+    },
+    {
+      "path": "招式动画/原版/water_impact__ANIM_TAG_WATER_IMPACT.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/water_impact.png"
+      ],
+      "sha256": "797bdfd9e792351ba3efd72740bc72ff6e920e4b766a07203b9f6c34c57ecb36",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0001-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0001-bulbasaur.gif"
+      ],
+      "sha256": "fdf1d00bae6b81d76e83243723b52ebaec3724e6bdc2e71170aac40dcdb14d38",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0002-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0002-ivysaur.gif"
+      ],
+      "sha256": "bcc1c3d2f3b17e712f16a1c4002a103fe35b5deb07e43dd6e97ce49ace3754b0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0003-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0003-venusaur.gif"
+      ],
+      "sha256": "95808819f6a3f418b78c955c66840627f3f13e8213688d5c68c015463ddc0034",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0004-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0004-charmander.gif"
+      ],
+      "sha256": "395d82b1374814aafda247651eddb53cbab282be8dbc6d2c8bc58c559548c349",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0005-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0005-charmeleon.gif"
+      ],
+      "sha256": "b7617c77ee3743b6ab1575514509f1011a1ee9fff8cafe90db474dc6519389b3",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0006-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0006-charizard.gif"
+      ],
+      "sha256": "236cf13feae8b93add7a7bc680bcc383d7d9f2c7d1a6383d4b112d3c9dfefb34",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0007-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0007-squirtle.gif"
+      ],
+      "sha256": "2c8cdc8e544554075d8fa9519f0c8e1e873f5d0958eb607fde2e6433814d3376",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0008-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0008-wartortle.gif"
+      ],
+      "sha256": "07c8af85c7d1b372782e3be66d687922d028e11bbbceb2477c70fa0b1d8a8ee3",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0009-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0009-blastoise.gif"
+      ],
+      "sha256": "71209f9ebaee1d4e1f33af824be9dc08dc346868cfcb6f9977cd74488a0aa22a",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0021-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0021-spearow.gif"
+      ],
+      "sha256": "43741ae4587b55dcdfa4ac7d216d2c7924dbe1b94b841c84370f29cafcfb1ea6",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0025-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0025-pikachu.gif"
+      ],
+      "sha256": "02831e4964a8e1ecd30623f16d9457be64eb7c26c34322b0af28d0ce1b55762c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0026-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0026-raichu.gif"
+      ],
+      "sha256": "bd566a7a8f808eeab1902b216234ab3e22b631dab138b5e59e05cd4e6866261f",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0054-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0054-psyduck.gif"
+      ],
+      "sha256": "b2e243f538c8264ecf2edebde3a8d1b7ae9ea2d82f2d93b866d1702f36b3a461",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0063-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0063-abra.gif"
+      ],
+      "sha256": "620c6654a3bc276a2bbff8f3a96802dcced608b4ea485f499204e3d489569949",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0065-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0065-alakazam.gif"
+      ],
+      "sha256": "2e7a30c9af1374b95c368ed8efa3f07ca5775689e26e0ac26c4ad6b09c07c693",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0066-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0066-machop.gif"
+      ],
+      "sha256": "93766f4f18f39cd20467b1854ff3d6b34ea7ef5a0412d9a6a77d60f00cc83002",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0067-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0067-machoke.gif"
+      ],
+      "sha256": "dbd521a7e56861c32189a1d9726f95c88271e42035e645436145efcfbd81f795",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0068-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0068-machamp.gif"
+      ],
+      "sha256": "edc43a62f6ff22f44068c508ab2478da74daab476443d26a574bccf4744593f0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0092-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0092-gastly.gif"
+      ],
+      "sha256": "3f94fab1463247391b174fc1af65612677d906951a962756857f27f8d77553f8",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0093-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0093-haunter.gif"
+      ],
+      "sha256": "19a85b35e463e5a6b88b915aabb85fdaa26be82328b763e8b6aa9b0488e97487",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0094-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0094-gengar.gif"
+      ],
+      "sha256": "bb588b35d906da991d6c8d856e062a415914fbdc0cebead81dcd0d3ec15bcdf0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0095-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0095-onix.gif"
+      ],
+      "sha256": "07f16505c29ae13e314afcfe97be3472f2a2a2d7d0e6cf0709a9887bbe993d8c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0123-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0123-scyther.gif"
+      ],
+      "sha256": "5c908db2b5c5a0f6b23d47a9947118187710e629f8f4a118c3578dc3bc23e8bf",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0129-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0129-magikarp.gif"
+      ],
+      "sha256": "2ba879c503a289931bb2a89792374085278e918b5b2f5f656d19f88a29036c75",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0130-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0130-gyarados.gif"
+      ],
+      "sha256": "7566f384327e983d18e299de6261879f0852b53742e76c235f1fd7633cadbcfa",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0133-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0133-eevee.gif"
+      ],
+      "sha256": "6e38d4d70ba1d77a73f2f8172cb4f1af90e928e0f3bad7b75b82f2c11c3d4a36",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0134-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0134-vaporeon.gif"
+      ],
+      "sha256": "3d80831c1536fbfb67436b117cb8febab818c3e704b116f1e8e4808e62264a18",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0135-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0135-jolteon.gif"
+      ],
+      "sha256": "fd9a6740ab77074c5ea083b67dbc3e62a5eb1d8598fee5cac66ec80045a41ead",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0136-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0136-flareon.gif"
+      ],
+      "sha256": "04042fe832611642c7875db13ee7a1adf8c0e7839151b94a60135cbb0d00941d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0143-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0143-snorlax.gif"
+      ],
+      "sha256": "f4692fccaa5cdfa1ee8155edbf01dbca2a0e8375558169f47d65d49755835274",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0144-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0144-articuno.gif"
+      ],
+      "sha256": "cef484751b1e1c9c03953544921746459c32fdad436b44ae4054acdf49261693",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0145-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0145-zapdos.gif"
+      ],
+      "sha256": "08e521306f5a6190ce667b049baae30c67ca4fd4cdde239fa3639a347cdda3db",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0146-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0146-moltres.gif"
+      ],
+      "sha256": "11222f379ab174f6859f1d5bca6c37cea2a9c6cdd64ef0093f2318f5b67cde67",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0147-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0147-dratini.gif"
+      ],
+      "sha256": "81c9ae04ccc1f6a9ce08e8f6e43520b6b450688fd9ce8dd35b893dfe83e197a7",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0148-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0148-dragonair.gif"
+      ],
+      "sha256": "3a64ce47e88fc10b57d7544b7ff02bc537b006ccc2bd534490cee89ef7d82212",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0149-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0149-dragonite.gif"
+      ],
+      "sha256": "7cf7bd727bb89fe58999ff098777d52b1b7b35f0df0c0d62bf9dd0ad79145278",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0150-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0150-mewtwo.gif"
+      ],
+      "sha256": "0210d14368f72badaf426358b680faf50b4dace886ab2d0ff3127ef874c19df2",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0151-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0151-mew.gif"
+      ],
+      "sha256": "9bad8950d3b660b6248a262f6c97baf18b40a017d5a71b7a44e1073964d1dbe5",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0196-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0196-espeon.gif"
+      ],
+      "sha256": "77009e5b246827cfd5059a5ab6246c1556dc479dbdf368d60baed8490d64e229",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0197-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0197-umbreon.gif"
+      ],
+      "sha256": "4f387a57e4ac539fa62b0acdddb7ba9df22ceb533c2232c69dc1a151f8de604d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0208-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0208-steelix.gif"
+      ],
+      "sha256": "a84ba12f21add453495fb1ad3629b904abbe27f5ca1f942edcdbb1e6a3fc39cb",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0212-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0212-scizor.gif"
+      ],
+      "sha256": "ae91831794545a9422c87aac4401bde6dcd2c4e0e71ba43450f5d8fd77d83cb6",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0280-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0280-ralts.gif"
+      ],
+      "sha256": "3162547909c06e6e805c6ef5667519d5446cabb2365ef2ef9eafe5aacedd35eb",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0281-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0281-kirlia.gif"
+      ],
+      "sha256": "9bc01fc0173b2ee047c33d0c63f7eac460f3a90fa3732de03e3ccc5c50eb3f2f",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0282-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0282-gardevoir.gif"
+      ],
+      "sha256": "b6270c28927ccabe4bbf09813e7a08c41659d175783f18e2ee88b08c1a229355",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0448-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0448-lucario.gif"
+      ],
+      "sha256": "4a8cb86115fbefd1ccb53e2ead7c9afbad96a0b919439a9160f7d1e7e5d6b44d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0470-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0470-leafeon.gif"
+      ],
+      "sha256": "3235ed13c03621585f5f62e21dcf74e72c0f09c12edc08093ea76a8ea05f99d0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0471-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0471-glaceon.gif"
+      ],
+      "sha256": "83307e0eeda5a3aff27560a60eef8d409f8a6a65258c96a7f79865770c53ce27",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0658-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0658-greninja.gif"
+      ],
+      "sha256": "7fe827006b7447aceaff7269f293cb3e639f7f812c2b3c0469d6875c5849ebba",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0700-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0700-sylveon.gif"
+      ],
+      "sha256": "6555b010bf9e2d9097525e17038211d36ae6c4e9e3e801193c23755a771bf64c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式特效/第1批/原版牙齿/bite-动画.png",
+      "operation": "fangs-four-frames",
+      "inputs": [
+        "素材/原版战斗动画/sharp_teeth.png"
+      ],
+      "fangPalette": "native",
+      "sha256": "98981c6d65e6a57f597b466e378476cc996cecba210281c58fb5fbded48d3949",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式特效/第1批/原版牙齿/crunch-动画.png",
+      "operation": "fangs-four-frames",
+      "inputs": [
+        "素材/原版战斗动画/sharp_teeth.png"
+      ],
+      "fangPalette": "native",
+      "sha256": "98981c6d65e6a57f597b466e378476cc996cecba210281c58fb5fbded48d3949",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式特效/第1批/原版牙齿/firefang-动画.png",
+      "operation": "fangs-four-frames",
+      "inputs": [
+        "素材/原版战斗动画/sharp_teeth.png"
+      ],
+      "fangPalette": "fire",
+      "sha256": "23d475cfb8ae637d20334cb5515681c5bcc9545f741f93a86351bc98cbc8c7b3",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式特效/第1批/原版牙齿/bugbite-动画.png",
+      "operation": "fangs-four-frames",
+      "inputs": [
+        "素材/原版战斗动画/sharp_teeth.png"
+      ],
+      "fangPalette": "bug",
+      "sha256": "44d97d49d3d9eb0ce9e6d09aa2b70152b4f5f22f34b65bdae1ab5e3736524ca6",
+      "baseline": "source Git blob"
+    }
+  ],
+  "postprocess": [
+    {
+      "script": "招式动画/VA2/制作贴图.py",
+      "sha256": "a482d2d2bd6a686ffa6575e7c2b4f303909ad8cd2ff68f19819743520149d3b4",
+      "outputs": [
+        {
+          "path": "招式动画/VA2/breath.png",
+          "sha256": "dea9bedda0d169b8293b7d44dba9e47938f318d1f3fb055537db02ec2b4a4259"
+        },
+        {
+          "path": "招式动画/VA2/bubble.png",
+          "sha256": "41e2c94966a4b04477a75ba9555d9f6a2bb24185568ee50e951c213e1a1aaef9"
+        },
+        {
+          "path": "招式动画/VA2/crescent.png",
+          "sha256": "e3c9bcf9b04f175f736a4de6ef2c4b99c4fed18d095beb5c144047b9dd41c88c"
+        },
+        {
+          "path": "招式动画/VA2/dragon-flare.png",
+          "sha256": "d487e7021616d50ba74a6a38c0fac8d0e9abbe171303698b469613fc6b595a30"
+        },
+        {
+          "path": "招式动画/VA2/electric.png",
+          "sha256": "5680d1f5d67fc3b9b4fc326ff7057b72b1e3cbba1d7c5f53da9df6f2652955d5"
+        },
+        {
+          "path": "招式动画/VA2/flame.png",
+          "sha256": "5c5e2f56b758f6fd5e11441b5f6decb40eb4652a8c2af5a5cb2afdd1340880fb"
+        },
+        {
+          "path": "招式动画/VA2/green.png",
+          "sha256": "fe62fb59787388a4a70497f11a705af1530c87f5bc6c186e25f0ec221e72be92"
+        },
+        {
+          "path": "招式动画/VA2/gust.png",
+          "sha256": "a45642271de3aa6d1c102a94ddbbb43fc5561b2578fce52d486fb4b70c3c1d3f"
+        },
+        {
+          "path": "招式动画/VA2/heal.png",
+          "sha256": "5deea9f3f0c51c748c5990a6c94c8ec7bdb5e114c42ea411b89907f3845a3f48"
+        },
+        {
+          "path": "招式动画/VA2/ice.png",
+          "sha256": "53d5956eabc104d13a6bf85d990335301c33a1b7d40af9e97da78dca21e7f100"
+        },
+        {
+          "path": "招式动画/VA2/leaf.png",
+          "sha256": "c37d8839a3ae1dcea5b006e1e1908f687c159b25e7094de0bdef97d8231df96f"
+        },
+        {
+          "path": "招式动画/VA2/needle.png",
+          "sha256": "1244d71af9cff3f210794fb8fa74fc8b048099ae5bedb2b3c4c1900584cda237"
+        },
+        {
+          "path": "招式动画/VA2/orb.png",
+          "sha256": "84cd758bcb095db4ad8be0441c6472ab18fc225643d4f69deca9eaa2e7bfa629"
+        },
+        {
+          "path": "招式动画/VA2/poison.png",
+          "sha256": "e984c35ace61e4ca8ab46c4801bf38e3bb955572b838cd50657dd32ccf4ae030"
+        },
+        {
+          "path": "招式动画/VA2/razor.png",
+          "sha256": "d158ae41e9f1625944ea6b600c760114799956134818c8e62c4f6f53511ab1f2"
+        },
+        {
+          "path": "招式动画/VA2/red.png",
+          "sha256": "b289c3b9adc4f2237802418051acce8da9a1d5e313d668030141c6514d2fff0e"
+        },
+        {
+          "path": "招式动画/VA2/ring.png",
+          "sha256": "051b3bc9427f143e59e732ac4e5092a806c2e85ca2bdb7344af4f606d244c9d6"
+        },
+        {
+          "path": "招式动画/VA2/sap.png",
+          "sha256": "4490d22f33609982e9634642960b2dbd8a351f04965426cf8ff54992de8c812a"
+        },
+        {
+          "path": "招式动画/VA2/silver.png",
+          "sha256": "ab7d648c32b920646f27efca5862ba2ff8b568dc768a65e995b03ac272fdad37"
+        },
+        {
+          "path": "招式动画/VA2/spikes.png",
+          "sha256": "89298c12b88b42a6587329918e072f4632a5961c5c95773bf2cb21a5da9d8525"
+        },
+        {
+          "path": "招式动画/VA2/star.png",
+          "sha256": "f6aa526d7a5afe6eb3591cc7cdd4a069f040e07e2a3c9a49c01667a4e3272ff3"
+        },
+        {
+          "path": "招式动画/VA2/triangle.png",
+          "sha256": "a2ded2345b3644fbfbc1995535c3b01aafff46723c21454809ef9b8e595d87d5"
+        },
+        {
+          "path": "招式动画/VA2/water.png",
+          "sha256": "96fca8974aaba98eacee4e8502c01d05123f38032c8d2420299902d3a401ad9e"
+        }
+      ]
+    }
+  ],
+  "blockers": [
+    "源提交缺少构建输入: scripts/project.py",
+    "源提交缺少构建输入: 图标/favicon-32.png",
+    "源提交缺少构建输入: 招式特效/实战绘制.json",
+    "源提交缺少构建输入: 招式特效/生图重做/实景预览/构建记录.json",
+    "源提交缺少构建输入: 数值资料/体型校准/来源.json",
+    "源提交缺少构建输入: 素材/绿宝石场景/地图索引.json",
+    "源提交缺少构建输入: 素材/角色库/原始/type_efficacy.csv",
+    "源提交缺少构建输入: 素材/角色库/角色库.json",
+    "源提交缺少构建输入: 素材/角色库/飞行修正/飞行包.json",
+    "尚未完成SpriteCollab角色图集、飞行包和丰缘数据的完整重建配方；禁止宣称整个构建可复现"
+  ]
+}

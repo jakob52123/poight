@@ -1,0 +1,2 @@
+# Observed local build dependency only; Python runtime tested: 3.12.13
+Pillow==12.3.0

@@ -1,0 +1,34 @@
+{
+  "generator": "~/.claude/skills/codex-image/scripts/gen_images.sh",
+  "source": "招式特效/第2批/原图/icywind.png",
+  "originalSHA256": "5ba090beb5b7dc8219d7ae0a03d92b3c16dc0622d974e3f1f1a48d70774205f0",
+  "prompt": "生成可直接裁切的四帧特效图集，正方形画布，2×2等大小格子，无分隔线；四格主体各自居中并有足够透明留白，主体不跨格。背景真正透明RGBA，不绘制棋盘格。每帧朝右，四帧尺寸和中心相同。一股轻盈浅蓝冷风带，向右流动的半透明自然风纹，稀疏白雪粒，留大片透明间隙；四帧雪粒沿风向流动。不画三颗蓝球或冰山。",
+  "style": "严格参考已认可喷射火焰与水枪的掌机像素特效风格，只借画风不借形状；清晰像素边、有限色阶、无文字无水印，无角色无背景无UI。",
+  "time": "2026-10-11T15:43:47.064884+00:00",
+  "styleAnchorSHA256": {
+    "招式特效/生图重做/首批/喷射火焰/result.png": "dd8c683eb442aa68626279d229ec422181a29d4475bcc1a71d4ed38334817e1a",
+    "招式特效/生图重做/首批/水枪/result.png": "65ce65aaa42b5c21eae92aba41c3f6282f5b8b54c54fc9658cc61f81f287587a"
+  },
+  "processing": "Only quadrant/slot crops, common alpha>16 bounds (ignore near-zero-alpha export noise for bounding only), nearest resize and transparent alignment.",
+  "cropBounds": [
+    [
+      54,
+      245,
+      603,
+      503
+    ]
+  ],
+  "slotCutsPx": [
+    0,
+    627
+  ],
+  "output": "招式特效/第2批/icywind/icywind-动画.png",
+  "outputSHA256": "2225bc73b9aef13d9d972d85bc2c10c788d87b8ae22bf95706e9668af16c3cf4",
+  "drawing": {
+    "fw": 96,
+    "fh": 45,
+    "ax": 48,
+    "ay": 22,
+    "columns": 1
+  }
+}

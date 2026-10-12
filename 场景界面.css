@@ -1,0 +1,303 @@
+/* 地图选择只影响候选；顶部血量与底部体力明确区分。 */
+.healthname span {
+  color: #385447;
+  font-weight: 650;
+}
+.health.enemy .healthname span {
+  color: #865539;
+}
+.stamina-title {
+  color: #247c8c;
+}
+.stamina-title span {
+  color: #247c8c;
+}
+.stamina .meter {
+  border-color: #528e99;
+  background: #d2e5e6;
+}
+.stamina-note {
+  color: #607766;
+}
+.readout {
+  align-items: center;
+}
+.readout #sceneButton {
+  pointer-events: auto;
+  padding: 4px 7px;
+  border: 1px solid #6b8a66;
+  border-radius: 3px;
+  background: #f8fbe4f5;
+  color: #355942;
+  font-size: inherit;
+  white-space: nowrap;
+}
+.readout #sceneButton:hover {
+  background: #fffdea;
+  border-color: #257f96;
+}
+#setupMapButton {
+  font-size: 13px;
+  padding: 12px 13px;
+  background: #24384b;
+  border: 1px solid #708399;
+  border-radius: 2px;
+  color: #dbe5e7;
+  white-space: nowrap;
+}
+#setupMapButton:hover {
+  border-color: #f1d289;
+  color: #f1d289;
+}
+#scenePicker {
+  pointer-events: auto;
+  width: min(980px, calc(100% - 32px));
+  height: fit-content;
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  padding: 24px;
+  color: #e7eceb;
+  background: #112236;
+  border: 2px solid #c5a66c;
+  border-radius: 3px;
+  box-shadow: 0 16px 80px #0009;
+}
+#scenePicker::backdrop {
+  background: #06111de6;
+  backdrop-filter: none;
+}
+.scene-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+.scene-head .eyebrow {
+  color: #aebfd0;
+}
+.scene-head h2 {
+  margin: 5px 0;
+  font-size: 25px;
+  color: #f3d78b;
+}
+.scene-head button {
+  padding: 6px 12px;
+  border: 1px solid #687c8f;
+  color: #cfdce4;
+  background: #1c3247;
+  font-size: 23px;
+}
+#sceneHint {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #becedc;
+  margin: 14px 0 18px;
+}
+#sceneCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.scene-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 0 12px;
+  background: #1c3248;
+  border: 2px solid #4e657a;
+  border-radius: 3px;
+  overflow: hidden;
+  color: #e5ecec;
+}
+.scene-card[aria-pressed="true"] {
+  border-color: #f3d482;
+  box-shadow: 0 0 0 2px #f3d48233;
+  background: #30465a;
+}
+.scene-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8/5;
+  object-fit: contain;
+  image-rendering: pixelated;
+  background: #0d2030;
+}
+.scene-card strong {
+  padding: 12px 12px 5px;
+  font-size: 17px;
+  color: #f1dfad;
+}
+.scene-card small {
+  padding: 0 12px;
+  font-size: 12px;
+  color: #c3d3df;
+  line-height: 1.65;
+  min-height: 60px;
+}
+.scene-card .scene-selected {
+  font-size: 11px;
+  color: #85d9f7;
+  padding: 6px 12px 0;
+}
+.scene-card:focus-visible {
+  outline: 3px solid #78d9fd;
+  outline-offset: 3px;
+}
+#sceneMessage {
+  font-size: 12px;
+  color: #b6ccdb;
+  line-height: 1.7;
+  min-height: 21px;
+  margin: 15px 0;
+}
+.scene-foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+.scene-foot button {
+  padding: 11px 17px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+.scene-foot #cancelScene {
+  background: #1c3247;
+  border: 1px solid #687c8f;
+  color: #cfdce4;
+}
+.scene-foot .primary {
+  background: #e8c77c;
+  border-color: #ab823f;
+  color: #18283a;
+  min-width: 185px;
+}
+.scene-foot .primary:hover {
+  background: #f5d892;
+}
+@media (max-width: 650px) {
+  #setupMapButton {
+    font-size: 11px;
+    padding: 10px 7px;
+  }
+  #setup .setup-actions {
+    gap: 5px;
+  }
+  #setup #toggleLoadout {
+    font-size: 11px;
+    padding: 10px 7px;
+  }
+  #setup .setup-actions .primary {
+    min-width: 117px;
+    font-size: 12px;
+    padding: 10px 8px;
+  }
+  #setup .primary span {
+    margin-left: 7px;
+  }
+  .stamina {
+    grid-template-columns: 110px 1fr;
+  }
+  .stamina-title {
+    white-space: nowrap;
+  }
+  .healthname {
+    gap: 3px;
+  }
+  .healthname span {
+    font-size: 9px;
+  }
+  #scenePicker {
+    padding: 15px;
+    width: calc(100% - 20px);
+    max-height: calc(100dvh - 20px);
+  }
+  .scene-head h2 {
+    font-size: 21px;
+  }
+  #sceneHint {
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  #sceneCards {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+  .scene-card {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    padding: 0 0 6px;
+  }
+  .scene-card img {
+    grid-row: 1/4;
+    align-self: center;
+    width: 112px;
+  }
+  .scene-card strong {
+    font-size: 15px;
+    padding: 8px 10px 3px;
+  }
+  .scene-card small {
+    font-size: 11px;
+    padding: 0 10px;
+    min-height: 0;
+  }
+  .scene-card .scene-selected {
+    padding: 4px 10px 0;
+    font-size: 10px;
+  }
+  .scene-foot button {
+    padding: 10px 13px;
+    font-size: 13px;
+  }
+  .scene-foot .primary {
+    min-width: 170px;
+  }
+  #sceneMessage {
+    margin: 10px 0;
+    font-size: 11px;
+  }
+}
+@media (max-height: 480px) and (min-width: 651px) {
+  #scenePicker {
+    padding: 12px 18px;
+    max-height: calc(100dvh - 16px);
+  }
+  .scene-head h2 {
+    font-size: 20px;
+  }
+  #sceneHint {
+    font-size: 11px;
+    margin: 4px 0 8px;
+  }
+  .scene-card img {
+    max-height: 116px;
+    object-fit: cover;
+  }
+  .scene-card strong {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+  .scene-card small {
+    min-height: 0;
+    font-size: 10px;
+    padding: 0 8px;
+  }
+  .scene-card .scene-selected {
+    padding: 3px 8px 0;
+  }
+  .scene-card {
+    padding-bottom: 5px;
+  }
+  #sceneMessage {
+    margin: 5px 0;
+    font-size: 10px;
+    min-height: 16px;
+  }
+  .scene-foot button {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+}

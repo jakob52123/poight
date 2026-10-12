@@ -1,0 +1,21 @@
+{
+  "provider": "Codex subscription / gen_images.sh; one sweep, no fallback",
+  "original": "招式特效/第3批/原图/flamecharge.png",
+  "originalSHA256": "f15e8139359133517ffbf6ee06d7ce12f306937537ea9ea251ccc99b04970f19",
+  "prompt": "俯视斜角16位掌机像素即时战斗游戏独立特效精灵图。主体：稀疏橙黄蓄能火衣，几簇紧贴身体外沿的短火舌，左后方短火尾，中心至少百分之七十真正透明，不能覆盖原角色。 四帧动画，严格2列2行相同尺度相同锚点，每格独立留百分之十安全边；方向朝右，根部在左侧，四帧仅纹理连续变化不整体位移。 清楚方形像素颗粒、克制分层色块、亮暗边缘符合参考图。RGBA实际透明背景，不是黑白底或棋盘。 不画角色、地面、风景、界面。无文字、无数字、无水印、无logo。不画程序方块、几何logo、满屏光污染。",
+  "time": "2026-10-11T15:42:21.828354+00:00",
+  "processingTime": "2026-10-11T16:47:36.162955+00:00",
+  "processing": {
+    "frameSize": [
+      384,
+      311
+    ],
+    "anchorPx": [
+      192.0,
+      155.5
+    ],
+    "method": "union alpha>=80 bounds / nearest resize / 4 vertical frames",
+    "output": "招式特效/第3批/flamecharge/动画.png",
+    "outputSHA256": "eb767b97253d48995c24ff92064252f8bc3d5b1fcf104b4910b37d5587d1d39e"
+  }
+}

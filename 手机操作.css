@@ -1,0 +1,102 @@
+html, body {
+  overscroll-behavior: none;
+  touch-action: none;
+}
+#app {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+#rotatePhone {
+  position: fixed;
+  inset: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  color: #fff0ce;
+  background: #0b1628;
+  text-align: center;
+  align-content: center;
+  touch-action: none;
+}
+#rotatePhone h2 { font-size: 24px; }
+#rotatePhone p { font-size: 14px; color: #9db2c5; }
+.pixel-phone {
+  display: block;
+  width: 72px;
+  height: 96px;
+  margin: 0 auto 40px;
+  image-rendering: pixelated;
+  animation: turn-phone 2s steps(2) infinite;
+}
+html[data-touch-game="true"] .skill kbd {
+  display: none;
+}
+@keyframes turn-phone {
+  0%, 25% { transform: rotate(0deg); }
+  65%, 100% { transform: rotate(90deg); }
+}
+#mobileJoystick, #mobileActions, #jumpButton {
+  display: none;
+}
+html[data-touch-game="true"][data-hud="3"] #mobileJoystick {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  pointer-events: none;
+  left: max(90px, env(safe-area-inset-left));
+  top: calc(100% - 86px - env(safe-area-inset-bottom));
+  transform: translate(-50%, -50%);
+  width: 108px;
+  height: 108px;
+  border: 2px solid #cab57f66;
+  border-radius: 50%;
+  background: #0d1e3026;
+  opacity: 0.45;
+  z-index: 4;
+}
+#mobileJoystick i {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #cab57fa8;
+  border-radius: 50%;
+  background: #334b6199;
+}
+#mobileJoystick span { position: absolute; bottom: -20px; color: #fff0ce; font-size: 12px; }
+#mobileJoystick.held { opacity: 0.85 !important; }
+#mobileJoystick.held span { display: none; }
+html[data-touch-game="true"][data-hud="3"] #mobileActions {
+  display: flex;
+  gap: 8px;
+  position: fixed;
+  right: max(12px, env(safe-area-inset-right));
+  bottom: max(218px, calc(218px + env(safe-area-inset-bottom)));
+  z-index: 5;
+}
+#mobileActions button {
+  position: static !important;
+  display: block;
+  min-width: 48px !important;
+  min-height: 48px !important;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 2px solid #cab57f;
+  border-radius: 50%;
+  color: #fff0ce;
+  font-size: 16px;
+  background: radial-gradient(circle at 35% 25%, #334b61, #0e192d 85%);
+  touch-action: none !important;
+  pointer-events: auto;
+  box-shadow: 0 3px #060d18;
+}
+#mobileActions button[hidden] { display: none; }
+html:not([data-touch-game="true"]) #mobileActions #jumpButton,
+html:not([data-hud="3"]) #mobileActions #jumpButton { display: none; }
+@media (min-height: 501px) {
+  html[data-touch-game="true"][data-hud="3"] #mobileActions { bottom: 270px; }
+}

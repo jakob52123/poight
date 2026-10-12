@@ -1,0 +1,34 @@
+{
+  "generator": "~/.claude/skills/codex-image/scripts/gen_images.sh",
+  "source": "招式特效/第2批/原图/energyball.png",
+  "originalSHA256": "350ac6927100c8270497de2d5a75c47d5b58a09c9fce5315f9734d37e189a683",
+  "prompt": "生成可直接裁切的四帧特效图集，正方形画布，2×2等大小格子，无分隔线；四格主体各自居中并有足够透明留白，主体不跨格。背景真正透明RGBA，不绘制棋盘格。每帧朝右，四帧尺寸和中心相同。一颗自然草绿能量球，内部金绿聚光、流动叶脉状光纹与薄外光壳，短尾向左。四帧从紧密聚光到层次舒展；不是绿色实心方块。",
+  "style": "严格参考已认可喷射火焰与水枪的掌机像素特效风格，只借画风不借形状；清晰像素边、有限色阶、无文字无水印，无角色无背景无UI。",
+  "time": "2026-10-11T15:42:14.445933+00:00",
+  "styleAnchorSHA256": {
+    "招式特效/生图重做/首批/喷射火焰/result.png": "dd8c683eb442aa68626279d229ec422181a29d4475bcc1a71d4ed38334817e1a",
+    "招式特效/生图重做/首批/水枪/result.png": "65ce65aaa42b5c21eae92aba41c3f6282f5b8b54c54fc9658cc61f81f287587a"
+  },
+  "processing": "Only quadrant/slot crops, common alpha>16 bounds (ignore near-zero-alpha export noise for bounding only), nearest resize and transparent alignment.",
+  "cropBounds": [
+    [
+      44,
+      177,
+      589,
+      537
+    ]
+  ],
+  "slotCutsPx": [
+    0,
+    627
+  ],
+  "output": "招式特效/第2批/energyball/energyball-动画.png",
+  "outputSHA256": "5a60226654a033274b03678e70f4dc850c549809908f04d8ddf18dfeb0ea5af6",
+  "drawing": {
+    "fw": 96,
+    "fh": 63,
+    "ax": 48,
+    "ay": 31,
+    "columns": 1
+  }
+}

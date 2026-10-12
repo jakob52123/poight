@@ -1,0 +1,34 @@
+{
+  "generator": "~/.claude/skills/codex-image/scripts/gen_images.sh",
+  "source": "招式特效/第2批/原图/swift.png",
+  "originalSHA256": "dfe031145b7751f3867627af5808f32fe1d54018f7da290336b338267b0f24ff",
+  "prompt": "生成可直接裁切的四帧特效图集，正方形画布，2×2等大小格子，无分隔线；四格主体各自居中并有足够透明留白，主体不跨格。背景真正透明RGBA，不绘制棋盘格。每帧朝右，四帧尺寸和中心相同。仅一颗金色五角小星，五尖轮廓清楚、暖黄亮面和金橙薄暗边，短光尾向左。四帧同一颗星亮面闪动。不画方块或一整排星。",
+  "style": "严格参考已认可喷射火焰与水枪的掌机像素特效风格，只借画风不借形状；清晰像素边、有限色阶、无文字无水印，无角色无背景无UI。",
+  "time": "2026-10-11T15:48:53.424303+00:00",
+  "styleAnchorSHA256": {
+    "招式特效/生图重做/首批/喷射火焰/result.png": "dd8c683eb442aa68626279d229ec422181a29d4475bcc1a71d4ed38334817e1a",
+    "招式特效/生图重做/首批/水枪/result.png": "65ce65aaa42b5c21eae92aba41c3f6282f5b8b54c54fc9658cc61f81f287587a"
+  },
+  "processing": "Only quadrant/slot crops, common alpha>16 bounds (ignore near-zero-alpha export noise for bounding only), nearest resize and transparent alignment.",
+  "cropBounds": [
+    [
+      123,
+      202,
+      518,
+      491
+    ]
+  ],
+  "slotCutsPx": [
+    0,
+    627
+  ],
+  "output": "招式特效/第2批/swift/swift-动画.png",
+  "outputSHA256": "341da443b7386bf5b39c869bdffe2fe6bab87ce64b6e90d7d5ca91efe5ad8e66",
+  "drawing": {
+    "fw": 96,
+    "fh": 70,
+    "ax": 48,
+    "ay": 35,
+    "columns": 1
+  }
+}

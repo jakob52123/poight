@@ -1,0 +1,21 @@
+{
+  "provider": "Codex subscription / gen_images.sh; one sweep, no fallback",
+  "original": "招式特效/第3批/原图/waterfall.png",
+  "originalSHA256": "c2e845dcfff0c0abcb2c10f2b8647a377e978feb481a53ff78d232d18e1dcc6b",
+  "prompt": "俯视斜角16位掌机像素即时战斗游戏独立特效精灵图。主体：贴体上冲的青蓝瀑水外衣，两侧细水流由下向上翻起，上端小白水花，中心至少百分之七十透明。 四帧动画，严格2列2行相同尺度相同锚点，每格独立留百分之十安全边；方向朝右，根部在左侧，四帧仅纹理连续变化不整体位移。 清楚方形像素颗粒、克制分层色块、亮暗边缘符合参考图。RGBA实际透明背景，不是黑白底或棋盘。 不画角色、地面、风景、界面。无文字、无数字、无水印、无logo。不画程序方块、几何logo、满屏光污染。",
+  "time": "2026-10-11T15:43:27.887437+00:00",
+  "processingTime": "2026-10-11T16:47:36.543132+00:00",
+  "processing": {
+    "frameSize": [
+      384,
+      305
+    ],
+    "anchorPx": [
+      192.0,
+      152.5
+    ],
+    "method": "union alpha>=80 bounds / nearest resize / 4 vertical frames",
+    "output": "招式特效/第3批/waterfall/动画.png",
+    "outputSHA256": "ed0c099c84ed79455223eb5b759a2ab8fd35548cbe2aefa449575db2ac8e9134"
+  }
+}

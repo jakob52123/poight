@@ -1,0 +1,21 @@
+{
+  "provider": "Codex subscription / gen_images.sh; one sweep, no fallback",
+  "original": "招式特效/第3批/原图/spark.png",
+  "originalSHA256": "09baec97353f6b1204ab169794a558a43d667254dde252928a19930889ef28c1",
+  "prompt": "俯视斜角16位掌机像素即时战斗游戏独立特效精灵图。主体：紧贴小身体外缘的两三段稀疏金黄分叉电弧，细电尾向左，中心至少百分之七十透明，不画闪电图标。 四帧动画，严格2列2行相同尺度相同锚点，每格独立留百分之十安全边；方向朝右，根部在左侧，四帧仅纹理连续变化不整体位移。 清楚方形像素颗粒、克制分层色块、亮暗边缘符合参考图。RGBA实际透明背景，不是黑白底或棋盘。 不画角色、地面、风景、界面。无文字、无数字、无水印、无logo。不画程序方块、几何logo、满屏光污染。",
+  "time": "2026-10-11T15:43:46.207071+00:00",
+  "processingTime": "2026-10-11T16:47:36.430134+00:00",
+  "processing": {
+    "frameSize": [
+      384,
+      291
+    ],
+    "anchorPx": [
+      192.0,
+      145.5
+    ],
+    "method": "union alpha>=80 bounds / nearest resize / 4 vertical frames",
+    "output": "招式特效/第3批/spark/动画.png",
+    "outputSHA256": "8f0b15ce30e23dbafcd7454c827d7d45f2f7d07f211bd690311690ca3f627b6a"
+  }
+}

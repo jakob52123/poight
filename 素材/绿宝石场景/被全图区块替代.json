@@ -1,0 +1,337 @@
+{
+  "reason": "西南13图重打包为49图；旧文件保留原字节，发布清单使用新分块和预览",
+  "assets": {
+    "assets/emerald-ground-2237555c4d47.png": {
+      "bytes": 56388,
+      "sha256": "2237555c4d474c6dd6142255ccecf03a4187701e9835c99b63d841b293524599"
+    },
+    "assets/emerald-over-adc1e3b38bcf.png": {
+      "bytes": 4208,
+      "sha256": "adc1e3b38bcf46472254f4fa2aef9fc7736b6c7a3597d4599716c5cdb3810cba"
+    },
+    "assets/emerald-ground-72acb87b9e9e.png": {
+      "bytes": 58163,
+      "sha256": "72acb87b9e9e834e12e091458b2989e1fe61585cacdc866eb3f32343db6c0372"
+    },
+    "assets/emerald-over-eea2a0f99e5e.png": {
+      "bytes": 8248,
+      "sha256": "eea2a0f99e5e555ad1d85c390f5266ab739f2eddf7dc7f2efd78b8d190db984e"
+    },
+    "assets/emerald-ground-467cee84aab6.png": {
+      "bytes": 50820,
+      "sha256": "467cee84aab6f88511360202cb3b1cccf596eb0f6fae51de1602c3fb139c4362"
+    },
+    "assets/emerald-over-1bca8019301d.png": {
+      "bytes": 3682,
+      "sha256": "1bca8019301dbbd316d0279be3f6f4c190b3bd8e8577f90da2b64024d85ae095"
+    },
+    "assets/emerald-ground-e4626a3f4db2.png": {
+      "bytes": 54463,
+      "sha256": "e4626a3f4db29ef1b8b150f5a831c0ef07a024b56e7c0b43eef3f7eba13abf14"
+    },
+    "assets/emerald-over-a84f676ba842.png": {
+      "bytes": 7362,
+      "sha256": "a84f676ba84291f38d2a3fe7136ba3c0c6af7ec5930ecf37dffb1b00bb20d8c9"
+    },
+    "assets/emerald-ground-98b28c6ebd89.png": {
+      "bytes": 38781,
+      "sha256": "98b28c6ebd895030720056ae487acc54e608051391aaf453e1b19ab0af03ce2f"
+    },
+    "assets/emerald-over-76897dd2a296.png": {
+      "bytes": 3043,
+      "sha256": "76897dd2a296b4cce67f7f8985bd11953e1899613105206785ba976ab9a7c733"
+    },
+    "assets/emerald-ground-b3cd0ef3baed.png": {
+      "bytes": 46520,
+      "sha256": "b3cd0ef3baed48f8bbd9f08dad9e4a138c9a293715feca57f9f2c876587b9d5f"
+    },
+    "assets/emerald-over-1823b7b3fdd3.png": {
+      "bytes": 3689,
+      "sha256": "1823b7b3fdd3c27372d66a863922f1c2fef96831ac2f44ca6cba6b91650ffc31"
+    },
+    "assets/emerald-ground-7a671185cae9.png": {
+      "bytes": 55006,
+      "sha256": "7a671185cae9149ab504f4c1a146c89274f463b54bd68939c9e63e4410abf774"
+    },
+    "assets/emerald-over-7a7b377d3cfe.png": {
+      "bytes": 5501,
+      "sha256": "7a7b377d3cfe19cedf891ebf90e95d3ff4706101d2f883e7e01702615a87afad"
+    },
+    "assets/emerald-ground-eb7d241f9169.png": {
+      "bytes": 44333,
+      "sha256": "eb7d241f9169516494e1a6e8e2db012735050140a6094311bc379e47f3dcab3f"
+    },
+    "assets/emerald-over-8f9a7dd97961.png": {
+      "bytes": 3575,
+      "sha256": "8f9a7dd97961e02d84be2625e6703a17136096aa180c1443b4a1cb70b641726c"
+    },
+    "assets/emerald-ground-d27731e04a5a.png": {
+      "bytes": 50705,
+      "sha256": "d27731e04a5a40ea6a3f11def55ce8885e504bf70197a3f506c08c27e6e8b2f3"
+    },
+    "assets/emerald-over-fbcf63ea368e.png": {
+      "bytes": 10253,
+      "sha256": "fbcf63ea368e3df4d40bfa0b34824dfea35054ffbb1acf5543d8acf8a8b832ba"
+    },
+    "assets/emerald-ground-c3bbe636648f.png": {
+      "bytes": 41943,
+      "sha256": "c3bbe636648ffa237ccb7dff5cd6a8f84f7dd0c6add495096e0637f0497ad049"
+    },
+    "assets/emerald-over-96da598fed26.png": {
+      "bytes": 3500,
+      "sha256": "96da598fed261171add9035f9bdb23756c6d6184f616e49d4fea6d7dcb0f8fce"
+    },
+    "assets/emerald-ground-b6929330d3e3.png": {
+      "bytes": 40741,
+      "sha256": "b6929330d3e3bc26d731dd01f2aa8b5e147f9c9a23877543293889c4bc8a535b"
+    },
+    "assets/emerald-over-a7936c05a58c.png": {
+      "bytes": 5851,
+      "sha256": "a7936c05a58cf0d83500af89f1a2fab04462e16793a17e73a4a59eee98af447b"
+    },
+    "assets/emerald-ground-04e55dc8ea9c.png": {
+      "bytes": 4280,
+      "sha256": "04e55dc8ea9c7b15ddd00e902139ccced0ba9a3c01efeb31935198906a40befd"
+    },
+    "assets/emerald-ground-b38880639e93.png": {
+      "bytes": 20901,
+      "sha256": "b38880639e93fac3213f2a88a6e12e8709821f93523b287bfa0791418da19efa"
+    },
+    "assets/emerald-over-2cc25169305c.png": {
+      "bytes": 2693,
+      "sha256": "2cc25169305cb87514b61458d792273ed7cfd4da2af89175ebdcf2966e9b62af"
+    },
+    "assets/emerald-ground-9708689e765a.png": {
+      "bytes": 42081,
+      "sha256": "9708689e765a815f4e983b7c59f182f221ecea563199cf5ba1b826f8c4264da1"
+    },
+    "assets/emerald-over-291f3d90a62e.png": {
+      "bytes": 5275,
+      "sha256": "291f3d90a62e2513f1729b8d79ec848fec2ace808a1e3077edf399091622f00c"
+    },
+    "assets/emerald-ground-f2ba097243bd.png": {
+      "bytes": 39722,
+      "sha256": "f2ba097243bd9172cc90d7b7d5980dad210ae75a97a06bc2cad39f2eded60da1"
+    },
+    "assets/emerald-over-6e8d15e38be8.png": {
+      "bytes": 3675,
+      "sha256": "6e8d15e38be8ebcceddb7761d3aeb9821b69d3703386bd9c72a3109187c6c9ff"
+    },
+    "assets/emerald-ground-e1178b5a58db.png": {
+      "bytes": 22785,
+      "sha256": "e1178b5a58db6b473467e32840b1161126962174e78952fa952d17f5b469edaf"
+    },
+    "assets/emerald-ground-ceb5334692d6.png": {
+      "bytes": 43304,
+      "sha256": "ceb5334692d66f9c399bbcdf9a406a8b9c3da6e9254edf5187065b44f986b078"
+    },
+    "assets/emerald-over-186f7430bcfb.png": {
+      "bytes": 2293,
+      "sha256": "186f7430bcfb0c6527c81e45b51f76ebe5ca951e1a8423f28b307d6c425ff336"
+    },
+    "assets/emerald-ground-e0926a7bb0bb.png": {
+      "bytes": 23696,
+      "sha256": "e0926a7bb0bb6b04bf21a70532838844bb50f0a07b9364d5368a44e48614f11b"
+    },
+    "assets/emerald-ground-5ab11ac1eca1.png": {
+      "bytes": 4151,
+      "sha256": "5ab11ac1eca1978391e136eb2c34e7a8db212c16afd59ab6f99a48e93dd85745"
+    },
+    "assets/emerald-ground-eabf20d4196c.png": {
+      "bytes": 44559,
+      "sha256": "eabf20d4196c3e0ec3e6b7201c0f36998a94ea8e9b4f6f877cf25639f8ec8f57"
+    },
+    "assets/emerald-over-347f8d697361.png": {
+      "bytes": 1939,
+      "sha256": "347f8d69736174f1d0b07b7951b9c8a788c7a2983ba5779c3632d3501649e166"
+    },
+    "assets/emerald-ground-68a4c07c4e7c.png": {
+      "bytes": 4456,
+      "sha256": "68a4c07c4e7c477ba0682d0ac68acd7a443f97ffd9a1619f244ae752b5fbc602"
+    },
+    "assets/emerald-ground-f24b03346809.png": {
+      "bytes": 45537,
+      "sha256": "f24b03346809c77a10c6444ab88a79a5fbb8d1d3fb11ce53e473e32fd98000ad"
+    },
+    "assets/emerald-over-a385e162cf7b.png": {
+      "bytes": 4937,
+      "sha256": "a385e162cf7bcb146dbf84cf367699ace29189110c8d5dd570810347a325175e"
+    },
+    "assets/emerald-ground-57b5d00d0d57.png": {
+      "bytes": 55010,
+      "sha256": "57b5d00d0d573246b19fe51eac5bd0b8e7a4eb6f738daf1d8401f9ccd7bfdf14"
+    },
+    "assets/emerald-over-bcea592e462e.png": {
+      "bytes": 5700,
+      "sha256": "bcea592e462ea877a2af074b92d11b953eed56ae53f711ecdd14863956397b14"
+    },
+    "assets/emerald-ground-556903185eb1.png": {
+      "bytes": 39209,
+      "sha256": "556903185eb122fff72339b85c211ad4e49cdaae676e461c1f6a015d9802c588"
+    },
+    "assets/emerald-over-b2f8b6b78f8f.png": {
+      "bytes": 4666,
+      "sha256": "b2f8b6b78f8ff7020394aa5d10ef963741d0e5476e1a19df048ac1d68dc0e5c2"
+    },
+    "assets/emerald-ground-f520b73617d6.png": {
+      "bytes": 33423,
+      "sha256": "f520b73617d662028f7c81734b10ad82d214a388dde89a5b745e4090ec136b51"
+    },
+    "assets/emerald-over-b4f7b202ef7a.png": {
+      "bytes": 8725,
+      "sha256": "b4f7b202ef7a7880bcb840bfd239525c353d262b6cc173ccf181f27dd777cc55"
+    },
+    "assets/emerald-ground-b4746e33f0c5.png": {
+      "bytes": 7332,
+      "sha256": "b4746e33f0c5d59ed8cc839551c90b19ee8d4d85a35ea594e8ad630a33176aaa"
+    },
+    "assets/emerald-ground-5b5225f6a1e0.png": {
+      "bytes": 7129,
+      "sha256": "5b5225f6a1e0fbf53e8746e85d0e6d85d3a2baacf2d9938a318304208a74a6b9"
+    },
+    "assets/emerald-over-afd59a4ce47e.png": {
+      "bytes": 2529,
+      "sha256": "afd59a4ce47ea726b03b01eaaf3a32a3ab95a848a63a1ff449317b228d277bb0"
+    },
+    "assets/emerald-ground-8c334cc827eb.png": {
+      "bytes": 24328,
+      "sha256": "8c334cc827ebe77335f1f2d417301f945b723bf2e037d5ef9da282c09a0fbb21"
+    },
+    "assets/emerald-over-12de1b794c9a.png": {
+      "bytes": 13048,
+      "sha256": "12de1b794c9afe4206a1c221fa9883fe1d2ac36ab74a6fd2f9c4f91b75b73ef3"
+    },
+    "assets/emerald-ground-65e3d303f553.png": {
+      "bytes": 30865,
+      "sha256": "65e3d303f55363ab3ead49e0b448e13d239a923c8cc465d37718bdb282406d56"
+    },
+    "assets/emerald-over-6739abd63dea.png": {
+      "bytes": 5403,
+      "sha256": "6739abd63dea141d511777022f22dc3e3d6b741060e9f71fe9d9df0a5e090f7e"
+    },
+    "assets/emerald-ground-5d8562df9a94.png": {
+      "bytes": 37110,
+      "sha256": "5d8562df9a9409ab849a237eb6609dedc5d44259564b015f4588352e085e70eb"
+    },
+    "assets/emerald-over-27ce0f21a3da.png": {
+      "bytes": 16152,
+      "sha256": "27ce0f21a3daef60e9cf902a3f008c3a918f50f0e273d54c92c523ef1b32e722"
+    },
+    "assets/emerald-ground-8c8cc674683e.png": {
+      "bytes": 28826,
+      "sha256": "8c8cc674683e76ccb6161601db04d733c753f2103448a80dbb1777622019149d"
+    },
+    "assets/emerald-over-fd6f1ebb8a4a.png": {
+      "bytes": 13481,
+      "sha256": "fd6f1ebb8a4a9c474ca493404b5fe1531d4d971f6ba86b0b23bca226d1958394"
+    },
+    "assets/emerald-ground-4feb140d3465.png": {
+      "bytes": 37912,
+      "sha256": "4feb140d34656b5885fdbb9f35e729fc13b87ef50590be2976860fd3536828d6"
+    },
+    "assets/emerald-over-bdd4a73ac7b0.png": {
+      "bytes": 6407,
+      "sha256": "bdd4a73ac7b0cbda377cafbbacaab0430520d810b4f91c84805a8c8db7bbf2fd"
+    },
+    "assets/emerald-ground-2fbd85ac12dd.png": {
+      "bytes": 35760,
+      "sha256": "2fbd85ac12dd499ae23bbd78ab86696a9c73ce9ceca9288a292a3c6ef2115bac"
+    },
+    "assets/emerald-over-72fde9950f11.png": {
+      "bytes": 8100,
+      "sha256": "72fde9950f11d50f08aad286cc11d961f6db848bc4b20ed4d1f7bbc28db9c38d"
+    },
+    "assets/emerald-ground-57c95e72b74d.png": {
+      "bytes": 20156,
+      "sha256": "57c95e72b74d56dce0a754551aecea8f8b7a6b9b07c1211a9e4d5b3b50780992"
+    },
+    "assets/emerald-over-28988ba5650c.png": {
+      "bytes": 5741,
+      "sha256": "28988ba5650c2bf5c0fe583618171f85fbf45e5b413892b778d575c7ed1f88e9"
+    },
+    "assets/emerald-ground-39cb1f1cce65.png": {
+      "bytes": 11426,
+      "sha256": "39cb1f1cce656ec0735adefea230d4153c199df67d7767dc07c042cfa24a2438"
+    },
+    "assets/emerald-over-5a5916f39da6.png": {
+      "bytes": 2458,
+      "sha256": "5a5916f39da63c9d5615a5df606baa833ccd35350cfabcce17eaa10eb219332b"
+    },
+    "assets/emerald-ground-75a0c0d49bb3.png": {
+      "bytes": 9096,
+      "sha256": "75a0c0d49bb30edd02afe387090c4d379f734e9fc7ec32dcbd67d85424c213f5"
+    },
+    "assets/emerald-over-431dc604a00e.png": {
+      "bytes": 6118,
+      "sha256": "431dc604a00ec95ac877aa2a75fd279c3328cded5705fa76725e43771bb40097"
+    },
+    "assets/emerald-ground-7a405a0c3cb8.png": {
+      "bytes": 28456,
+      "sha256": "7a405a0c3cb813e1225b193cec86b3fe472d70f77ec572f6e39182efa6064f16"
+    },
+    "assets/emerald-over-58189624d5f7.png": {
+      "bytes": 17643,
+      "sha256": "58189624d5f7e011e53c5c89162a24dff9992cb439a8c76e44713de12c46b58f"
+    },
+    "assets/emerald-ground-f21b9e1b0f45.png": {
+      "bytes": 38344,
+      "sha256": "f21b9e1b0f453931c71ae11820ef2ab4554e9d46dcf27064e0d8c866f545779e"
+    },
+    "assets/emerald-over-25cb549e0ad7.png": {
+      "bytes": 8777,
+      "sha256": "25cb549e0ad70a56bee6d89557a459df721920821f87e446dd6285ff110d3a78"
+    },
+    "assets/emerald-ground-f626e3e030b2.png": {
+      "bytes": 39229,
+      "sha256": "f626e3e030b2cf2bd56017dbd24844b1a7679bd6ba57978b8ef384bfafbe1fc3"
+    },
+    "assets/emerald-over-404b22b73157.png": {
+      "bytes": 6773,
+      "sha256": "404b22b73157b1fa1235f1499ec358a9cbc5f9f64d27e0cc34f2aeb5a66db584"
+    },
+    "assets/emerald-ground-e6482b37998d.png": {
+      "bytes": 30451,
+      "sha256": "e6482b37998db28fae49a175a0d9b163e2251b35a631ec16a3d7be79d76a14e5"
+    },
+    "assets/emerald-over-c0195ab86781.png": {
+      "bytes": 14956,
+      "sha256": "c0195ab867817dce1a6bc00ef9f833f363a7f892f33c26097097c093c703e186"
+    },
+    "assets/emerald-ground-57bce650f586.png": {
+      "bytes": 35344,
+      "sha256": "57bce650f58655b4fc12fe48b960222a93f1859c3ce4902cee668fc83e2ecead"
+    },
+    "assets/emerald-over-02f1c882ad22.png": {
+      "bytes": 6385,
+      "sha256": "02f1c882ad2219e3a2ec4e7fe80a5543212de4332334d1ee402162bd8892f832"
+    },
+    "assets/emerald-ground-06009995c9d9.png": {
+      "bytes": 31404,
+      "sha256": "06009995c9d9cdc79f35ff5282fa10fa56a3d8216e0b4a66b09ba062f380511d"
+    },
+    "assets/emerald-over-3e16052991d2.png": {
+      "bytes": 7127,
+      "sha256": "3e16052991d2367295da578dde70af7d215268a800dc305108e1a4923237cc8b"
+    },
+    "assets/emerald-ground-b436e309914f.png": {
+      "bytes": 26032,
+      "sha256": "b436e309914f3ea25878781cccb0cf87312611e7abdc20ec4a50882e82006885"
+    },
+    "assets/emerald-over-3910a0bfb574.png": {
+      "bytes": 5837,
+      "sha256": "3910a0bfb5742705f19ec3f3188ebd0f5c0fdf91d9d38716e2f3af4fc5a6626a"
+    },
+    "assets/emerald-ground-133aeefb7ae2.png": {
+      "bytes": 17954,
+      "sha256": "133aeefb7ae28cf8c6bc761cdca9cc258975ab5ec0d07c343a6c668a2b32e836"
+    },
+    "assets/emerald-over-5f17538f31c1.png": {
+      "bytes": 4212,
+      "sha256": "5f17538f31c10f9415bf1d74422924611b955ac4308eb77c6b4c84ee46072681"
+    },
+    "assets/ground-4e2a0752e903.png": {
+      "bytes": 44711,
+      "sha256": "4e2a0752e903da43cc2e4c83b21e18ccd546fb18dc615be5143ff6aa3e8df7f7"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "generator": "~/.claude/skills/codex-image/scripts/gen_images.sh",
+  "source": "招式特效/第2批/原图/leafstorm.png",
+  "originalSHA256": "c75b0a6cc2886c5b9c8fbb02b97ba4379d6238dcff5133c58a6c62493c556936",
+  "prompt": "生成可直接裁切的四帧特效图集，正方形画布，2×2等大小格子，无分隔线；四格主体各自居中并有足够透明留白，主体不跨格。背景真正透明RGBA，不绘制棋盘格。每帧朝右，四帧尺寸和中心相同。一股旋卷叶风暴，三四片清晰小叶随浅绿透明风带绕流，前尖朝右、短风尾朝左，四帧叶片沿螺旋气流卷动。不是矩形直线叶阵。",
+  "style": "严格参考已认可喷射火焰与水枪的掌机像素特效风格，只借画风不借形状；清晰像素边、有限色阶、无文字无水印，无角色无背景无UI。",
+  "time": "2026-10-11T15:52:08.160245+00:00",
+  "styleAnchorSHA256": {
+    "招式特效/生图重做/首批/喷射火焰/result.png": "dd8c683eb442aa68626279d229ec422181a29d4475bcc1a71d4ed38334817e1a",
+    "招式特效/生图重做/首批/水枪/result.png": "65ce65aaa42b5c21eae92aba41c3f6282f5b8b54c54fc9658cc61f81f287587a"
+  },
+  "processing": "Only quadrant/slot crops, common alpha>16 bounds (ignore near-zero-alpha export noise for bounding only), nearest resize and transparent alignment.",
+  "cropBounds": [
+    [
+      22,
+      178,
+      617,
+      533
+    ]
+  ],
+  "slotCutsPx": [
+    0,
+    627
+  ],
+  "output": "招式特效/第2批/leafstorm/leafstorm-动画.png",
+  "outputSHA256": "d57221759d25a35b4d906000e8fca80a9e7b8b5b491ac30cd3c0a7f0ef9ddf9f",
+  "drawing": {
+    "fw": 96,
+    "fh": 57,
+    "ax": 48,
+    "ay": 28,
+    "columns": 1
+  }
+}

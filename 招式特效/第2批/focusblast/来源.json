@@ -1,0 +1,34 @@
+{
+  "generator": "~/.claude/skills/codex-image/scripts/gen_images.sh",
+  "source": "招式特效/第2批/原图/focusblast.png",
+  "originalSHA256": "72cc89ead0d5217c5eb0c57ee1c8449e34ddf5ce4febc72b25b5f3caa2e1fbb6",
+  "prompt": "生成可直接裁切的四帧特效图集，正方形画布，2×2等大小格子，无分隔线；四格主体各自居中并有足够透明留白，主体不跨格。背景真正透明RGBA，不绘制棋盘格。每帧朝右，四帧尺寸和中心相同。一颗凝聚橙金真气球，温白亮芯、橙金流动光壳、短尾向左，四帧气纹收束再脉动；不画巨大方块或实体拳头。",
+  "style": "严格参考已认可喷射火焰与水枪的掌机像素特效风格，只借画风不借形状；清晰像素边、有限色阶、无文字无水印，无角色无背景无UI。",
+  "time": "2026-10-11T15:53:46.711022+00:00",
+  "styleAnchorSHA256": {
+    "招式特效/生图重做/首批/喷射火焰/result.png": "dd8c683eb442aa68626279d229ec422181a29d4475bcc1a71d4ed38334817e1a",
+    "招式特效/生图重做/首批/水枪/result.png": "65ce65aaa42b5c21eae92aba41c3f6282f5b8b54c54fc9658cc61f81f287587a"
+  },
+  "processing": "Only quadrant/slot crops, common alpha>16 bounds (ignore near-zero-alpha export noise for bounding only), nearest resize and transparent alignment.",
+  "cropBounds": [
+    [
+      63,
+      131,
+      606,
+      578
+    ]
+  ],
+  "slotCutsPx": [
+    0,
+    627
+  ],
+  "output": "招式特效/第2批/focusblast/focusblast-动画.png",
+  "outputSHA256": "8db893c8de095993d3406817b05ec9c3d96b47405df329e2e569b6ef358e3dca",
+  "drawing": {
+    "fw": 96,
+    "fh": 79,
+    "ax": 48,
+    "ay": 39,
+    "columns": 1
+  }
+}

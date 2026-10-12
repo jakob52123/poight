@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 2,
+  "image": "自然场-B.png",
+  "world": {
+    "width": 2100,
+    "height": 1400
+  },
+  "artPixelWorldSize": 2,
+  "logoDiameter": null,
+  "annotationMethod": "扩建竞技场.py: exact composited pixel coordinates",
+  "battleArea": {
+    "id": "battle",
+    "kind": "battle",
+    "type": "rect",
+    "x": 0.05238095238095238,
+    "y": 0.07857142857142857,
+    "width": 0.8952380952380953,
+    "height": 0.8428571428571429
+  },
+  "obstacles": [
+    {
+      "id": "自然场-B-rock-01",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.12666666666666668,
+      "y": 0.18857142857142858,
+      "width": 0.047142857142857146,
+      "height": 0.06142857142857143
+    },
+    {
+      "id": "自然场-B-rock-02",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.5066666666666667,
+      "y": 0.20857142857142857,
+      "width": 0.048095238095238094,
+      "height": 0.06142857142857143
+    },
+    {
+      "id": "自然场-B-rock-03",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.8533333333333334,
+      "y": 0.19714285714285715,
+      "width": 0.047619047619047616,
+      "height": 0.062142857142857146
+    },
+    {
+      "id": "自然场-B-rock-04",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.15047619047619049,
+      "y": 0.36,
+      "width": 0.047142857142857146,
+      "height": 0.06142857142857143
+    },
+    {
+      "id": "自然场-B-rock-05",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.49714285714285716,
+      "y": 0.3457142857142857,
+      "width": 0.048095238095238094,
+      "height": 0.06142857142857143
+    },
+    {
+      "id": "自然场-B-rock-06",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.8457142857142858,
+      "y": 0.3657142857142857,
+      "width": 0.047619047619047616,
+      "height": 0.062142857142857146
+    },
+    {
+      "id": "自然场-B-rock-07",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.14666666666666667,
+      "y": 0.6257142857142857,
+      "width": 0.047142857142857146,
+      "height": 0.06142857142857143
+    },
+    {
+      "id": "自然场-B-rock-08",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.49333333333333335,
+      "y": 0.6314285714285715,
+      "width": 0.048095238095238094,
+      "height": 0.06142857142857143
+    },
+    {
+      "id": "自然场-B-rock-09",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.8695238095238095,
+      "y": 0.6171428571428571,
+      "width": 0.047619047619047616,
+      "height": 0.062142857142857146
+    },
+    {
+      "id": "自然场-B-rock-10",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.1380952380952381,
+      "y": 0.8014285714285714,
+      "width": 0.047142857142857146,
+      "height": 0.06142857142857143
+    },
+    {
+      "id": "自然场-B-rock-11",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.4857142857142857,
+      "y": 0.79,
+      "width": 0.048095238095238094,
+      "height": 0.06142857142857143
+    },
+    {
+      "id": "自然场-B-rock-12",
+      "kind": "rock",
+      "type": "rect",
+      "x": 0.8657142857142858,
+      "y": 0.7957142857142857,
+      "width": 0.047619047619047616,
+      "height": 0.062142857142857146
+    },
+    {
+      "id": "自然场-B-border-0",
+      "kind": "trees_and_bushes",
+      "type": "rect",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1.0,
+      "height": 0.06857142857142857,
+      "perimeter": true
+    },
+    {
+      "id": "自然场-B-border-1",
+      "kind": "trees_and_bushes",
+      "type": "rect",
+      "x": 0.0,
+      "y": 0.9314285714285714,
+      "width": 1.0,
+      "height": 0.06857142857142857,
+      "perimeter": true
+    },
+    {
+      "id": "自然场-B-border-2",
+      "kind": "trees_and_bushes",
+      "type": "rect",
+      "x": 0.0,
+      "y": 0.06857142857142857,
+      "width": 0.04285714285714286,
+      "height": 0.8628571428571429,
+      "perimeter": true
+    },
+    {
+      "id": "自然场-B-border-3",
+      "kind": "trees_and_bushes",
+      "type": "rect",
+      "x": 0.9571428571428572,
+      "y": 0.06857142857142857,
+      "width": 0.04285714285714286,
+      "height": 0.8628571428571429,
+      "perimeter": true
+    }
+  ],
+  "grassRegions": [
+    {
+      "id": "自然场-B-grass-01",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.23523809523809525,
+      "y": 0.15714285714285714,
+      "width": 0.08095238095238096,
+      "height": 0.06785714285714285,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-02",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.40190476190476193,
+      "y": 0.15714285714285714,
+      "width": 0.07095238095238095,
+      "height": 0.07142857142857142,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-03",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.7209523809523809,
+      "y": 0.15714285714285714,
+      "width": 0.07142857142857142,
+      "height": 0.06928571428571428,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-04",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.23523809523809525,
+      "y": 0.3242857142857143,
+      "width": 0.08095238095238096,
+      "height": 0.06785714285714285,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-05",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.40190476190476193,
+      "y": 0.3242857142857143,
+      "width": 0.07095238095238095,
+      "height": 0.07142857142857142,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-06",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.7209523809523809,
+      "y": 0.3242857142857143,
+      "width": 0.07142857142857142,
+      "height": 0.06928571428571428,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-07",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.23523809523809525,
+      "y": 0.6028571428571429,
+      "width": 0.08095238095238096,
+      "height": 0.06785714285714285,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-08",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.40190476190476193,
+      "y": 0.6028571428571429,
+      "width": 0.07095238095238095,
+      "height": 0.07142857142857142,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-09",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.7209523809523809,
+      "y": 0.6028571428571429,
+      "width": 0.07142857142857142,
+      "height": 0.06928571428571428,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-10",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.23523809523809525,
+      "y": 0.7714285714285715,
+      "width": 0.08095238095238096,
+      "height": 0.06785714285714285,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-11",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.40190476190476193,
+      "y": 0.7714285714285715,
+      "width": 0.07095238095238095,
+      "height": 0.07142857142857142,
+      "walkable": true,
+      "conceals": true
+    },
+    {
+      "id": "自然场-B-grass-12",
+      "kind": "tall_grass",
+      "type": "rect",
+      "x": 0.7209523809523809,
+      "y": 0.7714285714285715,
+      "width": 0.07142857142857142,
+      "height": 0.06928571428571428,
+      "walkable": true,
+      "conceals": true
+    }
+  ],
+  "spawns": [
+    {
+      "side": "left",
+      "x": 0.275,
+      "y": 0.5
+    },
+    {
+      "side": "right",
+      "x": 0.725,
+      "y": 0.5
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "provider": "Codex subscription native image_gen via gen_images.sh only",
+  "source": "招式特效/第1批/原图/firefang.png",
+  "originalSHA256": "e8df1194ef963a679bdcb447a6bb1c0d1fe21ce9b1855f16a213fd615de32432",
+  "prompt": "俯视斜角像素即时对战独立特效：火焰牙。主体：贴嘴部的上下两对极短橙金火焰牙光，中央透明，火舌小且沿上下颚，合咬再松开。 最终尺寸约20×20世界像素，普通精灵身体约40像素；绝不覆盖全身。参考仅控制像素画风，不继承火焰形状。16位掌机低分辨率像素色块、少量分层亮暗边缘。正方形RGBA透明底，严格2列2行四个独立连续动画帧，左上右上左下右下顺序，每格10%透明边，无分格线。四帧为凝到真实部位边沿、前伸、接触短痕、回收。根部固定在每格左侧20%、高度50%，朝右展开，动作播放时牢牢附着角色真实部位。中心透明露出原生角色，不画任何角色、额外肢体、地面、风景、UI或背景。无文字无数字无水印。不能用方块、几何图标或巨大圆弧冒充效果。",
+  "generatedAt": "2026-10-11T15:46:59.024368+00:00",
+  "processing": {
+    "method": "2x2 frames; shared alpha-bounds crop; nearest-neighbour scaling; no painted pixels",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "cropBox": [
+      0,
+      1,
+      627,
+      627
+    ],
+    "frameSize": [
+      256,
+      256
+    ],
+    "anchorPx": [
+      51.2,
+      127.59170653907496
+    ],
+    "outputSHA256": "a900787e163cf49561daf1000f85747c302842861a86120a0b3f065d8a303912",
+    "caster": 6
+  }
+}

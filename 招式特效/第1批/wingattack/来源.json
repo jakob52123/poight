@@ -1,0 +1,30 @@
+{
+  "provider": "Codex subscription native image_gen via gen_images.sh only",
+  "source": "招式特效/第1批/原图/wingattack.png",
+  "originalSHA256": "ff091539d97f10a3ab26771b587545b03ff055839d2549d8416d31b3f608233b",
+  "prompt": "俯视斜角像素即时对战独立特效：翅膀攻击。主体：沿真实翼缘的一小段白蓝气流羽痕，薄且短，透明中心，不画第二只翅膀。 最终尺寸约20×20世界像素，普通精灵身体约40像素；绝不覆盖全身。参考仅控制像素画风，不继承火焰形状。16位掌机低分辨率像素色块、少量分层亮暗边缘。正方形RGBA透明底，严格2列2行四个独立连续动画帧，左上右上左下右下顺序，每格10%透明边，无分格线。四帧为凝到真实部位边沿、前伸、接触短痕、回收。根部固定在每格左侧20%、高度50%，朝右展开，动作播放时牢牢附着角色真实部位。中心透明露出原生角色，不画任何角色、额外肢体、地面、风景、UI或背景。无文字无数字无水印。不能用方块、几何图标或巨大圆弧冒充效果。",
+  "generatedAt": "2026-10-11T15:40:41.529421+00:00",
+  "processing": {
+    "method": "2x2 frames; shared alpha-bounds crop; nearest-neighbour scaling; no painted pixels",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "cropBox": [
+      0,
+      1,
+      627,
+      627
+    ],
+    "frameSize": [
+      256,
+      256
+    ],
+    "anchorPx": [
+      51.2,
+      127.59170653907496
+    ],
+    "outputSHA256": "f44f90b85790cfcec428c66e5286bac7f99b1fe81c6474a6c7e01c16ed1a508e",
+    "caster": 21
+  }
+}

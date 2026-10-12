@@ -1,0 +1,48 @@
+{
+  "generator": "~/.claude/skills/codex-image/scripts/gen_images.sh",
+  "source": "招式特效/第2批/原图/triattack.png",
+  "originalSHA256": "e74fd970e0dc97e92dfe62b0d17d21fdaa73bbc3017546e53c7b854a66c6e19d",
+  "prompt": "生成可直接裁切的四帧特效图集，正方形画布，2×2等大小格子，无分隔线；四格主体各自居中并有足够透明留白，主体不跨格。背景真正透明RGBA，不绘制棋盘格。每帧朝右，四帧尺寸和中心相同。三个独立弹体分别放在每格内部的左中右三个相等小槽：左是红橙火星、中是黄色细电弧球、右是蓝白冰晶。四格都同样左火中电右冰，三者互不接触、间距足够裁切。绝不画三颗米色方块。",
+  "style": "严格参考已认可喷射火焰与水枪的掌机像素特效风格，只借画风不借形状；清晰像素边、有限色阶、无文字无水印，无角色无背景无UI。",
+  "time": "2026-10-11T15:48:57.820702+00:00",
+  "styleAnchorSHA256": {
+    "招式特效/生图重做/首批/喷射火焰/result.png": "dd8c683eb442aa68626279d229ec422181a29d4475bcc1a71d4ed38334817e1a",
+    "招式特效/生图重做/首批/水枪/result.png": "65ce65aaa42b5c21eae92aba41c3f6282f5b8b54c54fc9658cc61f81f287587a"
+  },
+  "processing": "Only quadrant/slot crops, common alpha>16 bounds (ignore near-zero-alpha export noise for bounding only), nearest resize and transparent alignment.",
+  "cropBounds": [
+    [
+      25,
+      249,
+      224,
+      432
+    ],
+    [
+      0,
+      256,
+      174,
+      442
+    ],
+    [
+      6,
+      272,
+      184,
+      421
+    ]
+  ],
+  "slotCutsPx": [
+    0,
+    224,
+    418,
+    627
+  ],
+  "output": "招式特效/第2批/triattack/triattack-动画.png",
+  "outputSHA256": "9607bb93b588fcfe751aacee8fbd794a3f283d2a25123bfc629bb96d91ab6bf1",
+  "drawing": {
+    "fw": 96,
+    "fh": 96,
+    "ax": 48,
+    "ay": 48,
+    "columns": 3
+  }
+}

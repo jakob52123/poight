@@ -1,0 +1,32 @@
+/* Letterbox the recording buffer; CSS scaling never changes logical pixels. */
+html[data-demo="true"] body {
+  background: #101923;
+}
+html[data-demo="true"] .stage {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  inset: 0 !important;
+  background: #101923;
+}
+html[data-demo="true"] #game {
+  flex: none;
+}
+/* Only recording keys may alter a demo. HUD remains visible unless hud=0. */
+html[data-demo="true"] #app {
+  pointer-events: none;
+}
+html[data-demo="true"] #app button,
+html[data-demo="true"] #app canvas,
+html[data-demo="true"] #app .skill {
+  pointer-events: none !important;
+}
+html[data-demo="true"] #rotatePhone,
+html[data-demo="true"] #jumpButton,
+html[data-demo="true"] #mobileControls {
+  display: none !important;
+}
+html[data-demo-hud="hidden"] #app > :not(.stage),
+html[data-demo-hud="hidden"] .stage > :not(#game) {
+  display: none !important;
+}

@@ -1,0 +1,30 @@
+{
+  "provider": "Codex subscription native image_gen via gen_images.sh only",
+  "source": "招式特效/第1批/原图/return.png",
+  "originalSHA256": "c8a70fe2cdb6924628093051e1f545ca8bb2418976f6d9ee10d20ff2f7f36720",
+  "prompt": "俯视斜角像素即时对战独立特效：报恩。主体：贴真实前掌的温暖米金色短打击光痕，伴一枚极小粉色心形光点，中心透明，不能出现巨拳。 最终尺寸约20×20世界像素，普通精灵身体约40像素；绝不覆盖全身。参考仅控制像素画风，不继承火焰形状。16位掌机低分辨率像素色块、少量分层亮暗边缘。正方形RGBA透明底，严格2列2行四个独立连续动画帧，左上右上左下右下顺序，每格10%透明边，无分格线。四帧为凝到真实部位边沿、前伸、接触短痕、回收。根部固定在每格左侧20%、高度50%，朝右展开，动作播放时牢牢附着角色真实部位。中心透明露出原生角色，不画任何角色、额外肢体、地面、风景、UI或背景。无文字无数字无水印。不能用方块、几何图标或巨大圆弧冒充效果。",
+  "generatedAt": "2026-10-11T15:44:02.213127+00:00",
+  "processing": {
+    "method": "2x2 frames; shared alpha-bounds crop; nearest-neighbour scaling; no painted pixels",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "cropBox": [
+      1,
+      11,
+      627,
+      619
+    ],
+    "frameSize": [
+      256,
+      249
+    ],
+    "anchorPx": [
+      50.87284345047923,
+      123.70607028753993
+    ],
+    "outputSHA256": "7b95017c3365350d8a1bbae8ea895651baaccfdd26568236a15954b757cba4d7",
+    "caster": 143
+  }
+}

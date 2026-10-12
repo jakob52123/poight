@@ -1,0 +1,942 @@
+{
+  "repository": "https://github.com/smogon/pokemon-showdown-client",
+  "revision": "cc6f5c24adaaf0a5eb89effbb580516bbf3e7286",
+  "files": [
+    {
+      "path": "vendor/showdown/LICENSE",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/LICENSE",
+      "sha256": "76a97c878c9c7a8321bb395c2b44d3fe2f8d81314d219b20138ed0e2dddd5182",
+      "bytes": 34520
+    },
+    {
+      "path": "vendor/showdown/src/battle-animations-moves.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+      "sha256": "f35d025fbbe843336fdcb8f38c33d937a3d6ec66ca2d1a8a35515a80ca0e82ad",
+      "bytes": 776632
+    },
+    {
+      "path": "vendor/showdown/src/battle-animations.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/src/battle-animations.ts",
+      "sha256": "eed81e4111a79518a215333c038a2f03dfdb65a32a81d58687339af57c9df878",
+      "bytes": 152516
+    },
+    {
+      "path": "vendor/showdown/src/battle-dex-data.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/src/battle-dex-data.ts",
+      "sha256": "556f461b83343068c0ece5876aa87c7e75157fb82d9948f27be17bd1dac55d45",
+      "bytes": 47598
+    },
+    {
+      "path": "vendor/showdown/src/battle-dex.ts",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/src/battle-dex.ts",
+      "sha256": "4097b57db00367ae9d5dda895990b11b9bb2cda355c461cc7c73fee10ab982a4",
+      "bytes": 52593
+    },
+    {
+      "path": "vendor/showdown/fx/alpha.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/alpha.png",
+      "sha256": "c8832cd9b8a201981abbe5ca2bb2576f89d80041511967e4d4d0efeec50ac597",
+      "bytes": 7064
+    },
+    {
+      "path": "vendor/showdown/fx/angry.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/angry.png",
+      "sha256": "5ea8b4f3f01f9461870d545c4c34f3fd8e448daa53d7ec9994a5d22ade6afc3d",
+      "bytes": 328
+    },
+    {
+      "path": "vendor/showdown/fx/bg-beach.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-beach.png",
+      "sha256": "2c8186d7919e05c1558f1a195b9e7ba9ff830bb327d52ab61f6dc948e8229a5b",
+      "bytes": 6707
+    },
+    {
+      "path": "vendor/showdown/fx/bg-beachshore.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-beachshore.png",
+      "sha256": "2b0c3de9a64f9337088592876afa46c50b6476348bab231aa26e2503bf46eafe",
+      "bytes": 5373
+    },
+    {
+      "path": "vendor/showdown/fx/bg-city.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-city.png",
+      "sha256": "82a73d455057b452176bea3685cfb8a837e15a2c059b8da71c2395461c88c01d",
+      "bytes": 5922
+    },
+    {
+      "path": "vendor/showdown/fx/bg-dampcave.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-dampcave.png",
+      "sha256": "46eece6ac10d111a7d33d8609aa056fb072b6e8cd4b00f30184967c33a2ce3bf",
+      "bytes": 7073
+    },
+    {
+      "path": "vendor/showdown/fx/bg-deepsea.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-deepsea.png",
+      "sha256": "73014e52567904fa36a75fc80e9850c7609e0a8f393928eb15ee4ff0d8017adb",
+      "bytes": 5791
+    },
+    {
+      "path": "vendor/showdown/fx/bg-desert.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-desert.png",
+      "sha256": "c868c217d1a9ac9231b87e12477ea74396ccfe49a00ec24d77b0b260ea2f3a57",
+      "bytes": 6489
+    },
+    {
+      "path": "vendor/showdown/fx/bg-earthycave.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-earthycave.png",
+      "sha256": "54442e373fd79a940e5704daa8c7e39bbd8c7eb081b694004d09a32d681f748b",
+      "bytes": 7195
+    },
+    {
+      "path": "vendor/showdown/fx/bg-forest.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-forest.png",
+      "sha256": "550cb311b985796b0d6f9a56d9a3619b688d0d7e1ca70ca3fb418e23650bddae",
+      "bytes": 8069
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen1-spl.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen1-spl.png",
+      "sha256": "5373d45217a55bd4edc9bf2948fd340bfbaf21f7ce4cb1d4251c5c9422c27553",
+      "bytes": 1205
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen1.png",
+      "sha256": "97a475418d9f8696dab363f90d521da6459180e1a6653f2efea77d1555068c4a",
+      "bytes": 1067
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen2-spl.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen2-spl.png",
+      "sha256": "06c14152ee23a03ac4cfdae0d6772c5e9c2a16a825f4bf75f687e63ab51f9881",
+      "bytes": 9676
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen2.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen2.png",
+      "sha256": "8be8dc0f11e47a1e60f451f9dc58cf5124f1fc8d79d69fac1abf9b13a3b9f9cb",
+      "bytes": 9504
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen3-arena.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen3-arena.png",
+      "sha256": "8f906275d48fab3908baefd8100d9c9fb869584ba2a0fc9957b21b61743d9062",
+      "bytes": 7654
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen3-cave.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen3-cave.png",
+      "sha256": "73397bfd8260b5c3a803c4c888292bfeac7281ce0c1094ca1ca8981cfd35e2af",
+      "bytes": 2827
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen3-forest.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen3-forest.png",
+      "sha256": "81c965b633965c59581ece72dbcb03eb5c0bc764cb6a2fd68d57183177f3a64d",
+      "bytes": 3142
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen3-ocean.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen3-ocean.png",
+      "sha256": "f7f1d24733a8cd4e765640c300e6d520f3141b2fb31c91632148d788c2b95e7e",
+      "bytes": 4929
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen3-sand.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen3-sand.png",
+      "sha256": "d6ab49bb50b60b7b5cbe03293997553d3aa8a0922998ea32b9121f497e75a8e7",
+      "bytes": 7601
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen3-spl.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen3-spl.png",
+      "sha256": "7f43627b47a7256354a0c538c7c416b763f0c88e55bc4e660672969625e85ceb",
+      "bytes": 53050
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen3.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen3.png",
+      "sha256": "00e0ffd7fea913372a117c963b03e53a6dedcff4d3b92d426c8931dfd05c3078",
+      "bytes": 4780
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen4-cave.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen4-cave.png",
+      "sha256": "181231b0cb9ede72c8bb66bb11719cfe13300c0ac18c4750f5e3d85eb16b8051",
+      "bytes": 29549
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen4-indoors.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen4-indoors.png",
+      "sha256": "b4d815bc22fd64df6ae03ff3c13d5685f1c2acb06cde2913150f3bc58e286e6c",
+      "bytes": 33188
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen4-snow.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen4-snow.png",
+      "sha256": "31f6c922663d52ca9620665ee22a11cc36e7c7667323d6c2b1572c7d5e5caad7",
+      "bytes": 18940
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen4-spl.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen4-spl.png",
+      "sha256": "0d47b3908be597a317b0fcf36be5cdfcfed92514af0e0989a255cfbd3b28ee97",
+      "bytes": 66613
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen4-water.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen4-water.png",
+      "sha256": "e784382ca7314b8ca73fe322faa2b60efd74badb1660e6b1259c09f54a49b6f0",
+      "bytes": 32589
+    },
+    {
+      "path": "vendor/showdown/fx/bg-gen4.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-gen4.png",
+      "sha256": "c4fc6944800062a1ca43d9834022db3b713af379a5aff0647095fabd51e1178b",
+      "bytes": 45875
+    },
+    {
+      "path": "vendor/showdown/fx/bg-icecave.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-icecave.png",
+      "sha256": "c5bb8dcda67964df93b00a16f354f765dd1e2c94a3e1813cc00f0be7369d1c95",
+      "bytes": 8568
+    },
+    {
+      "path": "vendor/showdown/fx/bg-meadow.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-meadow.png",
+      "sha256": "974c416c848609de5d2996d042f733bb110e285975797a5e5179464b92efe398",
+      "bytes": 10255
+    },
+    {
+      "path": "vendor/showdown/fx/bg-mountain.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-mountain.png",
+      "sha256": "17b19f95ebae8b0b387118d502c33eef9f7a8a7400cfe2cb5f28322b1a308fed",
+      "bytes": 8559
+    },
+    {
+      "path": "vendor/showdown/fx/bg-npa.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-npa.png",
+      "sha256": "300ae0c8e3f87c20142c6a41a872fa19d746bd817394c7c424ebe99134866b93",
+      "bytes": 125229
+    },
+    {
+      "path": "vendor/showdown/fx/bg-river.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-river.png",
+      "sha256": "e719e4bac34fbe74a4dc7ba80ff46e85bb0c7564700a22653617ab4f572d9307",
+      "bytes": 8498
+    },
+    {
+      "path": "vendor/showdown/fx/bg-route.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-route.png",
+      "sha256": "72e2dc7a83c98b1534a467b52193afca19593687658378449b55449b4c93e2b3",
+      "bytes": 9574
+    },
+    {
+      "path": "vendor/showdown/fx/bg-scl.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-scl.png",
+      "sha256": "bdceb5e563fee0a5b8ebcc1aa8c9d53b1f44ffc7363a866de4b5b60f6990b1c4",
+      "bytes": 135730
+    },
+    {
+      "path": "vendor/showdown/fx/bg-space.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-space.jpg",
+      "sha256": "aefb17f5b5887403d5d39bb558fb76124a63bdaccbf6e23023a31e24df4523b0",
+      "bytes": 265717
+    },
+    {
+      "path": "vendor/showdown/fx/bg-spl.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-spl.png",
+      "sha256": "f75406d1453e06c86a3a0700d374b50cd9f88163cc1624c2c2724da0c47f4f4b",
+      "bytes": 113064
+    },
+    {
+      "path": "vendor/showdown/fx/bg-thunderplains.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-thunderplains.png",
+      "sha256": "b579d7e290ec48d76df64f3c19be4a0324b5bc324ef40f5ff8c2460196d6c9e7",
+      "bytes": 8138
+    },
+    {
+      "path": "vendor/showdown/fx/bg-volcanocave.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-volcanocave.png",
+      "sha256": "86b8c1e68adc291ebeae46a58a96dae3cb08f50ad4ff6e9c5beb607652b3fbcf",
+      "bytes": 8586
+    },
+    {
+      "path": "vendor/showdown/fx/bg-wcop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg-wcop.png",
+      "sha256": "2715b41ed5848188d3f6670e5c214be4ac92c4783588d423a3ba28013892dd63",
+      "bytes": 401551
+    },
+    {
+      "path": "vendor/showdown/fx/bg.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg.jpg",
+      "sha256": "24999a33fd88ae7ca58bfbd34b93fe1d6a767920a616773af63b3cfd5434a967",
+      "bytes": 8487
+    },
+    {
+      "path": "vendor/showdown/fx/bg.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bg.png",
+      "sha256": "5dbce955ec9149382130766bbfafe9dc4fcf553830a2acdccb173b66044ca430",
+      "bytes": 61379
+    },
+    {
+      "path": "vendor/showdown/fx/blackwisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/blackwisp.png",
+      "sha256": "67386ed656053c716951ee9e0fc74d62b1bac650b4f25d7adcc055459ddef94e",
+      "bytes": 20204
+    },
+    {
+      "path": "vendor/showdown/fx/bluefireball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bluefireball.png",
+      "sha256": "b3cac70933b333c2997142bba6069ebbb3b5f52d3facd73b1d83a62e4327dab2",
+      "bytes": 1360
+    },
+    {
+      "path": "vendor/showdown/fx/bone.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bone.png",
+      "sha256": "8a58a73e81f001416740442a46be3f37f286377a4f8361e07024c30265856a6f",
+      "bytes": 197
+    },
+    {
+      "path": "vendor/showdown/fx/bottombite.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/bottombite.png",
+      "sha256": "ba4ed6edb11460067c8cad139b280e7e1e0de4afb3fc98f68a59779bd30f55ac",
+      "bytes": 1184
+    },
+    {
+      "path": "vendor/showdown/fx/caltrop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/caltrop.png",
+      "sha256": "8855c6342bffe354ad742142ecd3546a1a64e699b94adc36fe93a011a41e07ee",
+      "bytes": 17421
+    },
+    {
+      "path": "vendor/showdown/fx/client-bg-charizards.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/client-bg-charizards.jpg",
+      "sha256": "24bb085b27cced288366714f7c8b8df9724371f6c8185553e3b7ba974499feaa",
+      "bytes": 185268
+    },
+    {
+      "path": "vendor/showdown/fx/client-bg-horizon.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/client-bg-horizon.jpg",
+      "sha256": "d0431784a5d7f40e8c032cb3f8fb4346632f8a34a6080c6d8120f4d99a6a552b",
+      "bytes": 297817
+    },
+    {
+      "path": "vendor/showdown/fx/client-bg-ocean.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/client-bg-ocean.jpg",
+      "sha256": "7e70e053fe40aa02a1590819e5127f90b0537670d76b6fd13090c88b9a234644",
+      "bytes": 108140
+    },
+    {
+      "path": "vendor/showdown/fx/client-bg-psday.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/client-bg-psday.jpg",
+      "sha256": "9c737e62337a2894a989e9d7eab91ecc5308df2ac5e4ca01f1a59e459871a973",
+      "bytes": 153820
+    },
+    {
+      "path": "vendor/showdown/fx/client-bg-shaymin.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/client-bg-shaymin.jpg",
+      "sha256": "6a61403243b61c71095a3cd3db033adce83938efb2cdb95b445db759855f83a7",
+      "bytes": 220586
+    },
+    {
+      "path": "vendor/showdown/fx/client-bg.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/client-bg.jpg",
+      "sha256": "ee045025435ec161e7c4644cafbe6734a25c630fd8b4a0e83368611cdfae877c",
+      "bytes": 108715
+    },
+    {
+      "path": "vendor/showdown/fx/client-bgsheet.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/client-bgsheet.png",
+      "sha256": "5cbd690d87316a0eafb9bb2b1942058b87094b0c98dc14af3ba76f0d59df86ed",
+      "bytes": 133730
+    },
+    {
+      "path": "vendor/showdown/fx/client-topbar-bg.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/client-topbar-bg.png",
+      "sha256": "fd2f3f44bfb6c86a5a85cd668df84aec4905f1fe6155b3f6551932574e5d4660",
+      "bytes": 1665
+    },
+    {
+      "path": "vendor/showdown/fx/closebuttonsheet.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/closebuttonsheet.png",
+      "sha256": "801fc96ca524d2be8c3c47e774d0fc70cac8a30a57645255149aefef164620c6",
+      "bytes": 362
+    },
+    {
+      "path": "vendor/showdown/fx/electroball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/electroball.png",
+      "sha256": "860acbe504d59f4fa7987cc926761518cd1ad77430ad12685a7f1f41d7cd12a9",
+      "bytes": 7460
+    },
+    {
+      "path": "vendor/showdown/fx/energyball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/energyball.png",
+      "sha256": "3e69c9ef298a14a124242ae56ac4f54351b62e05269dcbc096df676c45744156",
+      "bytes": 3694
+    },
+    {
+      "path": "vendor/showdown/fx/faintleft.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/faintleft.png",
+      "sha256": "51d6d371a0eb145d543b214f39afc3b076559ed774c11624d6f80f42e3a84df0",
+      "bytes": 433
+    },
+    {
+      "path": "vendor/showdown/fx/faintright.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/faintright.png",
+      "sha256": "7680e1fd38f61be493d6da2916a2f28bd820119fb59314126563f52a712150de",
+      "bytes": 433
+    },
+    {
+      "path": "vendor/showdown/fx/feather.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/feather.png",
+      "sha256": "112b309c114c9d81ff1d1164839a3b48275d6b0578bb9241e8b5c06065259bf8",
+      "bytes": 2465
+    },
+    {
+      "path": "vendor/showdown/fx/fireball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/fireball.png",
+      "sha256": "6eb03a7bb5da44d3b8db50302593af47c0e2eda500b93ea9af4d009a4f7b6d73",
+      "bytes": 1325
+    },
+    {
+      "path": "vendor/showdown/fx/fist.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/fist.png",
+      "sha256": "6f4d45f65e3ad9c3667a79b3bd9f5b2af837647de4e1479386886c88c150050a",
+      "bytes": 1680
+    },
+    {
+      "path": "vendor/showdown/fx/fist1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/fist1.png",
+      "sha256": "836a2b203fcc6ebfcc713e2f73369714bc6715e253bac81b1aac0b524327db34",
+      "bytes": 1572
+    },
+    {
+      "path": "vendor/showdown/fx/flareball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/flareball.png",
+      "sha256": "bb713056ebb2d6d9eee563d5d8a3ec7a33617c58f06a92a89efc19a86c192a06",
+      "bytes": 8623
+    },
+    {
+      "path": "vendor/showdown/fx/foot.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/foot.png",
+      "sha256": "478e0c97418137fa9290d468cd990bbd724214e88d83ec3df681662bf114667e",
+      "bytes": 3311
+    },
+    {
+      "path": "vendor/showdown/fx/gear.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/gear.png",
+      "sha256": "139a80c8e7cac4c63574c6c5a2bd5997e29de8c2aeab5c23772f71657d5f129e",
+      "bytes": 18560
+    },
+    {
+      "path": "vendor/showdown/fx/gender-f.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/gender-f.png",
+      "sha256": "0c155dc5064dda4b0c8db511f9dcba1467b607ca3dc3fccba02a90cfb417ed6a",
+      "bytes": 125
+    },
+    {
+      "path": "vendor/showdown/fx/gender-m.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/gender-m.png",
+      "sha256": "089262d614d63333a71685116052e5cb70739170b0c7c0b07e44dfd0a509ea39",
+      "bytes": 136
+    },
+    {
+      "path": "vendor/showdown/fx/greenmetal1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/greenmetal1.png",
+      "sha256": "978c308877a89cf1a89e8f7d0d73b5d80a4e7e94c3196e92e1a4283ccd09b209",
+      "bytes": 4499
+    },
+    {
+      "path": "vendor/showdown/fx/greenmetal2.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/greenmetal2.png",
+      "sha256": "9771787ffb15d15858c9864eac8947ed84cf3a4f6d71c828684b227ce41b5797",
+      "bytes": 4191
+    },
+    {
+      "path": "vendor/showdown/fx/groupchat.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/groupchat.png",
+      "sha256": "d725cc58cc938d76a258d94ae73def64842d9dbf1a998b8d74ba6924d3c620b0",
+      "bytes": 492647
+    },
+    {
+      "path": "vendor/showdown/fx/hangman0.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hangman0.png",
+      "sha256": "17e30f0c31e524fe5778af0fce7c3ce1338bf25fe868b5af700cc5556c25dcc9",
+      "bytes": 137
+    },
+    {
+      "path": "vendor/showdown/fx/hangman1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hangman1.png",
+      "sha256": "4bc337006ffec0e2141f07c3ab858ff31c8db55beea0610ce68ff16464ebda3b",
+      "bytes": 244
+    },
+    {
+      "path": "vendor/showdown/fx/hangman2.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hangman2.png",
+      "sha256": "6b7c1d1a95f43fb3ccc666c99b344f1f36dc6052abb0de351f9684f4df569f7c",
+      "bytes": 292
+    },
+    {
+      "path": "vendor/showdown/fx/hangman3.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hangman3.png",
+      "sha256": "4221a7b4ed3b8ae6a5a8fecfd99f6514c6a3127d0c6a296ee4a7e8e811067137",
+      "bytes": 335
+    },
+    {
+      "path": "vendor/showdown/fx/hangman4.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hangman4.png",
+      "sha256": "20cf161fdd17e6ce72c4795ae92744c63636f57f664505d71e421dd90ed8dd57",
+      "bytes": 375
+    },
+    {
+      "path": "vendor/showdown/fx/hangman5.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hangman5.png",
+      "sha256": "72436127630446ff5f77f20e753c63d8f0730bfcaeae7d2422d36941bfab5b89",
+      "bytes": 417
+    },
+    {
+      "path": "vendor/showdown/fx/hangman6.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hangman6.png",
+      "sha256": "05e5cf27420b2a499443b01637b57abac3726c0aaa4df32e7d8bb29f7e1f64dd",
+      "bytes": 415
+    },
+    {
+      "path": "vendor/showdown/fx/hangman7.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hangman7.png",
+      "sha256": "081f27633744d3c879365f95cf0c3ba8375a7f115e8f9d11616e4ab9261e4169",
+      "bytes": 477
+    },
+    {
+      "path": "vendor/showdown/fx/heart.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/heart.png",
+      "sha256": "62afb3c9c0ea6e4477114577353602711ddbcab6c5258c67be2563c901e08b2b",
+      "bytes": 917
+    },
+    {
+      "path": "vendor/showdown/fx/hitmarker.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/hitmarker.png",
+      "sha256": "ea594f5f29f78232038ea4b2e5de0f70ea96401569a6d6ad240a2189d65d2f7f",
+      "bytes": 59150
+    },
+    {
+      "path": "vendor/showdown/fx/iceball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/iceball.png",
+      "sha256": "6b66ab6fc33fbd06ad16afb77c23e7cda7ebb41a5075a0903143f4f9279a29d8",
+      "bytes": 6984
+    },
+    {
+      "path": "vendor/showdown/fx/icicle-pink.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/icicle-pink.png",
+      "sha256": "2d816f5f9e6a0b1eff10a9381cf912b90954fb3af829b4a3a3453726b79b9857",
+      "bytes": 1296
+    },
+    {
+      "path": "vendor/showdown/fx/icicle.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/icicle.png",
+      "sha256": "81046c6c2f6c4da88da4f6d466f51366745c086eb7edc61b2da4fb89395029f3",
+      "bytes": 1068
+    },
+    {
+      "path": "vendor/showdown/fx/impact.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/impact.png",
+      "sha256": "efb5d795733d223456e023c21e5eab866bcf2ec417bf3903c10d30893e1ba3f8",
+      "bytes": 18150
+    },
+    {
+      "path": "vendor/showdown/fx/item.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/item.png",
+      "sha256": "1d442de621ab146c29bceae62c57943845e615835b8318ed62c4d92602abad95",
+      "bytes": 152
+    },
+    {
+      "path": "vendor/showdown/fx/leaf1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/leaf1.png",
+      "sha256": "608a387738675f34f9228be3e4f5a10089360c18a43f7df2809975657f34f15e",
+      "bytes": 1680
+    },
+    {
+      "path": "vendor/showdown/fx/leaf2.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/leaf2.png",
+      "sha256": "82a732a9e732f20e53578c34f1fb1dc3a1e6214c0c2e36c4598a4ef7a0b20057",
+      "bytes": 1737
+    },
+    {
+      "path": "vendor/showdown/fx/leftchop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/leftchop.png",
+      "sha256": "b1cd8c5dea9c977b2de61cf8aa25763ed06e5555c9a860dba5eaf0e64496458a",
+      "bytes": 6678
+    },
+    {
+      "path": "vendor/showdown/fx/leftclaw.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/leftclaw.png",
+      "sha256": "f1cb1f1f2c4d4a93acdcdb6003fcd433008c0080e59189422dbb340b6c7de8e1",
+      "bytes": 356
+    },
+    {
+      "path": "vendor/showdown/fx/leftslash.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/leftslash.png",
+      "sha256": "3b62427f76c08bd782d4c00da5814683d5b2192fab6895701f336296ba0873a4",
+      "bytes": 15836
+    },
+    {
+      "path": "vendor/showdown/fx/lightning.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/lightning.png",
+      "sha256": "77593a8096a906698719ee5003d39ba6cfb39133952ffebeafcd4b8059adad50",
+      "bytes": 25633
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-cop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-cop.png",
+      "sha256": "c9320c65a2c3aaa7bdd908e7b9f82c2015668af5c21388cdd9d8486579b10ae5",
+      "bytes": 614
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-dead.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-dead.png",
+      "sha256": "6a76c0811c4b5edca77e7660bac295328421c3cc3cc022a34079aa3225d875c6",
+      "bytes": 288
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-doctor.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-doctor.png",
+      "sha256": "846271f3809c166a9fc9c8107ecacc921392b6d6e5a0c0c6d85fc93cc3f96a47",
+      "bytes": 520
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-fool.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-fool.png",
+      "sha256": "89b1cf0dbaa9a7f2bc92fc035064394732eb7507cd4830d3ece575c9230605dd",
+      "bytes": 420
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-godfather.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-godfather.png",
+      "sha256": "18eb74724aa8e670f90b18b0e25bf45ff99d66486a95692ba5474abeecb049dd",
+      "bytes": 421
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-goon.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-goon.png",
+      "sha256": "5ee20cd8ef0ba14c3e16755d5c1dfc48ffaafb45e54dd04a24e76d357e8a384b",
+      "bytes": 606
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-hooker.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-hooker.png",
+      "sha256": "8721527bdb351325d2e067ae4647284119b43f2dbc856b0e37541af1c1cebc10",
+      "bytes": 711
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-mafia.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-mafia.png",
+      "sha256": "b67a05b96ecc168dcc79d5381a3699ff1baa7699c34d2e6dd32cdcb6d8bbfaed",
+      "bytes": 552
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-mayor.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-mayor.png",
+      "sha256": "4af39cb09bbb79031ff64280f6e7caefa701851712c0f115549172e19f0c938f",
+      "bytes": 569
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-villager.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-villager.png",
+      "sha256": "d426078b6631f9f884a4b19800a9aff07e534dbe073c7259427816b523e7123b",
+      "bytes": 374
+    },
+    {
+      "path": "vendor/showdown/fx/mafia-werewolf.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mafia-werewolf.png",
+      "sha256": "d090616c4a124c459baa92c786157c3396eb56720b451671a392b7a4d0191355",
+      "bytes": 513
+    },
+    {
+      "path": "vendor/showdown/fx/mail.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mail.png",
+      "sha256": "38b1839e3dea5366afac1c8020eaa352f275a69cc61bd24858ebce261b998622",
+      "bytes": 164
+    },
+    {
+      "path": "vendor/showdown/fx/mistball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mistball.png",
+      "sha256": "4ea7bbf58196f6a60be073fde13f126b41e2796752112ff73e69714d6951d406",
+      "bytes": 7629
+    },
+    {
+      "path": "vendor/showdown/fx/moon.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/moon.png",
+      "sha256": "bfbb583832854456f50f0e272d3e2e3cdecb28040617ba0d38394aee0e46945e",
+      "bytes": 4824
+    },
+    {
+      "path": "vendor/showdown/fx/mudwisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mudwisp.png",
+      "sha256": "1fd09f0213c7bbd3133ef6f989ecd41a7c9269fa86c38b3676278f151ecf1538",
+      "bytes": 18539
+    },
+    {
+      "path": "vendor/showdown/fx/mute.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/mute.png",
+      "sha256": "ff079dd71786629d6cafff66badef639e293930c90dd09bb06ec11e2f5016e1b",
+      "bytes": 3163
+    },
+    {
+      "path": "vendor/showdown/fx/omega.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/omega.png",
+      "sha256": "8a684ee41e92fd31ef6567d8c50599d109925e7457351d22b9f442816b87b79a",
+      "bytes": 7193
+    },
+    {
+      "path": "vendor/showdown/fx/petal.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/petal.png",
+      "sha256": "81bfa521d66da0fda30a6db44a7685838d496da76f306af999c97f4646c7eb3c",
+      "bytes": 3914
+    },
+    {
+      "path": "vendor/showdown/fx/pointer.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/pointer.png",
+      "sha256": "a89ddbff81e1479cadaf09e8a77d4d4ef5beb23b87e3e8dda55e38e7d9a84448",
+      "bytes": 4533
+    },
+    {
+      "path": "vendor/showdown/fx/poisoncaltrop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/poisoncaltrop.png",
+      "sha256": "afbc88bd51ccbb34c952679ad2e6ea2c35b07b1d4a24088ace7b1326585feb7e",
+      "bytes": 17442
+    },
+    {
+      "path": "vendor/showdown/fx/poisonwisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/poisonwisp.png",
+      "sha256": "eeff3b5c5fa35796e272f94aa066355a5c57bcd639131dd2b3dad6e671722a90",
+      "bytes": 4277
+    },
+    {
+      "path": "vendor/showdown/fx/pokeball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/pokeball.png",
+      "sha256": "0e3d568fd7c206b2768b1396f4b50e13c1c2034b64dc96718bd8199453965084",
+      "bytes": 1686
+    },
+    {
+      "path": "vendor/showdown/fx/purplewisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/purplewisp.png",
+      "sha256": "eeff3b5c5fa35796e272f94aa066355a5c57bcd639131dd2b3dad6e671722a90",
+      "bytes": 4277
+    },
+    {
+      "path": "vendor/showdown/fx/rainbow.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rainbow.png",
+      "sha256": "9e783194f5aecac013895930293b8a5a30d3633dde2fef0e0885801bff2b2daf",
+      "bytes": 4847
+    },
+    {
+      "path": "vendor/showdown/fx/rightchop.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rightchop.png",
+      "sha256": "cce9fd8c4debf3f4bab2c9c4f498264eebbd4dc6cb105bcf5af21098ae24abdc",
+      "bytes": 5731
+    },
+    {
+      "path": "vendor/showdown/fx/rightclaw.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rightclaw.png",
+      "sha256": "0d0351c4dd89d3f8b31275c45c39f9f75b9bb43d342f50f4537daa0253f6859d",
+      "bytes": 357
+    },
+    {
+      "path": "vendor/showdown/fx/rightslash.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rightslash.png",
+      "sha256": "85a43788d247c8c4889cc4e2faa0974655e25b57a105aa89c959025ff21bf47a",
+      "bytes": 1482
+    },
+    {
+      "path": "vendor/showdown/fx/rock1.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rock1.png",
+      "sha256": "66f60b5c1ba066f6388e7cdbf8515ad1e5a95eb95347014c9d973eee2b3a9f97",
+      "bytes": 1120
+    },
+    {
+      "path": "vendor/showdown/fx/rock2.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rock2.png",
+      "sha256": "8c403a0a38b9e745329eddedce5c1eb9676be36f7aa8040732b0a8d5c90c516a",
+      "bytes": 1017
+    },
+    {
+      "path": "vendor/showdown/fx/rock3.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rock3.png",
+      "sha256": "320099aa3d9be7eec716ba22bcff2b6d5f38d91d8ee7e2ae88a5f8697d6f794a",
+      "bytes": 2460
+    },
+    {
+      "path": "vendor/showdown/fx/rocks.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/rocks.png",
+      "sha256": "132c0725f1afd584ac5b754c337cca7568c5d5d49058c476601f0af37a98e6b8",
+      "bytes": 377
+    },
+    {
+      "path": "vendor/showdown/fx/shadowball.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/shadowball.png",
+      "sha256": "095793124bd03f8fb03449b865f8b6dba95bb6325105510eed5f598367c997d5",
+      "bytes": 4346
+    },
+    {
+      "path": "vendor/showdown/fx/shell.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/shell.png",
+      "sha256": "69cf5ebc38af7365f5246e14250628d51db2afcc0cbd0ab34d08d065ebcd56be",
+      "bytes": 30344
+    },
+    {
+      "path": "vendor/showdown/fx/shine.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/shine.png",
+      "sha256": "22d78fd51531fa27d9710c456c1962ec144b0b04ddd245fb19b379100f43b950",
+      "bytes": 6029
+    },
+    {
+      "path": "vendor/showdown/fx/sound.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/sound.png",
+      "sha256": "991b960309676a3eb66b058e5bb1d7940073aae0631ab46bc29ad709d41d8c77",
+      "bytes": 4869
+    },
+    {
+      "path": "vendor/showdown/fx/stare.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/stare.png",
+      "sha256": "1e5824f30205d4c89bb8907fd04647335ba441c518d2e2c4b4a5564f008edb99",
+      "bytes": 18929
+    },
+    {
+      "path": "vendor/showdown/fx/switchleft.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/switchleft.png",
+      "sha256": "51bfd4d90c59db0c1d4e13e44799f68b0ad05382aa79cfbf9bef857909e7fdd6",
+      "bytes": 473
+    },
+    {
+      "path": "vendor/showdown/fx/switchright.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/switchright.png",
+      "sha256": "d4c3dfd11996b26a55939f1299eb3dbdd4768ccb37a2d546be1b8d0ae16db33f",
+      "bytes": 475
+    },
+    {
+      "path": "vendor/showdown/fx/sword.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/sword.png",
+      "sha256": "ead33650edcd6c00b726f42202ffb40702b3d5f06e7f93fe2e1766dff0782bbf",
+      "bytes": 2056
+    },
+    {
+      "path": "vendor/showdown/fx/topbite.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/topbite.png",
+      "sha256": "c560ea6535e103d8983535a79f430a58f570ed5d906ac258d974c021f84fec3d",
+      "bytes": 1154
+    },
+    {
+      "path": "vendor/showdown/fx/ultra.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/ultra.png",
+      "sha256": "a6805ae5b30137ece1a50800cd3f1375bdc509ebfba8d295dedda7f5500ef50a",
+      "bytes": 3117
+    },
+    {
+      "path": "vendor/showdown/fx/versus.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/versus.png",
+      "sha256": "8e26aa689fca518cded83b0ce76f5f11678e9a7d58c25d2b0b6531b6e2c23643",
+      "bytes": 321
+    },
+    {
+      "path": "vendor/showdown/fx/waterwisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/waterwisp.png",
+      "sha256": "264d200ffb493324c3b49b0e3802fc74c2c596a75d7ed5d8512da1dc68fd5ee7",
+      "bytes": 4600
+    },
+    {
+      "path": "vendor/showdown/fx/weather-electricterrain.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-electricterrain.png",
+      "sha256": "85efa306959615594616119ea69169043b8ce2af48e8f6c87ad789a98d7bc869",
+      "bytes": 98462
+    },
+    {
+      "path": "vendor/showdown/fx/weather-grassyterrain.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-grassyterrain.png",
+      "sha256": "a33878f6a5facdc2b03d84d02c89948013f5cbb0a2d7f4d7e6f7ef3660e3ecdf",
+      "bytes": 103930
+    },
+    {
+      "path": "vendor/showdown/fx/weather-gravity.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-gravity.png",
+      "sha256": "f1c70608834fb9a3fd5018836a1e58950876b4637f89e99260aa37245a14d34a",
+      "bytes": 13262
+    },
+    {
+      "path": "vendor/showdown/fx/weather-hail.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-hail.png",
+      "sha256": "bd4ce02cc5fc56389067103d51b7cd33dcd1fa5f635b045f97fe1ef821c27171",
+      "bytes": 72321
+    },
+    {
+      "path": "vendor/showdown/fx/weather-magicroom.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-magicroom.png",
+      "sha256": "75f908b43bed539d6c9f10a57d2685f975ec5b046a6c51ad4b5b06f03e8887d9",
+      "bytes": 13516
+    },
+    {
+      "path": "vendor/showdown/fx/weather-mistyterrain.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-mistyterrain.png",
+      "sha256": "afe8773263147fd4f82a0f8c1656fa4e30d50da600b597d4fc5d9aca86b4a8db",
+      "bytes": 79711
+    },
+    {
+      "path": "vendor/showdown/fx/weather-psychicterrain.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-psychicterrain.png",
+      "sha256": "2efcb4bc32189c782e70a62b67db5a6d93d96220b8c60c5954273d17806343d7",
+      "bytes": 73278
+    },
+    {
+      "path": "vendor/showdown/fx/weather-raindance.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-raindance.jpg",
+      "sha256": "20bda3c6eb2c78385ede66367a9febde1e50ed9e091bee7241037c4e8cc6a76d",
+      "bytes": 50030
+    },
+    {
+      "path": "vendor/showdown/fx/weather-sandstorm.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-sandstorm.png",
+      "sha256": "f1c9c6bb5188d24a16b3a37f43390813be7bd23cfa5caccb576997d00077333d",
+      "bytes": 105014
+    },
+    {
+      "path": "vendor/showdown/fx/weather-strongwind.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-strongwind.png",
+      "sha256": "fb216e27ac88cac3043017606188fdf4dccee8d9792bbdfe7a621e3b3b5a4b6b",
+      "bytes": 28644
+    },
+    {
+      "path": "vendor/showdown/fx/weather-sunnyday.jpg",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-sunnyday.jpg",
+      "sha256": "1b125b7f4ae75bb96676496ac9b1872e73ba8ae550c67af1f8c23a137d120881",
+      "bytes": 24401
+    },
+    {
+      "path": "vendor/showdown/fx/weather-trickroom.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-trickroom.png",
+      "sha256": "a1d445801d1071298683dc40427caa144b451257399bfa2e1e6e857c9d01d0fe",
+      "bytes": 18473
+    },
+    {
+      "path": "vendor/showdown/fx/weather-wonderroom.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/weather-wonderroom.png",
+      "sha256": "234a80a46dcf3eca4fe42971698f5099c643dc1eeeafdb6b4d93c85adbb5a21c",
+      "bytes": 13585
+    },
+    {
+      "path": "vendor/showdown/fx/web.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/web.png",
+      "sha256": "71974312c14157cb0302448d821d172c5620c5a4c48fb70fc678d26995f2778c",
+      "bytes": 11404
+    },
+    {
+      "path": "vendor/showdown/fx/wisp.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/wisp.png",
+      "sha256": "5418f62c9134de754fa2dcda890486ea7d14b7d0c3f2fedb895587a23c1ff42c",
+      "bytes": 3792
+    },
+    {
+      "path": "vendor/showdown/fx/z-symbol.png",
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown-client/cc6f5c24adaaf0a5eb89effbb580516bbf3e7286/play.pokemonshowdown.com/fx/z-symbol.png",
+      "sha256": "95fd24fcce5cfc6e01cd92b39400d376107355e262186ff5cc139bdf06a46eac",
+      "bytes": 6591
+    }
+  ]
+}

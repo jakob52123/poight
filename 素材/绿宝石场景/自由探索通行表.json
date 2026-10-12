@@ -1,0 +1,301 @@
+{
+  "scope": "Hoenn free exploration only; original collision/elevation preserved. Non-whitelisted blockers remain blocked.",
+  "behaviors": {
+    "0x10": {
+      "name": "MB_POND_WATER",
+      "mode": "water"
+    },
+    "0x11": {
+      "name": "MB_INTERIOR_DEEP_WATER",
+      "mode": "water"
+    },
+    "0x12": {
+      "name": "MB_DEEP_WATER",
+      "mode": "water"
+    },
+    "0x13": {
+      "name": "MB_WATERFALL",
+      "mode": "water",
+      "overrideCollision": true,
+      "elevationLink": true,
+      "speed": 0.5
+    },
+    "0x14": {
+      "name": "MB_SOOTOPOLIS_DEEP_WATER",
+      "mode": "water"
+    },
+    "0x15": {
+      "name": "MB_OCEAN_WATER",
+      "mode": "water"
+    },
+    "0x17": {
+      "name": "MB_SHALLOW_WATER",
+      "mode": "water"
+    },
+    "0x22": {
+      "name": "MB_SEAWEED",
+      "mode": "water"
+    },
+    "0x38": {
+      "name": "MB_JUMP_EAST",
+      "mode": "ledge",
+      "overrideCollision": true,
+      "elevationLink": true,
+      "direction": [
+        1,
+        0
+      ]
+    },
+    "0x39": {
+      "name": "MB_JUMP_WEST",
+      "mode": "ledge",
+      "overrideCollision": true,
+      "elevationLink": true,
+      "direction": [
+        -1,
+        0
+      ]
+    },
+    "0x3A": {
+      "name": "MB_JUMP_NORTH",
+      "mode": "ledge",
+      "overrideCollision": true,
+      "elevationLink": true,
+      "direction": [
+        0,
+        -1
+      ]
+    },
+    "0x3B": {
+      "name": "MB_JUMP_SOUTH",
+      "mode": "ledge",
+      "overrideCollision": true,
+      "elevationLink": true,
+      "direction": [
+        0,
+        1
+      ]
+    },
+    "0x3C": {
+      "name": "MB_JUMP_NORTHEAST",
+      "mode": "ledge",
+      "overrideCollision": true,
+      "elevationLink": true,
+      "direction": [
+        1,
+        -1
+      ]
+    },
+    "0x3D": {
+      "name": "MB_JUMP_NORTHWEST",
+      "mode": "ledge",
+      "overrideCollision": true,
+      "elevationLink": true,
+      "direction": [
+        -1,
+        -1
+      ]
+    },
+    "0x3E": {
+      "name": "MB_JUMP_SOUTHEAST",
+      "mode": "ledge",
+      "overrideCollision": true,
+      "elevationLink": true,
+      "direction": [
+        1,
+        1
+      ]
+    },
+    "0x3F": {
+      "name": "MB_JUMP_SOUTHWEST",
+      "mode": "ledge",
+      "overrideCollision": true,
+      "elevationLink": true,
+      "direction": [
+        -1,
+        1
+      ]
+    },
+    "0x50": {
+      "name": "MB_EASTWARD_CURRENT",
+      "mode": "water",
+      "overrideCollision": true,
+      "current": [
+        1,
+        0
+      ],
+      "againstSpeed": 0.5,
+      "withSpeed": 1.5
+    },
+    "0x51": {
+      "name": "MB_WESTWARD_CURRENT",
+      "mode": "water",
+      "overrideCollision": true,
+      "current": [
+        -1,
+        0
+      ],
+      "againstSpeed": 0.5,
+      "withSpeed": 1.5
+    },
+    "0x52": {
+      "name": "MB_NORTHWARD_CURRENT",
+      "mode": "water",
+      "overrideCollision": true,
+      "current": [
+        0,
+        -1
+      ],
+      "againstSpeed": 0.5,
+      "withSpeed": 1.5
+    },
+    "0x53": {
+      "name": "MB_SOUTHWARD_CURRENT",
+      "mode": "water",
+      "overrideCollision": true,
+      "current": [
+        0,
+        1
+      ],
+      "againstSpeed": 0.5,
+      "withSpeed": 1.5
+    },
+    "0x70": {
+      "name": "MB_BRIDGE_OVER_OCEAN",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x71": {
+      "name": "MB_BRIDGE_OVER_POND_LOW",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x72": {
+      "name": "MB_BRIDGE_OVER_POND_MED",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x73": {
+      "name": "MB_BRIDGE_OVER_POND_HIGH",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x74": {
+      "name": "MB_PACIFIDLOG_VERTICAL_LOG_TOP",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x75": {
+      "name": "MB_PACIFIDLOG_VERTICAL_LOG_BOTTOM",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x76": {
+      "name": "MB_PACIFIDLOG_HORIZONTAL_LOG_LEFT",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x77": {
+      "name": "MB_PACIFIDLOG_HORIZONTAL_LOG_RIGHT",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x78": {
+      "name": "MB_FORTREE_BRIDGE",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x7A": {
+      "name": "MB_BRIDGE_OVER_POND_MED_EDGE_1",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x7B": {
+      "name": "MB_BRIDGE_OVER_POND_MED_EDGE_2",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x7C": {
+      "name": "MB_BRIDGE_OVER_POND_HIGH_EDGE_1",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x7D": {
+      "name": "MB_BRIDGE_OVER_POND_HIGH_EDGE_2",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x7E": {
+      "name": "MB_UNUSED_BRIDGE",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0x7F": {
+      "name": "MB_BIKE_BRIDGE_OVER_BARRIER",
+      "mode": "bridge",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0xD0": {
+      "name": "MB_MUDDY_SLOPE",
+      "mode": "land",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0xD1": {
+      "name": "MB_BUMPY_SLOPE",
+      "mode": "land",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0xD2": {
+      "name": "MB_CRACKED_FLOOR",
+      "mode": "land",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0xD3": {
+      "name": "MB_ISOLATED_VERTICAL_RAIL",
+      "mode": "land",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0xD4": {
+      "name": "MB_ISOLATED_HORIZONTAL_RAIL",
+      "mode": "land",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0xD5": {
+      "name": "MB_VERTICAL_RAIL",
+      "mode": "land",
+      "overrideCollision": true,
+      "elevationLink": true
+    },
+    "0xD6": {
+      "name": "MB_HORIZONTAL_RAIL",
+      "mode": "land",
+      "overrideCollision": true,
+      "elevationLink": true
+    }
+  },
+  "objectEvents": {
+    "OBJ_EVENT_GFX_CUTTABLE_TREE": "pass underlying ground; these are object sprites, not metatile behavior codes; no NPC/object collision is instantiated",
+    "OBJ_EVENT_GFX_BREAKABLE_ROCK": "pass underlying ground; these are object sprites, not metatile behavior codes; no NPC/object collision is instantiated",
+    "OBJ_EVENT_GFX_PUSHABLE_BOULDER": "pass underlying ground; these are object sprites, not metatile behavior codes; no NPC/object collision is instantiated"
+  }
+}

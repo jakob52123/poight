@@ -1,0 +1,324 @@
+[
+  {
+    "key": "bubble",
+    "restoredSource": "bubble__ANIM_TAG_BUBBLE.png",
+    "sourceSHA256": "c2034190a0ee205b8e69f75855d37194a0588b55f4536ddef00e6baff3fc02ce",
+    "frame": [
+      0,
+      0,
+      16,
+      16
+    ],
+    "outputSHA256": "41e2c94966a4b04477a75ba9555d9f6a2bb24185568ee50e951c213e1a1aaef9",
+    "palette": "#093b9d",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "flame",
+    "restoredSource": "small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "sourceSHA256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
+    "frame": [
+      0,
+      32,
+      32,
+      64
+    ],
+    "outputSHA256": "5c5e2f56b758f6fd5e11441b5f6decb40eb4652a8c2af5a5cb2afdd1340880fb",
+    "palette": "#981701",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "leaf",
+    "restoredSource": "leaf__ANIM_TAG_LEAF.png",
+    "sourceSHA256": "d34dd53bfe5868e71d232713e2d34b086ac6bc3ea8ab64f7354989634ccbb163",
+    "frame": [
+      0,
+      0,
+      16,
+      16
+    ],
+    "outputSHA256": "c37d8839a3ae1dcea5b006e1e1908f687c159b25e7094de0bdef97d8231df96f",
+    "palette": "#03280b",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "razor",
+    "restoredSource": "razor_leaf__ANIM_TAG_RAZOR_LEAF.png",
+    "sourceSHA256": "f9fa295154ad5ac0a98fac64c7f6eb6be416060a4f2a1fcf91da472ffa714ee0",
+    "frame": [
+      0,
+      0,
+      32,
+      16
+    ],
+    "outputSHA256": "d158ae41e9f1625944ea6b600c760114799956134818c8e62c4f6f53511ab1f2",
+    "palette": "#06451a",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "gust",
+    "restoredSource": "gust__ANIM_TAG_GUST.png",
+    "sourceSHA256": "5607c973e729853b1bed0fc743584078710307cc61640eef278f92373d27d6f5",
+    "frame": [
+      0,
+      0,
+      32,
+      64
+    ],
+    "outputSHA256": "a45642271de3aa6d1c102a94ddbbb43fc5561b2578fce52d486fb4b70c3c1d3f",
+    "palette": "#063b70",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "needle",
+    "restoredSource": "needle__ANIM_TAG_NEEDLE.png",
+    "sourceSHA256": "4ce65ddaaca284ccdc470fb292fd2c018abc03d63a4ec92272a68f1bfad433bf",
+    "frame": [
+      0,
+      0,
+      16,
+      16
+    ],
+    "outputSHA256": "1244d71af9cff3f210794fb8fa74fc8b048099ae5bedb2b3c4c1900584cda237",
+    "palette": "#601378",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "star",
+    "restoredSource": "yellow_star__ANIM_TAG_YELLOW_STAR.png",
+    "sourceSHA256": "82ea22365794912c7d992f95237fd9bd5df09746c054e1963806530445b51a3a",
+    "frame": [
+      0,
+      0,
+      32,
+      32
+    ],
+    "outputSHA256": "f6aa526d7a5afe6eb3591cc7cdd4a069f040e07e2a3c9a49c01667a4e3272ff3",
+    "palette": "#ffff24",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "triangle",
+    "restoredSource": "tri_attack_triangle__ANIM_TAG_TRI_ATTACK_TRIANGLE.png",
+    "sourceSHA256": "e9b6aae7c3ccb8ab050f897856c57edc69d9f0a5be8b68d846b094d32eb7d43d",
+    "frame": [
+      0,
+      0,
+      64,
+      64
+    ],
+    "outputSHA256": "a2ded2345b3644fbfbc1995535c3b01aafff46723c21454809ef9b8e595d87d5",
+    "palette": null,
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "crescent",
+    "restoredSource": "air_wave_2__ANIM_TAG_AIR_WAVE_2.png",
+    "sourceSHA256": "ef7b3d6d08d6b06051407382caf3d0efba1b3c178e279aa4ebfe404f2e6f58ce",
+    "frame": [
+      0,
+      0,
+      32,
+      16
+    ],
+    "outputSHA256": "e3c9bcf9b04f175f736a4de6ef2c4b99c4fed18d095beb5c144047b9dd41c88c",
+    "palette": "#900749",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "ice",
+    "restoredSource": "ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
+    "sourceSHA256": "5571dd9d34a946a3de23dd30881642d1630d346550f95eef386233991a3c99f8",
+    "frame": [
+      0,
+      0,
+      16,
+      16
+    ],
+    "outputSHA256": "53d5956eabc104d13a6bf85d990335301c33a1b7d40af9e97da78dca21e7f100",
+    "palette": "#65ffff",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "spikes",
+    "restoredSource": "ice_spikes__ANIM_TAG_ICE_SPIKES.png",
+    "sourceSHA256": "f4ab94225c530cece2ecdcf275c7cfb3be6b79d5e4acc25b7c37ed13ec7b1b0d",
+    "frame": [
+      0,
+      32,
+      8,
+      48
+    ],
+    "outputSHA256": "89298c12b88b42a6587329918e072f4632a5961c5c95773bf2cb21a5da9d8525",
+    "palette": "#31e8ff",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "orb",
+    "restoredSource": "orbs__ANIM_TAG_ORBS.png",
+    "sourceSHA256": "33618b641a599eb9302c75581c9eb5d9337fdf28d02e40ddef676e6ccc503973",
+    "frame": [
+      0,
+      32,
+      16,
+      48
+    ],
+    "outputSHA256": "84cd758bcb095db4ad8be0441c6472ab18fc225643d4f69deca9eaa2e7bfa629",
+    "palette": "#ffec45",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "water",
+    "restoredSource": "water_orb__ANIM_TAG_WATER_ORB.png",
+    "sourceSHA256": "c12ddcc23266c5d457d136805d39c51eec6056b74f07e6403f50ba8ff1239f20",
+    "frame": [
+      0,
+      0,
+      16,
+      16
+    ],
+    "outputSHA256": "96fca8974aaba98eacee4e8502c01d05123f38032c8d2420299902d3a401ad9e",
+    "palette": "#65ffff",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "ring",
+    "restoredSource": "gold_ring__ANIM_TAG_GOLD_RING.png",
+    "sourceSHA256": "f159e6de4adfac37c4b5a6c3b864f6ff30906504dd035833fed5e97072c039aa",
+    "frame": [
+      0,
+      0,
+      16,
+      32
+    ],
+    "outputSHA256": "051b3bc9427f143e59e732ac4e5092a806c2e85ca2bdb7344af4f606d244c9d6",
+    "palette": "#ffff24",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "red",
+    "restoredSource": "glowy_red_orb__ANIM_TAG_GLOWY_RED_ORB.png",
+    "sourceSHA256": "7756185c8aedb00fb20679e0b6c75bc872640b8f4ff77047a82257fd871cfc2e",
+    "frame": [
+      0,
+      0,
+      8,
+      8
+    ],
+    "outputSHA256": "b289c3b9adc4f2237802418051acce8da9a1d5e313d668030141c6514d2fff0e",
+    "palette": "#ff7272",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "green",
+    "restoredSource": "glowy_red_orb__ANIM_TAG_GLOWY_GREEN_ORB.png",
+    "sourceSHA256": "f3973ac9d8d36ebc9c8b95eab8aa17fbbda58e09effaac11f30ae2ac16c102c1",
+    "frame": [
+      0,
+      0,
+      8,
+      8
+    ],
+    "outputSHA256": "fe62fb59787388a4a70497f11a705af1530c87f5bc6c186e25f0ec221e72be92",
+    "palette": "#5dff24",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "sap",
+    "restoredSource": "orbs__ANIM_TAG_ORBS.png",
+    "sourceSHA256": "33618b641a599eb9302c75581c9eb5d9337fdf28d02e40ddef676e6ccc503973",
+    "frame": [
+      0,
+      32,
+      16,
+      48
+    ],
+    "outputSHA256": "4490d22f33609982e9634642960b2dbd8a351f04965426cf8ff54992de8c812a",
+    "palette": "#70ff24",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "silver",
+    "restoredSource": "orbs__ANIM_TAG_ORBS.png",
+    "sourceSHA256": "33618b641a599eb9302c75581c9eb5d9337fdf28d02e40ddef676e6ccc503973",
+    "frame": [
+      0,
+      32,
+      16,
+      48
+    ],
+    "outputSHA256": "ab7d648c32b920646f27efca5862ba2ff8b568dc768a65e995b03ac272fdad37",
+    "palette": "#39ddff",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "heal",
+    "restoredSource": "blue_star__ANIM_TAG_BLUE_STAR.png",
+    "sourceSHA256": "868e22db9f787805880f193058749509c7a3344d6829bf224ebe7e4ba19190d5",
+    "frame": [
+      0,
+      64,
+      32,
+      96
+    ],
+    "outputSHA256": "5deea9f3f0c51c748c5990a6c94c8ec7bdb5e114c42ea411b89907f3845a3f48",
+    "palette": null,
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "breath",
+    "restoredSource": "small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "sourceSHA256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
+    "frame": [
+      0,
+      32,
+      32,
+      64
+    ],
+    "outputSHA256": "dea9bedda0d169b8293b7d44dba9e47938f318d1f3fb055537db02ec2b4a4259",
+    "palette": "#ffea39",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "dragon-flare",
+    "restoredSource": "small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "sourceSHA256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
+    "frame": [
+      0,
+      32,
+      32,
+      64
+    ],
+    "outputSHA256": "d487e7021616d50ba74a6a38c0fac8d0e9abbe171303698b469613fc6b595a30",
+    "palette": "#ff8c39",
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "electric",
+    "restoredSource": "lightning__ANIM_TAG_LIGHTNING.png",
+    "sourceSHA256": "32f6ff91fce8aa2e2a70d4d285e7a7475530af10c4e2118b74f45bfdaef76be2",
+    "frame": [
+      0,
+      32,
+      32,
+      64
+    ],
+    "outputSHA256": "5680d1f5d67fc3b9b4fc326ff7057b72b1e3cbba1d7c5f53da9df6f2652955d5",
+    "palette": null,
+    "note": "tight alpha crop; needle width adapted for readability"
+  },
+  {
+    "key": "poison",
+    "restoredSource": "poison_bubble__ANIM_TAG_POISON_BUBBLE.png",
+    "sourceSHA256": "011f5bd96b180fa8aae430514c99fb33aac0f71933d7577833384f45f7d4001f",
+    "frame": [
+      0,
+      0,
+      16,
+      16
+    ],
+    "outputSHA256": "e984c35ace61e4ca8ab46c4801bf38e3bb955572b838cd50657dd32ccf4ae030",
+    "palette": "#601378",
+    "note": "tight alpha crop; needle width adapted for readability"
+  }
+]

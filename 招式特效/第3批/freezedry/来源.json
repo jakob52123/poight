@@ -1,0 +1,21 @@
+{
+  "provider": "Codex subscription / gen_images.sh; one sweep, no fallback",
+  "original": "招式特效/第3批/原图/freezedry.png",
+  "originalSHA256": "230ef5aa2a3f14f3db84cca8d1106bba9305809536eab4ace774e15f55222413",
+  "prompt": "俯视斜角16位掌机像素即时战斗游戏独立特效精灵图。主体：极细浅冰蓝霜晶射线，前沿有可辨认的几枚不规则白霜晶，边缘少量干燥霜粒，绝不是粗水流。 四帧动画，严格2列2行相同尺度相同锚点，每格独立留百分之十安全边；方向朝右，根部在左侧，四帧仅纹理连续变化不整体位移。 清楚方形像素颗粒、克制分层色块、亮暗边缘符合参考图。RGBA实际透明背景，不是黑白底或棋盘。 不画角色、地面、风景、界面。无文字、无数字、无水印、无logo。不画程序方块、几何logo、满屏光污染。",
+  "time": "2026-10-11T15:40:41.627275+00:00",
+  "processingTime": "2026-10-11T16:47:36.192405+00:00",
+  "processing": {
+    "frameSize": [
+      384,
+      97
+    ],
+    "anchorPx": [
+      0,
+      48.5
+    ],
+    "method": "union alpha>=80 bounds / nearest resize / 4 vertical frames",
+    "output": "招式特效/第3批/freezedry/动画.png",
+    "outputSHA256": "1fa0f355fc13c6c0579aaef96088981bbdd4256dc7958cf8bbe920e8850e58f4"
+  }
+}

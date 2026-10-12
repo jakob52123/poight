@@ -1,0 +1,30 @@
+{
+  "provider": "Codex subscription native image_gen via gen_images.sh only",
+  "source": "招式特效/第1批/原图/metalclaw.png",
+  "originalSHA256": "7fdb3690d98247847b79f3ab66bc65401be88f5ae17311eb1983aac63bf5078b",
+  "prompt": "俯视斜角像素即时对战独立特效：金属爪。主体：贴真实钳爪表面的银白金属薄高光，前端三道极短银色爪刃余痕，中心透明，不画新钳子。 最终尺寸约20×20世界像素，普通精灵身体约40像素；绝不覆盖全身。参考仅控制像素画风，不继承火焰形状。16位掌机低分辨率像素色块、少量分层亮暗边缘。正方形RGBA透明底，严格2列2行四个独立连续动画帧，左上右上左下右下顺序，每格10%透明边，无分格线。四帧为凝到真实部位边沿、前伸、接触短痕、回收。根部固定在每格左侧20%、高度50%，朝右展开，动作播放时牢牢附着角色真实部位。中心透明露出原生角色，不画任何角色、额外肢体、地面、风景、UI或背景。无文字无数字无水印。不能用方块、几何图标或巨大圆弧冒充效果。",
+  "generatedAt": "2026-10-11T15:42:26.309716+00:00",
+  "processing": {
+    "method": "2x2 frames; shared alpha-bounds crop; nearest-neighbour scaling; no painted pixels",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "cropBox": [
+      1,
+      7,
+      627,
+      627
+    ],
+    "frameSize": [
+      256,
+      254
+    ],
+    "anchorPx": [
+      50.87284345047923,
+      125.34185303514377
+    ],
+    "outputSHA256": "4b817d787625fd5ef6ca826cc6b334110de1f26d5a085e9adad9da4f277c753a",
+    "caster": 212
+  }
+}
