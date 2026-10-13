@@ -30,9 +30,9 @@ RAMPS = {
     'fire': [(180, 42, 5), (255, 230, 40), (255, 241, 65)],
     'ice': [(8, 114, 155), (55, 245, 255), (100, 255, 255)],
     'pink': [(70, 0, 27), (108, 0, 46), (145, 8, 70)],
-    'poison': [(34, 0, 55), (66, 0, 88), (160, 45, 231)],
-    'ghost': [(13, 0, 27), (37, 0, 58), (130, 45, 206)],
-    'blue': [(15, 200, 255), (45, 235, 255), (85, 250, 255)],
+    'poison': [(255, 100, 255), (255, 100, 255), (255, 100, 255)],
+    'ghost': [(13, 0, 27), (37, 0, 58), (95, 16, 164)],
+    'blue': [(45, 215, 255), (65, 245, 255), (85, 250, 255)],
 }
 VARIANTS = {
     'fist': ['gold', 'fire', 'ice', 'green', 'ghost'],
@@ -61,7 +61,7 @@ def build(root, output, mapping):
                 ramp = [(255, 245, 60), (255, 255, 70), (255, 255, 80)]
             tinted = original.copy()
             values = []
-            for r, g, b, a in original.get_flattened_data():
+            for pixel, (r, g, b, a) in enumerate(original.get_flattened_data()):
                 luma = (r + g + b) / 3
                 # Hands are filled dark in the original: keep the knuckle ink dark and
                 # the face saturated bright. The outside white contour remains a highlight.
@@ -70,6 +70,8 @@ def build(root, output, mapping):
                     rgb = highlight if luma > 150 else ramp[0] if luma < 55 else ramp[1]
                 else:
                     rgb = ramp[0 if luma < 60 else 1 if luma < 210 else 2]
+                if color == 'poison' and (pixel % original.width + pixel // original.width) % 4 < 2:
+                    rgb = (255, 255, 255)  # white facets on the same Emerald alpha contour
                 values.append((*rgb, a))
             tinted.putdata(values)
             if shape == 'star':

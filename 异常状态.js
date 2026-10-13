@@ -30,11 +30,14 @@ window.PoightStatus = class {
       g.putImageData(pixels, 0, 0);
       return [id, c];
     }));
-    this.images = Object.fromEntries(Object.entries(assets).map(([id, src]) => {
-      const image = new Image();
-      image.src = src;
-      return [id, image];
-    }));
+    this.assets = assets;
+    this.images = {};
+  }
+  async load(loader) {
+    if (!this.loading) this.loading = Promise.all(Object.entries(this.assets).map(
+      async ([id, src]) => { this.images[id] = await loader(src); },
+    )).catch(error => { this.loading = null; throw error; });
+    return this.loading;
   }
   frozen(p) { return p?.status?.id === "frz"; }
   blocked(p) { return this.frozen(p) || (p?.status?.stiff || 0) > 1e-7; }
@@ -88,7 +91,7 @@ window.PoightStatus = class {
     }
     if (["brn", "psn"].includes(s.id) && s.tick <= 1e-7) {
       s.tick += 1;
-      this.api.damage(p, s.source, p.maxHP * (s.id === "brn" ? 0.02 : 0.015),
+      this.api.damage(p, s.source, p.maxHP * (s.id === "brn" ? 0.009 : 0.015),
         true, s.move);
     }
     if (s.left <= 1e-7) this.clear(p);

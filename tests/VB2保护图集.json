@@ -1,0 +1,47 @@
+[
+  {
+    "id": "thunderbolt",
+    "sha256": "f9412cdea3c86083bacf6c4beaf4764ffa599499daa3649d7f5740dd44b7e35e",
+    "t5SHA256": "f9412cdea3c86083bacf6c4beaf4764ffa599499daa3649d7f5740dd44b7e35e"
+  },
+  {
+    "id": "quickattack",
+    "sha256": "2b3eeb82a82f66bad0ed0d51cd8e6ed573fb13551f5ad114b1a467ba3498630d",
+    "t5SHA256": "2b3eeb82a82f66bad0ed0d51cd8e6ed573fb13551f5ad114b1a467ba3498630d"
+  },
+  {
+    "id": "irontail",
+    "sha256": "14f2a9c2b91e2ce1c62a1b72dfcfbcae463821fae4424c02ec0380e309e6da4f",
+    "t5SHA256": "14f2a9c2b91e2ce1c62a1b72dfcfbcae463821fae4424c02ec0380e309e6da4f"
+  },
+  {
+    "id": "thunder",
+    "sha256": "719bc9b82095dd80f53fa33c9ddeea6722fe966c20783f5968be120d4a972184",
+    "t5SHA256": "719bc9b82095dd80f53fa33c9ddeea6722fe966c20783f5968be120d4a972184"
+  },
+  {
+    "id": "flamethrower",
+    "sha256": "6050366365b4afd9b66288e88d3867fea6c813c016910fe81b05170017f644f0",
+    "t5SHA256": "6050366365b4afd9b66288e88d3867fea6c813c016910fe81b05170017f644f0"
+  },
+  {
+    "id": "fireblast",
+    "sha256": "e6a97eacb5086098137fe715390c3b2159c05e1c5e5298ed28d566bcce8fbb00",
+    "t5SHA256": "e6a97eacb5086098137fe715390c3b2159c05e1c5e5298ed28d566bcce8fbb00"
+  },
+  {
+    "id": "dragonclaw",
+    "sha256": "59733a719279b5ec26f994958008620e2654fbb77d42fd2f75f5d42d8841b7aa",
+    "t5SHA256": "59733a719279b5ec26f994958008620e2654fbb77d42fd2f75f5d42d8841b7aa"
+  },
+  {
+    "id": "airslash",
+    "sha256": "50756e619f140f4f8f7c16a9d0ef95add51ba9b56c4ceebbfddfac61054918e6",
+    "t5SHA256": "50756e619f140f4f8f7c16a9d0ef95add51ba9b56c4ceebbfddfac61054918e6"
+  },
+  {
+    "id": "stoneedge",
+    "sha256": "ec3849ad57d94f0a64a8b95e2f9e188051659d7eb0f5ccc2b836f6684c66ed39",
+    "t5SHA256": "ec3849ad57d94f0a64a8b95e2f9e188051659d7eb0f5ccc2b836f6684c66ed39"
+  }
+]

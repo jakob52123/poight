@@ -50,7 +50,7 @@ def shot(page, name):
 
 try:
     rows = json.loads((ROOT / "素材/角色库/角色库.json").read_text())
-    ids = json.loads((ROOT / "首发50.json").read_text())["ids"]
+    ids = json.loads((ROOT / "首发200.json").read_text())["ids"]
     rows = [row for row in rows if row["id"] in ids]
     old = {"__file__": str(ROOT / "游戏数据.py")}
     exec(subprocess.check_output(["git", "show", "928b570:游戏数据.py"], cwd=ROOT), old)  # noqa: S102 — trusted local T5 commit
@@ -73,7 +73,7 @@ try:
     for n in ids:
         if n != 129:
             expected = {**before[n], "baseHP": before[n]["hp"],
-                        "hp": before[n]["hp"] * HP_MULTIPLIER}
+                        "hp": int(before[n]["hp"] * HP_MULTIPLIER + 0.5)}
             check(f"{n}: metadata unchanged except global HP multiplier", expected == after[n])
 
     # Execute the exact build assertion function, without importing/building the entire pack.

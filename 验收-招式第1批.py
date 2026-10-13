@@ -203,8 +203,14 @@ try:
                     if mid in VB1:
                         bursts = s['animation']['bursts']
                         contact = s['animation']['contacts'][-1]
-                        check(name+f' VB1 symbol stays at actual hit point {tick}',
-                              e is not None and bool(bursts) and bursts[-1].get('vb1') and
+                        # M8 routes lick to the continuous mouth-anchored P6 tongue, not VB1.
+                        # Its real hit still creates the same timed/contact-keyed hollow burst.
+                        owner = bool(bursts) and bursts[-1]['id'] == mid and (
+                            (not bursts[-1].get('vb1') and bursts[-1]['key'].startswith('core-impact-'))
+                            if mid == 'lick' else bursts[-1].get('vb1'))
+                        label = 'P6 tongue contact ring' if mid == 'lick' else 'VB1 symbol'
+                        check(name+f' {label} stays at actual hit point {tick}',
+                              e is not None and owner and
                               distance(bursts[-1], contact) <= 6 and bursts[-1]['age'] <= .26)
                     else:
                         check(name+(f' target-body-follow {tick}' if m.get('fangs') else f' frame-follow {tick}'),

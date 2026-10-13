@@ -22,10 +22,32 @@ function curve(name,t,axis,start,end){
 }
 export class MoveAnimationEngine {
  constructor(data,mapping){this.data=data;this.mapping=mapping;this.images=new Map();this.instances=[];this.shots=[];this.nextId=1;}
- async load(){
-  await Promise.all([...new Set(Object.values(this.mapping.effects).map(e=>e.file))].map(async file=>{
-   const im=new Image();im.src=file;await im.decode();this.images.set(file,im);
-  }));return this;
+ async load(ids = null, extraEffects = []) {
+  const keys = new Set(extraEffects);
+  if (ids === null) Object.keys(this.mapping.effects).forEach(key => keys.add(key));
+  else for (const id of ids) {
+   for (const event of this.data.moves[id]?.events || []) {
+    if (event.type === 'effect' && !event.fx.startsWith('@'))
+     keys.add(this.mapping.moveOverrides?.[id]?.[event.fx] || event.fx);
+   }
+  }
+  const files = [...new Set([...keys].map(key => {
+   const effect = this.mapping.effects[key];
+   if (!effect) throw new Error('未映射预载特效: ' + key);
+   return effect.file;
+  }))];
+  this.pending ||= new Map();
+  await Promise.all(files.map(file => {
+   if (this.images.has(file)) return;
+   if (!this.pending.has(file)) this.pending.set(file, (async () => {
+    const image = new Image();
+    image.src = file;
+    await image.decode();
+    this.images.set(file, image);
+   })().finally(() => this.pending.delete(file)));
+   return this.pending.get(file);
+  }));
+  return this;
  }
  cast(id,attacker,defender,{windupMs=null,recoveryMs=null,onImpact=null}={}){
   const move=this.data.moves[id];if(!move)throw Error('招式未转换: '+id);

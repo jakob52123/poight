@@ -7,6 +7,7 @@ window.PoightMobile = class {
   }
   constructor(api, mode, demo = false) {
     this.api = api;
+    this.popoverOK = typeof HTMLElement !== "undefined" && "showPopover" in HTMLElement.prototype;
     this.demo = demo;
     this.enabled = window.PoightMobile.touchDevice();
     this.controls = !demo && this.enabled && mode === "3";
@@ -17,7 +18,8 @@ window.PoightMobile = class {
     document.documentElement.dataset.touchGame = String(this.enabled);
     this.overlay = document.createElement("div");
     this.overlay.id = "rotatePhone";
-    this.overlay.setAttribute("popover", "manual");
+    if (this.popoverOK) this.overlay.setAttribute("popover", "manual");
+    else this.overlay.hidden = true;
     this.overlay.setAttribute("role", "alert");
     this.overlay.innerHTML = `<svg class="pixel-phone" viewBox="0 0 12 16"
       aria-hidden="true" shape-rendering="crispEdges">
@@ -42,18 +44,18 @@ window.PoightMobile = class {
     if (this.controls) this.actions.append(document.getElementById("diveButton"));
     document.getElementById("app").append(this.actions);
     this.dashButton.addEventListener("pointerdown", (e) => {
-      if (e.button !== 0 || this.portrait) return;
+      if (e.button !== 0 || this.blockedPortrait) return;
       e.preventDefault();
       api.start();
       api.dash(this.vector);
     });
     this.dashButton.addEventListener("click", (e) => {
-      if (e.detail === 0 && !this.portrait) api.dash(this.vector);
+      if (e.detail === 0 && !this.blockedPortrait) api.dash(this.vector);
     });
     const canvas = document.getElementById("game");
     canvas.addEventListener("pointerdown", (e) => {
       const rect = canvas.getBoundingClientRect();
-      if (!this.controls || this.portrait || e.pointerType !== "touch" ||
+      if (!this.controls || this.blockedPortrait || e.pointerType !== "touch" ||
         this.pointerId !== null || e.clientX > rect.left + rect.width * 0.45) return;
       e.preventDefault();
       api.start();
@@ -97,16 +99,24 @@ window.PoightMobile = class {
     this.stick.querySelector("i").style.transform = "none";
   }
   orient(refresh = false) {
+    const vertical = innerHeight > innerWidth;
+    if (document.documentElement.dataset.gba && this.vertical !== vertical) this.clear();
+    this.vertical = vertical;
     this.portrait = !this.demo && this.enabled && innerHeight > innerWidth;
-    if (this.portrait) {
+    this.blockedPortrait = this.portrait && !document.documentElement.dataset.gba;
+    if (this.blockedPortrait) {
       if (this.api.playing()) {
         this.resume = true;
         this.api.pause();
       }
-      if (refresh && this.overlay.matches(":popover-open")) this.overlay.hidePopover();
-      if (!this.overlay.matches(":popover-open")) this.overlay.showPopover();
+      if (this.popoverOK) {
+        if (refresh && this.overlay.matches(":popover-open")) this.overlay.hidePopover();
+        if (!this.overlay.matches(":popover-open")) this.overlay.showPopover();
+      } else this.overlay.hidden = false;
     } else {
-      if (this.overlay.matches(":popover-open")) this.overlay.hidePopover();
+      if (this.popoverOK) {
+        if (this.overlay.matches(":popover-open")) this.overlay.hidePopover();
+      } else this.overlay.hidden = true;
       if (this.resume) {
         this.resume = false;
         this.api.start();
@@ -118,7 +128,8 @@ window.PoightMobile = class {
     try { await screen.orientation?.lock("landscape"); } catch { /* Optional browser support. */ }
   }
   snapshot() {
-    return { enabled: this.enabled, portrait: this.portrait, pointerId: this.pointerId,
+    return { enabled: this.enabled, portrait: this.portrait, blockedPortrait: this.blockedPortrait,
+      pointerId: this.pointerId,
       vector: { ...this.vector }, radius: this.radius };
   }
 };

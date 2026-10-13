@@ -65,6 +65,21 @@ html[data-hud] .hud {
   box-shadow: none;
   white-space: normal;
 }
+#battleMenu #musicTrack,
+#battleMenu #musicRedMode {
+  min-width: 0;
+  color: #f1e7c9;
+  background: #22364b;
+  border: 1px solid #667e93;
+}
+#battleMenu label[for="musicVolume"] {
+  grid-column: 1 / -1;
+  font-size: 12px;
+}
+#battleMenu #musicVolume {
+  width: 100%;
+  accent-color: #cab57f;
+}
 #battleMenu .readout span {
   display: grid;
   place-items: center;
@@ -425,6 +440,23 @@ html[data-hud="3"] .skill:nth-child(4) {
   }
 }
 @media (max-height: 500px) and (orientation: landscape) {
+  #battleMenu:has(#musicToggle) .buttons,
+  #battleMenu:has(#musicToggle) .readout {
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+  #battleMenu:has(#musicToggle) button,
+  #battleMenu:has(#musicToggle) .readout span {
+    padding: 6px 4px;
+  }
+  #battleMenu label[for="musicVolume"] {
+    grid-column: auto;
+    font-size: 10px;
+  }
+  #battleMenu #musicVolume {
+    height: 14px;
+    margin: 0;
+  }
   html[data-hud] #battleMenu {
     top: 72px;
     right: 50%;

@@ -66,6 +66,15 @@ window.PoightHeroVisuals = class {
   paint(ctx, s) {
     ctx.save();
     ctx.globalAlpha = s.alpha ?? 1;
+    if (s.contactTarget) {
+      // This is the 100ms contact ribbon, not the travelling beam: keep its body intact
+      // outside the victim's central silhouette, with no blanket translucency/filter.
+      const p = s.contactTarget, r = p.height * .60;
+      ctx.beginPath();
+      ctx.rect(p.x - 10000, p.y - 10000, 20000, 20000);
+      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.clip("evenodd");
+    }
     const { id, x, y, height: h, age = 0, angle = 0 } = s;
     const tick = Math.floor(age * 30);
     if (s.kind === "beam") {
@@ -157,19 +166,39 @@ window.PoightHeroVisuals = class {
         this.line(ctx, pts, w * .40, "#fffff7");
       }
       if (s.part === "ring") {
-        const th = s.targetHeight, r = th * (.44 + Math.min(.10, since * .4));
+        const th = s.targetHeight, tw = s.targetWidth || th,
+          r = Math.max(Math.hypot(tw, th) * .55, th * .60) + Math.min(.10, since * .4) * th;
+        // Follow the sprite bounding box outside its body, including small targets.
+        ctx.translate(s.ringX - x, s.ringY - y);
         ctx.globalAlpha *= Math.min(1, (.35 - since) / .12);
         const points = Array.from({ length: 33 }, (_, i) => {
           const a = i * Math.PI / 16, rr = r + (i % 2 ? 1 : -1);
-          return [x + Math.cos(a) * rr, y + Math.sin(a) * rr * .52];
+          return [x + Math.cos(a) * rr, y + Math.sin(a) * rr];
         });
-        this.line(ctx, points, 3, "#ffe529");
-        this.line(ctx, points, 1, "#fffff7");
-        for (let i = 0; i < 6; i++) {
-          const a = i * Math.PI / 3 + .2, inner = th * .56, outer = th * .62;
-          this.line(ctx, [[x + Math.cos(a) * inner, y + Math.sin(a) * inner * .52],
-            [x + Math.cos(a) * outer, y + Math.sin(a) * outer * .52]], 1.5, "#fff6a0");
+        const pixel = 1 / Math.hypot(ctx.getTransform().a, ctx.getTransform().b),
+          color = this.core.ringColor(13),
+          outside = points.map(([px, py]) => {
+            const length = Math.hypot(px - x, py - y);
+            return [px + (px - x) / length * pixel / 2,
+              py + (py - y) / length * pixel / 2];
+          });
+        this.line(ctx, outside, 3 + pixel, '#000000');
+        this.line(ctx, points, 3, color);
+        if (since < .035 || (since >= .075 && since < .11)) {
+          ctx.save();
+          const ratio = (r + pixel / 2) / r;
+          ctx.setLineDash([r * Math.PI * .75 * ratio, r * Math.PI * .25 * ratio]);
+          this.line(ctx, outside, 4 + pixel, '#000000');
+          ctx.setLineDash([r * Math.PI * .75, r * Math.PI * .25]);
+          this.line(ctx, points, 4, '#ffffff');
+          ctx.restore();
         }
+        for (let i = 0; i < 6; i++) {
+          const a = i * Math.PI / 3 + .2, inner = r + 3, outer = r + th * .10;
+          this.line(ctx, [[x + Math.cos(a) * inner, y + Math.sin(a) * inner],
+            [x + Math.cos(a) * outer, y + Math.sin(a) * outer]], 1.5, color);
+        }
+        // White crests carry the flash; do not bleach every yellow pigment pixel.
       }
     } else if (s.kind === "rush") {
       ctx.translate(x, y);
@@ -192,6 +221,9 @@ window.PoightHeroVisuals = class {
     } else if (s.kind === "claw") {
       // Emerald's final claw_slash frame: three PARALLEL, separated diagonal cuts.
       // Screen-diagonal on all headings, like the original; no fuzzy aura over the victim.
+      // Contact-only crisp white keyline. Original scar texture/gradient and spacing stay intact.
+      if (s.ringX !== undefined)
+        ctx.filter = "drop-shadow(1px 0 0 white) drop-shadow(-1px 0 0 white)";
       for (let i = 0; i < 3; i++) {
         if (age + 1e-6 < i * .04) continue;
         const n = (i - 1) * Math.max(18, h * .48);
@@ -200,6 +232,24 @@ window.PoightHeroVisuals = class {
       }
     } else if (s.kind === "contact") {
       const t = age / .28, size = s.size;
+      if (s.ringX !== undefined && ["thunderbolt", "flamethrower", "fireblast",
+        "quickattack", "irontail"].includes(id)) {
+        // Only the contact layer changes. Beams, flying glyphs and tail/rush actions stay intact.
+        // The shared ring supplies the center-free shock; attribute fragments orbit OUTSIDE it.
+        const r = Math.max(size, h * 1.2) * .5 + h * .18;
+        for (let i = 0; i < 8; i++) {
+          const a = i * Math.PI / 4 + tick * .05,
+            px = s.ringX + Math.cos(a) * r, py = s.ringY + Math.sin(a) * r;
+          if (["flamethrower", "fireblast"].includes(id))
+            this.texture(ctx, "flame" + (i % 2), px, py, h * .13, 1 - t, a);
+          else if (id === "thunderbolt")
+            this.texture(ctx, "spark" + (i % 2), px, py, h * .10, 1 - t, a);
+          else this.line(ctx, [[px, py], [px + Math.cos(a) * 5, py + Math.sin(a) * 5]],
+            1, "#f9ffff");
+        }
+        ctx.restore();
+        return;
+      }
       if (["fireblast", "thunderbolt"].includes(id))
         this.local(ctx, x, y, h * 1.8, false, .48 * (1 - t));
       if (id === "fireblast") this.fireGlyph(ctx, x, y, Math.max(42, s.sourceHeight * 1.05),
@@ -220,6 +270,10 @@ window.PoightHeroVisuals = class {
         }
       }
       if (id === "dragonclaw") this.paint(ctx, { ...s, kind: "claw",
+        // Keep all three original scars/spacing/colors; move just the target contact group
+        // to its flank rather than across its face/body.
+        x: s.ringX - h * 1.4 / Math.SQRT2,
+        y: s.ringY + h * 1.4 / Math.SQRT2,
         alpha: Math.min(1, (.28 - age) / .10) });
       if (["irontail", "quickattack"].includes(id)) {
         if (id === "quickattack") this.core.sprite(ctx, "core-impact--1", x, y, size, 1 - t);
@@ -269,6 +323,10 @@ window.PoightHeroVisuals = class {
     const event = { kind: "contact", ...b, height: target.char.body.visibleSize[1],
       sourceHeight: source.char.body.visibleSize[1], angle: Math.atan2(dy, dx) };
     this.bursts.push(event);
+    for (const ribbon of this.ribbons) {
+      if (ribbon.id === b.id && ribbon.life === 0)
+        ribbon.contactTarget = { x: b.ringX, y: b.ringY, height: event.height };
+    }
     if (["thunder", "dragonclaw"].includes(b.id)) b.heroContact = true;
     if (b.id === "thunder") this.shocks.set(target, 0);
     this.events.push({ id: b.id, x: b.x, y: b.y, time: this.core.time, wall: false });
@@ -305,7 +363,10 @@ window.PoightHeroVisuals = class {
       if (e.landed || layer === "above")
         this.paint(ctx, { kind: e.landed ? "thunder" : "warning", id: e.id,
           x: e.ex, y: e.ey, height: e.owner.char.body.visibleSize[1],
-          targetHeight: target.char.body.visibleSize[1], radius: e.radius, age: e.age,
+          targetHeight: target.char.body.visibleSize[1],
+          targetWidth: target.char.body.visibleSize[0], ringX: target.x,
+          ringY: target.y + 14 - target.char.body.visibleSize[1] / 2 - api.lift(target),
+          radius: e.radius, age: e.age,
           part: layer === "below" ? "bolt" : "ring", since: e.age - (e.life - .35) });
       return true;
     }
@@ -314,6 +375,8 @@ window.PoightHeroVisuals = class {
     const anchor = api.anchor(p, e.m, e.a);
     if (anchor) e.drawAnchor = anchor; // Preserve the existing landmark audit verbatim.
     if (e.id === "quickattack") {
+      const victim = p === api.player ? api.enemy : api.player;
+      if (this.core.colorGuard.has(victim)) return true;
       this.paint(ctx, { kind: "rush", id: e.id, ...anchor, height, age: e.age, angle: e.a });
     } else if (e.id === "irontail") {
       this.sheen(ctx, p, anchor, api, e.age);
@@ -327,28 +390,8 @@ window.PoightHeroVisuals = class {
     return true;
   }
   electrify(ctx, target, image, sx, sy, sw, sh, x, y, w, h) {
-    const age = this.shocks.get(target);
-    if (age === undefined || !(age < .035 || (age >= .075 && age < .11))) return;
-    // Two white sweeps on the actual sprite alpha, never a solid flash hiding its colors.
-    const canvas = (this.shockCanvas ||= document.createElement("canvas"));
-    canvas.width = Math.ceil(w); canvas.height = Math.ceil(h);
-    const c = canvas.getContext("2d");
-    c.imageSmoothingEnabled = false;
-    c.drawImage(image, sx, sy, sw, sh, 0, 0, w, h);
-    c.globalCompositeOperation = "source-in";
-    c.fillStyle = "#ffffff";
-    c.fillRect(0, 0, w, h);
-    c.globalCompositeOperation = "destination-in";
-    c.beginPath();
-    for (let i = -h; i < w; i += 16) {
-      c.moveTo(i, 0); c.lineTo(i + 3, 0);
-      c.lineTo(i + h + 3, h); c.lineTo(i + h, h); c.closePath();
-    }
-    c.fill();
-    ctx.save();
-    ctx.globalAlpha *= .9;
-    ctx.drawImage(canvas, x, y);
-    ctx.restore();
+    // P6b: the same two timed white sweeps are now on the electric ring, not the actor.
+    // Keep this sprite hook for native-frame observation; never recolor target pixels.
   }
   step(dt) {
     for (const [target, age] of this.shocks) {

@@ -16,8 +16,9 @@ if keep_going:
     names.remove('--keep-going')
 out = ROOT / '验收记录/集成批次' / label
 out.mkdir(parents=True, exist_ok=True)
-with tarfile.open(ROOT / 'MX-夹具.tar.gz') as archive:
-    archive.extractall(ROOT, filter='data')
+if os.environ.get('POIGHT_FIXTURES_STAGED') != '1':
+    with tarfile.open(ROOT / 'MX-夹具.tar.gz') as archive:
+        archive.extractall(ROOT, filter='data')
 hashes = json.loads((ROOT / 'MX-夹具-sha256.json').read_text())
 assert all(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest
            for name, digest in hashes.items())
@@ -25,6 +26,8 @@ print(f'Verified {len(hashes)} unchanged historical inputs', flush=True)
 
 
 def clean_staged_inputs():
+    if os.environ.get('POIGHT_KEEP_FIXTURES') == '1':
+        return  # M9 has three local lanes sharing these immutable inputs.
     # The immutable archive/hash manifest is retained. Do not copy 20k temporary
     # fixture rasters back as if they were new acceptance evidence.
     for name, digest in hashes.items():
@@ -73,7 +76,11 @@ for name in names:
             pass
     if obj is None:
         print(result.stdout[-3000:] + result.stderr[-3000:], flush=True)
-        raise SystemExit(result.returncode or 1)
+        if not keep_going:
+            raise SystemExit(result.returncode or 1)
+        obj = {'passed': 0, 'failed': 1, 'failure': 'Suite exited without a structured report',
+               'checks': [{'name': 'missing structured report (JS count unverified)',
+                           'ok': False, 'detail': result.stderr[-3000:]}]}
     row = {'test': name, 'exitCode': result.returncode, 'passed': obj['passed'],
            'failed': max(obj.get('failed', sum(not c['ok'] for c in obj.get('checks', []))),
                          int(bool(obj.get('failure') or result.returncode))),

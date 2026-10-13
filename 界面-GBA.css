@@ -1,0 +1,2334 @@
+/* Normal play uses GBA A; explicit hud= routes retain the archived comparison layouts. */
+html[data-gba] #setup {
+  inset: 0;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  padding: calc(26px + var(--safe-top)) max(48px, var(--safe-right)) calc(24px + var(--safe-bottom))
+    max(48px, var(--safe-left));
+  border: 0;
+  border-radius: 0;
+  color: var(--ink);
+  background: #eaeed8;
+  box-shadow: none;
+}
+html[data-gba] #setup[open] {
+  display: grid;
+  grid-template-rows: 82px minmax(0, 1fr) 64px 24px;
+}
+html[data-gba] #setup .setup-head {
+  position: relative;
+  padding: 0 0 16px;
+  background: none;
+  border-bottom: 4px solid var(--edge);
+  color: var(--ink);
+}
+html[data-gba] #setup .select-brand {
+  color: #276b80;
+  font:
+    900 26px ui-monospace,
+    monospace;
+  letter-spacing: 2px;
+}
+html[data-gba] #setup .select-brand span {
+  display: block;
+  color: #53666a;
+  font: 12px system-ui;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+html[data-gba] #setupTitle {
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  transform: translateX(-50%);
+  width: min(43%, 430px);
+  color: var(--ink);
+}
+html[data-gba] #pickInstruction {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #53666a;
+  font-size: 12px;
+  margin: 0;
+}
+html[data-gba] #setup .setup-count {
+  margin-right: 60px;
+  color: #53666a;
+  font-size: 12px;
+}
+html[data-gba] #setup .setup-count b {
+  color: #276b80;
+}
+html[data-gba] #setup .setup-count span {
+  font-size: 12px;
+  color: #53666a;
+}
+html[data-gba]
+  #setup
+  :is(#randomEnemy, #toggleLoadout, #setupMapButton, #search, #typeFilterToggle, #closeSetup) {
+  font-size: 12px;
+  color: var(--ink);
+  background: var(--paper);
+  border-radius: 7px;
+}
+html[data-gba] #setup #startBattle {
+  color: #fffde9;
+  background: #276b80;
+  font-style: normal;
+  min-width: 0;
+  border-radius: 7px;
+}
+html[data-gba] #setup :is(#setupMessage, #selectionSummary) {
+  font-size: 12px;
+  color: #53666a;
+}
+html[data-gba] #setup .close {
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+html[data-gba] #setup .setup-body {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) 154px;
+  gap: 20px 16px;
+  padding: 14px 0 0;
+  overflow: hidden;
+  min-height: 0;
+}
+html[data-gba] #setup .dex {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 44px minmax(0, 1fr);
+  gap: 8px;
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+html[data-gba] #setup .side-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+}
+html[data-gba] #setup .side-tabs button {
+  flex: 1;
+  white-space: nowrap;
+  font-size: 12px;
+  padding: 6px 12px;
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--edge);
+}
+html[data-gba] #setup .side-tabs strong {
+  display: inline;
+  color: inherit;
+  font-size: 12px;
+}
+html[data-gba] #setup .side-tabs button[aria-pressed="true"] {
+  background: #276b80;
+  color: #fffde9;
+}
+html[data-gba] #setup .filters {
+  display: flex;
+  margin: 0;
+  height: 44px;
+  gap: 8px;
+}
+html[data-gba] #setup .filters input {
+  min-width: 0;
+  flex: 1;
+  width: auto;
+}
+html[data-gba] #setup .filters button {
+  white-space: nowrap;
+}
+html[data-gba] #setup #typeChoices {
+  background: var(--paper);
+  border-color: var(--edge);
+  color: var(--ink);
+  max-height: 45dvh;
+  overflow: auto;
+  z-index: 20;
+}
+html[data-gba] #setup .roster {
+  grid-column: 1 / -1;
+  display: grid;
+  --roster-cell-height: 64px;
+  --roster-columns: 10;
+  grid-template-columns: repeat(var(--roster-columns), minmax(0, 1fr));
+  grid-auto-rows: minmax(var(--roster-cell-height), 1fr);
+  gap: 5px;
+  padding: 5px;
+  border: 5px solid var(--edge);
+  background: var(--shade);
+  min-height: 0;
+  overflow: auto;
+  touch-action: pan-y;
+}
+html[data-gba] #setup .mon {
+  display: flex;
+  position: relative;
+  min-height: var(--roster-cell-height);
+  padding: 0 0 22px;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(
+    140deg,
+    var(--tile) 62%,
+    color-mix(in srgb, var(--tile), #fff 28%) 62%
+  );
+  box-shadow: inset 0 0 0 2px #ffffff50;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: none;
+}
+html[data-gba] #setup .mon .mon-icon {
+  background-image: var(--gba-roster);
+  width: 44px;
+  height: 44px;
+  transform: scale(1.36);
+  margin: 0;
+  flex-shrink: 0;
+}
+html[data-gba] #setup .mon small {
+  display: none;
+}
+html[data-gba] #setup .mon::before,
+html[data-gba] #setup .mon::after {
+  font-size: 12px;
+}
+html[data-gba] #setup .mon b {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #fffbe9;
+  text-shadow: 1px 2px #132935;
+  background: #142c37dc;
+}
+html[data-gba] #setup .mon[data-player="true"] {
+  outline: 4px solid #5ed1f0;
+  outline-offset: -4px;
+}
+html[data-gba] #setup .mon[data-enemy="true"] {
+  box-shadow: inset 0 0 0 4px #f66d69;
+}
+html[data-gba] #setup .pagination {
+  display: none;
+}
+html[data-gba] #setup .fighter-panel {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  grid-template-rows: 26px 40px 28px 24px;
+  align-content: center;
+  gap: 0 24px;
+  padding: 14px 24px;
+  border: 4px solid var(--edge);
+  border-radius: 12px;
+  color: var(--ink);
+  background: linear-gradient(115deg, #478a9a38 25%, transparent 25%), var(--paper);
+  box-shadow:
+    inset 0 0 0 2px var(--line),
+    4px 4px var(--shade);
+  text-align: left;
+  min-width: 0;
+}
+html[data-gba] #setup .fighter-player {
+  grid-column: 1;
+}
+html[data-gba] #setup .fighter-enemy {
+  grid-column: 2;
+  background: linear-gradient(115deg, #d55f4538 25%, transparent 25%), var(--paper);
+}
+html[data-gba] #setup .fighter-panel .portrait-stage {
+  grid-column: 1;
+  grid-row: 1 / 5;
+  width: 130px;
+  height: 118px;
+  display: grid;
+  place-items: center;
+  background: none;
+}
+html[data-gba] #setup .portrait-stage::after {
+  display: none;
+}
+html[data-gba] #setup .select-portrait {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+html[data-gba] #setup .fighter-panel > :not(.portrait-stage) {
+  grid-column: 2;
+  margin: 0;
+  text-align: left;
+}
+html[data-gba] #setup .fighter-badge {
+  font:
+    900 22px ui-monospace,
+    monospace;
+  color: #2485a6;
+  line-height: 26px;
+}
+html[data-gba] #setup .fighter-enemy .fighter-badge {
+  color: #c45345;
+}
+html[data-gba] #setup .fighter-panel > strong {
+  font-size: 28px;
+  line-height: 40px;
+  color: var(--ink);
+  text-shadow: none;
+}
+html[data-gba] #setup .fighter-types {
+  align-self: center;
+}
+html[data-gba] #setup .type-tag {
+  font-size: 12px;
+  color: #293f50;
+}
+html[data-gba] #setup .body-summary {
+  font-size: 12px;
+  color: #53666a;
+}
+html[data-gba] #setup .fighter-moves,
+html[data-gba] #setup .panel-action {
+  display: none;
+}
+html[data-gba] #setup .setup-foot {
+  padding: 12px 0 0;
+  background: none;
+  border: 0;
+  min-height: 0;
+  gap: 12px;
+}
+html[data-gba] #setup .setup-foot > div:first-child {
+  font-size: 12px;
+  color: #53666a;
+}
+html[data-gba] #setupMessage {
+  font-size: 12px;
+  color: #53666a;
+}
+html[data-gba] #setup .setup-actions {
+  display: flex;
+  gap: 12px;
+}
+html[data-gba] #setup .setup-actions button {
+  min-height: 44px;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+html[data-gba] #setup .setup-credit {
+  color: #53666a;
+  font: 12px system-ui;
+  opacity: 1;
+  padding: 0;
+}
+html[data-gba][data-touch-game="true"] #setup[open] {
+  grid-template-rows: 48px minmax(0, 1fr) 56px 44px;
+}
+.setup-credit [popovertarget="analyticsPrivacy"] {
+  all: unset;
+  cursor: pointer;
+}
+html[data-gba] #battleMenu label[for="musicVolume"] {
+  font-size: 12px;
+}
+html[data-gba][data-touch-game="true"] .setup-credit a,
+html[data-gba][data-touch-game="true"] .setup-credit [popovertarget="analyticsPrivacy"] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
+}
+html[data-gba][data-touch-game="true"] #setup .setup-body {
+  grid-template-rows: minmax(0, 1fr) 70px;
+}
+html[data-gba][data-touch-game="true"] #setup .fighter-panel {
+  grid-template-rows: 18px 24px 18px;
+  padding-block: 3px;
+}
+html[data-gba][data-touch-game="true"] #setup .fighter-panel .portrait-stage {
+  height: 60px;
+}
+html[data-gba][data-touch-game="true"] #setup .fighter-badge {
+  line-height: 18px;
+}
+html[data-gba][data-touch-game="true"] #setup .fighter-panel > strong {
+  line-height: 24px;
+}
+html[data-gba] #setup #loadoutPanel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  background: var(--paper);
+  color: var(--ink);
+  border: 3px solid var(--edge);
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+  display: block;
+  touch-action: pan-y;
+}
+html[data-gba] #setup .loadout[hidden] {
+  display: none;
+}
+html[data-gba] #setup.configuring .dex,
+html[data-gba] #setup.configuring .fighter-panel {
+  visibility: hidden;
+}
+html[data-gba] #setup #loadoutPanel :is(h3, strong, p, small, span, div, label, summary) {
+  color: var(--ink);
+}
+html[data-gba] #setup .loadout .move-card {
+  color: var(--ink);
+  background: #e2eaca;
+  border-color: var(--edge);
+}
+html[data-gba] #setup .loadout summary {
+  min-height: 44px;
+  padding: 12px;
+}
+html[data-gba] #loadoutPanel * {
+  font-size: 12px;
+}
+html[data-gba]
+  #setup
+  :is(.loadout-nav button, .move-slot, .slot-controls button, #closeMoves, #typeChoices button) {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--edge);
+}
+html[data-gba] #setup button[aria-pressed="true"] {
+  outline-color: #276b80;
+}
+html[data-gba] #setup .move-slot[aria-pressed="true"] {
+  background: #d8e8ce;
+}
+html[data-gba] #setup #difficulty button {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--edge);
+}
+html[data-gba] #setup #difficulty button[aria-pressed="true"] {
+  color: var(--paper);
+  background: #276b80;
+}
+html[data-gba] #setup .loadout-nav {
+  position: sticky;
+  top: -12px;
+  background: var(--paper);
+  z-index: 2;
+  padding: 8px;
+}
+html[data-gba] #setup #moveCatalog {
+  overflow: visible;
+  flex: none;
+  height: auto;
+  max-height: none;
+  min-height: 90px;
+}
+html[data-gba] #setup :is(.loadout p, .loadout small, .loadout span, .move-card, summary) {
+  font-size: 12px;
+}
+html[data-gba] #scenePicker,
+html[data-gba] .match-card {
+  background: var(--paper);
+  border-color: var(--edge);
+  color: var(--ink);
+  border-radius: 12px;
+}
+html[data-gba] #scenePicker :is(h2, strong, .eyebrow, .scene-selected) {
+  color: var(--ink);
+}
+html[data-gba] #scenePicker :is(.eyebrow, .scene-selected),
+html[data-gba] .help-panel :is(p, span, div, kbd, a) {
+  font-size: 12px;
+}
+html[data-gba] #scenePicker .scene-card[aria-pressed="true"] {
+  background: #d8e8ce;
+  border-color: var(--edge);
+}
+html[data-gba] #scenePicker #cancelScene {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--edge);
+}
+html[data-gba] #scenePicker :is(p, small),
+html[data-gba] .help-panel p {
+  font-size: 12px;
+  color: #53666a;
+}
+@media (max-height: 500px), (max-width: 650px) {
+  html[data-gba] #setup {
+    padding: calc(8px + var(--safe-top)) calc(12px + var(--safe-right))
+      calc(8px + var(--safe-bottom)) calc(12px + var(--safe-left));
+  }
+  html[data-gba] #setup[open] {
+    grid-template-rows: 48px minmax(0, 1fr) 56px 20px;
+  }
+  html[data-gba] #setup .setup-head {
+    padding: 0;
+  }
+  html[data-gba] #setup .select-brand {
+    font-size: 18px;
+  }
+  html[data-gba] #setup .select-brand span,
+  html[data-gba] #pickInstruction,
+  html[data-gba] #setup .setup-count {
+    display: none;
+  }
+  html[data-gba] #setupTitle {
+    top: 12px;
+  }
+  html[data-gba] #setup .setup-body {
+    grid-template-rows: minmax(0, 1fr) 82px;
+    gap: 8px;
+    padding-top: 8px;
+  }
+  html[data-gba] #setup .roster {
+    border-width: 3px;
+    gap: 4px;
+    padding: 3px;
+    grid-auto-rows: var(--roster-cell-height);
+  }
+  html[data-gba] #setup .mon b {
+    font-size: 12px;
+  }
+  html[data-gba] #setup .mon .mon-icon {
+    transform: none;
+  }
+  html[data-gba] #setup .fighter-panel {
+    padding: 6px 10px;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 22px 28px 20px;
+    gap: 0 10px;
+    border-width: 2px;
+  }
+  html[data-gba] #setup .fighter-panel .portrait-stage {
+    width: 70px;
+    height: 70px;
+    grid-row: 1 / 4;
+  }
+  html[data-gba] #setup .fighter-badge {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  html[data-gba] #setup .fighter-panel > strong {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  html[data-gba] #setup .body-summary {
+    display: none;
+  }
+  html[data-gba] #setup .setup-foot > div:first-child {
+    display: none;
+  }
+  html[data-gba] #setup .setup-actions {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  html[data-gba] #setup .setup-actions button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  html[data-gba] #setup .side-tabs button {
+    padding: 4px 8px;
+  }
+  html[data-gba] #setup .side-tabs strong {
+    display: none;
+  }
+  html[data-gba] #setup .selected-mon {
+    min-height: 80px;
+    height: auto;
+  }
+  html[data-gba] #setup .move-slots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  html[data-gba] #setup .loadout-nav button {
+    font-size: 12px;
+  }
+}
+@media (max-width: 650px) and (orientation: portrait) {
+  html[data-gba] #setupTitle {
+    width: 58%;
+    left: 46%;
+    top: 14px;
+  }
+  html[data-gba] #setup .select-brand {
+    display: none;
+  }
+  html[data-gba] #setup .dex {
+    grid-template-columns: 1fr;
+    grid-template-rows: 44px 44px minmax(0, 1fr);
+  }
+  html[data-gba] #setup .roster {
+    --roster-columns: 5;
+    grid-template-columns: repeat(var(--roster-columns), minmax(0, 1fr));
+  }
+  html[data-gba] #setup .fighter-panel {
+    grid-template-columns: 48px 1fr;
+    gap: 0 5px;
+    padding: 4px;
+  }
+  html[data-gba] #setup .fighter-panel .portrait-stage {
+    width: 48px;
+    height: 70px;
+  }
+  html[data-gba] #setup .fighter-panel > strong {
+    font-size: 14px;
+  }
+  html[data-gba] #setup .type-tag {
+    padding: 2px 4px;
+  }
+  html[data-gba] #setup .setup-actions {
+    gap: 5px;
+    justify-content: space-between;
+  }
+  html[data-gba] #setup .setup-actions button {
+    padding: 6px;
+  }
+  html[data-gba] #setup .move-slots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+html[data-gba] {
+  --paper: #fffde9;
+  --ink: #293f50;
+  --edge: #507aa0;
+  --line: #adc5d2;
+  --shade: #8caca3;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  color: var(--ink);
+  background: #eaeed8;
+}
+html[data-gba] body {
+  color: var(--ink);
+}
+.pixel-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+[data-pixel] > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#gbaClock b > svg {
+  width: 116px;
+  height: 28px;
+}
+.gba-result .result-word > svg {
+  filter: drop-shadow(7px 9px #fff2af);
+}
+html[data-gba] button,
+html[data-gba] input,
+html[data-gba] select {
+  font-family:
+    system-ui,
+    -apple-system,
+    "PingFang SC",
+    sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 2px solid var(--edge);
+  border-radius: 7px;
+  box-shadow:
+    inset 0 0 0 1px var(--line),
+    3px 3px 0 var(--shade);
+}
+html[data-gba] button,
+html[data-gba] input,
+html[data-gba] select {
+  min-height: 44px;
+  min-width: 44px;
+}
+html[data-gba] button.primary {
+  color: #fffde9;
+  background: #276b80;
+  border-color: #293f50;
+}
+html[data-gba] :focus-visible {
+  outline: 3px solid #e77a40;
+  outline-offset: 2px;
+}
+html[data-gba] #app {
+  height: 100dvh;
+  overflow: hidden;
+}
+.gba-result-art {
+  display: none;
+}
+html[data-gba] .match-overlay.gba-result {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 50;
+  background: #152e38;
+  color: #fff4ce;
+  pointer-events: auto;
+  overflow: hidden;
+  text-shadow: none;
+  padding: 0;
+}
+.gba-result .gba-result-art {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+.gba-result .result-rays {
+  position: absolute;
+  inset: -35%;
+  transform: rotate(-8deg);
+  background: repeating-conic-gradient(
+    from -13deg at 65% 47%,
+    #2e647080 0deg 8deg,
+    transparent 8deg 20deg
+  );
+}
+.gba-result .result-band {
+  position: absolute;
+  left: -7%;
+  top: 18%;
+  width: 112%;
+  height: 35%;
+  background: #e3bd57;
+  transform: rotate(-9deg);
+  border-top: 10px solid #fff9d299;
+  border-bottom: 12px solid #172e3899;
+  box-shadow: 0 24px 0 #846c3770;
+}
+.gba-result .result-heading {
+  position: absolute;
+  top: 36px;
+  left: 48px;
+  right: 48px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 850;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+.gba-result .result-heading span {
+  font-size: 16px;
+  letter-spacing: 0;
+}
+.gba-result .result-word {
+  position: absolute;
+  top: 27%;
+  left: 5%;
+  width: 46%;
+  transform: rotate(-9deg);
+  z-index: 4;
+  color: #16333e;
+  font:
+    1000 clamp(40px, 7vw, 110px) ui-monospace,
+    monospace;
+  text-shadow: 7px 9px #fff2af;
+}
+.gba-result .winner-art {
+  position: absolute;
+  right: 8%;
+  top: 15%;
+  width: 38%;
+  height: 61%;
+  z-index: 3;
+  background: none;
+  border: 0;
+  transform: rotate(5deg);
+  display: grid;
+  place-items: center;
+}
+.gba-result .winner-art::after {
+  display: none;
+}
+.gba-result .winner-art canvas {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(8px 0 #fff9d5) drop-shadow(-7px 0 #fff9d5) drop-shadow(0 -7px #fff9d5)
+    drop-shadow(0 10px #1a344270);
+}
+.gba-result .winner-tag {
+  position: absolute;
+  left: 7%;
+  top: 54%;
+  z-index: 5;
+  font-size: 38px;
+  font-weight: 850;
+}
+.gba-result .result-stats {
+  position: absolute;
+  left: 22%;
+  bottom: 18%;
+  z-index: 5;
+  display: flex;
+  gap: 28px;
+  padding: 22px 28px;
+  background: #19373f;
+  border: 3px solid #d6b568;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 0 2px #f7df96,
+    5px 5px #061b24;
+}
+.gba-result .result-stats > div {
+  font-size: 14px;
+  color: #c0d1cb;
+  text-align: left;
+}
+.gba-result .result-stats > div + div {
+  border-left: 2px solid #d6b568;
+  padding-left: 26px;
+}
+.gba-result .result-stats b {
+  display: block;
+  margin-top: 14px;
+  font:
+    800 24px ui-monospace,
+    monospace;
+  color: #fff4ce;
+}
+.gba-result .result-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px max(48px, var(--safe-right)) calc(30px + var(--safe-bottom))
+    max(48px, var(--safe-left));
+  background: #19373f;
+  border-top: 5px solid #d6b568;
+}
+.gba-result .result-footer > div {
+  display: flex;
+  gap: 18px;
+}
+.gba-result .result-footer > div:first-child {
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+.gba-result .result-footer b {
+  font-size: 22px;
+}
+.gba-result .result-footer span {
+  color: #c0d1cb;
+  font-size: 16px;
+}
+html[data-gba] .gba-result button {
+  background: #19373f;
+  color: #fff4ce;
+  border: 3px solid #d6b568;
+  padding: 14px 24px;
+  font-size: 16px;
+  box-shadow:
+    inset 0 0 0 2px #f7df96,
+    4px 4px #061b24;
+}
+html[data-gba] .gba-result button.primary {
+  background: #efd076;
+  color: #19373f;
+}
+html[data-gba] .gba-result .match-card {
+  position: absolute;
+  left: 5%;
+  top: 44%;
+  transform: rotate(-9deg);
+  border: 0;
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  z-index: 5;
+  pointer-events: none;
+  width: auto;
+}
+html[data-gba] .gba-result #matchTitle {
+  font-size: 34px;
+  letter-spacing: 24px;
+  color: #16333e;
+  text-shadow: 2px 3px #ffeda2;
+}
+.gba-result #matchDetail,
+.gba-result #matchHint {
+  display: none;
+}
+@media (max-height: 500px) {
+  .gba-result .result-heading {
+    top: 18px;
+    left: 28px;
+    right: 28px;
+    font-size: 14px;
+  }
+  .gba-result .result-heading span {
+    font-size: 12px;
+  }
+  .gba-result .result-band {
+    top: 22%;
+    height: 32%;
+    border-width: 5px;
+    box-shadow: 0 12px #846c3770;
+  }
+  .gba-result .result-word {
+    top: 25%;
+  }
+  html[data-gba] .gba-result #matchTitle {
+    font-size: 18px;
+    letter-spacing: 15px;
+  }
+  .gba-result .winner-tag {
+    top: 56%;
+    font-size: 24px;
+  }
+  .gba-result .result-stats {
+    left: 19%;
+    bottom: 21%;
+    padding: 10px 16px;
+    gap: 16px;
+    border-width: 2px;
+    border-radius: 7px;
+  }
+  .gba-result .result-stats > div {
+    font-size: 12px;
+  }
+  .gba-result .result-stats > div + div {
+    padding-left: 14px;
+  }
+  .gba-result .result-stats b {
+    font-size: 16px;
+    margin-top: 7px;
+  }
+  .gba-result .result-footer {
+    padding: 10px 28px calc(10px + var(--safe-bottom));
+    border-top-width: 3px;
+  }
+  .gba-result .result-footer b {
+    font-size: 14px;
+  }
+  .gba-result .result-footer span {
+    font-size: 12px;
+  }
+  html[data-gba] .gba-result button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border-width: 2px;
+  }
+}
+@media (orientation: portrait) {
+  .gba-result .result-heading {
+    top: calc(20px + var(--safe-top));
+    left: 20px;
+    right: 20px;
+    font-size: 14px;
+  }
+  .gba-result .result-heading span {
+    font-size: 12px;
+  }
+  .gba-result .result-band {
+    top: 18%;
+    height: 28%;
+  }
+  .gba-result .result-word {
+    top: 20%;
+    width: 86%;
+  }
+  html[data-gba] .gba-result .match-card {
+    top: 30%;
+  }
+  html[data-gba] .gba-result #matchTitle {
+    font-size: 24px;
+  }
+  .gba-result .winner-art {
+    top: 34%;
+    right: 5%;
+    width: 65%;
+    height: 31%;
+  }
+  .gba-result .winner-tag {
+    left: 7%;
+    top: 61%;
+    font-size: 24px;
+  }
+  .gba-result .result-stats {
+    left: 5%;
+    right: 5%;
+    bottom: 20%;
+    gap: 12px;
+    padding: 14px;
+    justify-content: space-between;
+  }
+  .gba-result .result-stats > div {
+    font-size: 12px;
+  }
+  .gba-result .result-stats > div + div {
+    padding-left: 10px;
+  }
+  .gba-result .result-stats b {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .gba-result .result-footer {
+    padding: 14px 18px calc(18px + var(--safe-bottom));
+    flex-direction: column;
+    gap: 16px;
+  }
+  .gba-result .result-footer > div:first-child {
+    flex-direction: row;
+    align-items: center;
+  }
+  .gba-result .result-footer b {
+    font-size: 14px;
+  }
+  .gba-result .result-footer span {
+    font-size: 12px;
+  }
+  html[data-gba] .gba-result button {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+}
+html[data-gba] #battleRail {
+  top: calc(28px + var(--safe-top));
+  left: max(5%, var(--safe-left));
+  right: max(5%, var(--safe-right));
+  gap: 160px;
+  width: auto;
+  flex-direction: row;
+  color: var(--ink);
+  text-shadow: none;
+}
+html[data-gba] .battle-card,
+html[data-gba] .battle-card.enemy {
+  width: 360px;
+  max-width: 36%;
+  padding: 12px;
+  gap: 12px;
+  flex-direction: row;
+  background: #fffbe8ed;
+  border: 3px solid var(--edge);
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 0 2px var(--line),
+    4px 4px 0 #152e3850;
+}
+html[data-gba] .battle-avatar {
+  background: none;
+  width: 48px;
+  height: 48px;
+}
+html[data-gba] .battle-name {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+html[data-gba] .battle-name span {
+  color: #276b80;
+  font-size: 14px;
+}
+html[data-gba] .enemy .battle-name span {
+  color: #ae4941;
+}
+html[data-gba] .battle-hp {
+  height: 12px;
+  border: 2px solid #364a54;
+  background: #b8c1b5;
+}
+html[data-gba] .battle-hp i {
+  background: linear-gradient(#88e799 50%, #48be81 50%);
+}
+html[data-gba] .battle-sp,
+html[data-gba] .battle-sp-label,
+html[data-gba] .battle-avatar .sp-arc {
+  display: none;
+}
+html[data-gba] .gba-hp-number {
+  display: block;
+  margin-top: 7px;
+  font-size: 14px;
+  color: #53666a;
+}
+#gbaClock,
+#gbaResources,
+#gbaKeys {
+  position: absolute;
+  z-index: 4;
+  color: var(--ink);
+  background: #fffbe8ed;
+  border: 3px solid var(--edge);
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 0 2px var(--line),
+    4px 4px 0 #152e3850;
+  pointer-events: none;
+  text-shadow: none;
+}
+#gbaClock {
+  top: calc(28px + var(--safe-top));
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 20px;
+  text-align: center;
+  min-width: 136px;
+}
+#gbaClock b {
+  font:
+    900 28px ui-monospace,
+    monospace;
+  letter-spacing: 3px;
+  display: block;
+}
+#gbaClock span {
+  display: block;
+  font-size: 14px;
+  margin-top: 12px;
+}
+#gbaResources {
+  left: max(5%, var(--safe-left));
+  bottom: calc(30px + var(--safe-bottom));
+  width: 216px;
+  padding: 15px 18px;
+}
+#gbaResources > div:not(.resource-bar) {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+}
+#gbaResources b {
+  margin-left: auto;
+  font-family: ui-monospace, monospace;
+}
+#gbaResources span {
+  color: #53666a;
+}
+.resource-bar {
+  width: auto;
+  min-width: 0;
+  height: 9px;
+  background: #63767a;
+  border: 1px solid #274153;
+  margin: 7px 0 12px;
+}
+.resource-bar:last-child {
+  margin-bottom: 0;
+}
+.resource-bar i {
+  display: block;
+  height: 100%;
+}
+.resource-bar.energy i {
+  background: #55c7db;
+}
+.resource-bar.stamina i {
+  background: #e9c85f;
+}
+#gbaKeys {
+  right: max(5%, var(--safe-right));
+  bottom: calc(30px + var(--safe-bottom));
+  padding: 18px 24px;
+  font-size: 14px;
+  line-height: 2;
+  border-width: 2px;
+  box-shadow: none;
+}
+html[data-gba] .hud {
+  left: 50%;
+  right: auto;
+  bottom: calc(28px + var(--safe-bottom));
+  transform: translateX(-50%);
+  padding: 18px 30px;
+  width: auto;
+  background: #fffbe8ed;
+  border: 3px solid var(--edge);
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 0 2px var(--line),
+    4px 4px 0 #152e3850;
+}
+html[data-gba] #skills {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  grid-template-columns: none;
+  width: auto;
+  height: auto;
+}
+html[data-gba] .skill {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 90px;
+  height: 128px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--ink);
+  overflow: visible;
+  text-shadow: none;
+  isolation: isolate;
+}
+html[data-gba] .skill::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 8px;
+  width: 74px;
+  height: 74px;
+  border: 2px solid #ecda86;
+  border-radius: 50%;
+  transform: none;
+  background: var(--move);
+  box-shadow:
+    inset 0 0 0 3px #fff2,
+    3px 4px 0 #1027358c;
+  z-index: -1;
+}
+html[data-gba] .skill.cooling::before {
+  background: conic-gradient(#e4ca70 calc((1 - var(--cool)) * 1turn), #233b48 0);
+}
+html[data-gba] .skill::after {
+  content: "✦";
+  position: absolute;
+  inset: 5px auto auto 13px;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  color: #fff5b3;
+  background: none;
+  border-radius: 50%;
+  transform: none;
+  box-shadow: none;
+  z-index: -1;
+}
+html[data-gba] .skill.cooling::after {
+  content: "";
+  background: #203946;
+}
+html[data-gba] .skill kbd {
+  display: block;
+  position: absolute;
+  right: 2px;
+  top: -7px;
+  font: 850 14px system-ui;
+  color: var(--ink);
+  background: var(--paper);
+  border: 2px solid var(--edge);
+  padding: 2px 5px;
+  border-radius: 0;
+  min-width: 22px;
+  box-shadow: 2px 2px 0 #13293550;
+}
+html[data-gba] .skill strong {
+  position: absolute;
+  top: 82px;
+  left: -8px;
+  width: 106px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+html[data-gba] .skill small {
+  position: absolute;
+  top: 107px;
+  left: -8px;
+  width: 106px;
+  font-size: 14px;
+  color: #53666a;
+}
+html[data-gba] .gba-cd {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 74px;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  font:
+    900 24px ui-monospace,
+    monospace;
+  color: #fff;
+  text-shadow: none;
+  pointer-events: none;
+}
+html[data-gba] .skill:not(.cooling) .gba-cd {
+  display: none;
+}
+html[data-gba] .skill.insufficient {
+  opacity: 0.58;
+}
+html[data-gba] .skill.active {
+  box-shadow: none;
+}
+html[data-gba] .skill.active::before {
+  outline: 2px solid #fff6bd;
+}
+html[data-gba] .skill.cast-rejected::before {
+  outline: 3px solid #dc5b49;
+}
+html[data-gba] #battleMenuButton {
+  left: auto;
+  transform: none;
+  width: auto;
+  top: calc(145px + var(--safe-top));
+  right: max(5%, var(--safe-right));
+  background: #fffbe8ed;
+  color: var(--ink);
+  border-color: var(--edge);
+}
+html[data-gba] #battleMenu {
+  top: calc(195px + var(--safe-top));
+  background: var(--paper);
+  border-color: var(--edge);
+  color: var(--ink);
+  border-radius: 10px;
+  max-height: calc(100dvh - 220px - var(--safe-bottom));
+}
+html[data-gba] #battleMenu button,
+html[data-gba] #battleMenu .readout span {
+  font-size: 12px;
+  color: var(--ink);
+  background: #e2eaca;
+  border-color: var(--edge);
+}
+html[data-gba] .help-panel {
+  top: calc(16px + var(--safe-top));
+  max-height: calc(100dvh - 32px - var(--safe-top) - var(--safe-bottom));
+  background: var(--paper);
+  color: var(--ink);
+  border: 3px solid var(--edge);
+  border-radius: 12px;
+}
+html[data-gba] .help-panel a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+#gbaHelpClose {
+  display: block;
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  z-index: 1;
+}
+#gbaPause {
+  display: none;
+  pointer-events: auto;
+}
+#gbaShort {
+  pointer-events: auto;
+  max-width: min(460px, 95vw);
+  background: var(--paper);
+  color: var(--ink);
+  border: 3px solid var(--edge);
+  border-radius: 10px;
+  padding: 12px;
+}
+#gbaShort::backdrop {
+  background: #152e38f2;
+}
+#gbaShort h2 {
+  font-size: 18px;
+  margin: 0;
+}
+#gbaShort p {
+  font-size: 12px;
+  margin: 8px 0;
+}
+html[data-gba][data-ko] :is(.hud, #mobileActions, #mobileJoystick, #gbaPause, #battleMenuButton) {
+  visibility: hidden;
+}
+html[data-gba]:has(#setup[open]) :is(#battleRail, #gbaClock, #gbaResources, #gbaKeys),
+html[data-gba]:has(#vsScreen:not([hidden]))
+  :is(
+    #battleRail,
+    #gbaClock,
+    #gbaResources,
+    #gbaKeys,
+    .hud,
+    #mobileJoystick,
+    #mobileActions,
+    #battleMenuButton,
+    #gbaPause
+  ) {
+  visibility: hidden;
+}
+@media (max-width: 1100px) and (min-height: 501px) {
+  html[data-gba] .hud {
+    padding: 12px;
+  }
+  html[data-gba] #skills {
+    gap: 12px;
+  }
+  #gbaKeys {
+    display: none;
+  }
+  #gbaResources {
+    left: 16px;
+    bottom: 208px;
+  }
+}
+@media (max-height: 500px), (max-width: 650px) {
+  html[data-gba] #battleRail {
+    top: calc(12px + var(--safe-top));
+    left: calc(3.5% + var(--safe-left));
+    right: calc(3.5% + var(--safe-right));
+    gap: 100px;
+  }
+  html[data-gba] .battle-card,
+  html[data-gba] .battle-card.enemy {
+    width: 235px;
+    max-width: 36%;
+    padding: 8px;
+    gap: 7px;
+    border-width: 2px;
+    border-radius: 8px;
+  }
+  html[data-gba] .battle-avatar {
+    width: 30px;
+    height: 32px;
+  }
+  html[data-gba] .battle-avatar .mon-icon {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  html[data-gba] .battle-name {
+    font-size: 14px;
+    margin-bottom: 7px;
+  }
+  html[data-gba] .battle-name span,
+  html[data-gba] .gba-hp-number {
+    font-size: 12px;
+  }
+  html[data-gba] .gba-hp-number {
+    margin-top: 4px;
+  }
+  html[data-gba] .battle-hp {
+    height: 8px;
+    border-width: 1px;
+  }
+  #gbaClock {
+    top: calc(12px + var(--safe-top));
+    padding: 8px;
+    min-width: 98px;
+    border-width: 2px;
+  }
+  #gbaClock b {
+    font-size: 18px;
+  }
+  #gbaClock b > svg {
+    width: 75px;
+    height: 18px;
+  }
+  #gbaClock span {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  #gbaResources {
+    width: 145px;
+    padding: 9px 10px;
+    bottom: calc(16px + var(--safe-bottom));
+    border-width: 2px;
+  }
+  #gbaResources > div:not(.resource-bar),
+  #gbaKeys {
+    font-size: 12px;
+  }
+  .resource-bar {
+    height: 6px;
+    margin: 4px 0 6px;
+  }
+  #gbaKeys {
+    padding: 10px 12px;
+    right: 16px;
+    bottom: 16px;
+  }
+  html[data-gba] .hud {
+    padding: 12px 18px;
+    bottom: calc(14px + var(--safe-bottom));
+    border-width: 2px;
+  }
+  html[data-gba] #skills {
+    gap: 12px;
+  }
+  html[data-gba] .skill {
+    width: 62px;
+    height: 95px;
+  }
+  html[data-gba] .skill::before {
+    left: 7px;
+    width: 48px;
+    height: 48px;
+  }
+  html[data-gba] .skill::after {
+    left: 12px;
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+  }
+  html[data-gba] .skill strong {
+    top: 57px;
+    left: -3px;
+    width: 68px;
+    font-size: 12px;
+  }
+  html[data-gba] .skill small {
+    top: 78px;
+    left: -3px;
+    width: 68px;
+    font-size: 12px;
+  }
+  html[data-gba] .skill kbd {
+    font-size: 12px;
+    right: 0;
+  }
+  html[data-gba] .gba-cd {
+    width: 48px;
+    height: 48px;
+    left: 7px;
+    font-size: 18px;
+  }
+  html[data-gba] #battleMenuButton {
+    top: calc(100px + var(--safe-top));
+    right: calc(14px + var(--safe-right));
+  }
+  html[data-gba] #battleMenu {
+    top: calc(82px + var(--safe-top));
+    max-height: calc(100dvh - 94px - var(--safe-top) - var(--safe-bottom));
+  }
+}
+/* VS uses the already-loaded battle canvas, no extra image request. */
+html[data-gba] #vsScreen {
+  padding: 0;
+  background: linear-gradient(100deg, #ecd56ba8 42%, #203e4e99 42%);
+  color: #fffce4;
+}
+html[data-gba] #vsScreen::before {
+  content: "POIGHT / 1V1 BATTLE";
+  position: absolute;
+  top: max(36px, var(--safe-top));
+  left: max(48px, var(--safe-left));
+  font:
+    900 24px ui-monospace,
+    monospace;
+  letter-spacing: 3px;
+}
+html[data-gba] #vsScreen .vs-fighter {
+  position: absolute;
+  left: 8%;
+  bottom: 68px;
+  width: 42%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+html[data-gba] #vsScreen .vs-enemy {
+  left: auto;
+  right: 8%;
+}
+html[data-gba] #vsScreen .portrait-stage {
+  order: 0;
+  width: 100%;
+  height: calc(100% - 150px);
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  background: none;
+}
+html[data-gba] #vsScreen .portrait-stage::after {
+  display: none;
+}
+html[data-gba] #vsScreen .select-portrait {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+html[data-gba] #vsScreen .vs-fighter > span:first-child {
+  order: 1;
+  width: 100%;
+  background: #d55549;
+  border-top: 4px solid #fff4d3;
+  padding: 18px 24px 0;
+  color: #fff9df;
+  font:
+    900 20px ui-monospace,
+    monospace;
+}
+html[data-gba] #vsScreen .vs-fighter > strong {
+  order: 2;
+  width: 100%;
+  background: #d55549;
+  border-bottom: 4px solid #fff4d3;
+  padding: 10px 24px 24px;
+  color: #fff9df;
+  font-size: 40px;
+  text-shadow: 2px 2px #852d31;
+}
+html[data-gba] #vsScreen .vs-middle {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+html[data-gba] #vsScreen .vs-middle > b {
+  position: absolute;
+  top: 32%;
+  left: 44%;
+  width: 12%;
+  color: #fffce4;
+  transform: skewY(-8deg);
+  animation: none;
+  filter: drop-shadow(6px 6px #c54331) drop-shadow(3px 3px #193643);
+}
+html[data-gba] #vsTier {
+  position: absolute;
+  top: 36px;
+  right: 48px;
+  font-size: 16px;
+  background: #152d3fde;
+  border: 2px solid #f6e7a3;
+  padding: 14px 22px;
+  margin: 0;
+}
+html[data-gba] #vsContinue {
+  position: absolute;
+  bottom: calc(14px + var(--safe-bottom));
+  right: max(48px, var(--safe-right));
+  pointer-events: auto;
+  min-height: 44px;
+  padding: 8px 16px;
+}
+@media (max-height: 500px), (orientation: portrait) {
+  html[data-gba] #vsScreen::before {
+    top: calc(16px + var(--safe-top));
+    left: 20px;
+    font-size: 14px;
+  }
+  html[data-gba] #vsTier {
+    top: calc(12px + var(--safe-top));
+    right: 20px;
+    font-size: 12px;
+    padding: 8px;
+  }
+  html[data-gba] #vsScreen .vs-fighter {
+    left: 4%;
+    bottom: 64px;
+    width: 46%;
+    height: 65%;
+  }
+  html[data-gba] #vsScreen .vs-enemy {
+    left: auto;
+    right: 4%;
+  }
+  html[data-gba] #vsScreen .portrait-stage {
+    height: calc(100% - 74px);
+  }
+  html[data-gba] #vsScreen .vs-fighter > span:first-child {
+    padding: 8px 12px 0;
+    font-size: 14px;
+  }
+  html[data-gba] #vsScreen .vs-fighter > strong {
+    padding: 4px 12px 10px;
+    font-size: 24px;
+  }
+  html[data-gba] #vsContinue {
+    right: 20px;
+  }
+}
+@media (orientation: portrait) {
+  html[data-gba] #vsTier {
+    top: calc(56px + var(--safe-top));
+  }
+  html[data-gba] #vsScreen .vs-fighter {
+    height: 57%;
+    bottom: 20%;
+  }
+  html[data-gba] #vsScreen .vs-middle > b {
+    top: 27%;
+    left: 39%;
+    width: 22%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-gba] #vsScreen .vs-middle > b {
+    animation: vs-name 0.3s both;
+  }
+}
+/* Touch arc: dodge is always the bottom-right action, jump is above-left. */
+html[data-gba][data-touch-game="true"] .hud {
+  position: static;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: none;
+  transform: none;
+}
+html[data-gba][data-touch-game="true"] .skill {
+  position: fixed;
+  width: 68px;
+  height: 90px;
+  right: calc(214px + var(--safe-right));
+  bottom: calc(28px + var(--safe-bottom));
+  z-index: 5;
+  color: #fff9e2;
+}
+html[data-gba][data-touch-game="true"] .skill:nth-child(2) {
+  right: calc(166px + var(--safe-right));
+  bottom: calc(130px + var(--safe-bottom));
+}
+html[data-gba][data-touch-game="true"] .skill:nth-child(3) {
+  right: calc(88px + var(--safe-right));
+  bottom: calc(186px + var(--safe-bottom));
+}
+html[data-gba][data-touch-game="true"] .skill:nth-child(4) {
+  right: calc(8px + var(--safe-right));
+  bottom: calc(122px + var(--safe-bottom));
+}
+html[data-gba][data-touch-game="true"] .skill::before {
+  left: 10px;
+  width: 48px;
+  height: 48px;
+}
+html[data-gba][data-touch-game="true"] .skill::after {
+  left: 15px;
+  top: 5px;
+  width: 38px;
+  height: 38px;
+  font-size: 26px;
+}
+html[data-gba][data-touch-game="true"] .skill strong {
+  top: 55px;
+  left: -3px;
+  width: 74px;
+  font-size: 12px;
+  text-shadow:
+    1px 1px #16333e,
+    -1px -1px #16333e;
+}
+html[data-gba][data-touch-game="true"] .skill small {
+  top: 74px;
+  left: -3px;
+  width: 74px;
+  font-size: 12px;
+  color: #fff9e2;
+  text-shadow:
+    1px 1px #16333e,
+    -1px -1px #16333e;
+}
+html[data-gba][data-touch-game="true"] .skill kbd {
+  display: none;
+}
+html[data-gba][data-touch-game="true"] .gba-cd {
+  left: 10px;
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+}
+html[data-gba][data-touch-game="true"] #mobileJoystick {
+  left: calc(90px + var(--safe-left));
+  top: calc(100% - 100px - var(--safe-bottom));
+  width: 104px;
+  height: 104px;
+  opacity: 0.85;
+  background: #14303b70;
+  border: 2px solid #e4cc80b5;
+  box-shadow:
+    inset 0 0 0 8px #15334544,
+    0 0 0 2px #1e3b4490;
+}
+html[data-gba] #mobileJoystick i {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: linear-gradient(#d85747 43%, #314457 43% 58%, #fffde7 58%);
+  border: 3px solid #314457;
+  box-shadow: 3px 4px #0d273650;
+}
+html[data-gba] #mobileJoystick i::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 8px;
+  height: 8px;
+  background: #fffde7;
+  border: 3px solid #314457;
+  border-radius: 50%;
+}
+html[data-gba][data-touch-game="true"] #mobileActions {
+  display: contents;
+}
+html[data-gba] #mobileActions button {
+  position: fixed !important;
+  width: 48px;
+  height: 48px;
+  min-width: 48px !important;
+  left: auto !important;
+  right: calc(18px + var(--safe-right));
+  bottom: calc(20px + var(--safe-bottom));
+  border: 2px solid #e6cd7a;
+  background: #173844e8;
+  color: #fff7d4;
+  z-index: 5;
+}
+html[data-gba] #mobileActions #jumpButton {
+  right: calc(86px + var(--safe-right));
+  bottom: calc(54px + var(--safe-bottom)) !important;
+}
+html[data-gba] #mobileActions #diveButton {
+  right: calc(146px + var(--safe-right));
+  bottom: calc(48px + var(--safe-bottom)) !important;
+}
+html[data-gba][data-touch-game="true"] #gbaKeys {
+  display: none;
+}
+html[data-gba][data-touch-game="true"] #gbaResources {
+  left: 42%;
+  bottom: calc(14px + var(--safe-bottom));
+  transform: translateX(-50%);
+  width: 118px;
+  padding: 7px 8px;
+  border-width: 2px;
+}
+html[data-gba][data-touch-game="true"] #gbaResources > div:not(.resource-bar) {
+  font-size: 12px;
+  gap: 3px;
+}
+html[data-gba][data-touch-game="true"] #gbaResources .resource-bar {
+  height: 4px;
+  margin: 4px 0 6px;
+}
+html[data-gba][data-touch-game="true"] #gbaPause {
+  display: block;
+  position: fixed;
+  left: 54%;
+  bottom: calc(14px + var(--safe-bottom));
+  z-index: 5;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+html[data-gba][data-touch-game="true"] #battleMenuButton {
+  right: auto;
+  left: calc(16px + var(--safe-left));
+  top: calc(170px + var(--safe-top));
+}
+html[data-gba][data-compact="true"] #battleRail {
+  top: calc(8px + var(--safe-top));
+}
+html[data-gba][data-compact="true"] .battle-card {
+  padding: 6px;
+}
+html[data-gba][data-compact="true"] .battle-avatar {
+  display: none;
+}
+html[data-gba][data-compact="true"] .battle-name {
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 4px;
+}
+html[data-gba][data-compact="true"] .battle-hp {
+  height: 6px;
+}
+html[data-gba][data-compact="true"] .gba-hp-number {
+  margin-top: 3px;
+  line-height: 14px;
+}
+html[data-gba][data-compact="true"] #gbaClock {
+  top: calc(8px + var(--safe-top));
+  padding: 6px;
+}
+html[data-gba][data-compact="true"] #gbaClock span {
+  margin-top: 4px;
+}
+html[data-gba][data-compact="true"] .skill {
+  height: 78px;
+}
+html[data-gba][data-compact="true"] .skill::before {
+  width: 44px;
+  height: 44px;
+  left: 12px;
+}
+html[data-gba][data-compact="true"] .skill::after {
+  width: 34px;
+  height: 34px;
+  left: 17px;
+}
+html[data-gba][data-compact="true"] .skill strong {
+  top: 48px;
+}
+html[data-gba][data-compact="true"] .skill small {
+  top: 63px;
+}
+html[data-gba][data-compact="true"] .gba-cd {
+  width: 44px;
+  height: 44px;
+  left: 12px;
+}
+html[data-gba][data-compact="true"] .skill:nth-child(1) {
+  right: calc(224px + var(--safe-right));
+  bottom: calc(58px + var(--safe-bottom));
+}
+html[data-gba][data-compact="true"] .skill:nth-child(2) {
+  right: calc(152px + var(--safe-right));
+  bottom: calc(58px + var(--safe-bottom));
+}
+html[data-gba][data-compact="true"] .skill:nth-child(3) {
+  right: calc(80px + var(--safe-right));
+  bottom: calc(58px + var(--safe-bottom));
+}
+html[data-gba][data-compact="true"] .skill:nth-child(4) {
+  right: calc(8px + var(--safe-right));
+  bottom: calc(58px + var(--safe-bottom));
+}
+html[data-gba][data-compact="true"] #mobileActions #jumpButton {
+  bottom: calc(10px + var(--safe-bottom)) !important;
+}
+html[data-gba][data-compact="true"] #mobileActions #dashButton,
+html[data-gba][data-compact="true"] #mobileActions #diveButton {
+  bottom: calc(6px + var(--safe-bottom)) !important;
+}
+html[data-gba][data-compact="true"] #mobileJoystick {
+  width: 88px;
+  height: 88px;
+  top: calc(100% - 52px - var(--safe-bottom));
+}
+html[data-gba][data-compact="true"] #mobileJoystick span {
+  display: none;
+}
+html[data-gba][data-compact="true"] #gbaResources {
+  left: calc(140px + var(--safe-left));
+  transform: none;
+  width: 112px;
+  padding: 5px;
+  bottom: calc(8px + var(--safe-bottom));
+}
+html[data-gba][data-compact="true"] #gbaResources > div {
+  line-height: 14px;
+}
+html[data-gba][data-compact="true"] #gbaResources .resource-bar {
+  margin: 2px 0;
+}
+html[data-gba][data-compact="true"] #gbaPause {
+  left: calc(260px + var(--safe-left));
+  bottom: calc(8px + var(--safe-bottom));
+}
+html[data-gba][data-compact="true"] #battleMenuButton {
+  left: calc(140px + var(--safe-left));
+  top: calc(80px + var(--safe-top));
+}
+@media (max-width: 740px) and (orientation: landscape) {
+  html[data-gba]:not([data-compact="true"]) #mobileActions #diveButton {
+    left: calc(155px + var(--safe-left)) !important;
+    right: auto;
+    bottom: calc(20px + var(--safe-bottom)) !important;
+  }
+  html[data-gba][data-touch-game="true"]:not([data-compact="true"]) .skill:first-child {
+    right: calc(184px + var(--safe-right));
+  }
+}
+@media (orientation: portrait) {
+  html[data-gba] #battleRail {
+    top: calc(12px + var(--safe-top));
+    left: calc(10px + var(--safe-left));
+    right: calc(10px + var(--safe-right));
+    gap: 10px;
+  }
+  html[data-gba] .battle-card,
+  html[data-gba] .battle-card.enemy {
+    width: calc(50% - 5px);
+    max-width: none;
+    padding: 8px;
+    gap: 4px;
+  }
+  html[data-gba] .battle-avatar {
+    display: none;
+  }
+  html[data-gba] .battle-name {
+    font-size: 14px;
+  }
+  html[data-gba] .battle-name span,
+  html[data-gba] .gba-hp-number {
+    font-size: 12px;
+  }
+  #gbaClock {
+    top: calc(110px + var(--safe-top));
+    padding: 8px 14px;
+  }
+  #gbaResources {
+    left: 16px;
+    bottom: 156px;
+  }
+  #gbaClock b {
+    font-size: 20px;
+  }
+  #gbaClock b > svg {
+    width: 83px;
+    height: 20px;
+  }
+  #gbaClock span {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  html[data-gba][data-touch-game="true"] #mobileJoystick {
+    left: calc(72px + var(--safe-left));
+    top: calc(100% - 210px - var(--safe-bottom));
+  }
+  html[data-gba][data-touch-game="true"] .skill {
+    right: calc(104px + var(--safe-right));
+    bottom: calc(100px + var(--safe-bottom));
+  }
+  html[data-gba][data-touch-game="true"] .skill:nth-child(2) {
+    right: calc(104px + var(--safe-right));
+    bottom: calc(204px + var(--safe-bottom));
+  }
+  html[data-gba][data-touch-game="true"] .skill:nth-child(3) {
+    right: calc(16px + var(--safe-right));
+    bottom: calc(248px + var(--safe-bottom));
+  }
+  html[data-gba][data-touch-game="true"] .skill:nth-child(4) {
+    right: calc(16px + var(--safe-right));
+    bottom: calc(140px + var(--safe-bottom));
+  }
+  html[data-gba] #mobileActions #jumpButton {
+    right: calc(96px + var(--safe-right));
+    bottom: calc(38px + var(--safe-bottom)) !important;
+  }
+  html[data-gba] #mobileActions #diveButton {
+    left: calc(16px + var(--safe-left)) !important;
+    right: auto;
+    bottom: calc(100px + var(--safe-bottom)) !important;
+  }
+  html[data-gba][data-touch-game="true"] #gbaResources {
+    left: calc(14px + var(--safe-left));
+    transform: none;
+    width: 140px;
+    bottom: calc(18px + var(--safe-bottom));
+  }
+  html[data-gba][data-touch-game="true"] #gbaPause {
+    left: calc(50% - 26px);
+    bottom: calc(18px + var(--safe-bottom));
+  }
+  html[data-gba] #battleMenuButton,
+  html[data-gba][data-touch-game="true"] #battleMenuButton {
+    top: calc(180px + var(--safe-top));
+    left: calc(16px + var(--safe-left));
+    right: auto;
+  }
+  html[data-gba] #battleMenu {
+    top: calc(230px + var(--safe-top));
+    max-height: calc(100dvh - 246px - var(--safe-top) - var(--safe-bottom));
+  }
+}
+/* MOB-02: one scrolling owner, compact context/slots, catalog before secondary controls. */
+@media (max-height: 500px), (max-width: 650px) {
+  html[data-gba] #setup #loadoutPanel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: 4px;
+    padding: 6px;
+  }
+  html[data-gba] #setup .loadout-nav {
+    grid-row: 1;
+    position: static;
+    padding: 0;
+    gap: 4px;
+  }
+  html[data-gba] #setup .loadout-nav > div {
+    display: flex;
+    gap: 4px;
+    min-width: 0;
+  }
+  html[data-gba] #setup .loadout-nav button {
+    padding: 4px;
+    white-space: nowrap;
+  }
+  html[data-gba] #setup .selected-mon {
+    grid-row: 2;
+    display: flex;
+    min-height: 24px;
+    padding: 0;
+    gap: 6px;
+  }
+  html[data-gba] #setup .selected-mon > div:not(.selected-stats) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  html[data-gba] #setup .selected-mon :is(h3, .type-list) {
+    margin: 0;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  html[data-gba] #setup .selected-mon :is(.mon-icon, .eyebrow, .selected-stats) {
+    display: none;
+  }
+  html[data-gba] #setup #moveSlots {
+    grid-row: 3;
+    grid-template-columns: repeat(var(--slot-count, 4), minmax(0, 1fr));
+    gap: 4px;
+  }
+  html[data-gba] #setup .move-slot,
+  html[data-gba] #setup .move-slot[aria-pressed="true"] {
+    min-height: 44px;
+    padding: 3px;
+    grid-template-columns: 16px minmax(0, 1fr);
+    gap: 2px;
+  }
+  html[data-gba] #setup .move-slot kbd {
+    padding: 0;
+    grid-row: auto;
+  }
+  html[data-gba] #setup .move-slot small {
+    display: none;
+  }
+  html[data-gba] #setup #moveCatalog {
+    grid-row: 4;
+    padding: 0;
+    gap: 4px;
+  }
+  html[data-gba] #setup .move-card {
+    padding: 6px;
+    gap: 4px;
+    min-height: 73px;
+  }
+  html[data-gba] #setup .loadout-title { grid-row: 5; }
+  html[data-gba] #setup .slot-controls { grid-row: 6; }
+  html[data-gba] #setup #moveHint { grid-row: 7; font-size: 12px; }
+  html[data-gba] #setup .ai-options { grid-row: 8; max-height: none; }
+}
+@media (max-height: 500px) and (min-height: 331px) and (min-width: 651px) {
+  html[data-gba] #setup #loadoutPanel {
+    grid-template-columns: minmax(120px, 1fr) minmax(0, 3fr);
+  }
+  html[data-gba] #setup #loadoutPanel > * { grid-column: 1 / -1; }
+  html[data-gba] #setup .selected-mon { grid-column: 1; grid-row: 2; }
+  html[data-gba] #setup #moveSlots { grid-column: 2; grid-row: 2; }
+  html[data-gba] #setup #moveCatalog { grid-row: 3; }
+  html[data-gba] #setup .move-card {
+    display: grid;
+    grid-template-columns: minmax(120px, 1fr) 2fr;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+@media (max-height: 500px) {
+  html[data-gba][data-compact="true"] #setup.configuring[open] {
+    grid-template-rows: 44px minmax(0, 1fr) 48px 0;
+  }
+  html[data-gba][data-compact="true"] #setup.configuring .setup-credit { display: none; }
+  html[data-gba][data-compact="true"] #setup #moveCatalog { grid-row: 2; }
+  html[data-gba][data-compact="true"] #setup #moveSlots { grid-row: 3; }
+  html[data-gba][data-compact="true"] #setup .selected-mon { grid-row: 4; }
+}
+@media (max-height: 330px) {
+  html[data-gba] #setup.configuring[open] {
+    grid-template-rows: 44px minmax(0, 1fr) 48px 0;
+  }
+  html[data-gba] #setup.configuring .setup-credit { display: none; }
+  html[data-gba] #setup #moveCatalog { grid-row: 2; }
+  html[data-gba] #setup .move-card {
+    display: grid;
+    grid-template-columns: minmax(120px, 1fr) 2fr;
+    align-items: center;
+    min-height: 44px;
+  }
+  html[data-gba] #setup #moveSlots { grid-row: 3; }
+  html[data-gba] #setup .selected-mon { grid-row: 4; }
+}
+/* R200b: narrow portrait keeps MOB3's hidden body details, but the expanded
+   move catalog must occupy its full grid track. With auto rows + min-height:90px
+   + overflow:visible it could paint over the following recommended-loadout
+   button. Size content tracks naturally and let the existing panel scroll. */
+@media (max-width: 430px) and (orientation: portrait) {
+  html[data-gba] #setup #loadoutPanel { grid-auto-rows: max-content; }
+}
+/* R200b supplement-1: only narrow PORTRAIT may hide body facts. Landscape
+   keeps readable facts in the existing loadout card, without changing style. */
+@media (max-height: 500px) and (orientation: landscape) {
+  html[data-gba] #setup #loadoutPanel { grid-auto-rows: max-content; }
+  html[data-gba] #setup .selected-mon { flex-wrap: wrap; }
+  html[data-gba] #setup #selectedStats {
+    display: flex;
+    flex-basis: 100%;
+    gap: 0 8px;
+    margin: 0;
+    white-space: normal;
+  }
+}
+/* MOB-01: shrink the grid's min-content tracks, never the avatar targets. */
+@media (max-height: 500px), (max-width: 650px) {
+  html[data-gba] #setup[open] { grid-template-columns: minmax(0, 1fr); }
+  html[data-gba] #setup .setup-body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 0;
+  }
+  html[data-gba] #setup .dex { min-width: 0; }
+}
+@media (max-height: 500px) {
+  html[data-gba][data-touch-game="true"] #setup[open] {
+    grid-template-rows: 44px minmax(0, 1fr) 48px 44px;
+  }
+  html[data-gba][data-touch-game="true"] #setup .setup-body {
+    grid-template-rows: minmax(0, 1fr) 44px;
+    padding-top: 4px;
+    gap: 4px;
+  }
+  html[data-gba] #setup .dex { gap: 4px; }
+  html[data-gba][data-touch-game="true"] #setup .fighter-panel {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    height: 44px;
+    padding: 4px;
+    gap: 4px;
+  }
+  html[data-gba][data-touch-game="true"] #setup .fighter-panel .portrait-stage {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+  }
+  html[data-gba][data-touch-game="true"] #setup .fighter-panel :is(.fighter-badge, strong) {
+    font-size: 12px;
+    line-height: 14px;
+    min-width: 0;
+  }
+  html[data-gba][data-touch-game="true"] #setup .fighter-panel > :is(#playerPickTypes, #enemyPickTypes, .body-summary) {
+    display: none;
+  }
+  html[data-gba][data-compact="true"] #setup[open] {
+    grid-template-rows: 44px minmax(0, 1fr) 44px 0;
+    padding: calc(4px + var(--safe-top)) calc(12px + var(--safe-right))
+      calc(4px + var(--safe-bottom)) calc(12px + var(--safe-left));
+  }
+  html[data-gba][data-compact="true"] #setup .setup-foot { padding-top: 0; }
+  html[data-gba][data-compact="true"] #setup .setup-credit { display: none; }
+  html[data-gba][data-compact="true"] #setup .setup-body {
+    grid-template-rows: minmax(0, 1fr);
+    padding-top: 0;
+    gap: 0;
+  }
+  html[data-gba][data-compact="true"] #setup .fighter-panel { display: none; }
+}
+/* MOB-06: each footer action has a bounded, complete 44px hit target. */
+@media (max-height: 500px), (max-width: 650px) {
+  html[data-gba] #setup .setup-foot { padding-top: 4px; }
+  html[data-gba] #setup .setup-actions {
+    display: grid;
+    grid-template-columns: 44px repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 4px;
+  }
+  html[data-gba] #setup .setup-actions button,
+  html[data-gba] #setup #startBattle {
+    grid-column: auto;
+    grid-row: auto;
+    min-width: 44px;
+    min-height: 44px;
+    height: 44px;
+    width: 100%;
+    padding: 2px;
+    white-space: normal;
+    line-height: 16px;
+  }
+  /* The animated CPU name must not intercept the safe-area skip button. */
+  html[data-gba] #vsContinue { z-index: 5; }
+}
+/* Tablet landscape safe insets can also move the CPU name over the skip target. */
+html[data-gba][data-touch-game="true"] #vsContinue { z-index: 5; }
+/* MOB-07: no rendered operation HUD under the independent touch top layer. */
+html[data-gba][data-touch-game="true"][data-ko] :is(
+  .hud, #battleRail, #mobileActions, #mobileJoystick, #battleMenuButton, #battleMenu,
+  #gbaPause, #gbaClock, #gbaResources, #gbaKeys
+) { display: none; }
+html[data-gba][data-touch-game="true"] #matchOverlay:popover-open {
+  inset: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100dvh;
+}
+/* MOB-03/04: under 210 usable px, setup remains scrollable; only battle is gated. */
+html[data-gba][data-touch-game="true"][data-setup-short="true"] #setup[open] {
+  grid-template-rows: 0 minmax(0, 1fr) 44px 0;
+  padding: calc(4px + var(--safe-top)) calc(12px + var(--safe-right))
+    calc(4px + var(--safe-bottom)) calc(12px + var(--safe-left));
+}
+html[data-gba][data-setup-short="true"] #setup :is(.setup-head, .setup-credit, .fighter-panel) {
+  display: none;
+}
+html[data-gba][data-setup-short="true"] #setup .setup-body {
+  grid-row: 2;
+  display: block;
+  padding: 0;
+  overflow: auto;
+  touch-action: pan-y;
+}
+html[data-gba][data-setup-short="true"] #setup .dex {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  overflow: visible;
+  gap: 4px;
+}
+html[data-gba][data-setup-short="true"] #setup .roster {
+  order: -1;
+  height: 76px;
+  min-height: 76px;
+  flex: none;
+}
+html[data-gba][data-setup-short="true"] #setup.configuring .dex { display: none; }
+html[data-gba][data-setup-short="true"] #setup #loadoutPanel {
+  grid-template-columns: minmax(0, 1fr);
+}
+html[data-gba][data-setup-short="true"] #setup #loadoutPanel > * { grid-column: 1; }
+html[data-gba][data-setup-short="true"] #setup #moveCatalog { grid-row: 1; }
+html[data-gba][data-setup-short="true"] #setup .loadout-nav { grid-row: 2; }
+html[data-gba][data-setup-short="true"] #setup .selected-mon { grid-row: 3; }
+html[data-gba][data-setup-short="true"] #setup #moveSlots { grid-row: 4; }
+html[data-gba][data-setup-short="true"] #setup .setup-foot { grid-row: 3; padding-top: 0; }
+@media (max-width: 360px) and (orientation: portrait) {
+  html[data-gba][data-touch-game="true"] #gbaResources {
+    width: 116px;
+  }
+  html[data-gba] #mobileActions #jumpButton {
+    right: calc(86px + var(--safe-right));
+    bottom: calc(48px + var(--safe-bottom)) !important;
+  }
+}

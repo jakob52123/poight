@@ -77,7 +77,7 @@ with sync_playwright() as pw:
         check('加载的是当前候选HTML', hashlib.sha256(response.body()).hexdigest() == sha(ROOT / '候选试玩.html'))
         catalog = call('()=>__waterTest.catalog()')
         scenes = catalog['scenes']
-        check('三张场景且50角色不扩容', [s['id'] for s in scenes] == ['forest', 'courtyard', 'coast'] and len(catalog['roster']) == 50)
+        check('三张场景且角色数遵守当前授权名单', [s['id'] for s in scenes] == ['forest', 'courtyard', 'coast'] and len(catalog['roster']) == len(json.loads((ROOT/'首发200.json').read_text())['ids']))
         check('三张底图不同，不只改场景名称', len({s['groundSrc'] for s in scenes}) == 3)
         check('三张地图预览图全部可解码', all(s.get('previewSrc') for s in scenes))
         choose('forest')

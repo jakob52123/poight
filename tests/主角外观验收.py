@@ -1,4 +1,5 @@
 """VH read-only raster metrics and deterministic real-speed combat evidence."""
+import ast
 import base64
 import hashlib
 import io
@@ -53,7 +54,48 @@ def run(page, root, url, check, *, directions=range(8), evidence=True):
         # body/hero atlas packer retain the V1 byte guards without exceptions.
         revision = 'bc5e66c' if name == '游戏数据.py' else 'd3aedfac76bed3e43d1fd07f8a8ab125594bb061'
         baseline = subprocess.check_output(['git', 'show', f'{revision}:{name}'], cwd=root)
-        check('VH unchanged combat/body bytes: '+name, (root/name).read_bytes() == baseline)
+        current = (root/name).read_bytes()
+        if name == '游戏数据.py':
+            # B2 HP + R200b new150 loadouts are explicit authorizations. Retain the
+            # semantic guard for EVERY other old source node and full original50 data.
+            old_tree, new_tree = ast.parse(baseline), ast.parse(current)
+            old_hp = next(n for n in old_tree.body if isinstance(n, ast.Assign)
+                          and any(isinstance(t, ast.Name) and t.id == 'HP_MULTIPLIER' for t in n.targets))
+            new_hp = next(n for n in new_tree.body if isinstance(n, ast.Assign)
+                          and any(isinstance(t, ast.Name) and t.id == 'HP_MULTIPLIER' for t in n.targets))
+            allowed = old_hp.value.value == 3 and new_hp.value.value == 1.5
+            new_hp.value = old_hp.value
+            r200b_imports = {ast.dump(n) for n in ast.parse('import csv\nfrom functools import lru_cache').body}
+            new_tree.body = [n for n in new_tree.body if ast.dump(n) not in r200b_imports
+                            and not (isinstance(n, ast.FunctionDef) and n.name in ('r200b_learnsets','r200b_defaults'))]
+            authorized = ast.parse('''learned = r200b_learnsets().get(n)
+if learned is not None:
+    if n != 132:
+        defaults = r200b_defaults(ts, pool, learned, covers)
+    pool = list(dict.fromkeys(pool + learned))
+''').body
+            metadata_fn = next(n for n in new_tree.body if isinstance(n, ast.FunctionDef) and n.name == 'roster_metadata')
+            loop = next(n for n in metadata_fn.body if isinstance(n, ast.For))
+            dumps = [ast.dump(n) for n in loop.body]
+            changes = [i for i in range(len(dumps)-1) if dumps[i:i+2] == [ast.dump(n) for n in authorized]]
+            if len(changes) == 1:
+                del loop.body[changes[0]:changes[0]+2]
+            check('VH combat data unchanged except authorized HP and new150 loadouts',
+                  allowed and len(changes) == 1 and ast.dump(old_tree) == ast.dump(new_tree))
+            before_ns = {'__file__':str(root/name),'__name__':'vh_baseline'}
+            after_ns = {'__file__':str(root/name),'__name__':'vh_current'}
+            exec(baseline, before_ns)
+            exec(current, after_ns)
+            before_ns['HP_MULTIPLIER'] = 1.5
+            original_ids = set(json.loads((root/'首发50.json').read_text())['ids'])
+            raw = [r for r in json.loads((root/'素材/角色库/角色库.json').read_text()) if r['id'] in original_ids]
+            check('VH all original50 metadata and selectable pools unchanged',
+                  before_ns['roster_metadata'](raw) == after_ns['roster_metadata'](raw))
+            selected_ids = set(json.loads((root/'首发200.json').read_text())['ids'])
+            check('VH learned-move branch excludes original50 exactly',
+                  set(after_ns['r200b_learnsets']()) == selected_ids-original_ids)
+        else:
+            check('VH unchanged combat/body bytes: '+name, current == baseline)
     for mid in IDS:
         caster = 25 if mid in IDS[:4] else 6
         scope = page.evaluate('''({mid,caster})=>{
@@ -248,12 +290,15 @@ def run(page, root, url, check, *, directions=range(8), evidence=True):
                         revision['tick'] = i
                         stages.append(revision)
                         if mid == 'thunder':
-                            check(tag+f'/{i} target original-color opaque pixels >=50%',
-                                  revision['targetPixels'] > 20 and revision['originalFraction'] >= .50,
+                            check(tag+f'/{i} target original-color opaque pixels >=60%',
+                                  revision['targetPixels'] > 20 and revision['originalFraction'] >= .60,
                                   revision)
                             if i < 27:  # Opaque ring; final .12s intentionally fades.
-                                check(tag+f'/{i} hollow ring diameter <=1.3 target H',
-                                      0 < revision['ringDiameter'] <= 1.3*th
+                                check(tag+f'/{i} outer ring >=0.8H, inner >=0.55 body diagonal, thin hollow center',
+                                      revision['ringDiameter'] >= .8*th
+                                      and revision['ringInnerDiameter'] >= .55 * math.hypot(
+                                          revision['targetWidth'], th)
+                                      and revision['ringBandWidth'] <= .18*revision['ringDiameter']
                                       and revision['ringCenterPixels'] == 0, revision)
                         else:
                             components = revision['components']
@@ -264,7 +309,7 @@ def run(page, root, url, check, *, directions=range(8), evidence=True):
                     if mid == 'thunder':
                         flashes = [s['flashPixels'] > 20 for s in stages]
                         bolts = [s['boltOpaque'] > 20 for s in stages]
-                        check(tag+' actual white silhouette raster flashes exactly twice',
+                        check(tag+' actual white ring-band raster sweeps exactly twice',
                               sum(b and not a for a, b in pairwise([False]+flashes)) == 2, flashes)
                         check(tag+' actual bolt raster bright-dark-bright in first .10s',
                               sum(b and not a for a, b in pairwise([False]+bolts)) == 2
@@ -297,6 +342,8 @@ def run(page, root, url, check, *, directions=range(8), evidence=True):
     candidate = (root / '候选试玩.html').read_text()
     start = candidate.index('const DATA = ') + len('const DATA = ')
     data, _ = json.JSONDecoder().raw_decode(candidate[start:])
+    from scripts.roster_fixture import materialize_character_packs
+    materialize_character_packs(data, root)  # Only materialize data; historical M4 JS stays exact.
     data.pop('moveAnimations')
     paths = ['世界地图.js', '竞技场.js', '草丛藏身.js', '大地图通行.js', '体型判定.js',
              '生图招式.js', '招式第3批.js', '平衡测试.js', '打击感.js', '瞄准预警.js',

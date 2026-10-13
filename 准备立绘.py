@@ -42,15 +42,29 @@ def download(pair):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    ids = json.loads((ROOT / '首发50.json').read_text())['ids']
-    with ThreadPoolExecutor(max_workers=8) as pool:
-        sources = list(pool.map(download, zip(ids, NAMES, strict=True)))
+    ids = json.loads((ROOT / '首发200.json').read_text())['ids']
+    # Incremental R200: keep the original 50 originals, atlas bytes and timings unchanged.
+    previous = {s['id']: s for s in json.loads((OUT / '来源.json').read_text())}
+    catalog = json.loads((OUT / '图集.json').read_text())
+    facts = json.loads((ROOT / '数值资料/体型校准/来源.json').read_text())['species']
+    aliases = {'nidoran-f': 'nidoranf', 'nidoran-m': 'nidoranm', 'mr-mime': 'mrmime',
+               'farfetchd': 'farfetchd', 'mimikyu-disguised': 'mimikyu', 'ho-oh': 'hooh'}
+    names = {s['id']: aliases.get(s['name'], s['name']) for s in facts}
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        added = list(pool.map(download, [(n, names[n]) for n in ids
+            if n not in previous or previous[n]['sources'][0].get('missing')]))
+    previous.update({s['id']: s for s in added})
+    sources = [previous[n] for n in ids]
     (OUT / '来源.json').write_text(json.dumps(sources, ensure_ascii=False, indent=2) + '\n')
     missing = [s for s in sources if any(x.get('missing') for x in s['sources'])]
-    assert not missing, missing
-    catalog = {}
+    assert all(not s['sources'][0].get('missing') for s in sources), missing
     for source in sources:
-        with Image.open(OUT / source['sources'][1]['file']) as gif:
+        if str(source['id']) in catalog:
+            continue
+        animated = not source['sources'][1].get('missing')
+        if not animated:
+            source['fallback'] = 'gen5 PNG; gen5ani GIF unavailable'
+        with Image.open(OUT / source['sources'][1 if animated else 0]['file']) as gif:
             frames = [f.convert('RGBA') for f in ImageSequence.Iterator(gif)]
             durations = [max(10, f.info.get('duration', 100)) for f in ImageSequence.Iterator(gif)]
         box = frames[0].getbbox()
@@ -65,9 +79,10 @@ def main():
             atlas.paste(frame.crop(box), (i % columns * w, i // columns * h))
         filename = f"{source['id']:04}-atlas.png"
         atlas.save(OUT / filename, optimize=True)
-        catalog[source['id']] = {'file': filename, 'width': w, 'height': h, 'columns': columns,
+        catalog[str(source['id'])] = {'file': filename, 'width': w, 'height': h, 'columns': columns,
                                 'durations': durations, 'frames': len(frames), 'sourceFacing': 'left',
                                 'sha256': hashlib.sha256((OUT / filename).read_bytes()).hexdigest()}
+    (OUT / '来源.json').write_text(json.dumps(sources, ensure_ascii=False, indent=2) + '\n')
     (OUT / '图集.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'portraits': len(catalog), 'missing': missing,
                       'sourceBytes': sum(p.stat().st_size for p in OUT.iterdir())}))

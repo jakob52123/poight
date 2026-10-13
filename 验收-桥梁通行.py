@@ -132,7 +132,7 @@ try:
             reset(point(x, y, False))
             before = snap(p)["player"]
             p.keyboard.down("w")
-            step(p, .2)
+            step(p, .2 * 224 / before['speed'])
             p.keyboard.up("w")
             after = snap(p)["player"]
             check(f"Walk original gatehouse shortcut {x},{y}->{target_x}",
@@ -156,7 +156,8 @@ try:
             if index == 6:
                 p.screenshot(path=str(SHOTS / "桥中间-1440x900.png"))
         elapsed = snap(p)["elapsed"] - started
-        check("Entire bridge walk completes within 30 simulation seconds", elapsed < 30, elapsed)
+        check("Entire bridge walk completes within speed-scaled 30s budget",
+              elapsed < 30 * 224 / snap(p)['player']['speed'], elapsed)
         p.screenshot(path=str(SHOTS / "桥另一端-1440x900.png"))
         # Reverse traversal also enters via apron, never via a crossing underneath.
         for index, (x, y) in enumerate(reversed([(28, 92), *checkpoints[:-1]])):

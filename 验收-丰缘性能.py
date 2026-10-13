@@ -102,13 +102,15 @@ def measure(root, label):
             errors = []
             page.on("pageerror", lambda e: errors.append(str(e)))
             page.goto(URL + "?observe=1", wait_until="load")
-            wait(page, "window.__waterTest?.snapshot().artReady")
+            # PERF: enter the match before measuring its terrain/resources. Selection
+            # deliberately has no battlefield; keep the real 60-second RAF benchmark.
+            wait(page, "document.querySelector('#setup').open && !document.querySelector('#startBattle').disabled")
+            page.locator("#startBattle").click()
+            wait(page, "window.__waterTest.snapshot().phase === 'playing'")
             initial = page.evaluate("""() => ({state:window.__waterTest.snapshot(),
               resources: performance.getEntriesByType('resource').map(r=>({name:r.name,
                 bytes:r.encodedBodySize,transfer:r.transferSize})),
               html:performance.getEntriesByType('navigation')[0].encodedBodySize})""")
-            page.locator("#startBattle").click()
-            wait(page, "window.__waterTest.snapshot().phase === 'playing'")
             page.evaluate("window.__costs.clear(); window.__record=true")
             start = time.monotonic()
             # Real keyboard input, live fixed-step simulation and AI, not manual test stepping.

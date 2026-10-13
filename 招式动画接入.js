@@ -9,8 +9,8 @@ window.PoightMoveAnimations = class {
     this.melee = new window.PoightMeleeVB1(this);
     this.reset();
   }
-  load() {
-    return (this.loading ||= this.engine.load());
+  load(ids = null, extraEffects = []) {
+    return this.engine.load(ids, extraEffects);
   }
   reset() {
     this.hero.reset();
@@ -21,6 +21,8 @@ window.PoightMoveAnimations = class {
     this.releases = [];
     this.contacts = [];
     this.frost = new Map();
+    this.colorGuard = new Map();
+    this.contactFrames = new Map();
     this.time = 0;
   }
   uses(id) {
@@ -157,12 +159,17 @@ window.PoightMoveAnimations = class {
       reach = api.bodies.reach(target, dx, dy),
       contact = point || { x: target.x - dx / length * reach * .6,
         y: target.y + 14 - height / 2 - api.lift(target) - dy / length * reach * .6 },
-      burst = { id: m.id, ...contact, age: 0,
+      burst = { id: m.id, type: m.type, ...contact, age: 0,
+        ringX: target.x, ringY: target.y + 14 - height / 2 - api.lift(target),
+        height,
         size: height * Math.max(.8, .6 + .4 * amount / 35),
         key: "core-impact-" + (this.engine.mapping.effects["core-impact-" + m.type] ? m.type : -1),
         heavy: amount >= 25 || mult >= 2, time: this.time, amount };
+    Object.defineProperty(burst, 'ringTarget', { value: target });
     this.hero.impact(burst, target, source, dx, dy);
     this.melee.impact(burst, target, source, m, api);
+    // Presentation-only stencil: covers the existing contact/recovery layers, never hit clocks.
+    this.colorGuard.set(target, .6);
     if (m.id === "icebeam") this.frost.set(target, .3);
     this.bursts.push(burst);
     this.bursts = this.bursts.slice(-64);
@@ -238,10 +245,42 @@ window.PoightMoveAnimations = class {
     ctx.drawImage(canvas, x - 4, y - 4);
     ctx.restore();
   }
+  captureContactFrame(ctx, target, nativeBounds, ...args) {
+    // Same alpha>=128 pixel bounds as runtime sampling, packed losslessly at build time.
+    // file:// images may be drawable but not readable under Chromium's origin policy.
+    const [left, top, right, bottom] = nativeBounds;
+    this.contactFrames.set(target, { args, matrix: ctx.getTransform(),
+      bounds: { left, top, right, bottom } });
+  }
+  clipContactCenters(ctx, targets = this.colorGuard.keys()) {
+    // Used ONLY for successful-hit contact/recovery paint. Actors, terrain, charge and
+    // live projectiles never enter this stencil. Zero alpha also prevents stacked teeth.
+    const transform = ctx.getTransform();
+    for (const target of targets) {
+      const frame = this.contactFrames.get(target);
+      if (!frame || !this.colorGuard.has(target)) continue;
+      const { args, bounds: b, matrix } = frame, [, , , sw, sh, x, y, w, h] = args;
+      const cx = x + (b.left + b.right) / 2 * w / sw,
+        cy = y + (b.top + b.bottom) / 2 * h / sh,
+        shape = window.PoightBodies.shape(target);
+      ctx.resetTransform();
+      ctx.beginPath();
+      ctx.rect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      ctx.setTransform(matrix);
+      ctx.ellipse(cx, cy, Math.max(shape.rx * .90, (b.right - b.left) * w / sw * .45),
+        Math.max(shape.ry * .90, (b.bottom - b.top) * h / sh * .45), 0, 0, Math.PI * 2);
+      ctx.clip("evenodd");
+    }
+    ctx.setTransform(transform);
+  }
   step(dt) {
     this.hero.step(dt);
     this.time += dt;
     this.melee.step(dt);
+    for (const [target, life] of this.colorGuard) {
+      if (life <= dt) this.colorGuard.delete(target);
+      else this.colorGuard.set(target, life - dt);
+    }
     for (const [target, life] of this.frost) {
       if (life <= dt) this.frost.delete(target);
       else this.frost.set(target, life - dt);
@@ -253,41 +292,186 @@ window.PoightMoveAnimations = class {
     this.engine.shots = this.engine.shots.filter((s) => this.time * 1000 - s.time < 1000);
   }
   draw(ctx) {
+    ctx.save();
+    this.clipContactCenters(ctx);
     for (const r of this.ribbons)
       this.path(ctx, r.id, r.root, r.front, r.shotAge, 1 - r.age / .10, r.height);
     for (const b of this.bursts) {
       // VH revision: hollow electricity / separated scars replace only these two solid stars.
       if (b.heroContact) continue;
-      const t = b.age / .26, alpha = 1 - t;
-      if (b.id === "watergun" || b.id === "icebeam") {
-        const ice = b.id === "icebeam";
-        if (!ice) this.sprite(ctx, "core-splash", b.x, b.y, b.size * (1 + t), alpha);
-        else this.glow(ctx, b.x, b.y, b.size, alpha * .5);
-        for (let i = 0; i < 9; i++) {
-          const a = i * Math.PI * 2 / 9, r = b.size * (.22 + t * .7);
-          this.sprite(ctx, ice ? "core-shard" : "core-drop", b.x + Math.cos(a) * r,
-            b.y + Math.sin(a) * r + (ice ? 0 : t * t * 12), ice ? 16 : 14, alpha, a);
-        }
-      }
-      this.sprite(ctx, b.key, b.x, b.y, b.size * (b.vb1 ? 1.1 : 1), alpha);
+      this.drawBurst(ctx, b);
       this.melee.symbol(ctx, b);
-      if (b.heavy) {
-        ctx.save();
-        ctx.strokeStyle = "#ffffff";
-        ctx.globalAlpha = alpha;
-        ctx.lineWidth = 2;
-        for (let i = 0; i < 12; i++) {
-          const a = i * Math.PI / 6, r = b.size * (.6 + t * .4);
-          ctx.beginPath();
-          ctx.moveTo(b.x + Math.cos(a) * r, b.y + Math.sin(a) * r);
-          ctx.lineTo(b.x + Math.cos(a) * (r + 5), b.y + Math.sin(a) * (r + 5));
-          ctx.stroke();
-        }
-        ctx.restore();
-      }
     }
     this.hero.draw(ctx);
     this.melee.draw(ctx);
+    ctx.restore();
+  }
+  ringGeometry(ctx, b) {
+    let x = b.ringX, y = b.ringY, diameter = Math.max(b.size, b.height * 1.2);
+    const frame = this.contactFrames.get(b.ringTarget);
+    if (frame) {
+      const { args, bounds: box, matrix } = frame, [, , , sw, sh, bx, by, w, h] = args,
+        cx = bx + (box.left + box.right) / 2 * w / sw,
+        cy = by + (box.top + box.bottom) / 2 * h / sh,
+        shape = window.PoightBodies.shape(b.ringTarget),
+        rx = Math.max(shape.rx * .90, (box.right - box.left) * w / sw * .45),
+        ry = Math.max(shape.ry * .90, (box.bottom - box.top) * h / sh * .45),
+        transform = ctx.getTransform().inverse().multiply(matrix),
+        center = new DOMPoint(cx, cy).matrixTransform(transform),
+        axisX = new DOMPoint(cx + rx, cy).matrixTransform(transform),
+        axisY = new DOMPoint(cx, cy + ry).matrixTransform(transform);
+      x = center.x; y = center.y;
+      diameter = Math.max(diameter, 2 * (Math.max(Math.hypot(axisX.x - x, axisX.y - y),
+        Math.hypot(axisY.x - x, axisY.y - y)) + 6));
+    }
+    return { x, y, diameter: diameter * (1 + b.age / .26 * .15) };
+  }
+  drawBurst(ctx, b) {
+    // Follow the actual current silhouette outside the P6 stencil, including hurt poses.
+    // Physical contact coordinates and the hit clock stay intact.
+    const t = b.age / .26, { x, y, diameter } = this.ringGeometry(ctx, b),
+      r = diameter / 2, width = Math.min(3, diameter * .065),
+      color = this.ringColor(b.type), shock = [1, 2, 9, -1].includes(b.type);
+    ctx.save();
+    ctx.globalAlpha *= Math.min(1, (.26 - b.age) / .08);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.lineJoin = "round";
+    const outline = (offset) => {
+      ctx.beginPath();
+      for (let i = 0; i <= 64; i++) {
+        const a = i * Math.PI / 32,
+          wobble = b.type === 13 ? (i % 2 ? 1 : -1) * width * .45
+            : b.type === 11 ? Math.sin(a * 9 + t * 3) * width * .35 : 0,
+          rr = r - width / 2 + wobble + offset;
+        const px = x + Math.cos(a) * rr, py = y + Math.sin(a) * rr;
+        if (i) ctx.lineTo(px, py);
+        else ctx.moveTo(px, py);
+      }
+      ctx.closePath();
+    };
+    // Exactly one screen pixel on the OUTSIDE, none added inside the transparent center.
+    const pixel = 1 / Math.hypot(ctx.getTransform().a, ctx.getTransform().b);
+    outline(pixel / 2);
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = width + pixel;
+    ctx.stroke();
+    outline(0);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.stroke();
+    // Broken white crests/highlights, not a solid disk: attribute ink remains continuous
+    // underneath. Long alternating segments preserve saturated pigment between crests.
+    ctx.save();
+    const crestDash = [r * Math.PI * .75, r * Math.PI * .25],
+      crestRatio = (r - width / 2 + pixel / 2) / (r - width / 2);
+    ctx.setLineDash(crestDash.map(v => v * crestRatio));
+    ctx.lineDashOffset = -t * r * .3 * crestRatio;
+    outline(pixel / 2);
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = width + 1 + pixel;
+    ctx.stroke();
+    outline(0);
+    ctx.setLineDash(crestDash);
+    ctx.lineDashOffset = -t * r * .3;
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = width + 1; // White fringe is achromatic; outside ink stays exactly one pixel.
+    ctx.stroke();
+    ctx.restore();
+    // Outer-only motifs: never place a shard, leaf, spark or glow in the transparent center.
+    for (let i = 0; i < 10; i++) {
+      const a = i * Math.PI / 5 + .15, ca = Math.cos(a), sa = Math.sin(a),
+        inner = r + width, outer = inner + Math.max(3, diameter * .09) * (1 + t);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = shock ? 1.2 : width * .65;
+      ctx.beginPath();
+      ctx.moveTo(x + ca * inner, y + sa * inner);
+      if (b.type === 12 || b.type === 15) {
+        ctx.lineTo(x + ca * (inner + outer) / 2 - sa * width,
+          y + sa * (inner + outer) / 2 + ca * width);
+        ctx.lineTo(x + ca * outer, y + sa * outer);
+        ctx.lineTo(x + ca * (inner + outer) / 2 + sa * width,
+          y + sa * (inner + outer) / 2 - ca * width);
+        ctx.closePath();
+      } else if ([4, 8, 14].includes(b.type)) {
+        ctx.arc(x, y, outer, a, a + .25);
+      } else {
+        ctx.lineTo(x + ca * outer, y + sa * outer);
+      }
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+  ringColor(type) {
+    // All primary pigments have HSL L>=60%; white/ivory, blue foam and bright violet.
+    const colors = { 1: '#fff340', 2: '#ff8f40', 3: '#4fbaff', 4: '#ed40ff',
+      5: '#ffd440', 6: '#ffd440', 7: '#b0ff40', 8: '#d640ff', 9: '#4fbaff',
+      10: '#ffb240', 11: '#4fc3ff', 12: '#b0ff40', 13: '#ffe440',
+      14: '#ff40dd', 15: '#4fefff', 16: '#a640ff', 17: '#d640ff', 18: '#ff40dd' };
+    return colors[type] || colors[1];
+  }
+  ringBackdrop(ctx, x, y, r) {
+    if (this.backdropReadbackBlocked) return 160;
+    const matrix = ctx.getTransform(), points = [];
+    let left = ctx.canvas.width - 1, top = ctx.canvas.height - 1, right = 0, bottom = 0;
+    for (let i = 0; i < 64; i++) {
+      const a = i * Math.PI / 32,
+        q = new DOMPoint(x + Math.cos(a) * r, y + Math.sin(a) * r).matrixTransform(matrix),
+        px = Math.max(0, Math.min(ctx.canvas.width - 1, Math.round(q.x))),
+        py = Math.max(0, Math.min(ctx.canvas.height - 1, Math.round(q.y)));
+      points.push([px, py]);
+      left = Math.min(left, px); right = Math.max(right, px);
+      top = Math.min(top, py); bottom = Math.max(bottom, py);
+    }
+    const width = right - left + 1;
+    let pixels;
+    try {
+      pixels = ctx.getImageData(left, top, width, bottom - top + 1).data;
+    } catch (error) {
+      if (error.name !== "SecurityError") throw error;
+      // Preserve offline playback; only blocked backdrop readback uses the dark saturated ink.
+      this.backdropReadbackBlocked = true;
+      return 160;
+    }
+    return points.reduce((sum, [px, py]) => {
+      const n = ((py - top) * width + px - left) * 4;
+      return sum + .2126 * pixels[n] + .7152 * pixels[n + 1] + .0722 * pixels[n + 2];
+    }, 0) / points.length;
+  }
+  lick(ctx, p, m, age, api, charging = false) {
+    if (!this.enabled || m.id !== "lick") return false;
+    const a = p.attack?.aim ?? p.a, h = p.char.body.visibleSize[1],
+      root = api.anchor(p, m, a) || this.anchor(p, m, a, api) ||
+        { x: p.x, y: p.y - h * .45 - api.lift(p) },
+      target = p === api.player ? api.enemy : api.player,
+      tip = { x: target.x, y: target.y + 14 - target.char.body.visibleSize[1] / 2 -
+        api.lift(target) },
+      reach = Math.min(m.range, Math.hypot(tip.x - root.x, tip.y - root.y)),
+      angle = Math.atan2(tip.y - root.y, tip.x - root.x),
+      contact = m.contactDelay || .10, hold = contact + .04,
+      // Sample the EXISTING release/contact/recovery clocks; do not change any hit tick.
+      extension = charging ? .5 * Math.min(1, age / p.attack.hitTime)
+        : age <= contact ? .5 + .5 * Math.min(1, age / contact)
+          : Math.max(0, 1 - Math.max(0, age - hold) / Math.max(.01, m.recovery - hold)),
+      length = Math.max(56, reach) * extension, width = Math.min(3, h * .06);
+    ctx.save();
+    ctx.translate(root.x, root.y);
+    ctx.rotate(angle);
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.bezierCurveTo(length * .32, -width * .8, length * .70, width * .8, length * .86, 0);
+    ctx.bezierCurveTo(length * 1.08, -width * .7, length * .98, -width * 1.5,
+      length * .88, -width * .9);
+    ctx.strokeStyle = "#70002b";
+    ctx.lineWidth = width;
+    ctx.stroke();
+    ctx.strokeStyle = "#d8106a";
+    ctx.lineWidth = width * .65;
+    ctx.stroke();
+    ctx.restore();
+    return root;
   }
   // Melee opt-in: never apply raw contactattack actor coordinates to game state.
   boundedPose(instance, role, elapsed) {

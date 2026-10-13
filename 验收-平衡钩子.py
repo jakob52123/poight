@@ -25,7 +25,14 @@ def check(name, ok, detail=None):
 def ready(page, observe=True):
     deadline = time.monotonic() + 60
     while not page.evaluate(
-        "window.__waterTest?.snapshot().artReady" if observe
+        # PERF: normal/observe now stops at a ready selection UI, before battle assets.
+        """() => window.__waterTest?.snapshot().artReady ||
+          (window.__waterTest?.snapshot().phase === 'selection' &&
+           document.querySelector('#setup').open &&
+           !document.querySelector('#startBattle').disabled &&
+           document.querySelectorAll('#roster .mon').length === __waterTest.snapshot().rosterCount &&
+           [...document.querySelectorAll('#playerPortrait,#enemyPortrait')]
+             .every(e => e.dataset.frame !== undefined))""" if observe
         else "!document.getElementById('startBattle').disabled"
     ):
         assert time.monotonic() < deadline, "artReady timeout"
@@ -79,7 +86,7 @@ def main():
         check("archived report remains HPx6; snapshot uses current multiplier",
               receipt["hpMultiplier"] == 6 and snap(page)["hpMultiplier"] == DATA.HP_MULTIPLIER)
         for c in roster.values():
-            check(f"{c['id']} same global HP multiplier", c["hp"] == c["baseHP"] * DATA.HP_MULTIPLIER)
+            check(f"{c['id']} same global HP multiplier", c["hp"] == int(c["baseHP"] * DATA.HP_MULTIPLIER + 0.5))
         profile.update(player=25, enemy=6, playerMoves=roster[25]["defaultMoves"],
                        enemyMoves=roster[6]["defaultMoves"], tier="poke", map="emerald-rustborocity")
         check("profile selected", page.evaluate("p => window.__waterTest.select(p)", profile))

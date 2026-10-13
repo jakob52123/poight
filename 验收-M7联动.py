@@ -216,9 +216,21 @@ def links(page, width, height):
                   box['y']+box['height'] <= height, box)
     check(f'{width} credit does not overlap any setup button', page.evaluate('''()=>{
       const r=document.querySelector('.setup-credit').getBoundingClientRect();
-      return [...document.querySelectorAll('#setup button')].every(b=>{
-        const q=b.getBoundingClientRect();return !q.width || q.right<=r.left || q.left>=r.right ||
-          q.bottom<=r.top || q.top>=r.bottom;});
+      return [...document.querySelectorAll('#setup button:not([popovertarget="analyticsPrivacy"])')].every(b=>{
+        if(!b.checkVisibility())return true;
+        const q=b.getBoundingClientRect();let x=q.left,y=q.top,right=q.right,bottom=q.bottom;
+        for(let a=b.parentElement;a;a=a.parentElement){const s=getComputedStyle(a),v=a.getBoundingClientRect();
+          if(['auto','scroll','hidden','clip'].includes(s.overflowX)){x=Math.max(x,v.left);right=Math.min(right,v.right);}
+          if(['auto','scroll','hidden','clip'].includes(s.overflowY)){y=Math.max(y,v.top);bottom=Math.min(bottom,v.bottom);}}
+        return right<=x || bottom<=y || right<=r.left || x>=r.right || bottom<=r.top || y>=r.bottom;});
+    }'''))
+    check(f'{width} anonymous privacy control stays inside credit', page.evaluate('''()=>{
+      const credit=document.querySelector('.setup-credit').getBoundingClientRect();
+      const button=document.querySelector('[popovertarget="analyticsPrivacy"]');
+      if (!button) return false;
+      const r=button.getBoundingClientRect();
+      return r.width>0 && r.height>0 && r.left>=credit.left && r.right<=credit.right &&
+        r.top>=credit.top && r.bottom<=credit.bottom;
     }'''))
     page.screenshot(path=str(SHOTS / f'选人页-{width}x{height}.png'))
 

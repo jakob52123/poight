@@ -36,7 +36,7 @@ OVERRIDES = {
 
 
 def extend(result, rows, root):
-    selected = set(json.loads((root/'首发50.json').read_text())['ids'])
+    selected = set(json.loads((root/'首发200.json').read_text())['ids'])
     fractions = {'r1-hand': HAND, 'r1-hand2': [(1-u, v) for u, v in HAND],
                  'r1-mouth': MOUTH, 'r1-head': [(u, max(.12, v-.14)) for u, v in MOUTH],
                  'r1-tail': TAIL, 'r1-wing': WING, 'r1-vine': [(.5, .30)]*8,
@@ -56,12 +56,20 @@ def extend(result, rows, root):
                      for f in range(clip['frames'])]
             base_x, base_y = (boxes[0][0]+boxes[0][2])/2, boxes[0][3]
             pose_offsets.append([[round((b[0]+b[2])/2-base_x, 2), b[3]-base_y] for b in boxes])
+        # R200: cache each native pose/opaque-pixel list once, not ten times.
+        tile_cache = {}
+        for direction in range(8):
+            for frame in range(clip['frames']):
+                tile = im.crop((frame*w, direction*h, (frame+1)*w, (direction+1)*h))
+                opaque = [(xx, yy) for yy in range(h) for xx in range(w)
+                          if tile.getpixel((xx, yy))[3] > 128]
+                tile_cache[direction, frame] = (tile, opaque)
         for part, fractions_by_row in fractions.items():
             points = []
             for direction in range(8):
                 poses = []
                 for frame in range(clip['frames']):
-                    tile = im.crop((frame*w, direction*h, (frame+1)*w, (direction+1)*h))
+                    tile, opaque = tile_cache[direction, frame]
                     x0, y0, x1, y1 = tile.getbbox()
                     u, v = OVERRIDES.get(n, {}).get(part, fractions_by_row)[direction]
                     if n == 68 and frame >= 8 and part.startswith('r1-hand'):
@@ -77,9 +85,7 @@ def extend(result, rows, root):
                         if warm:
                             x, y = min(warm, key=lambda p: (p[0]-x)**2+(p[1]-y)**2)
                     if part != 'r1-body':
-                        pixels = [(xx, yy) for yy in range(h) for xx in range(w)
-                                  if tile.getpixel((xx, yy))[3] > 128]
-                        x, y = min(pixels, key=lambda p: (p[0]-x)**2+(p[1]-y)**2)
+                        x, y = min(opaque, key=lambda p: (p[0]-x)**2+(p[1]-y)**2)
                     poses.append([round(x, 2), round(y, 2)])
                 points.append(poses)
             entries[part] = {'role': 'melee', 'points': points,

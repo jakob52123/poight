@@ -62,16 +62,16 @@ def walk(page, key, target):
     try:
         result = page.evaluate("""([axis,end])=>{
           const a=__waterTest;
-          for(let ticks=0;ticks<1800;ticks++){
+          for(let ticks=0;ticks<3960;ticks++){
             const p=a.snapshot().player;
             if(Math.abs(p[axis]-end)<2)return {ticks,player:p};
             a.step(1/120,false);
           }
-          return {ticks:1800,player:a.snapshot().player};
+          return {ticks:3960,player:a.snapshot().player};
         }""", ["x" if key in ("a", "d") else "y", target])
     finally:
         page.keyboard.up(key)
-    check("贴边绕场路段" + key + str(target), result["ticks"] < 1800, result)
+    check("贴边绕场路段" + key + str(target), result["ticks"] < 3960, result)
     return result["player"]
 
 

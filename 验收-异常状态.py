@@ -99,7 +99,7 @@ def main():
             check(id+' expires on exact frame',snap().player.status === null);
             check(id+' label disappears',snap().player.statusLabel === null);
           }
-          for (const [id, rate, duration] of [['brn',.02,5],['psn',.015,6]]) {
+          for (const [id, rate, duration] of [['brn',.009,5],['psn',.015,6]]) {
             reset(); s.apply('player',id); const initial=snap().player;
             for(let second=1;second<=duration;second++) {
               t.step(1,false); const now=snap().player;

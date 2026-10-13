@@ -224,7 +224,7 @@ try:
 
         reset()
         p.evaluate("window.__waterTest.dash('player',1,0)")
-        step(0.1)
+        step(0.22)  # B2: still tap in the last 80ms of the now-300ms dash.
         press()
         step(0.1)
         check("Dash buffer executes", snap()["player"]["attack"]["id"] == "thunderbolt")

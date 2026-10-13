@@ -1,5 +1,6 @@
 "use strict";
 (() => {
+  const evt = window.PoightEVT;
   const DATA = __GAME_DATA__,
     {
       roster: ROSTER,
@@ -35,8 +36,24 @@
     observe = args.get("observe") === "1";
   const animations = new window.PoightMoveAnimations(DATA.moveAnimations, args.get("anim") !== "old");
   generated.animations = animations;
+  const matchAssets = window.PoightMatchAssets(animations, generated, MOVES);
   const demo = new window.PoightDemo(args);
   const battleHUD = new window.PoightBattleHUD(args.get("hud") || (demo.enabled ? "2" : null), DATA);
+  const music = new window.PoightBattleMusic(initAudio, args, DATA.music);
+  music.onDecision = (bgm) => evt.music(bgm);
+  const gba = new window.PoightGBA(!demo.enabled && !args.has("hud"), {
+    togglePause: () => phase === "paused" ? start() : pause(), playing: () => phase === "playing",
+    resume: () => start(), setup: () => openSetup(), rematch: () => resetMatch(true),
+    portrait: (el, id, side) => setPortrait(el, id, side), roster: DATA.gbaRoster,
+  });
+  if (gba.enabled) battleHUD.onMenuChange = (open) => { if (open) pause(); };
+  const ui3 = gba.enabled && !window.PoightMobile.touchDevice() && matchMedia("(pointer: fine)").matches
+    ? new window.PoightUI3(DATA) : null;
+  const selectionUI = new window.PoightSelection(gba.enabled, ROSTER, (savedCursor) => {
+    if (savedCursor != null) cursorID = savedCursor;
+    pageIndex = 0;
+    filteredRoster();
+  });
   let mobile = null;
   const TAU = Math.PI * 2,
     WORLD = { ...ENV.world },
@@ -44,14 +61,15 @@
   let obstacles = ENV.collisionContract;
   const CONFIG = {
     speed: 185,
-    dashSpeed: 590,
-    dashDuration: 0.18,
+    // B2: PV rapid-movement interval 0.30–0.433s; 255px ≈ 7.77 Pikachu heights.
+    dashSpeed: 850,
+    dashDuration: 0.30,
     dashProtection: 0.115,
     dashCooldown: 0.4,
     doubleTap: 0.25,
     regen: 25,
     regenDelay: 0.58,
-    cost: { dash: 22 },
+    cost: { dash: 15 },
     radius: 18,
   };
   const byID = new Map(ROSTER.map((c) => [c.id, c])),
@@ -243,9 +261,11 @@
       if (!audio) audio = new (window.AudioContext || window.webkitAudioContext)();
       if (audio.state === "suspended") audio.resume().catch(() => {});
     } catch (_) {}
+    return audio;
   }
   function tone(kind) {
     if (!sound || manual || !audio || audio.state !== "running") return;
+    music.duckAlarm();
     try {
       const t = audio.currentTime,
         o = audio.createOscillator(),
@@ -279,7 +299,9 @@
       im.src = src;
     });
   }
+  const loadCharacterMetadata = window.PoightCharacterMetadata(DATA.characterPacks, ART, byID, loadImage);
   async function loadCharacter(id) {
+    await loadCharacterMetadata(id);
     if (imageCache.has(id)) {
       const p = imageCache.get(id);
       imageCache.delete(id);
@@ -512,8 +534,13 @@
   }
   function resetMatch(play = false) {
     if (!artReady || !player || !enemy) return;
+    evt.quit(player, enemy); evt.replay();
+    gba.reset();
     const pImages = player.images,
       eImages = enemy.images;
+    music.setPlaying(false);
+    music.prepared = false;
+    if (play) music.prepareRound();
     phase = play ? "playing" : "idle";
     elapsed = 0;
     matchSeconds = 0;
@@ -550,13 +577,16 @@
       updateDemoCamera(0, true);
     } else if (ENV.type === "arena") resize();
     syncUI();
+    if (play) evt.playing(profile, music.stream && !music.decided ? null : music.bgm);
   }
   async function applyProfile(input, play = true) {
     const next = validateProfile(input),
       job = ++applySerial;
+    evt.quit(player, enemy);
     traversal.reset();
     clearInputs();
     phase = "loading";
+    music.setPlaying(false);
     $("startBattle").disabled = true;
     setText($("setupMessage"), "正在加载精灵动作和场景…");
     $("setupMessage").classList.remove("error");
@@ -565,8 +595,9 @@
         loadCharacter(next.player),
         loadCharacter(next.enemy),
         loadEnvironment(next.map),
-        generated.load(loadImage),
-        animations.load(),
+        matchAssets.load(next, loadImage),
+        statuses.load(loadImage),
+        ...(gba.enabled ? [bwPortraits.preload(next.player), bwPortraits.preload(next.enemy)] : []),
       ]);
       if (job !== applySerial) {
         pruneImages();
@@ -603,14 +634,16 @@
   function start() {
     if (
       !artReady ||
-      mobile?.portrait ||
+      mobile?.blockedPortrait ||
       $("setup").open ||
       $("scenePicker").open ||
       phase === "over" ||
       phase === "loading"
     )
       return;
+    if (!music.prepared) music.prepareRound();
     phase = "playing";
+    evt.playing(profile, music.stream && !music.decided ? null : music.bgm);
     clearInputs();
     if (demo.enabled) demo.paused = false;
     if (sound) initAudio();
@@ -619,6 +652,7 @@
   function pause() {
     if (demo.enabled) demo.paused = true;
     if (phase === "playing") {
+      evt.pause();
       phase = "paused";
       clearInputs();
       syncUI();
@@ -628,6 +662,8 @@
     if (phase !== "playing" || (player.hp > 0 && enemy.hp > 0)) return;
     outcome = player.hp <= 0 ? (enemy.hp <= 0 ? "draw" : "loss") : "win";
     phase = "over";
+    music.setPlaying(false);
+    evt.finish(outcome, matchSeconds, player, hits, taken);
     clearInputs();
     bullets = [];
     zones = [];
@@ -641,6 +677,7 @@
         p.animAge = ART[p.id].hurt.totalDuration - 0.001;
       }
     }
+    gba.finish(outcome, player, enemy, matchSeconds);
     tone(outcome === "win" ? "win" : "loss");
   }
   function mapObstacles(ax, ay, bx = ax, by = ay, pad = 0, upper) {
@@ -841,7 +878,7 @@
     if (statuses.blocked(p) || jump.blocked(p) || traversal.pending || p.worldAbsent ||
       traversal.submerged(p, terrain)) return false;
     const length = hypot(dx, dy);
-    if (!length || phase !== "playing" || p.hp <= 0 || p.dash || p.dashCool > 1e-6 || !spend(p, 22))
+    if (!length || phase !== "playing" || p.hp <= 0 || p.dash || p.dashCool > 1e-6 || !spend(p, 15))
       return false;
     p.attack = null;
     p.hurt = 0;
@@ -1078,6 +1115,7 @@
     if (p === enemy && id === "thunder" && hypot(target.x - p.x, target.y - p.y) > m.range)
       return false;
     if (!spend(p, m.cost)) return false;
+    evt.cast(p === player ? "player" : "enemy", id);
     stealth.event(p, "cast", elapsed);
     const aim = manualAim ?? aimAt(p, target, m),
       rushTime = m.kind === "rush" ? rushDuration(m) : 0,
@@ -1127,7 +1165,7 @@
     effects.push({ kind, x, y, color, age: 0, life: 0.35, ...extra });
     if (effects.length > 120) effects.splice(0, effects.length - 120);
   }
-  function particles(x, y, color, count = 12) {
+  function particles(x, y, color, count = 12, contactGroup = null) {
     for (let i = 0; i < count; i++) {
       const a = rand() * TAU,
         s = 35 + rand() * 135;
@@ -1136,6 +1174,7 @@
         vy: Math.sin(a) * s - 20,
         size: 2 + Math.floor(rand() * 4),
         life: 0.23 + rand() * 0.2,
+        contactGroup,
       });
     }
   }
@@ -1248,7 +1287,9 @@
       balance?.record(source, source, m.id, "recoil", recoil);
       float("反伤 −" + recoil, source.x, source.y - 60, "#ffd1b0");
     }
-    if (!generated.has(m.id) && !m.r3) {
+    if (!generated.has(m.id) && !m.r3 && !animations.enabled) {
+      // The enabled animation adapter already owns this contact's hollow burst.
+      // Keep the classic particles/solid flash only in the explicit old-renderer mode.
       particles(target.x, target.y - 16 - visualLift(target), m.color, 12);
       fx("impact", target.x, target.y - 16 - visualLift(target), "#fff9df", { life: 0.15 });
     }
@@ -1304,6 +1345,7 @@
         a: a.aim,
         radius: m.range * 0.75,
         life: 0.24,
+        contactGroup: a.group,
       });
       const dx = target.x - p.x,
         dy = target.y - p.y,
@@ -1323,6 +1365,7 @@
         ey: end.y - 16,
         life: 0.22,
         width: m.damage > 30 ? 18 : 11,
+        contactGroup: a.group,
       });
       if (
         Number.isFinite(bodies.segment(target, p.x, p.y, end.x, end.y, 6)) &&
@@ -1346,7 +1389,8 @@
       });
       tone("shot");
     } else if (m.kind === "nova") {
-      fx("nova", p.x, p.y - 10, m.color, { radius: m.range, life: 0.45 });
+      fx("nova", p.x, p.y - 10, m.color,
+        { radius: m.range, life: 0.45, contactGroup: a.group });
       if (bodies.circle(target, p.x, p.y, m.range) && clearLine(p.x, p.y, target.x, target.y, 3)) {
         const d = hypot(target.x - p.x, target.y - p.y) || 1;
         damage(target, p, m, (target.x - p.x) / d, (target.y - p.y) / d, a.group);
@@ -1388,6 +1432,7 @@
   }
   function movePet(p, dx, dy, dt) {
     if (statuses.blocked(p) || p.landLeft > 1e-7) return;
+    if (p === player && phase === "playing" && (dx || dy || p.dash)) evt.firstInput();
     if (p.dash) {
       const d = p.dash,
         t = Math.max(0, Math.min(dt, CONFIG.dashDuration - d.age));
@@ -1907,7 +1952,7 @@
   }
   function update(dt) {
     mobile?.orient();
-    if (mobile?.portrait || !artReady || traversal.pending) return;
+    if (mobile?.blockedPortrait || !artReady || traversal.pending) return;
     if (phase === "playing") window.PoightFangs.presentationStep(generated, dt);
     if (phase === "playing") matchSeconds += dt;
     aim.tick(dt);
@@ -2008,8 +2053,9 @@
           d = hypot(dx, dy) || 1;
         if (bodies.circle(target, z.x, z.y, z.radius) && clearLine(z.x, z.y, target.x, target.y, 3))
           damage(target, z.owner, z.m, dx / d, dy / d, z.group);
-        fx("nova", z.x, z.y - 10, z.m.color, { radius: z.radius, life: 0.5 });
-        particles(z.x, z.y - 16, z.m.color, 18);
+        fx("nova", z.x, z.y - 10, z.m.color,
+          { radius: z.radius, life: 0.5, contactGroup: z.group });
+        particles(z.x, z.y - 16, z.m.color, 18, z.group);
         zones.splice(i, 1);
       }
     }
@@ -2115,7 +2161,8 @@
         (d.anchorY + (d.bodyOffsets?.[row]?.[col]?.[1] || 0) + poseOffset[1]) * scale -
         flightHeight(p)));
     ctx.filter = statuses.filter(p);
-    if (!p.status && p.hurt > 0.08 && alpha === 1 && !animations.hero.shocks.has(p))
+    if (!p.status && p.hurt > 0.08 && alpha === 1 && !animations.hero.shocks.has(p) &&
+      !animations.colorGuard.has(p))
       ctx.filter = "brightness(1.65)";
     const frameArgs = [
       statuses.sprite(p, im),
@@ -2134,6 +2181,7 @@
     ];
     ctx.drawImage(...frameArgs);
     if (alpha === 1) {
+      animations.captureContactFrame(ctx, p, d.contactBounds[row][col], ...frameArgs);
       animations.drawFrost(ctx, p, ...frameArgs);
       animations.hero.electrify(ctx, p, ...frameArgs);
     }
@@ -2297,10 +2345,11 @@
       ctx.fillStyle = "#9ff3ff";
       ctx.fillRect(o.x, o.y, o.width * o.ratio, o.height);
     }
-    const tagWidth = (p === player ? 18 : 25) / h.sx;
+    const tagWidth = (gba.enabled ? (p === player ? 24 : 32) : (p === player ? 18 : 25)) / h.sx,
+      tagHeight = gba.enabled ? 16 : 12;
     ctx.fillStyle = p === player ? "#246cb5" : "#b83d4c";
-    ctx.fillRect(left - tagWidth - 2 / h.sx, h.y - 6 / h.sy, tagWidth, 12 / h.sy);
-    ctx.font = `bold ${8 / h.sy}px system-ui`;
+    ctx.fillRect(left - tagWidth - 2 / h.sx, h.y - tagHeight / 2 / h.sy, tagWidth, tagHeight / h.sy);
+    ctx.font = `bold ${(gba.enabled ? 12 : 8) / h.sy}px system-ui`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillStyle = "#ffffff";
@@ -2334,8 +2383,9 @@
         const h = hudGeometry(p);
         const height = battleHUD.mode === "2" && p === player
           ? (h.oxygen ? 31 : 24) : (h.oxygen ? 22 : 14);
-        return hudScreenBox(h.x - h.width / 2 - 29 / sx, h.y - 7 / sy,
-          h.width + 29 / sx, height / sy);
+        const pad = gba.enabled ? 36 : 29;
+        return hudScreenBox(h.x - h.width / 2 - pad / sx, h.y - (gba.enabled ? 9 : 7) / sy,
+          h.width + pad / sx, Math.max(height, gba.enabled ? 18 : height) / sy);
       }),
       layouts = [];
     const overlaps = (a, b) =>
@@ -2343,7 +2393,7 @@
     for (const f of floats) {
       ctx.font = `bold ${12 / sy}px system-ui`;
       const mainWidth = ctx.measureText(f.text).width;
-      ctx.font = `bold ${9 / sy}px system-ui`;
+      ctx.font = `bold ${(gba.enabled ? 12 : 9) / sy}px system-ui`;
       const suffixWidth = f.suffix ? ctx.measureText(f.suffix).width + 4 / sx : 0,
         width = mainWidth + suffixWidth,
         x = f.x + (f.slot ? (f.slot % 2 ? -10 : 10) / sx : 0),
@@ -2380,7 +2430,7 @@
       ctx.fillText(f.text, q.x, q.y);
       if (f.suffix) {
         const x = q.x + q.mainWidth + 4 / q.sx;
-        ctx.font = `bold ${9 / q.sy}px system-ui`;
+        ctx.font = `bold ${(gba.enabled ? 12 : 9) / q.sy}px system-ui`;
         ctx.strokeText(f.suffix, x, q.y);
         ctx.fillStyle = f.suffix.includes("拔群") ? "#ffe16b" : "#cbd0d7";
         ctx.fillText(f.suffix, x, q.y);
@@ -2479,6 +2529,7 @@
   function drawEffect(e) {
     const t = e.age / e.life;
     ctx.save();
+    if (e.contactGroup?.hit.size) animations.clipContactCenters(ctx, e.contactGroup.hit);
     ctx.globalAlpha = Math.max(0, 1 - t);
     ctx.fillStyle = e.color;
     ctx.strokeStyle = e.color;
@@ -2571,7 +2622,7 @@
     ctx.restore();
   }
   function drawMiniMap() {
-    if (ENV.type === "arena") {
+    if (ENV.type === "arena" || gba.enabled) {
       battleHUD.drawArenaMap(ctx, ground, player, enemy, camera, W, H, WORLD,
         renderRect(), stealth.invisible(enemy), demo.enabled);
       return;
@@ -2619,6 +2670,12 @@
     ctx.imageSmoothingEnabled = false;
     ctx.fillStyle = "#73cda4";
     ctx.fillRect(0, 0, W, H);
+    if (gba.enabled && phase === "versus" && ground.width) {
+      const scale = Math.max(W / ground.width, H / ground.height) * 1.13;
+      ctx.drawImage(ground, (W - ground.width * scale) / 2,
+        (H - ground.height * scale) / 2, ground.width * scale, ground.height * scale);
+      return;
+    }
     const screen = renderRect(),
       cx = demo.enabled || ENV.type === "arena" ? camera.x : Math.round(camera.x) - (feel.offset.x * W) / screen.width,
       cy = demo.enabled || ENV.type === "arena" ? camera.y : Math.round(camera.y) - (feel.offset.y * H) / screen.height;
@@ -2636,15 +2693,21 @@
       for (const z of zones) drawZone(z);
       stealth.drawGenerated(generated, ctx, "below", visualLift, generatedAPI());
       jump.draw(ctx);
-      for (const q of ghosts)
+      for (const q of ghosts) {
+        // Quick Attack contact ghosts fade immediately; release/flight trails are unchanged.
+        const victim = q.p === player ? enemy : player;
+        if (q.heroQuick && animations.colorGuard.has(victim)) continue;
         spriteDraw(q.p, q.x, q.y, q.a, q.name, q.time,
           (1 - q.age / 0.16) * (q.heroQuick ? 0.56 : 0.28));
+      }
       for (const s of warnings())
         telegraph.draw(ctx, s, s.player, s.remaining, s.aiming,
           [player, enemy].filter(Boolean).map((p) => {
             const h = hudGeometry(p);
-            return { x: h.x - h.width / 2 - 29 / h.sx, y: h.y - 7 / h.sy,
-              width: h.width + 30 / h.sx, height: (h.oxygen ? 22 : 14) / h.sy };
+            return { x: h.x - h.width / 2 - (gba.enabled ? 36 : 29) / h.sx,
+              y: h.y - (gba.enabled ? 9 : 7) / h.sy,
+              width: h.width + (gba.enabled ? 37 : 30) / h.sx,
+              height: (h.oxygen ? 22 : gba.enabled ? 18 : 14) / h.sy };
           }));
       for (const p of [player, enemy])
         if (p.attack)
@@ -2746,6 +2809,7 @@
         );
       else if (phase === "idle")
         overlay("准备好了。", "方向键移动 · J K L I 出招", "点场地开打 · 左上角换精灵 / 配招");
+      else if (phase === "over" && gba.enabled) gba.showResult(outcome);
       else if (phase === "over")
         overlay(
           outcome === "win" ? "你赢了！" : outcome === "loss" ? "再来一局？" : "平局",
@@ -2807,7 +2871,7 @@
                         : m.slow
                           ? " · 减速"
                           : "";
-    return `${category} · ${first} · CD ${m.cd}s · 体力 ${m.cost}${extra}`;
+    return `${category} · ${first} · CD ${gba.enabled ? Number(m.cd.toFixed(2)) : m.cd}s · 体力 ${m.cost}${extra}`;
   }
   function renderSkillButtons() {
     $("skills").parentElement.style.setProperty("--skill-count", player.moves.length);
@@ -2826,18 +2890,27 @@
       k.textContent = keyLabels[i];
       name.textContent = m.name;
       button.append(k, name, small);
+      if (gba.enabled) {
+        const cd = document.createElement("span");
+        cd.className = "gba-cd";
+        button.append(cd);
+      }
       aim.bind(button, i);
       $("skills").append(button);
       return { button, small, id };
     });
+    ui3?.bind(skillButtons);
   }
   function syncUI() {
+    if (player) music.setHealth(player.hp / player.maxHP);
+    music.setPlaying(phase === "playing");
     traversal.syncButton(player, terrain, phase === "playing");
     if (mobile?.controls && traversal.button) {
       traversal.button.textContent = traversal.submerged(player, terrain) ? "浮" : "潜";
     }
     if (!player || !enemy) return;
     battleHUD.sync(player, enemy);
+    gba.sync(player, enemy, matchSeconds, terrain?.area(player.x, player.y)?.name || ENV.name, phase);
     for (const s of skillButtons) {
       const m = MOVES[s.id],
         left = player.cool[s.id] || 0;
@@ -2848,9 +2921,12 @@
       s.button.classList.toggle("cast-rejected", (rejectedUntil.get(s.id) || 0) > aim.clock);
       setText(
         s.small,
-        left > 0.01 ? "CD " + (Math.ceil(left * 10) / 10).toFixed(1) + "s" : "体力 " + m.cost,
+        gba.enabled ? "能量 " + m.cost :
+          left > 0.01 ? "CD " + (Math.ceil(left * 10) / 10).toFixed(1) + "s" : "体力 " + m.cost,
       );
+      if (gba.enabled) setText(s.button.querySelector(".gba-cd"), (Math.ceil(left * 10) / 10).toFixed(1));
     }
+    ui3?.sync(player, enemy, matchSeconds, phase, skillButtons);
     setText($("tierLabel"), tier().name);
     setText(
       $("sceneButton"),
@@ -2880,7 +2956,7 @@
     setupReturnPhase = "idle",
     cursorID = null,
     versusTimer = null;
-  const PAGE_SIZE = 50;
+  const PAGE_SIZE = ROSTER.length; // R200: one scrollable grid, including keyboard/gamepad navigation.
   const bwPortraits = window.PoightPortraits(DATA.portraits, loadImage);
   function setPortrait(el, id, side) {
     bwPortraits.set(el, id, side);
@@ -2919,7 +2995,7 @@
       /INPUT|TEXTAREA|SELECT/.test(e.target.tagName) ||
       e.target.isContentEditable ||
       !$("loadoutPanel").hidden ||
-      !$("typeChoices").hidden ||
+      (!selectionUI.enabled && !$("typeChoices").hidden) ||
       $("scenePicker").open
     )
       return;
@@ -2937,6 +3013,15 @@
       e.preventDefault();
       $(editingSide === "player" ? "chooseEnemy" : "choosePlayer").click();
       $("roster").querySelector(`[data-id="${cursorID}"]`)?.focus({ preventScroll: true });
+    } else if (e.code === "Home" || e.code === "End") {
+      e.preventDefault();
+      const list = [...$("roster").querySelectorAll(".mon")];
+      const next = e.code === "Home" ? list[0] : list.at(-1);
+      if (!next) return;
+      cursorID = Number(next.dataset.id);
+      for (const b of list) b.dataset.cursor = String(b === next);
+      next.focus({ preventScroll: true });
+      next.scrollIntoView({ block: "nearest", inline: "nearest" });
     } else if (e.code in deltas) {
       e.preventDefault();
       const list = [...$("roster").querySelectorAll(".mon")];
@@ -2957,12 +3042,34 @@
       $("roster").querySelector(`[data-id="${cursorID}"]`)?.click();
     }
   }
+  // R200 selection-only standard gamepad support; the existing keyboard handler
+  // remains the single navigation path, including focus and nearest-row scrolling.
+  let padKey = "", padRepeatAt = 0;
+  function selectionGamepad(now) {
+    if (!selectionUI.enabled && $("setup").open && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName || "")) {
+      const pad = [...(navigator.getGamepads?.() || [])].find(p => p?.connected);
+      const pressed = n => pad?.buttons[n]?.pressed;
+      const key = pressed(0) ? "Enter" : pressed(4) || pressed(5) ? "Tab" :
+        pressed(12) || pad?.axes[1] < -.55 ? "ArrowUp" :
+        pressed(13) || pad?.axes[1] > .55 ? "ArrowDown" :
+        pressed(14) || pad?.axes[0] < -.55 ? "ArrowLeft" :
+        pressed(15) || pad?.axes[0] > .55 ? "ArrowRight" : "";
+      if (key && (key !== padKey || (now >= padRepeatAt && key.startsWith("Arrow")))) {
+        $("roster").dispatchEvent(new KeyboardEvent("keydown", { code: key, bubbles: true, cancelable: true }));
+        padRepeatAt = now + (key === padKey ? 130 : 300);
+      }
+      padKey = key;
+    } else padKey = "";
+    requestAnimationFrame(selectionGamepad);
+  }
+  requestAnimationFrame(selectionGamepad);
   requestAnimationFrame(animatePortraits);
   function iconStyle(el, id) {
     const index = DATA.iconOrder.indexOf(id);
     el.style.backgroundPosition = `-${(index % DATA.iconColumns) * 48}px -${Math.floor(index / DATA.iconColumns) * 48}px`;
   }
   function setTypePicker(open) {
+    if (selectionUI.enabled) return;
     $("typeChoices").hidden = !open;
     $("typeFilterToggle").setAttribute("aria-expanded", String(open));
     if (open) {
@@ -2994,7 +3101,8 @@
         (!term ||
           (/^\d+$/.test(term) ? c.id === Number(term) : c.name.toLowerCase().includes(term))) &&
         (!type || c.types.includes(type)) &&
-        (!gen || (c.id > bounds[gen - 1] && c.id <= bounds[gen])),
+        (!gen || (c.id > bounds[gen - 1] && c.id <= bounds[gen])) &&
+        selectionUI.matches(c),
     );
     pageIndex = clamp(pageIndex, 0, Math.max(0, Math.ceil(filtered.length / PAGE_SIZE) - 1));
     renderRoster();
@@ -3003,11 +3111,12 @@
     const grid = $("roster"),
       fragment = document.createDocumentFragment(),
       scroll = grid.scrollTop,
-      visible = filtered.slice(pageIndex * PAGE_SIZE, (pageIndex + 1) * PAGE_SIZE);
+      visible = selectionUI.enabled ? filtered : filtered.slice(pageIndex * PAGE_SIZE, (pageIndex + 1) * PAGE_SIZE);
     if (!visible.some((c) => c.id === cursorID)) cursorID = visible[0]?.id ?? null;
-    for (const c of filtered.slice(pageIndex * PAGE_SIZE, (pageIndex + 1) * PAGE_SIZE)) {
+    for (const c of visible) {
       const button = document.createElement("button");
       button.className = "mon";
+      if (gba.enabled) button.style.setProperty("--tile", TYPES[c.types[0]][1]);
       button.dataset.id = c.id;
       button.dataset.cursor = String(cursorID === c.id);
       button.dataset.player = String(draft.player === c.id);
@@ -3021,6 +3130,10 @@
       icon.className = "mon-icon";
       icon.setAttribute("aria-hidden", "true");
       iconStyle(icon, c.id);
+      if (gba.enabled) {
+        const n = DATA.iconOrder.indexOf(c.id);
+        icon.style.backgroundPosition = `-${n % 10 * 44}px -${Math.floor(n / 10) * 44}px`;
+      }
       name.textContent = c.name;
       button.append(number, icon, name);
       button.addEventListener("click", () => {
@@ -3040,7 +3153,10 @@
       fragment.append(empty);
     }
     grid.replaceChildren(fragment);
+    grid.dataset.count = visible.length;
+    grid.dataset.expectedCount = visible.length;
     grid.scrollTop = scroll;
+    selectionUI.count(filtered.length);
     setText($("filterCount"), `${filtered.length} 只符合条件`);
     setText(
       $("pageLabel"),
@@ -3176,6 +3292,7 @@
       b.onclick = () => {
         if (equipped.some((v, i) => i !== activeMoveSlot && v === id)) return;
         equipped[activeMoveSlot] = id;
+        evt.change(editingSide + "Moves", [...equipped]);
         renderFighterDetails(editingSide);
         renderMoveCards(c);
         $("moveCatalog").querySelector(`[data-move="${id}"]`).focus({ preventScroll: true });
@@ -3195,6 +3312,7 @@
       const id = c.learnset.find((id) => !equipped.includes(id));
       if (id) equipped.push(id);
     } else if (!add && equipped.length > 1) equipped.pop();
+    evt.change(editingSide + "Moves", [...equipped]);
     renderFighterDetails(editingSide);
     renderMoveCards(c);
   }
@@ -3209,6 +3327,8 @@
     } else $("toggleLoadout").focus({ preventScroll: true });
   }
   function openSetup() {
+    if (gba.locked()) return;
+    evt.quit(player, enemy); evt.replay(true);
     clearTimeout(versusTimer);
     $("vsScreen").hidden = true;
     if (phase === "versus") phase = "idle";
@@ -3229,9 +3349,20 @@
     filteredRoster();
     renderSelection();
     if (!$("setup").open) $("setup").showModal();
+    evt.selection();
   }
   function closeSetup() {
-    if (phase === "loading" && !player) return;
+    if (!player) {
+      // Preserve first-open X/Esc: cancel the draft and prepare the saved/default
+      // match on this explicit action, never as a hidden selection-page preload.
+      if (phase !== "loading") applyProfile(profile, false).then(ok => {
+        if (ok) {
+          setupReturnPhase = "idle";
+          closeSetup();
+        }
+      });
+      return;
+    }
     if (phase === "loading") {
       ++applySerial;
       $("startBattle").disabled = false;
@@ -3244,10 +3375,13 @@
     canvas.focus({ preventScroll: true });
   }
   async function launchBattle() {
+    evt.launch(draft, byID, { map: DEFAULT_ENV.id, tier: DATA.defaultDifficulty });
     if (!(await applyProfile(draft, false))) return;
     if ($("setup").open) $("setup").close();
     clearInputs();
     phase = "versus";
+    // applyProfile has awaited both characters and all match artwork. Only now stream BGM.
+    music.prepareRound();
     for (const [side, prefix] of [
       ["player", "vsPlayer"],
       ["enemy", "vsEnemy"],
@@ -3382,6 +3516,7 @@
     if (sceneBusy) return;
     if (sceneFromSetup) {
       draft.map = pendingScene;
+      evt.change("map", pendingScene);
       renderSelection();
       closeScenePicker();
       return;
@@ -3390,6 +3525,7 @@
       closeScenePicker();
       return;
     }
+    evt.setting("map", pendingScene);
     const run = ++sceneSelectSerial;
     sceneBusy = true;
     renderSceneCards();
@@ -3424,6 +3560,7 @@
       render();
       $(id).onclick = () => {
         profile[key] = !profile[key];
+        evt.setting(key, profile[key]);
         if (key === "holdAim") clearInputs();
         feel.refresh(profile.shake);
         saveProfile();
@@ -3479,7 +3616,9 @@
         pageIndex = 0;
         filteredRoster();
         setTypePicker(false);
-        $("typeFilterToggle").focus({ preventScroll: true });
+        if (selectionUI.enabled) {
+          $("typeChoices").querySelector(`[data-type="${id}"]`)?.focus({ preventScroll: true });
+        } else $("typeFilterToggle").focus({ preventScroll: true });
       };
       $("typeChoices").append(b);
     }
@@ -3496,6 +3635,7 @@
       b.append(ball, document.createTextNode(t.name));
       b.addEventListener("click", () => {
         draft.tier = t.id;
+        evt.change("tier", t.id);
         renderSelection();
       });
       $("difficulty").append(b);
@@ -3513,12 +3653,14 @@
     $("randomEnemy").onclick = () => {
       const c = ROSTER[Math.floor(Math.random() * ROSTER.length)];
       draft.enemy = c.id;
+      evt.change("random", c.id);
       draft.enemyMoves = [...c.defaultMoves];
       renderSelection();
       renderRoster();
     };
     $("defaultMoves").onclick = () => {
       draft[editingSide + "Moves"] = [...byID.get(draft[editingSide]).defaultMoves];
+      evt.change(editingSide + "Moves", draft[editingSide + "Moves"]);
       renderSelection();
     };
     for (const id of ["search", "typeFilter", "generationFilter"])
@@ -3539,7 +3681,7 @@
     $("closeSetup").onclick = closeSetup;
     $("setup").addEventListener("cancel", (e) => {
       e.preventDefault();
-      if (!$("typeChoices").hidden) {
+      if (!selectionUI.enabled && !$("typeChoices").hidden) {
         setTypePicker(false);
         $("typeFilterToggle").focus();
       } else if (!$("loadoutPanel").hidden) setLoadoutOpen(false);
@@ -3559,6 +3701,7 @@
     };
     $("sound").onclick = () => {
       sound = !sound;
+      evt.setting("sound", sound);
       setText($("sound"), "声音：" + (sound ? "开" : "关"));
       $("sound").setAttribute("aria-pressed", String(sound));
       if (sound) initAudio();
@@ -3579,6 +3722,7 @@
     };
     document.addEventListener("fullscreenchange", () => {
       const on = !!document.fullscreenElement;
+      evt.setting("fullscreen", on);
       $("fullscreen").setAttribute("aria-pressed", String(on));
       setText($("fullscreen"), on ? "退出全屏 ⛶" : "全屏 ⛶");
       resize();
@@ -3854,6 +3998,7 @@
       queued: queued ? { slot: queued.slot, remaining: Math.max(0, queued.until - inputClock) } : null,
       dashMemory: dashMemory ? { remaining: Math.max(0, dashMemory.until - inputClock) } : null,
       sound,
+      music: music.snapshot(),
       warnings: warnings(),
       world: { ...WORLD },
       environment: {
@@ -3883,6 +4028,8 @@
       mobile: mobile?.snapshot(),
       hud: {
         variant: battleHUD.mode,
+        tagFont: gba.enabled ? 12 : 8,
+        suffixFont: gba.enabled ? 12 : 9,
         actors: [player, enemy].filter(Boolean).map((p) => {
           const h = hudGeometry(p);
           return {
@@ -3982,6 +4129,7 @@
   function loop(now) {
     const t = performance.now(),
       dt = Math.min(0.25, Math.max(0, (now - last) / 1000));
+    if (phase === "playing") evt.frame(now - last);
     last = now;
     if (demo.enabled) {
       if (demo.ready && !demo.paused) {
@@ -4005,6 +4153,18 @@
       syncUI();
     }
     if (!demo.enabled) {
+      // Finish-hit presentation runs on wall time, never AI/physics/input or resource clocks.
+      if (phase === "over" && gba.locked()) {
+        animations.step(dt);
+        for (const e of effects) {
+          e.age += dt;
+          if (e.kind === "particle") { e.x += e.vx * dt; e.y += e.vy * dt; e.vy += 140 * dt; }
+        }
+        effects = effects.filter(e => e.age < e.life);
+        for (const f of floats) f.age += dt;
+        floats = floats.filter(f => f.age <= 0.8);
+        ghosts = [];
+      }
       draw();
       frame++;
     }
@@ -4317,6 +4477,7 @@
       },
       render: draw,
     });
+  evt.bind(() => [player, enemy]);
   prepareUI();
   traversal.bindButton(() => { toggleDive(); syncUI(); canvas.focus({ preventScroll: true }); });
   mobile = new window.PoightMobile({
@@ -4333,6 +4494,17 @@
   resize();
   requestAnimationFrame(loop);
   (async () => {
+    // The privileged regression fixture supports synchronous arbitrary equip/cast and
+    // direct raster probes, so explicitly preload its full library. Real navigation,
+    // observe mode, demo mode and ?test=1&lazy=1 always use match-scoped assets.
+    if (manual && args.get("lazy") !== "1")
+      await Promise.all([generated.load(loadImage), animations.load(),
+        ...ROSTER.map(c => loadCharacterMetadata(c.id))]);
+    if (!manual && !demo.enabled) {
+      phase = "selection";
+      openSetup();
+      return;
+    }
     if (demo.enabled) {
       profile.shake = false;
       profile.holdAim = false;

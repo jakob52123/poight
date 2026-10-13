@@ -47,7 +47,8 @@
     const pixel = 1 / Math.hypot(matrix.a, matrix.b);
     const sections = Array.from({ length: 8 }, () => ({ min: Infinity, max: -Infinity }));
     let count = 0, colored = 0, saturation = 0, fgSum = 0, bgSum = 0;
-    let lo = Infinity, hi = -Infinity, centerSum = 0, centerCount = 0, maxForward = -Infinity;
+    let lo = Infinity, hi = -Infinity, alongLo = Infinity, alongHi = -Infinity;
+    let centerSum = 0, centerCount = 0, maxForward = -Infinity;
     for (let y = 0; y < mask.height; y++) for (let x = 0; x < mask.width; x++) {
       const i = (y * mask.width + x) * 4;
       if (d[i + 3] < 250) continue;
@@ -57,6 +58,7 @@
       maxForward = Math.max(maxForward, along);
       if (cfg.beam && (along < length * .25 || along > length * .75)) continue;
       lo = Math.min(lo, normal); hi = Math.max(hi, normal);
+      alongLo = Math.min(alongLo, along); alongHi = Math.max(alongHi, along);
       if (cfg.beam) {
         const bin = Math.min(7, Math.floor((along / length - .25) * 16));
         sections[bin].min = Math.min(sections[bin].min, normal);
@@ -70,7 +72,9 @@
       fgSum += l; bgSum += lum(bg[i], bg[i+1], bg[i+2]); count++;
     }
     return { id, composite, background, mask: mask.toDataURL(), count, height: s.player.body.visibleSize[1],
-      opaqueDiameter: hi - lo + pixel, frontOverrun: maxForward - length, pixelSize: pixel,
+      opaqueDiameter: hi - lo + pixel, opaqueLength: alongHi - alongLo + pixel,
+      maxDimension: Math.max(hi - lo, alongHi - alongLo) + pixel,
+      frontOverrun: maxForward - length, pixelSize: pixel,
       minimumBeamWidth: cfg.beam ? Math.min(...sections.map((s) => s.max - s.min + pixel)) : null,
       centerLuma: centerSum / Math.max(1, centerCount),
       saturation: saturation / Math.max(1, colored), colorFraction: colored / Math.max(1, count),

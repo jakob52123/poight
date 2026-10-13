@@ -299,7 +299,8 @@ try:
                 "ux": 1, "uy": 0, "speed": 1,
             })
             before = snap(p)
-            move(p, key, .16)
+            travel = .16 * 216 / before['player']['speed']
+            move(p, key, travel)
             wait(p, "!window.__waterTest.snapshot().environment.warpPending")
             a = snap(p)
             check("Walked original entrance " + w["id"], a["environment"]["id"] == w["destScene"], a["environment"])
@@ -308,7 +309,8 @@ try:
             check("Warp retains both HP and nonreset stamina " + w["id"],
                   a["player"]["hp"] == before["player"]["hp"] == 57
                   and a["enemy"]["hp"] == before["enemy"]["hp"] == 63
-                  and 61 <= a["player"]["stamina"] < 66 and 58 <= a["enemy"]["stamina"] < 63)
+                  and before["player"]["stamina"] <= a["player"]["stamina"] <= before["player"]["stamina"] + 25*travel + .01
+                  and before["enemy"]["stamina"] <= a["enemy"]["stamina"] <= before["enemy"]["stamina"] + 25*travel + .01)
             check("Warp clears projectiles and AI paths " + w["id"], not a["bullets"]
                   and not a["zones"] and a["generated"]["active"] == 0 and a["ai"]["pathSearches"] == 0)
             check("AI not yet in new scene " + w["id"], a["enemy"]["worldAbsent"])
@@ -345,7 +347,7 @@ try:
             check("Interior tree/rock blocks movement " + entry["id"],
                   a["x"] >= (pair % n) * size + a["body"]["moveRadius"] - .01)
             p.evaluate("window.__waterTest.dash('player',-1,0)")
-            step(p, .2)
+            step(p, .3)  # B2: complete the whole 300ms dash before the return-warp walk.
             check("Interior tree/rock blocks dash " + entry["id"],
                   snap(p)["player"]["x"] >= (pair % n) * size + a["body"]["moveRadius"] - .01)
             back = next(w for w in current_t["warps"] if w["sourceWarp"] == entry["destWarp"])

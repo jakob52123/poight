@@ -36,7 +36,9 @@ def ready(page):
         if page.evaluate("window.__waterTest?.snapshot().artReady"):
             return
         time.sleep(0.025)
-    raise TimeoutError("art ready")
+    detail = page.evaluate("""()=>({message:document.querySelector('#setupMessage')?.textContent,
+      state:window.__waterTest?.snapshot().phase})""")
+    raise TimeoutError(json.dumps({'artReadyTimeout': detail, 'jsErrors': errors}, ensure_ascii=False))
 
 
 def load(browser, path):
@@ -239,7 +241,7 @@ with sync_playwright() as pw:
     after.evaluate("window.__waterTest.step(.3216666667)")
     after.keyboard.press("Shift")
     s = snap(after)
-    check("Last 80ms dash memory does not pre-spend", s["dashMemory"] is not None and s["player"]["spent"] == 22 and not s["player"]["protected"])
+    check("Last 80ms dash memory does not pre-spend", s["dashMemory"] is not None and s["player"]["spent"] == 15 and not s["player"]["protected"])
     after.evaluate("window.__waterTest.step(.075)")
     check("Dash memory executes at cooldown end", snap(after)["player"]["dodges"] == 2)
     setup(after, profile, x, y)

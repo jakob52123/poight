@@ -1,0 +1,92 @@
+/* Formal S2. Scoped to setup only: touch battle HUD is deliberately untouched. */
+html[data-selection="S2"] #setup { padding: 24px 48px; }
+html[data-selection="S2"] #setup[open] { grid-template-rows: 70px minmax(0,1fr) 56px 20px; }
+html[data-selection="S2"] #setup .setup-head { padding-bottom: 12px; }
+html[data-selection="S2"] #setup .setup-body { grid-template-rows: minmax(0,1fr) 154px; gap: 16px; }
+html[data-selection="S2"] #setup .dex { grid-template-columns: 1fr; grid-template-rows: 38px 28px minmax(0,1fr); gap: 8px; }
+html[data-selection="S2"] #setup .filters { display: none; }
+html[data-selection="S2"] #setup .roster-toolbar { display: flex; align-items: stretch; min-width: 0; gap: 12px; }
+html[data-selection="S2"] #setup .side-tabs { width: 31%; flex: none; }
+html[data-selection="S2"] #setup .side-tabs button { min-height: 0; }
+html[data-selection="S2"] #setup .group-tabs { display: flex; gap: 6px; }
+html[data-selection="S2"] #setup .group-tabs button { min-height: 0; padding: 4px 16px; font-size: 12px; border: 2px solid var(--edge); border-radius: 7px; background: var(--paper); color: var(--ink); white-space: nowrap; }
+html[data-selection="S2"] #setup .group-tabs button[aria-selected="true"] { background: #276b80; color: #fffde9; }
+html[data-selection="S2"] #setup .roster-search { display: flex; align-items: center; justify-content: flex-end; flex: 1; min-width: 0; gap: 14px; font-size: 12px; color: #53666a; }
+html[data-selection="S2"] #setup .roster-search span { white-space: nowrap; }
+html[data-selection="S2"] #setup #search { width: 100%; max-width: 240px; min-width: 0; height: 38px; padding: 8px 12px; border: 2px solid var(--edge); }
+html[data-selection="S2"] #setup #typeChoices { position: static; width: auto; max-height: none; display: flex; gap: 5px; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: none; }
+html[data-selection="S2"] #setup #typeChoices button { flex: 1; width: auto; white-space: nowrap; min-height: 0; font-size: 11px; padding: 3px 8px; border: 1px solid #7197a3; border-bottom: 3px solid var(--type-color,#276b80); border-radius: 4px; background: #fffbe988; color: var(--ink); }
+html[data-selection="S2"] #setup #typeChoices button[aria-pressed="true"] { background: #276b80; color: #fffde9; }
+html[data-selection="S2"] #setup .roster { grid-column: 1; grid-template-columns: repeat(10,minmax(0,1fr)); grid-auto-rows: 80px; align-content: start; gap: 5px; padding: 5px; border: 5px solid var(--edge); }
+html[data-selection="S2"] #setup .mon { min-height: 0; min-width: 0; }
+html[data-selection="S2"] #setup .empty-results { grid-column: 1 / -1; color: var(--ink); text-align: center; }
+html[data-selection="S2"] #setup .close { color: var(--ink); }
+html[data-selection="S2"] #setup .setup-actions { display: flex; }
+html[data-selection="S2"] #setup .setup-actions button { color: var(--ink); background: var(--paper); border: 2px solid var(--edge); border-radius: 7px; white-space: nowrap; }
+html[data-selection="S2"] #setup .setup-actions #startBattle { background: #276b80; color: #fffde9; }
+html[data-selection="S2"] #setup .setup-credit { text-align: right; line-height: 20px; }
+html[data-selection="S2"] #setup .setup-foot { padding-top: 8px; }
+html[data-selection="S2"] #setup .setup-actions button { min-height: 44px; }
+html[data-selection="S2"][data-touch-game="true"] #setup[open] { grid-template-rows: 70px minmax(0,1fr) 56px 44px; }
+html[data-selection="S2"][data-touch-game="true"] #setup .setup-credit { min-height: 44px; line-height: 44px; }
+@media (min-height: 501px) and (max-height: 650px) {
+  html[data-selection="S2"][data-touch-game="true"] #setup { padding-top: calc(12px + var(--safe-top)); padding-bottom: calc(12px + var(--safe-bottom)); }
+}
+@media (max-height: 500px), (max-width: 650px) {
+  html[data-selection="S2"] #setup { padding: calc(8px + var(--safe-top)) calc(12px + var(--safe-right)) calc(8px + var(--safe-bottom)) calc(12px + var(--safe-left)); }
+  html[data-gba][data-selection="S2"] #setup[open] { grid-template-rows: 44px minmax(0,1fr) 44px 44px; }
+  html[data-gba][data-selection="S2"] #setup { padding-top: calc(4px + var(--safe-top)); padding-bottom: calc(4px + var(--safe-bottom)); }
+  html[data-gba][data-selection="S2"] #setup .setup-foot { padding-top: 0; }
+  html[data-selection="S2"] #setup .setup-head { padding: 0 0 8px; border-bottom-width: 3px; }
+  html[data-selection="S2"] #setup .select-brand { font-size: 18px; }
+  html[data-selection="S2"] #setup .close { width: 44px; height: 44px; min-height: 44px; }
+  html[data-selection="S2"] #setup .setup-body { padding-top: 6px; grid-template-rows: minmax(0,1fr) 78px; gap: 8px; }
+  html[data-selection="S2"] #setup .dex { grid-template-rows: 28px 23px minmax(0,1fr); gap: 5px; }
+  html[data-selection="S2"] #setup .roster-toolbar { gap: 6px; }
+  html[data-selection="S2"] #setup .side-tabs { width: 27%; }
+  html[data-selection="S2"] #setup .side-tabs button { padding: 3px 4px; font-size: 10px; }
+  html[data-selection="S2"] #setup .group-tabs button { padding: 2px 8px; font-size: 10px; }
+  html[data-selection="S2"] #setup .roster-search { gap: 8px; font-size: 10px; }
+  html[data-selection="S2"] #setup #search { height: 28px; max-width: 166px; padding: 3px 7px; font-size: 10px; }
+  html[data-selection="S2"] #setup #typeChoices { gap: 2px; }
+  html[data-selection="S2"] #setup #typeChoices button { font-size: 9px; min-width: 23px; padding: 1px 4px; border-bottom-width: 2px; }
+  html[data-selection="S2"] #setup .roster { border-width: 3px; padding: 3px; grid-auto-rows: 64px; gap: 3px; }
+  html[data-selection="S2"] #setup .mon { padding-bottom: 16px; }
+  html[data-selection="S2"] #setup .mon b { font-size: 11px; line-height: 16px; }
+  html[data-selection="S2"] #setup .fighter-panel { padding: 5px 10px; grid-template-columns: 60px 1fr; grid-template-rows: 16px 22px 16px 12px; gap: 0 10px; border-width: 3px; border-radius: 8px; }
+  html[data-selection="S2"] #setup .fighter-panel .portrait-stage { width: 60px; height: 64px; }
+  html[data-selection="S2"] #setup .fighter-badge { font-size: 12px; line-height: 16px; }
+  html[data-selection="S2"] #setup .fighter-panel > strong { font-size: 18px; line-height: 22px; }
+  html[data-selection="S2"] #setup .fighter-panel .type-tag { font-size: 9px; padding: 1px 5px; }
+  html[data-selection="S2"] #setup .setup-foot { padding-top: 5px; }
+  html[data-selection="S2"] #setup .setup-actions { gap: 5px; }
+  html[data-selection="S2"] #setup .setup-actions button { padding: 4px 8px; min-height: 44px; font-size: 12px; }
+  html[data-selection="S2"] #setup #startBattle span { font-size: inherit; }
+  html[data-selection="S2"] #setup .setup-credit { font-size: 12px; line-height: 20px; }
+}
+/* MOB3 small-strip pattern: reclaim grid space instead of covering it. */
+@media (max-height: 500px) and (orientation: landscape) {
+  html[data-gba][data-selection="S2"] #setup .setup-body { grid-template-rows: minmax(0,1fr) 32px; gap: 4px; padding-top: 4px; }
+  html[data-gba][data-selection="S2"] #setup .fighter-panel { display: grid; min-height: 32px; height: 32px; grid-template-columns: 26px auto minmax(0,1fr) auto; grid-template-rows: 24px; align-items: center; padding: 1px 6px; gap: 5px; border-width: 2px; }
+  html[data-gba][data-selection="S2"] #setup .fighter-panel .portrait-stage { grid-row: 1; grid-column: 1; width: 24px; height: 24px; }
+  html[data-gba][data-selection="S2"] #setup .fighter-badge { grid-row: 1; grid-column: 2; width: auto; font-size: 10px; white-space: nowrap; }
+  html[data-gba][data-selection="S2"] #setup .fighter-panel > strong { grid-row: 1; grid-column: 3; font-size: 14px; line-height: 24px; white-space: nowrap; }
+  html[data-gba][data-selection="S2"] #setup :is(#playerPickTypes,#enemyPickTypes) { display: flex; grid-row: 1; grid-column: 4; }
+  html[data-selection="S2"] #setup :is(.body-summary,.fighter-moves,.panel-action) { display: none; }
+}
+@media (max-width: 650px) and (orientation: portrait) {
+  html[data-selection="S2"] #setup .roster-toolbar { flex-wrap: wrap; }
+  html[data-selection="S2"] #setup .side-tabs { width: 45%; }
+  html[data-selection="S2"] #setup .roster-search { flex-basis: 100%; }
+  html[data-selection="S2"] #setup #search { max-width: none; }
+  html[data-selection="S2"] #setup .dex { grid-template-rows: 61px 23px minmax(0,1fr); }
+  html[data-selection="S2"] #setup .roster { grid-template-columns: repeat(5,minmax(0,1fr)); }
+  html[data-selection="S2"] #setup .fighter-panel { grid-template-columns: 48px 1fr; gap: 0 5px; padding: 4px; }
+  html[data-selection="S2"] #setup .fighter-panel .portrait-stage { width: 48px; }
+  html[data-selection="S2"] #setup .fighter-panel > strong { font-size: 14px; }
+}
+/* Preserve the extreme-height scroll fallback from MOB3. */
+html[data-selection="S2"][data-setup-short="true"] #setup[open] { grid-template-rows: 0 minmax(0,1fr) 44px 0; padding-top: calc(4px + var(--safe-top)); padding-bottom: calc(4px + var(--safe-bottom)); }
+html[data-selection="S2"][data-setup-short="true"] #setup .dex { display: flex; height: auto; }
+html[data-selection="S2"][data-setup-short="true"] #setup .roster-toolbar { min-height: 28px; }
+html[data-selection="S2"][data-setup-short="true"] #setup #typeChoices { min-height: 23px; }

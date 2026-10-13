@@ -2,11 +2,11 @@
 () => {
   window.vb1Probe = { enabled: false, suppress: false, records: [], pose: [], flows: [] };
   const proto = window.PoightMeleeVB1.prototype, symbol = proto.symbol, pose = proto.pose,
-    sprite = window.PoightMoveAnimations.prototype.sprite;
+    core = window.PoightMoveAnimations.prototype, burst = core.drawBurst, lick = core.lick;
   proto.pose = function (p) {
     const result = pose.call(this, p);
     window.vb1Probe.poseInstances = this.activePoses.length;
-    if (this.has(p.attack?.id)) window.vb1Probe.pose.push({
+    if (this.has(p.attack?.id) || p.attack?.id === 'lick') window.vb1Probe.pose.push({
       id: p.attack.id, age: p.attack.age,
       impact: p.attack.hitTime + (p.attack.move.contactDelay || 0),
       height: p.char.body.visibleSize[1], ...result,
@@ -69,20 +69,35 @@
     probe.records = probe.records.slice(-500);
     if (!probe.enabled) return symbol.call(this, ctx, b);
     const [canvas, c] = layer(ctx);
+    this.adapter.clipContactCenters(c);
     symbol.call(this, c, b);
     probe.last = { canvas, matrix: ctx.getTransform(), b };
     if (!probe.suppress) symbol.call(this, ctx, b);
   };
-  window.PoightMoveAnimations.prototype.sprite = function (ctx, key, x, y, size, ...rest) {
+  core.lick = function (ctx, p, m, ...rest) {
     const probe = window.vb1Probe;
-    if (probe.enabled && key.startsWith("core-impact-")) {
+    if (m.id !== 'lick' || !probe.enabled) return lick.call(this, ctx, p, m, ...rest);
+    const [canvas, c] = layer(ctx);
+    this.clipContactCenters(c);
+    const root = lick.call(this, c, p, m, ...rest);
+    probe.tongue = { canvas, matrix: ctx.getTransform() };
+    if (!probe.suppress) lick.call(this, ctx, p, m, ...rest);
+    return root;
+  };
+  core.drawBurst = function (ctx, b, ...rest) {
+    const probe = window.vb1Probe;
+    if (b.id === 'lick') {
+      probe.records.push({id:b.id,x:b.x,y:b.y,age:b.age,time:this.time});
+      if (probe.tongue) probe.last = {...probe.tongue,b};
+    }
+    if (probe.enabled) {
       const [canvas, c] = layer(ctx);
-      sprite.call(this, c, key, x, y, size, ...rest);
-      if (!probe.star || size >= probe.star.size)
-        probe.star = { canvas, matrix: ctx.getTransform(), size };
+      this.clipContactCenters(c);
+      burst.call(this, c, b, ...rest);
+      probe.star = { canvas, matrix: ctx.getTransform(), size:b.size };
       if (probe.suppress) return;
     }
-    return sprite.call(this, ctx, key, x, y, size, ...rest);
+    return burst.call(this, ctx, b, ...rest);
   };
   window.measureVB1Pixels = () => {
     const probe = window.vb1Probe, entry = probe.last, star = probe.star,
@@ -120,7 +135,7 @@
         foreground: fg / Math.max(1, count), background: back / Math.max(1, count) };
     }
     return { ...measure(entry), star: measure(star, false),
-      height: entry.b.vb1.height, id: entry.b.id,
+      height: entry.b.height, id: entry.b.id,
       composite, background, mask: entry.canvas.toDataURL(), starMask: star.canvas.toDataURL() };
   };
 }

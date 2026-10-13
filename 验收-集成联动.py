@@ -290,6 +290,16 @@ def m5_links(browser, page):
     context.close()
     page.evaluate('p=>window.__waterTest.select(p)', {**profile, 'map': 'arena-formal'})
     page.evaluate('window.__waterTest.reset(true)')
+    # Preserve the original 10s real-battle/UI assertion with its archived HP budget.
+    # B2's separate fixture checks production HP x1.5; never alter the engine for this screenshot.
+    legacy = page.evaluate('''() => {
+      const t=window.__waterTest,tier=t.snapshot().profile.tier;
+      const result=t.simulate({seed:1357911,tier,playerTier:tier,
+        maxSeconds:1/120,hpMultiplier:3});
+      t.autopilot(null);return result;
+    }''')
+    check('M5 10s UI fixture explicit legacy HP x3; production multiplier unchanged',
+          legacy['maxHP'] == {'a': 276, 'b': 303} and snap(page)['hpMultiplier'] == HP_MULTIPLIER)
     arrange(page, ai=True, player={'x': 650, 'y': 450}, enemy={'x': 900, 'y': 450})
     step(page, 10)
     check('M5 Pikachu Charizard ten seconds actual battle', snap(page)['matchSeconds'] >= 9.9
@@ -377,8 +387,11 @@ try:
                   and page.locator("#skills kbd").all_text_contents() == ["J"])
             panel = page.locator(".hud").bounding_box()
             button = page.locator("#skills button").bounding_box()
-            check(label + " one-move panel hugs button without blank slots",
-                  0 <= panel["width"] - button["width"] <= 30, [panel, button])
+            padding = page.locator('.hud').evaluate('''e=>{const s=getComputedStyle(e);
+              return ['paddingLeft','paddingRight','borderLeftWidth','borderRightWidth']
+                .reduce((n,k)=>n+parseFloat(s[k]),0);}''')
+            check(label + " one-move GBA panel has only declared frame padding",
+                  abs(panel["width"] - button["width"] - padding) <= .5, [panel, button, padding])
             shot(page, f"M2-鲤鱼王技能栏-{label}.png")
             check(label + " no obsolete HP/SP/counters after VS", page.locator(
                 ".battlehud,#playerHealth,#enemyHealth,#staminaBox,#staminaMeter,#hits,#taken"
@@ -461,7 +474,7 @@ try:
         step(page, 1)
         before = snap(page)
         check("M2 both maxHP equal original baseHP times global multiplier", all(
-            before[side]["maxHP"] == roster[before[side]["id"]]["baseHP"] * HP_MULTIPLIER
+            before[side]["maxHP"] == int(roster[before[side]["id"]]["baseHP"] * HP_MULTIPLIER + 0.5)
             for side in ["player", "enemy"]))
         page.evaluate("n => window.__waterTest.testDamage('enemy', n, 0, 0)",
                       before["enemy"]["maxHP"] / 4)
@@ -580,7 +593,7 @@ try:
                 arrange(page, ai=False, player=start)
                 step(page, 0.01)
                 page.keyboard.down(key)
-                step(page, 0.16)
+                step(page, 0.16 * 216 / snap(page)['player']['speed'])
                 page.keyboard.up(key)
                 check(label + " M2 walk through " + dest, poll(
                     page, "!window.__waterTest.snapshot().environment.warpPending")
@@ -617,7 +630,7 @@ try:
                   and not page.locator('#diveButton').is_visible())
             check('M3 ' + scene['id'] + ' world and HP budgets unchanged',
                   state['world'] == {'width': 2100, 'height': 1400}
-                  and all(state[s]['maxHP'] == roster[state[s]['id']]['baseHP'] * HP_MULTIPLIER
+                  and all(state[s]['maxHP'] == int(roster[state[s]['id']]['baseHP'] * HP_MULTIPLIER + 0.5)
                           for s in ['player', 'enemy']))
 
         natural = next(s for s in arenas if s['id'] == 'arena-natural')

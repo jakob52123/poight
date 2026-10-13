@@ -46,7 +46,7 @@ with sync_playwright() as pw:
     try:
         response=page.goto(URL+'?test=1',wait_until='load');tested_sha=hashlib.sha256(response.body()).hexdigest();check('实际加载页面与候选构建SHA一致',tested_sha==hashlib.sha256((ROOT/'候选试玩.html').read_bytes()).hexdigest());page.wait_for_function('window.__waterTest?.snapshot().artReady',timeout=30000)
         catalog=call('()=>__waterTest.catalog()');roster=catalog['roster'];moves=catalog['moves'];roster_ids={c['id'] for c in roster}
-        check('严格只开放指定50只，不继续扩充',len(roster)==50 and roster_ids==set(json.loads((ROOT/'首发50.json').read_text())['ids']))
+        check('严格只开放本人新授权名单，不自行继续扩充',len(roster)==len(json.loads((ROOT/'首发200.json').read_text())['ids']) and roster_ids==set(json.loads((ROOT/'首发200.json').read_text())['ids']))
         check('121招覆盖12种实际机制（含无伤水溅跃）',len(moves)==121 and len({m['kind'] for m in moves.values()})==12)
         check('四档中文名称完全符合指定',[t['name'] for t in catalog['tiers']]==['红白球级','超级球级','高级球级','大师球级'])
         check('所有默认配招1–4招唯一、可学、有定义',all(1<=len(c['defaultMoves'])<=4 and len(c['defaultMoves'])==len(set(c['defaultMoves'])) and set(c['defaultMoves'])<=set(c['learnset'])<=set(moves) for c in roster))
@@ -137,7 +137,7 @@ with sync_playwright() as pw:
         step(.12);page.screenshot(path=str(ROOT/f'完整版-对战-{a.tag}.png'))
         page.locator('#setupButton').click();page.locator('#search').fill('jkli');step(.2);check('搜索框不触发攻击',not snap()['player']['attack'] and snap()['phase']=='paused');page.locator('#search').fill('不存在的怪物');check('空搜索有提示',page.locator('.empty-results').count()==1)
         page.locator('#search').fill('');page.locator('#typeFilterToggle').click();page.locator('#typeChoices button[data-type="13"]').click();check('属性筛选准确',all(13 in next(c['types'] for c in roster if c['id']==int(v)) for v in page.locator('.mon').evaluate_all('(a)=>a.map(e=>e.dataset.id)')))
-        page.locator('#typeFilterToggle').click();page.locator('#typeChoices button[data-type=""]').click();page.locator('#search').fill('');check('首发50头像同屏矩阵，无多余翻页',page.locator('.mon').count()==50 and not page.locator('#nextPage').is_visible())
+        page.locator('#typeFilterToggle').click();page.locator('#typeChoices button[data-type=""]').click();page.locator('#search').fill('');check('授权名单可滚动头像矩阵，无多余翻页',page.locator('.mon').count()==len(json.loads((ROOT/'首发200.json').read_text())['ids']) and not page.locator('#nextPage').is_visible())
         page.screenshot(path=str(ROOT/f'完整版-选角-{a.tag}.png'));page.locator('#closeSetup').click();check('取消配置不影响现役角色',snap()['player']['id']==25 and snap()['profile']['tier']=='ultra')
         for vw,vh in [(1920,1080),(1440,900),(1280,720),(900,600),(844,390),(390,844)]:
             page.set_viewport_size({'width':vw,'height':vh});page.wait_for_function('Math.abs(__waterTest.snapshot().viewport.width/__waterTest.snapshot().viewport.height-innerWidth/innerHeight)<.01',timeout=3000);rect=page.locator('#game').bounding_box();s=snap();overflow=call('()=>({x:document.documentElement.scrollWidth>innerWidth,y:document.documentElement.scrollHeight>innerHeight})')

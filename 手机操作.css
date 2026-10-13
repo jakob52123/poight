@@ -22,6 +22,7 @@ html, body {
   align-content: center;
   touch-action: none;
 }
+#rotatePhone:not([popover]) { z-index: 1000; }
 #rotatePhone h2 { font-size: 24px; }
 #rotatePhone p { font-size: 14px; color: #9db2c5; }
 .pixel-phone {

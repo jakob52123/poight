@@ -4,20 +4,28 @@
 ## ▶ 在线试玩：[poight.jiachengbo.com](https://poight.jiachengbo.com/)
 [![PLAY NOW](https://img.shields.io/badge/PLAY%20NOW-poight.jiachengbo.com-ff4757?style=for-the-badge)](https://poight.jiachengbo.com/)
 
-[![Poight 实机](docs/screenshot.png)](https://poight.jiachengbo.com/)
+[![Poight 人气精选 49 选人页](docs/selection-200.png)](https://poight.jiachengbo.com/)
+[![Poight 烈咬陆鲨 vs 洛奇亚 实机](docs/screenshot.png)](https://poight.jiachengbo.com/)
 
 手机请横屏，电脑浏览器体验最好。
+
+## 新版本 · 200 只（初代 151 全收录 + 人气 49）· 新 GBA 界面 · 9 首随机战斗曲 · 手机适配
+已上线 M10：200 只角色可选，新 GBA 风格界面，每局随机战斗曲，手机横屏触摸与小屏适配。
 
 灵感与致敬：《宝可梦：羁绊之旅》by B站 @瓜瓜的探索日记 —— https://www.bilibili.com/video/BV16bHd6jE1a/
 Inspired by and paying tribute to "Pokémon: Bond Journey" by Bilibili creator @瓜瓜的探索日记.
 
 ## 简介 / About
 
-Poight 是非官方、非商业的浏览器像素竞技场：50 只角色、120 招，即时 1v1 对战，强调移动、出招、闪避与命中反馈，不含养成、等级、进化或剧情系统。
+Poight 是非官方、非商业的浏览器像素竞技场：200 只角色、121 招，即时 1v1 对战，强调移动、出招、闪避与命中反馈，不含养成、等级、进化或剧情系统。
 An unofficial, non-commercial pixel-art real-time 1v1 browser fan game, focused on movement, moves, dodging and hit feedback.
 
 仓库提供游戏代码、原创招式图集、原创竞技场美术及实机截图；不单独分发宝可梦精灵、立绘、原版贴图或音频。第三方素材来源与作者署名见 [CREDITS](CREDITS.md)。
-Game code, original move atlases, original arena artwork and an in-game screenshot are included; standalone Pokémon sprites, portraits, original textures and audio are excluded.
+Game code, original move atlases, original arena artwork and gameplay screenshots are included; standalone Pokémon sprites, portraits, original textures and audio are excluded.
+
+### 音乐获取 / Music
+
+在线版含 9 首随机战斗曲：8 首 CC0 / CC-BY 外部曲目 + 1 套项目原创合成谱面。为保持源码快照小于 25 MB，本仓库不带 MP3、OGG 或 WAV；来源、完整署名、许可及本地获取方式见 [音乐说明](docs/music.md)、[CREDITS](CREDITS.md) 和 [NOTICE](NOTICE.md)。
 
 ## 操作 / Controls
 
@@ -29,8 +37,10 @@ WASD / arrows: move; J K L I: equipped moves; Shift / double-tap direction: dodg
 **目前仓库是代码与原创美术的源码快照，完整可复现构建脚本正在补齐。** 现在建议使用上方在线试玩；不要把源码快照当成已能独立构建的完整游戏。
 **This is a source snapshot of code and original artwork. Fully reproducible build scripts are being completed.** Use the online demo for now.
 
-尚缺的数据与配方类别：角色图集与索引、飞行动作修正包、属性相克数据、体型校准来源、丰缘地图索引与解码初始化、原创图集构建记录与实战绘制数据、站点图标及测试共用脚本。精确缺件见 `tools/assets-manifest.json` 的 `blockers`。
-Missing categories: character atlases/index, flight corrections, type efficacy, body calibration provenance, Hoenn map index/decoding initialization, original atlas build records/runtime drawing data, site icon and shared test utilities.
+尚缺的数据与配方类别：角色图集与索引、飞行动作修正包、属性相克数据、丰缘地图索引与解码初始化、原创图集构建记录与实战绘制数据、站点图标及测试共用脚本。精确缺件见 `tools/assets-manifest.json` 的 `blockers`。
+Missing categories: character atlases/index, flight corrections, type efficacy, Hoenn map index/decoding initialization, original atlas build records/runtime drawing data, site icon and shared test utilities.
+
+大型源码 JSON 使用确定性 gzip 无损打包（`.json.gz`），以保留原始字节并控制体积；先运行还原脚本，逐文件校验 SHA256，无网络操作。不修改战斗逻辑或美术字节。
 
 Python 3.10+、Pillow、Node.js 是构建依赖；浏览器验收另需 Playwright。以下为后续完整流程，当前最后两步受缺件阻塞：
 
@@ -38,6 +48,7 @@ Python 3.10+、Pillow、Node.js 是构建依赖；浏览器验收另需 Playwrig
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
+python tools/restore_source_data.py
 python tools/fetch_assets.py --allow-partial
 # --allow-partial 只核验已有下载配方，不代表完整游戏可构建。
 python 构建完整版.py

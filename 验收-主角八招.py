@@ -142,8 +142,14 @@ try:
             if mid not in hero_ids and mid not in RANGED_REVISIONS))
         check('S1 removes all burn and electric slow without legacy fallback', all(
             'burn' not in m and (m['type'] != 13 or 'slow' not in m) for m in MOVES.values()))
-        check('Other 48 default loadouts unchanged', all(
-            c['defaultMoves'] == base_roster[n]['defaultMoves'] for n, c in roster.items() if n not in DEFAULTS))
+        original_ids = set(json.loads((ROOT/'首发50.json').read_text())['ids'])
+        check('Other original 48 default loadouts unchanged', original_ids <= roster.keys() and all(
+            roster[n]['defaultMoves'] == base_roster[n]['defaultMoves'] for n in original_ids if n not in DEFAULTS))
+        # R200b explicitly changes only the added 150 defaults; keep the original48 golden intact.
+        from 游戏数据 import roster_metadata
+        expected_new = {c['id']: c for c in roster_metadata([r for r in raw_rows if r['id'] in roster])}
+        check('New150 defaults match authorized learned-move model', all(
+            c['defaultMoves'] == expected_new[n]['defaultMoves'] for n,c in roster.items() if n not in original_ids))
         for n, ids in DEFAULTS.items():
             check(f'{n} exact default four', roster[n]['defaultMoves'] == ids)
             check(f'{n} other legal moves remain selectable', len(set(roster[n]['learnset'])-set(ids)) > 0)

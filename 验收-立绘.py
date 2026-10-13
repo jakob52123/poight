@@ -1,4 +1,4 @@
-"""BW portraits: all 50, real canvas pixels, direction, integer scaling and offline assets."""
+"""BW portraits: authorized roster, real canvas pixels, direction, integer scaling and offline assets."""
 import base64
 import io
 import json
@@ -57,13 +57,14 @@ def geometry(el):
     return el.evaluate('''e => {
       const r=e.getBoundingClientRect(), p=e.parentElement.getBoundingClientRect();
       return {contained:r.left>=p.left-.5 && r.right<=p.right+.5 &&
-        r.top>=p.top-.5 && r.bottom<=p.bottom+.5, exact:r.width===e.width && r.height===e.height,
+        r.top>=p.top-.5 && r.bottom<=p.bottom+.5,
+        fit:r.width<=e.width+.5 && r.height<=e.height+.5 && getComputedStyle(e).objectFit==='contain',
         nearest:getComputedStyle(e).imageRendering==='pixelated'};
     }''')
 
 
 try:
-    overview = Image.new('RGB', (1280, 1100), '#102538')
+    overview = Image.new('RGB', (1280, ((len(catalog)+4)//5)*110), '#102538')
     draw = ImageDraw.Draw(overview)
     for i, ident in enumerate(catalog):
         tile = expected(ident, 0, 2, 'enemy')
@@ -72,7 +73,7 @@ try:
         tile = tile.resize((tile.width // 2, tile.height // 2), Image.Resampling.NEAREST)
         overview.paste(tile, (x + (256 - tile.width) // 2, y), tile)
         draw.text((x + 8, y + 94), f'{ident} {next(s["name"] for s in json.loads((ROOT / "素材/立绘/来源.json").read_text()) if str(s["id"]) == ident)}', fill='white')
-    overview.save(SHOTS / '50只立绘总览.png')
+    overview.save(SHOTS / '全名单立绘总览.png')
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
         context = browser.new_context(viewport={'width': 1440, 'height': 900}, service_workers='block')
@@ -96,9 +97,9 @@ try:
                           f'(() => {{const e=document.querySelector("#{portrait}");return e.dataset.id==="{ident}" && e.dataset.frame!==undefined;}})()'))
                     el = page.locator('#' + portrait)
                     value, actual = pixels(el)
-                    check(f'{width} {ident} {side} 整数2或3倍', value['scale'] in (2, 3), value['scale'])
+                    check(f'{width} {ident} {side} GBA背板整数1至3倍', value['scale'] in (1, 2, 3), value['scale'])
                     g = geometry(el)
-                    check(f'{width} {ident} {side} 无裁切且CSS无二次缩放', all(g.values()), g)
+                    check(f'{width} {ident} {side} 无裁切且缩略contain最近邻', all(g.values()), g)
                     reference = expected(ident, value['frame'], value['scale'], side)
                     check(f'{width} {ident} {side} 面向及最近邻像素正确',
                           actual.size == reference.size and ImageChops.difference(normalized(actual), normalized(reference)).getbbox() is None)
@@ -110,7 +111,11 @@ try:
                             if ImageChops.difference(normalized(actual), normalized(second)).getbbox():
                                 changed = True
                                 break
-                        check(f'{ident} {side} 动画两帧像素不同', changed)
+                        if catalog[ident]['frames'] == 1:
+                            source = next(s for s in json.loads((ROOT / '素材/立绘/来源.json').read_text()) if str(s['id']) == ident)
+                            check(f'{ident} {side} 经授权缺GIF静态PNG回退', source['sources'][1].get('missing') and bool(source.get('fallback')) and not changed)
+                        else:
+                            check(f'{ident} {side} 动画两帧像素不同', changed)
             page.locator('#pickPlayerPanel').click()
             page.locator('#roster .mon[data-id="25"]').click()
             page.locator('#pickEnemyPanel').click()
@@ -128,7 +133,7 @@ try:
             el = page.locator('#' + portrait)
             value, actual = pixels(el)
             reference = expected(ident, value['frame'], value['scale'], side)
-            check(f'VS {side} 放大朝向无裁切', value['scale'] in (2, 3) and all(geometry(el).values())
+            check(f'VS {side} GBA整数放大朝向无裁切', value['scale'] in range(1, 13) and all(geometry(el).values())
                   and ImageChops.difference(normalized(actual), normalized(reference)).getbbox() is None)
         page.screenshot(path=str(SHOTS / 'VS-1440x900.png'))
         check('离线白名单加载无404', not failures, failures)

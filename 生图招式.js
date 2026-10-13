@@ -9,26 +9,22 @@ window.PoightGeneratedMoves = class {
   has(id) {
     return !!this.data[id];
   }
-  async load(loader) {
-    if (!this.loading)
-      this.loading = (async () => {
-        const entries = Object.entries(this.data);
-        const impact = entries.find(([, d]) => d.fangImpact)?.[1].fangImpact;
-        if (impact) this.fangImpact = await loader(impact);
-        let n = 0;
-        await Promise.all(
-          Array.from({ length: 6 }, async () => {
-            while (n < entries.length) {
-              const [id, d] = entries[n++];
-              this.images.set(id, await loader(d.src));
-            }
-          }),
-        );
-      })().catch((e) => {
-        this.loading = null;
-        throw e;
-      });
-    return this.loading;
+  async load(loader, ids = Object.keys(this.data)) {
+    this.pending ||= new Map();
+    const entries = [...new Set(ids)].filter(id => this.data[id]);
+    const impact = entries.map(id => this.data[id]).find(d => d.fangImpact)?.fangImpact;
+    if (impact && !this.fangImpact) {
+      this.impactLoading ||= loader(impact).then(image => { this.fangImpact = image; })
+        .finally(() => { this.impactLoading = null; });
+      await this.impactLoading;
+    }
+    await Promise.all(entries.map(id => {
+      if (this.images.has(id)) return;
+      if (!this.pending.has(id)) this.pending.set(id, loader(this.data[id].src)
+        .then(image => { this.images.set(id, image); })
+        .finally(() => this.pending.delete(id)));
+      return this.pending.get(id);
+    }));
   }
   reset() {
     this.animations?.reset();
@@ -283,7 +279,8 @@ window.PoightGeneratedMoves = class {
   ) {
     const d = this.data[id],
       im = this.images.get(id);
-    if (!d || !im) return;
+    if (!d) return;
+    if (!im) throw new Error("招式图集尚未预载：" + id);
     this.drawn.add(id);
     const f = frame ?? Math.floor(Math.max(0, age) * 10) % d.frames;
     ctx.save();
@@ -425,6 +422,7 @@ window.PoightGeneratedMoves = class {
     }
     if (!p.attack || p.attack.emitted || !this.has(m.id)) return;
     if (m.fangs) return;
+    if (api.animations.lick(ctx, p, p.attack.move || m, p.attack.age, api, true)) return;
     if (api.animations.hero.charge(ctx, p, m, api)) return;
     if (m.limb) {
       this.limbStamp(ctx, p, m, p.attack.age, api, true);
@@ -470,9 +468,24 @@ window.PoightGeneratedMoves = class {
   }
   draw(ctx, layer, lift, api) {
     for (const e of this.states) {
+      ctx.save();
+      // The physics-owned hit set identifies this cast, not an unrelated recent hit.
+      if (e.contacted || e.group.hit.size) {
+        const target = e.owner === api.player ? api.enemy : api.player;
+        api.animations.clipContactCenters(ctx, e.contacted ? [target] : e.group.hit);
+      }
+      try {
       if (api.animations.hero.state(ctx, e, layer, api) || api.animations.melee.has(e.id)) {
-        this.drawn.add(e.id); // Both opt-ins replace only their own M4 raster.
+        this.drawn.add(e.id);
         continue;
+      }
+      if (e.id === "lick" && layer === "above") {
+        const mouth = api.animations.lick(ctx, e.owner, e.m, e.age, api);
+        if (mouth) {
+          e.drawAnchor = mouth; // The actual tongue root, preserving the original r1-mouth audit.
+          this.drawn.add(e.id);
+          continue;
+        }
       }
       if (e.mode === "core-nova") {
         if (layer === "below") {
@@ -567,6 +580,9 @@ window.PoightGeneratedMoves = class {
           "bottom",
         );
       } else this.stamp(ctx, e.id, e.x, e.y, d.width, d.height, e.age, 0, alpha, "bottom");
+      } finally {
+        ctx.restore();
+      }
     }
   }
   stats() {

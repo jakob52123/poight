@@ -8,7 +8,9 @@ from pathlib import Path
 from PIL import Image
 
 from 招式动画 import VA2素材
+from 招式动画.VC打包 import build as build_vc
 
+from .VA1打包 import build_va1
 from .VB1素材 import build as build_vb1
 
 
@@ -35,9 +37,13 @@ def build(root, output, types):
             # but use explicit high-chroma water/ice ramps (the source stays untouched).
             ice = key in {'core-ice', 'core-shard'}
             ramp = ([(50, 239, 255), (65, 248, 255), (100, 255, 255), (242, 255, 255)]
-                    if ice else [(6, 35, 155), (12, 50, 202), (14, 65, 230), (60, 140, 255)])
+                    if ice else [(90, 255, 255), (96, 255, 255), (100, 255, 255), (245, 255, 255)])
             original.putdata([(*ramp[0 if g < 140 else 1 if g < 185 else 2 if g < 240 else 3], a)
                               for r, g, b, a in original.get_flattened_data()])
+            if not ice:
+                # White foam occupies one quarter of the existing opaque pixels.
+                original.putdata([(245, 255, 255, a) if a and i % 4 == 0 else (r, g, b, a)
+                                  for i, (r, g, b, a) in enumerate(original.get_flattened_data())])
             if key == 'core-water':
                 # Small white specular highlight; not a pale translucent bubble.
                 for x, y in [(5, 3), (6, 3), (5, 4), (6, 4)]:
@@ -114,10 +120,13 @@ def build(root, output, types):
         }
     VA2素材.build(base, mapping, output)
     VA2素材.sources(root, output)
+    build_vc(root, output, mapping)
     impact = Image.open(base / '原版/impact__ANIM_TAG_IMPACT.png').convert('RGBA')
     for tid, t in {**types, -1: ('test', '#ffffff')}.items():
         color = t[1].lstrip('#')
         rgb = tuple(int(color[i:i+2], 16) for i in (0, 2, 4))
+        if tid == 11:  # Water impact: bright blue rim and the existing white foam core.
+            rgb = (0, 235, 255)
         tinted = impact.copy()
         # Retain Emerald's white core and pixel contour, color only the rim.
         tinted.putdata([(255, 255, 255, a) if r >= 250 and g >= 250 else
@@ -131,6 +140,11 @@ def build(root, output, types):
             'width': 32, 'height': 32,
         }
     build_vb1(root, output, mapping)
+    data = json.loads((base / '招式动画.json').read_text())
+    build_va1(base, output, mapping, data)
+    # Namespaced extensions coexist with PERF and VA1.
+    from 招式动画.VB2打包 import build as build_vb2
+    build_vb2(root, output, mapping)
     notices = {}
     for name in ['NOTICE.md', 'LICENSE-AGPL-3.0', 'vendor/showdown/NOTICE.md', 'vendor/showdown/LICENSE']:
         raw = (root / name).read_bytes()
@@ -143,8 +157,7 @@ def build(root, output, types):
                  '招式动画/VB1接入.md']:
         raw = (root / name).read_bytes()
         output('animation-source-' + hashlib.sha256(raw).hexdigest()[:16] + '.txt', raw)
-    return {'data': json.loads((base / '招式动画.json').read_text()),
-            'mapping': mapping, 'notices': notices}
+    return {'data': data, 'mapping': mapping, 'notices': notices}
 
 
 def runtime(root):
@@ -152,4 +165,5 @@ def runtime(root):
     return ('(() => {\n' + source + '\nwindow.PoightAnimationEngine = MoveAnimationEngine;\n'
             '})();\n' + (root / '招式动画接入.js').read_text() + '\n'
             + (root / '主角招式外观.js').read_text() + '\n'
-            + (root / '招式动画近身VB1.js').read_text())
+            + (root / '招式动画近身VB1.js').read_text() + '\n'
+            + (root / '招式动画/VA1飞行弹.js').read_text())

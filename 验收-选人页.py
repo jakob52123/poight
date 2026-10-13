@@ -72,13 +72,15 @@ GEOMETRY = """() => {
         Math.min(a.bottom, b.bottom) - Math.max(a.y, b.y) > .5) overlaps.push([a.id, b.id]);
   }
   const grid = document.querySelector('#roster').getBoundingClientRect();
-  const foot = document.querySelector('.setup-foot').getBoundingClientRect();
+  const foot = document.querySelector('.fighter-player').getBoundingClientRect();
   const portrait = document.querySelector('#playerPortrait').getBoundingClientRect();
   const stage = document.querySelector('.fighter-player .portrait-stage').getBoundingClientRect();
   const name = document.querySelector('#playerPickName').getBoundingClientRect();
   return {buttons: buttons.length, overlaps, gap: foot.top - grid.bottom,
     scroll: document.documentElement.scrollWidth, width: innerWidth,
-    portraitContained: portrait.bottom <= stage.bottom + .5 && portrait.bottom <= name.top + .5};
+    portraitContained: portrait.left >= stage.left - .5 && portrait.top >= stage.top - .5 &&
+      portrait.right <= stage.right + .5 && portrait.bottom <= stage.bottom + .5 &&
+      (portrait.right <= name.left + .5 || portrait.bottom <= name.top + .5)};
 }"""
 
 try:
@@ -106,7 +108,7 @@ try:
             check(f"可见按钮两两不重叠 {width}x{height}", not geometry["overlaps"], geometry)
             check(f"立绘不覆盖名字 {width}x{height}", geometry["portraitContained"], geometry)
             if width == 1440:
-                check("桌面网格下空白 ≤ 6%", geometry["gap"] <= height * 0.06, geometry)
+                check("桌面网格到下方选人卡空白 ≤ 6%", geometry["gap"] <= height * 0.06, geometry)
             check(
                 f"最近邻插值 {width}x{height}",
                 page.locator(".select-portrait").evaluate_all(
@@ -145,7 +147,7 @@ try:
             and page.locator("#roster .mon").get_attribute("data-id") == "25",
         )
         page.locator("#search").fill("")
-        page.locator("#typeFilterToggle").click()
+        # S2 exposes the attribute tags directly; no legacy popover toggle.
         # Water is type 11 in the existing data; discover its button by label instead.
         water = page.locator("#typeChoices button").filter(has_text="水").first
         type_id = int(water.get_attribute("data-type"))
@@ -154,13 +156,15 @@ try:
         catalog = page.evaluate("window.__waterTest.catalog()")
         roster = {c["id"]: c for c in catalog["roster"]}
         check("属性筛选", bool(ids) and all(type_id in roster[i]["types"] for i in ids), ids)
-        page.locator("#typeFilterToggle").click()
         page.locator('#typeChoices button[data-type=""]').click()
         page.locator("#randomEnemy").click()
-        random_id = int(page.locator('#roster .mon[data-enemy="true"]').get_attribute("data-id"))
+        random_id = int(page.locator('#enemyPortrait').get_attribute("data-id"))
+        page.locator(f'.group-tabs [data-group="{"popular" if random_id > 151 else "initial"}"]').click()
+        check("随机跨组仍标记CPU", page.locator(f'#roster .mon[data-id="{random_id}"]').get_attribute("data-enemy") == "true")
         check(
             "随机仍可用", page.locator("#enemyPickName").inner_text() == roster[random_id]["name"]
         )
+        page.locator('.group-tabs [data-group="initial"]').click()
         page.locator("#setupMapButton").click()
         check("原地图菜单仍可打开", page.locator("#scenePicker").is_visible())
         page.locator("#cancelScene").click()
@@ -196,7 +200,9 @@ try:
             "els => els.map(e => Number(e.dataset.id))"
         )
         page.keyboard.press("w")
-        check("W 向上一行", cursor(page) == ordered[ordered.index(enemy_id) - 5])
+        check("GBA桌面每行10只", page.locator('#roster').evaluate(
+            "e=>getComputedStyle(e).gridTemplateColumns.split(' ').length") == 10)
+        check("W 向上一行", cursor(page) == ordered[ordered.index(enemy_id) - 10])
         page.keyboard.press("s")
         check("S 向下一行", cursor(page) == enemy_id)
         page.keyboard.press("a")

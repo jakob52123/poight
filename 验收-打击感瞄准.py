@@ -516,7 +516,7 @@ try:
         step(0.08)
         check(
             "Buffered dash executes when simulation resumes",
-            snap()["player"]["dashing"] and snap()["player"]["spent"] == 22,
+            snap()["player"]["dashing"] and snap()["player"]["spent"] == 15,
         )
         reset()
         p.evaluate("document.getElementById('aimSetting').click()")

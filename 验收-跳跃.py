@@ -378,7 +378,12 @@ try:
             if touch_page.evaluate("window.__waterTest?.snapshot().artReady"):
                 break
             time.sleep(.025)
-        check("Touch portrait shows rotation prompt", touch_page.locator("#rotatePhone").is_visible())
+        check("GBA touch portrait exposes jump without rotation prompt",
+              not touch_page.locator("#rotatePhone").is_visible() and touch_page.locator("#jumpButton").is_visible())
+        touch_page.locator("#jumpButton").tap()
+        touch_page.evaluate("window.__waterTest.step(.225)")
+        check("Touch portrait pointer starts actual airborne jump",
+              touch_page.evaluate("window.__waterTest.snapshot().player.airborne"))
         touch_page.set_viewport_size({"width": 844, "height": 390})
         touch_page.wait_for_timeout(100)
         touch_page.evaluate("window.__waterTest.reset(true)")

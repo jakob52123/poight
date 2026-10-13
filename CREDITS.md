@@ -1,5 +1,27 @@
 # Credits / 素材署名
 
+## M10 · 200 只角色
+
+完整 200 只逐角色作者、许可标记与动作范围见 [M10 角色署名](docs/roster-credits.md)，提取自冻结源码的游戏内鸣谢文本。下方原 50 只的固定 SpriteCollab 提交署名继续保留；不把它冒称为新增 150 只的上游核验。
+
+## 战斗音乐 · 9 首随机曲目
+
+8 首外部曲目 + 1 套项目原创合成谱面；不随仓库附带音频文件。获取说明见 [音乐说明](docs/music.md)。外部曲目经过截段、循环接缝处理、响度归一化和 MP3 转码，原许可与署名要求不变。
+
+- HydroGene — **16-bit - Battle Theme I** — CC0；https://opengameart.org/content/16-bit-battle-theme-i
+- pmiller — **Chiptune Battle Music** — CC0；https://opengameart.org/content/chiptune-battle-music
+- request — **Rin's Theme (Loopable chiptune, adventure/battle BGM)** — CC0；https://opengameart.org/content/rins-theme-loopable-chiptune-adventurebattle-bgm
+- Eric Skiff — **Underclocked (underunderclocked mix)** — CC-BY 4.0；Music: Eric Skiff - Underclocked (underunderclocked mix) - Resistor Anthems - Available at http://EricSkiff.com/music
+- Eric Skiff — **Arpanauts** — CC-BY 4.0；Music: Eric Skiff - Arpanauts - Resistor Anthems - Available at http://EricSkiff.com/music
+- Eric Skiff — **Digital Native** — CC-BY 4.0；Music: Eric Skiff - Digital Native - Resistor Anthems - Available at http://EricSkiff.com/music
+- Pepsidog — **Looping Japanese fight track** — CC0；https://opengameart.org/content/looping-japanese-fight-track
+- PPEAK / Preston Peak — **fated encounter** — CC-BY 4.0；https://opengameart.org/content/free-action-chiptune-music-pack
+- Poight 项目原创 — **跃步电光 / 暗棱警报（BGM3 C/B/R3）** — AGPL-3.0-or-later；合成谱面在 `战斗音乐.js`。
+
+CC0：https://creativecommons.org/publicdomain/zero/1.0/ 。CC-BY 4.0：https://creativecommons.org/licenses/by/4.0/ 。逐曲原署名全文、下载来源见 `素材/音乐/源/来源.tsv`；循环点、转换后 SHA256 见 `素材/音乐/外部BGM.json`。
+
+## 原 50 只 · 固定上游署名
+
 Source: PMDCollab/SpriteCollab, commit `7f6ea6cc6892bbdd1376f803b3a1d7f376418895`.
 https://github.com/PMDCollab/SpriteCollab
 

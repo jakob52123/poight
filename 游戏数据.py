@@ -1,5 +1,7 @@
 """即时对战参数。数值、配招是本作改编，不冒充官方回合制规则。"""
+import csv
 import json
+from functools import lru_cache
 from pathlib import Path
 
 TYPES={1:('一般','#c4c197'),2:('格斗','#d78461'),3:('飞行','#95bde1'),4:('毒','#b586cf'),5:('地面','#cfb16c'),6:('岩石','#ac9a71'),7:('虫','#99bd5b'),8:('幽灵','#9987c8'),9:('钢','#a3c4c1'),10:('火','#f2a05b'),11:('水','#69c9ec'),12:('草','#88d885'),13:('电','#f0da62'),14:('超能力','#f49db5'),15:('冰','#abeee4'),16:('龙','#a197ee'),17:('恶','#a89583'),18:('妖精','#eebcdd')}
@@ -86,9 +88,9 @@ POOLS={
  17:['bite','crunch','shadowball','quickattack','agility','protect'],
  18:['moonblast','dazzlinggleam','swift','recover','psychic','protect']}
 # All species share this multiplier; move damage/cooldowns/costs stay unchanged.
-# T9 provisional: pooled median 54.879s; one fourfold matchup is still 16.242s.
-# See 验收记录/平衡/平衡报告.md: duration acceptance is NOT fully satisfied.
-HP_MULTIPLIER = 3
+# B2: existing neutral 25-damage ordinary projectile takes 6–7 hits in the three fixtures.
+# Attribute resistance/immunity and native baseHP differences are intentionally retained.
+HP_MULTIPLIER = 1.5
 DEFAULT_DIFFICULTY = "poke"
 
 DIFFICULTIES=[
@@ -201,6 +203,58 @@ for mid, runtime in HERO_MOVES.items():
     MOVES[mid].update(runtime, hero=True)
 
 
+@lru_cache(maxsize=1)
+def r200b_learnsets():
+    """10-13 补充1：仅新增150只按任意世代可学∩原有120招；原50不变。"""
+    root = Path(__file__).parent
+    original = set(json.loads((root / '首发50.json').read_text())['ids'])
+    selected = set(json.loads((root / '首发200.json').read_text())['ids']) - original
+    with (root / '数值资料/Pi-20261011/learnset-audit.tsv').open(newline='') as f:
+        learned = {int(r['dex']): r['runtime_move_ids'].split(',') if r['runtime_move_ids'] else []
+                   for r in csv.DictReader(f, delimiter='\t')
+                   if int(r['dex']) in selected and r['generation_group'].startswith('Any generation')}
+    assert set(learned) == selected, 'Run scripts/R200b-可学采集.py first'
+    assert all(len(v) == len(set(v)) and set(v) <= MOVES.keys() - {'splash'} for v in learned.values())
+    return learned
+
+
+def r200b_defaults(types, pool, learned, covers):
+    """本系主攻 + 独立近身 + 副属性/覆盖/光束 + 守住，最少属性池补位。
+
+    穷举三个攻击槽，先最小化不可学补位数，再按原属性池次序稳定选取。
+    covers 是原有的全上场属性免疫检查；守住沿用通用规则。
+    原作无变身的百变怪在调用处保留旧四招，不在这里伪造学招证据。
+    """
+    attack = lambda m: MOVES[m]['damage'] > 0 and MOVES[m]['kind'] not in ('heal', 'guard', 'buff', 'splash')
+    available = list(dict.fromkeys(pool + learned))
+    attacks = [m for m in available if attack(m)]
+    rank = {m: i for i, m in enumerate(available)}
+    learned = set(learned)
+    primary = [m for m in attacks if MOVES[m]['type'] in types]
+    near = [m for m in attacks if MOVES[m]['kind'] in ('melee', 'rush', 'spin')]
+    best = None
+    for a in primary:
+        for b in near:
+            if b == a:
+                continue
+            for c in attacks:
+                if c in (a, b):
+                    continue
+                ta, tb, tc = (MOVES[m]['type'] for m in (a, b, c))
+                score = (sum(m not in learned for m in (a, b, c)),
+                         sum(m not in learned and MOVES[m]['type'] not in types for m in (a, b, c)),
+                         types.index(ta),
+                         0 if tc in types and tc != ta else 1,
+                         rank[a], 0 if tb in types else 1, rank[b],
+                         0 if tc not in (ta, tb) else 1,
+                         0 if MOVES[c]['kind'] in ('beam', 'zone', 'nova', 'shot', 'fan') else 1,
+                         rank[c])
+                if (best is None or score < best[0]) and covers([a, b, c]):
+                    best = (score, [a, b, c, 'protect'])
+    assert best is not None, (types, learned)
+    return best[1]
+
+
 def roster_metadata(rows):
     result=[]
     # 官方属性免疫关系；避免推荐四招在某个已收录对手身上全部无效。
@@ -233,6 +287,12 @@ def roster_metadata(rows):
             for move in defaults:
                 if move not in pool:
                     pool.append(move)
+        # R200b 授权仅新150只：原50默认招、可选池、数值和动画完全不变。
+        learned = r200b_learnsets().get(n)
+        if learned is not None:
+            if n != 132:  # 原作仅变身，暂用一般系；不声称旧四招可学。
+                defaults = r200b_defaults(ts, pool, learned, covers)
+            pool = list(dict.fromkeys(pool + learned))
         flags=[]
         if n==129:
             pool=['splash'];defaults=['splash'];flags=['无伤配招']

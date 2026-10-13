@@ -29,7 +29,7 @@ try:
  check('No new formal asset changes; pre-existing fixed-credit mismatch recorded',not bad or known_credit_mismatch,{'existingMismatches':bad,'matchedPreEmeraldCandidateReceipt':known_credit_mismatch,'notRepairedHere':True})
  with sync_playwright() as pw:
   browser=pw.chromium.launch(headless=True);context=browser.new_context(viewport={'width':1440,'height':900});page=context.new_page();page.on('pageerror',lambda e:errors.append(str(e)));page.on('request',lambda r:external.append(r.url) if urlsplit(r.url).scheme in ('http','https') and urlsplit(r.url).hostname not in ('localhost','localhost') else None)
-  page.goto(URL+'/?test=1',wait_until='load');wait(page,'window.__waterTest?.snapshot().artReady');check('Exact roster50/moves121 preserved',snap(page)['rosterCount']==50 and snap(page)['moveCount']==121)
+  page.goto(URL+'/?test=1',wait_until='load');wait(page,'window.__waterTest?.snapshot().artReady');check('Exact authorized roster/moves121 preserved',snap(page)['rosterCount']==len(json.loads((ROOT/'首发200.json').read_text())['ids']) and snap(page)['moveCount']==121)
   cat=page.evaluate('window.__waterTest.catalog()');cat['scenes']=[s for s in cat['scenes'] if s.get('type')!='arena'];base={**snap(page)['profile'],'map':'emerald-littleroottown'};check('Sixteen original town start presets including independent Sootopolis',len(cat['scenes'])==16)
   for scene in cat['scenes']:
    ok=page.evaluate('(p)=>window.__waterTest.select(p)',{**base,'map':scene['id']});check('Atomic town entry '+scene['name'],ok)
@@ -48,9 +48,9 @@ try:
    if not pairs:continue
    x,y,nx,ny=pairs[len(pairs)//2];px,py=(x+.5)*s,(y+.5)*s
    page.evaluate('window.__waterTest.reset(true)');arrange(page,{'ai':False,'player':{'x':px,'y':py,'hp':57,'stamina':61}});before=snap(page);check('Seam starts on source '+seam['from'],before['environment']['area']==seam['from'])
-   key='d' if nx>x else 'a' if nx<x else 's' if ny>y else 'w';page.keyboard.down(key);step(page,.24);page.keyboard.up(key);after=snap(page)
+   key='d' if nx>x else 'a' if nx<x else 's' if ny>y else 'w';travel=.24*216/before['player']['speed'];page.keyboard.down(key);step(page,travel);page.keyboard.up(key);after=snap(page)
    check('Walk seam '+seam['from']+' -> '+seam['to'],after['environment']['area']==seam['to'],{'xy':[after['player']['x'],after['player']['y']],'wanted':seam['to'],'actual':after['environment']['area']})
-   check('Seam retains HP and time',after['player']['hp']==57 and abs(after['elapsed']-.24)<1e-7)
+   check('Seam retains HP and time',after['player']['hp']==57 and abs(after['elapsed']-travel)<1e-7)
   # Solid collision selected directly from original collision grid, away from missing-map borders.
   area=next(a for a in t['areas'] if a['id']=='MAP_LITTLEROOT_TOWN');pair=None
   for y in range(area['gridY']+2,area['gridY']+area['rows']-2):
@@ -82,7 +82,7 @@ try:
    page.set_viewport_size({'width':width,'height':height});page.locator('#battleMenuButton').click();page.locator('#sceneButton').click();page.screenshot(path=str(OUT/f'起点选择-{width}x{height}.png'));box=page.locator('#applyScene').bounding_box();page.locator('#applyScene').scroll_into_view_if_needed();box=page.locator('#applyScene').bounding_box();check(f'Controls reachable {width}x{height}',box and box['y']>=0 and box['y']+box['height']<=height+1);page.locator('#cancelScene').click()
   page.set_viewport_size({'width':1440,'height':900})
   # Actual allowlist, including newly content-hashed credits.
-  for path in ['/世界地图.js','/素材/绿宝石场景/原始/pokeemerald/README.md','/.git/config','/首发50.json']:
+  for path in ['/世界地图.js','/素材/绿宝石场景/原始/pokeemerald/README.md','/.git/config','/首发50.json','/首发200.json']:
    check('Private path blocked '+path,page.request.get(URL+path).status==404)
   href=page.locator('.credits a').get_attribute('href');check('Credits available',page.request.get(URL+'/'+href).status==200)
   # Offline without a server, preserving separate page scope.

@@ -149,19 +149,29 @@ def measure_walk(page, label, start, end, keys):
         page.keyboard.down(key)
     ticks = 0
     try:
-        for ticks in range(1, 1801):
-            call(page, "step", 1 / 120)
-            p = snap(page)["player"]
-            if math.hypot(p["x"]-end["x"], p["y"]-end["y"]) < 2:
-                break
-        else:
-            raise AssertionError((label, p, end))
+        # R200b transport-only batching: identical live keyboard, 120Hz steps,
+        # per-tick snapshot/distance predicate, 3960-tick cap and renderer calls.
+        # Do not serialize the entire expanded snapshot twice per tick over CDP.
+        walk = page.evaluate("""end => {
+          const t = window.__waterTest;
+          let p;
+          for (let ticks = 1; ticks <= 3960; ticks++) {
+            t.step(1 / 120);
+            p = t.snapshot().player;
+            if (Math.hypot(p.x-end.x, p.y-end.y) < 2)
+              return {arrived:true, ticks, player:p};
+          }
+          return {arrived:false, ticks:3960, player:p};
+        }""", end)
+        ticks = walk["ticks"]
+        if not walk["arrived"]:
+            raise AssertionError((label, walk["player"], end))
     finally:
         for key in keys:
             page.keyboard.up(key)
     TIMINGS[label] = {"seconds": ticks / 120, "start": start, "end": end,
                       "speed": snap(page)["player"]["speed"]}
-    check(label + "未调世界速度", snap(page)["player"]["speed"] == 224)
+    check(label + "使用B2世界速度", snap(page)["player"]["speed"] == 116)
 
 
 def main():
@@ -286,7 +296,7 @@ def main():
                       // uses precisely the same terrain/body sweep at the unchanged speed.
                       return {distance:n,speed:start.speed,expected:n/start.speed};
                     }""")
-                    TIMINGS["整场世界对角理论值（含不可走看台）"] = math.hypot(2100, 1400) / 224
+                    TIMINGS["整场世界对角理论值（含不可走看台）"] = math.hypot(2100, 1400) / 116
                     TIMINGS["可走直线对角理论值"] = diagonal
                     # Real diagonal traversal using pointer joystick is tested below.
                     fresh(page)
@@ -335,7 +345,7 @@ def main():
                 {"x": 130 + 80 * 1840 / length, "y": 200 + 80 * 1260 / length, "id": 1}]})
             timing = phone.evaluate("""()=>{
               const a=__waterTest, start=a.snapshot().player;
-              for(let ticks=1;ticks<=1800;ticks++){
+              for(let ticks=1;ticks<=3960;ticks++){
                 a.step(1/120,false);
                 const p=a.snapshot().player;
                 if(Math.hypot(p.x-1970,p.y-1330)<2)
@@ -346,7 +356,7 @@ def main():
             }""")
             session.send("Input.dispatchTouchEvent", {"type": "touchEnd", "touchPoints": []})
             session.detach()
-            check("实测整场可走对角完成且不改移速", timing and timing["speed"] == 224, timing)
+            check("实测整场可走对角完成且使用B2移速", timing and timing["speed"] == 116, timing)
             TIMINGS["整场可走对角（真实触屏摇杆）"] = timing
             phone.set_viewport_size({"width": 390, "height": 844})
             phone.screenshot(path=SHOTS / "手机竖屏-390x844.png")

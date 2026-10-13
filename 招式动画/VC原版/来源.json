@@ -1,0 +1,77 @@
+[
+  {
+    "file": "explosion__ANIM_TAG_EXPLOSION.png",
+    "source": "./project",
+    "sha256": "ff94e7a07e758d642e67fccc9c9461e66072e17b309224e7f170337d7ae1de3a"
+  },
+  {
+    "file": "rocks__ANIM_TAG_ROCKS.png",
+    "source": "./project",
+    "sha256": "8344d85ff7f3809dc9b51a17d380ef5a2b830685aeb2810a66cfa1380a9a1fbc"
+  },
+  {
+    "file": "mist_cloud__ANIM_TAG_PURPLE_GAS_CLOUD.png",
+    "source": "./project",
+    "sha256": "09a0f2845be327f820349ee2feb5e64372bbff19d49b69e9388f0e8710a4ff58"
+  },
+  {
+    "file": "protect__ANIM_TAG_PROTECT.png",
+    "source": "./project",
+    "sha256": "39306fe7918a1b3949d4ea782131180164f68a3ca63c541c0be4e84ae67db442"
+  },
+  {
+    "file": "letter_z__ANIM_TAG_LETTER_Z.png",
+    "source": "./project",
+    "sha256": "6f4765304deeaa54529bd53712bf3a3f1848f353ce0676074e96e82e6a5eb138"
+  },
+  {
+    "file": "focus_energy__ANIM_TAG_FOCUS_ENERGY.png",
+    "source": "./project",
+    "sha256": "b17c8fc4a5e578487aebdd952e387ce068c6d970f7a548a0def9419602135fbf"
+  },
+  {
+    "file": "blue_star__ANIM_TAG_BLUE_STAR.png",
+    "source": "./project",
+    "sha256": "868e22db9f787805880f193058749509c7a3344d6829bf224ebe7e4ba19190d5"
+  },
+  {
+    "file": "sparkle_1__ANIM_TAG_SPARKLE_2.png",
+    "source": "./project",
+    "sha256": "16a0ee9ee14c69a3df3c101746f2957a2fff04db9d87ed953d475eddda720317"
+  },
+  {
+    "file": "orbs__ANIM_TAG_ORBS.png",
+    "source": "./project",
+    "sha256": "33618b641a599eb9302c75581c9eb5d9337fdf28d02e40ddef676e6ccc503973"
+  },
+  {
+    "file": "ice_spikes__ANIM_TAG_ICE_SPIKES.png",
+    "source": "./project",
+    "sha256": "f4ab94225c530cece2ecdcf275c7cfb3be6b79d5e4acc25b7c37ed13ec7b1b0d"
+  },
+  {
+    "file": "warm_rock__ANIM_TAG_WARM_ROCK.png",
+    "source": "./project",
+    "sha256": "dbc3bf2a5f0d7fab535e585a31f194c982a3839e38b3b8b5b2fc4124b80f4e91"
+  },
+  {
+    "file": "spark_0__ANIM_TAG_SPARK.png",
+    "source": "./project",
+    "sha256": "f85b6be7e4d328f7901be9b5c1331dc8bbca7d5100b13bc4a1d1ff32c092ea22"
+  },
+  {
+    "file": "small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "source": "./project",
+    "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599"
+  },
+  {
+    "file": "gold_ring__ANIM_TAG_GOLD_RING.png",
+    "source": "./project",
+    "sha256": "f159e6de4adfac37c4b5a6c3b864f6ff30906504dd035833fed5e97072c039aa"
+  },
+  {
+    "file": "small_bubbles__ANIM_TAG_SMALL_BUBBLES.png",
+    "source": "./project",
+    "sha256": "2829fcea0ffa781951e5a4272dc2916fa0c370248b5e58a69c65471c16763a0c"
+  }
+]

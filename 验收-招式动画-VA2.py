@@ -29,6 +29,8 @@ failure = None
 def check(name, ok, detail=None):
     checks.append({'name': name, 'ok': bool(ok), 'detail': detail})
     if not ok:
+        print('FAIL ' + name + ' ' + json.dumps(detail, ensure_ascii=False), flush=True)
+    if not ok:
         print('FAIL', name, str(detail)[:250], flush=True)
 
 
@@ -151,7 +153,7 @@ def audit_contact(mid, direction):
     check(tag+' visible head on hit point <=6px', ribbon['age'] == 0 and math.hypot(
         ribbon['front']['x']-burst['x'], ribbon['front']['y']-burst['y']) <= 6)
     check(tag+' impact >=0.8 target H', burst['size'] >= hit['enemy']['body']['visibleSize'][1]*.8)
-    check(tag+' actual impact star drawn', page.evaluate('''b=>window.va2Draws.some(
+    check(tag+' actual hollow contact ring drawn', page.evaluate('''b=>window.va2Draws.some(
       d=>d.key===b.key&&Math.hypot(d.x-b.x,d.y-b.y)<.01&&d.time===b.time)''', burst))
     samples.append({'id': mid, 'direction': direction, 'gap': gap,
                     'damage': hp-hit['enemy']['hp'], 'contact': burst, 'ribbon': ribbon})
@@ -180,7 +182,7 @@ def raster(mid, scene):
         Image.open(io.BytesIO(base64.b64decode(raw.split(',')[1]))).save(
             SHOTS / f'像素-{scene}-{mid}-{key}.png')
     tag = f'{scene}/{mid}'
-    check(tag+' actual opaque pixels', result['count'] > 20, result)
+    check(tag+' actual opaque pixels', result['count'] >= (4 if mid == 'poisonsting' else 20), result)
     check(tag+' precontact full HP', result['hp'] == initial['enemy']['hp'])
     check(tag+' actual opaque leading edge never ahead of head',
           result['frontOverrun'] <= result['pixelSize'], result['frontOverrun'])
@@ -189,10 +191,19 @@ def raster(mid, scene):
         ratio = .4 if mid in ['hydropump', 'solarbeam', 'hyperbeam'] else .25
         check(tag+' 8sections minimum opaque width', result['minimumBeamWidth'] >= max(10, result['height']*ratio), result)
         check(tag+' core luma >=230', result['centerLuma'] >= 230, result)
+    elif mid == 'poisonsting':
+        h, pixel = result['height'], result['pixelSize']
+        check(tag+' needle length .30-.40H, width <=.08H',
+              .30*h-pixel <= result['opaqueLength'] <= .40*h+pixel
+              and result['opaqueDiameter'] <= .08*h+pixel, result)
     else:
-        check(tag+' opaque contour diameter >=max(14,.30H)', result['opaqueDiameter'] >= max(14,result['height']*.3),result)
-    check(tag+' all nonwhite attribute pixels S>=.55 and >=30%',
-          result['saturation'] >= .55 and result['colorFraction'] >= .3, result)
+        h, pixel = result['height'], result['pixelSize']
+        check(tag+' small projectile maximum extent .25-.45H',
+              .25*h-pixel <= result['maxDimension'] <= .45*h+pixel, result)
+    # FX1's <=.08H needle has a white contour; preserve S>=.55, not the old fat-rod fill.
+    minimum_color = .10 if mid == 'poisonsting' else .30
+    check(tag+f' nonwhite attribute pixels S>=.55 and >={minimum_color:.0%}',
+          result['saturation'] >= .55 and result['colorFraction'] >= minimum_color, result)
     check(tag+' same-mask background luma difference >=60', result['contrast'] >= 60, result)
     step(1/120)
     check(tag+' next tick contact and HP', snap()['enemy']['hp'] < initial['enemy']['hp']
@@ -237,11 +248,13 @@ try:
         old_page.goto(URL+'/?test=1&anim=old');ready(old_page)
         old_page.evaluate(crop_function)
         page.evaluate('''()=>{
-          window.va2Draws=[];const proto=window.PoightMoveAnimations.prototype,draw=proto.sprite;
-          proto.sprite=function(ctx,key,x,y,size,...rest){
-            window.va2Draws.push({key,x,y,size,time:this.time});
+          // P6 replaced the solid star texture with drawBurst's hollow contact ring.
+          // Observe the real dispatch, preserving contact identity/coordinates/tick checks.
+          window.va2Draws=[];const proto=window.PoightMoveAnimations.prototype,draw=proto.drawBurst;
+          proto.drawBurst=function(ctx,b,...rest){
+            window.va2Draws.push({key:b.key,x:b.x,y:b.y,size:b.size,time:this.time});
             window.va2Draws=window.va2Draws.slice(-1500);
-            return draw.call(this,ctx,key,x,y,size,...rest);
+            return draw.call(this,ctx,b,...rest);
           };
         }''')
         overview = Image.new('RGB',(600,324*len(CASTERS)),'#223540')

@@ -42,3 +42,22 @@ vendor/showdown/fx/
 素材/绿宝石场景/场景目录.json
 素材/绿宝石场景/地图索引.json
 素材/绿宝石场景/来源核验.json
+# New third-party downloads and restored lossless source-data copies
+素材/音乐/源/*.mp3
+素材/音乐/源/*.ogg
+素材/音乐/源/*.wav
+招式动画/VA1素材/**/*.png
+招式动画/VB2原版/*.png
+招式动画/VC原版/*.png
+/招式动画/招式动画.json
+/招式特效/主角锚点.json
+/数值资料/体型校准/映射记录.json
+/素材/立绘/图集.json
+/素材/立绘/来源.json
+/tests/B2区间.json
+/tests/R200-B2区间.json
+/招式动画/特效映射.json
+/招式特效/确认名单.json
+/招式特效/第2批/图集记录.json
+/数值资料/体型校准/来源.json
+/素材/绿宝石场景/被全图区块替代.json

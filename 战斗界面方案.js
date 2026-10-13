@@ -79,6 +79,7 @@ window.PoightBattleHUD = class {
   setMenu(open) {
     this.menu.hidden = !open;
     this.menuButton.setAttribute("aria-expanded", String(open));
+    this.onMenuChange?.(open);
   }
   sync(player, enemy) {
     if (!this.cards) return;
@@ -105,6 +106,8 @@ window.PoightBattleHUD = class {
     return { scale, x: 0, y: 0 };
   }
   staminaBox() {
+    if (document.documentElement.dataset.gba)
+      return document.querySelector("#gbaResources .stamina")?.getBoundingClientRect().toJSON();
     const selector = this.mode === "1" ? ".player .battle-sp" : ".player .sp-arc";
     return document.querySelector(selector)?.getBoundingClientRect().toJSON() || null;
   }
@@ -156,18 +159,40 @@ window.PoightBattleHUD = class {
   }
   drawArenaMap(ctx, ground, player, enemy, camera, width, height, world, screen, hidden,
     recording = false) {
-    const small = screen.height < 500, pixels = small ? 90 : 144,
-      unit = width / screen.width, w = pixels * unit, h = w * 2 / 3,
-      x = width - w - 12 * unit;
+    const gba = !recording && document.documentElement.dataset.gba,
+      touch = gba && document.documentElement.dataset.touchGame === "true",
+      compact = touch && document.documentElement.dataset.compact === "true",
+      small = screen.height < 500 || touch, pixels = compact ? 54 : small ? 90 : 144,
+      unit = width / screen.width, w = pixels * unit, h = w * 2 / 3;
+    let x = width - w - 12 * unit;
     // Sit just above the right-side skills, including touch/legacy layouts.
     let bottom = screen.height - 12;
     // Recording pixels must not depend on CSS scaling or responsive DOM layout.
-    for (const button of recording ? [] : document.querySelectorAll(".skill, #dashButton, #jumpButton")) {
+    for (const button of recording ? [] : document.querySelectorAll(".skill, #dashButton, #jumpButton, #gbaKeys")) {
       const r = button.getBoundingClientRect();
       if (r.width && r.right > screen.right - pixels - 24)
         bottom = Math.min(bottom, r.top - screen.top - 10);
     }
-    const y = bottom * unit - h;
+    let y = bottom * unit - h;
+    if (gba) {
+      const rail = document.getElementById("battleRail").getBoundingClientRect();
+      if (touch) {
+        const menu = document.getElementById("battleMenuButton").getBoundingClientRect();
+        x = (menu.left - screen.left) * unit;
+        y = (rail.bottom - screen.top + 14) * unit;
+        // Portrait places the map below the menu, away from the center timer.
+        if (screen.height > screen.width) y = (menu.bottom - screen.top + 12) * unit;
+        if (compact) { x = (screen.width / 2 - 64) * unit; y = (rail.bottom - screen.top + 12) * unit; }
+      } else y = Math.max((rail.bottom - screen.top + 70) * unit, y);
+      y = Math.max(4 * unit, Math.min(height - h - 4 * unit, y));
+    }
+    // UI3 comparison B reserves the bottom-right for the arc; C leaves the map there.
+    if (!recording && document.documentElement.dataset.ui3 === "B") {
+      const cpu = document.querySelector(".battle-card.enemy").getBoundingClientRect();
+      x = (cpu.right - screen.left - pixels) * unit;
+      const menu = document.getElementById("battleMenuButton").getBoundingClientRect();
+      y = (Math.max(cpu.bottom + 24, menu.bottom + 12) - screen.top) * unit;
+    }
     this.minimap = { x: x / unit, y: y / unit, width: pixels, height: h / unit };
     ctx.save();
     ctx.fillStyle = "#142232e8";
@@ -194,7 +219,7 @@ window.PoightBattleHUD = class {
   drawHint(ctx, p, h, move) {
     if (this.mode === "0" || !this.debug || !move) return;
     ctx.save();
-    ctx.font = `bold ${10 / h.sy}px system-ui`;
+    ctx.font = `bold ${(document.documentElement.dataset.gba ? 12 : 10) / h.sy}px system-ui`;
     ctx.textAlign = "center";
     ctx.textBaseline = "bottom";
     ctx.strokeStyle = "#142232";

@@ -412,6 +412,18 @@
       "baseline": "pinned upstream; output checked against source Git blob"
     },
     {
+      "path": "素材/原版数据/下载/spark_0.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/spark_0.png",
+      "sha256": "91c7188c44ac12ed1ea131f9886bd644baf6229e0b8cff734a6e25b3e681620e",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/spark.pal",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/spark.pal",
+      "sha256": "403a3ee73cde7f1519f3a390cc543acf561c70e1cb50ecd6594fbc3b7e72dc61",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
       "path": "素材/原版数据/下载/air_wave_2.png",
       "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/air_wave_2.png",
       "sha256": "2e8e7582fe6c55f49a92169bb2c12277e86619ba6b7080f1592069925217df4e",
@@ -460,15 +472,15 @@
       "baseline": "pinned upstream; output checked against source Git blob"
     },
     {
-      "path": "素材/原版数据/下载/ice_crystals.pal",
-      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_crystals.pal",
-      "sha256": "4876a48eeb7e0bf033a3c58bc45f5a37111f218b91b6085b791593e11f873a24",
-      "baseline": "pinned upstream; output checked against source Git blob"
-    },
-    {
       "path": "素材/原版数据/下载/ice_spikes.png",
       "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_spikes.png",
       "sha256": "26dda6bf91d657bc27964e372fa3a9468f6a77aef821ee17b8738ca17a15e841",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
+      "path": "素材/原版数据/下载/ice_crystals.pal",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/ice_crystals.pal",
+      "sha256": "4876a48eeb7e0bf033a3c58bc45f5a37111f218b91b6085b791593e11f873a24",
       "baseline": "pinned upstream; output checked against source Git blob"
     },
     {
@@ -598,6 +610,12 @@
       "baseline": "pinned upstream; output checked against source Git blob"
     },
     {
+      "path": "素材/原版数据/下载/small_bubbles.png",
+      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/small_bubbles.png",
+      "sha256": "26d441082a5bc09ac38b6d37813df5a012464f402dc604d5276d38e8d5f2dfe2",
+      "baseline": "pinned upstream; output checked against source Git blob"
+    },
+    {
       "path": "素材/原版数据/下载/flying_dirt.png",
       "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/flying_dirt.png",
       "sha256": "f80c97253031f42ad734b0da132cd3cb5cd883e2689dd0172bf60113c447ddf2",
@@ -619,24 +637,6 @@
       "path": "素材/原版数据/下载/shock_3.png",
       "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/shock_3.png",
       "sha256": "0b2f821cfd692cd10567fe6ec8a6af3f2158f2e1881dafbee090cccb1a5b21ab",
-      "baseline": "pinned upstream; output checked against source Git blob"
-    },
-    {
-      "path": "素材/原版数据/下载/small_bubbles.png",
-      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/small_bubbles.png",
-      "sha256": "26d441082a5bc09ac38b6d37813df5a012464f402dc604d5276d38e8d5f2dfe2",
-      "baseline": "pinned upstream; output checked against source Git blob"
-    },
-    {
-      "path": "素材/原版数据/下载/spark_0.png",
-      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/spark_0.png",
-      "sha256": "91c7188c44ac12ed1ea131f9886bd644baf6229e0b8cff734a6e25b3e681620e",
-      "baseline": "pinned upstream; output checked against source Git blob"
-    },
-    {
-      "path": "素材/原版数据/下载/spark.pal",
-      "url": "https://raw.githubusercontent.com/pret/pokeemerald/731ad5bfd6e6f265508d0efcca0ba42f9dcf5881/graphics/battle_anims/sprites/spark.pal",
-      "sha256": "403a3ee73cde7f1519f3a390cc543acf561c70e1cb50ecd6594fbc3b7e72dc61",
       "baseline": "pinned upstream; output checked against source Git blob"
     },
     {
@@ -760,6 +760,138 @@
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
+      "path": "素材/立绘/0010-caterpie.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/caterpie.png",
+      "sha256": "96edb83a53dc8a7d0d1d904e848160e717d6940cb96a6133d3de8b7daacc45ca",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0010-caterpie.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/caterpie.gif",
+      "sha256": "8e9324adb18a48048bba4314d77ccef4a044e3139bc45caebf13d3def67aba1a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0011-metapod.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/metapod.png",
+      "sha256": "cdcb699aded828a37f3476232fb75d6999742779b9674968139d6cf909dff6fe",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0011-metapod.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/metapod.gif",
+      "sha256": "85dd7078542ab60aec3122e2b0dfb885f2526e1e3804d47cf4493583072b8889",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0012-butterfree.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/butterfree.png",
+      "sha256": "6276f841fc85bd62479ad3f06c39383131c1ee1dd434fea11899916edeced018",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0012-butterfree.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/butterfree.gif",
+      "sha256": "46c977409223ca79acc99fcfb1498b6b12bd34551f87555066298b3a968e06d7",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0013-weedle.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/weedle.png",
+      "sha256": "eec3a16c274cb514a53153c918c4569b0c7d4d33fcae4ab89705b1bc8c667591",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0013-weedle.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/weedle.gif",
+      "sha256": "13fb4215f083b771b6aa46d2751302f347e6ca262b570e2487a66a3d69e916d0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0014-kakuna.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/kakuna.png",
+      "sha256": "ee2500325fff06cca5f1aea50a4cf30492324470cc0b572163cb2d8402bdbc3f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0014-kakuna.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/kakuna.gif",
+      "sha256": "1e22925e3010955c2dd61315756281da7dfc58100495c4e0a4ff2efcb613f389",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0015-beedrill.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/beedrill.png",
+      "sha256": "6d7a3dacb6bda83e2c28ce7aef6b6ee56505a9cdff1d83b37c92a60823416044",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0015-beedrill.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/beedrill.gif",
+      "sha256": "f4b122e7f493ced1f73da4aea8bc1358be05a051923d6e39b001fd3d6fce0720",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0016-pidgey.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/pidgey.png",
+      "sha256": "699769086226680be0cd181445765fb4fff5b3bc83aba90d0644f14331fff14e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0016-pidgey.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/pidgey.gif",
+      "sha256": "34f48649467d0557d10945f1429084d5b4df2f8f48a971d4381db0de5182c121",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0017-pidgeotto.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/pidgeotto.png",
+      "sha256": "e7bbe1fb86b58654a3d00bcea2a90c5d8cf966960298290defb6812676388447",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0017-pidgeotto.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/pidgeotto.gif",
+      "sha256": "5b8bad68c74717717c9776a6d4772b0581cd081f8f7acbcd78a21762ea9c4833",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0018-pidgeot.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/pidgeot.png",
+      "sha256": "c8e8bab585192d2d87abf880fce3e4393ae4ce6b32c1a787defa3301ea65b069",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0018-pidgeot.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/pidgeot.gif",
+      "sha256": "003ca892ac72399c26f9333983a6873de50869fc2626995366caf470fa737343",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0019-rattata.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/rattata.png",
+      "sha256": "eed275a1d73e4db119b032fc1be4b0e1b7f588597911a44f4a8ccef9245c4252",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0019-rattata.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/rattata.gif",
+      "sha256": "75fb59f79cfb97fdeff737a672bdd3ed157bb667bf69ab02b3d1450b2bfc70df",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0020-raticate.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/raticate.png",
+      "sha256": "1df143e8a2bf0bd0bbd93096d5c6f6dda5c01e4e1686c6dd0f0a91dda469ccbf",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0020-raticate.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/raticate.gif",
+      "sha256": "0c938e3019eece5f45a6518761b1d4f905a94b352e50cd8044a1c5f1ca5c83ab",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
       "path": "素材/立绘/0021-spearow.png",
       "url": "https://play.pokemonshowdown.com/sprites/gen5/spearow.png",
       "sha256": "5f49d8edb12d88cd59deb385c5240cb77cc0149490604ede62ee3b0211a4e5da",
@@ -769,6 +901,42 @@
       "path": "素材/立绘/0021-spearow.gif",
       "url": "https://play.pokemonshowdown.com/sprites/gen5ani/spearow.gif",
       "sha256": "5ea4dba69e64a4f6266839d15001c9795c3dcabdec3aed4c01eb298b25e7af66",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0022-fearow.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/fearow.png",
+      "sha256": "e020f6a66dea542d9190e1e59dfd4c7604ee8d4cd14f3b8ee792b11f24ad026e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0022-fearow.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/fearow.gif",
+      "sha256": "365d64f8842468dd6b3bfb829d3458f5cbc6e8dd24192e675a62b2ad822e0784",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0023-ekans.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/ekans.png",
+      "sha256": "0ef3a72bb9c760370fe1044b157c4abe27125e5f56dccf9f66729dd670088df2",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0023-ekans.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/ekans.gif",
+      "sha256": "f8eaeabe9e4cdc65bd1b5eeec6d107a5e8c73e56a1f7c5964d092b7e76816f1f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0024-arbok.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/arbok.png",
+      "sha256": "95deb64e37c4f94e968a8c31f6e458ac8667649e4ff0c88578c3d4de478fcd19",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0024-arbok.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/arbok.gif",
+      "sha256": "85eb9e9727eed707dd8869365e9fba4b874306b8f1d4a4f7ec561ccaeb2d20f6",
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
@@ -796,6 +964,330 @@
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
+      "path": "素材/立绘/0027-sandshrew.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/sandshrew.png",
+      "sha256": "5c2a869be77d670042ce0c664db767007ed6ddaf27b103976012218e6d25ba7c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0027-sandshrew.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/sandshrew.gif",
+      "sha256": "c748749dd2e8f5b47d448289519080d324e293cb3bd345d84662c21c8b910678",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0028-sandslash.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/sandslash.png",
+      "sha256": "0629e7fabe9e80dc0e344939084a36c45863dd69f7663bdafdb40d073362966c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0028-sandslash.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/sandslash.gif",
+      "sha256": "c62ed83ca05c018f7d815c61f9fa821720475150b98eca861a0460392df81b9a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0029-nidoranf.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/nidoranf.png",
+      "sha256": "e9f9065629cc79803675ae25846d523019bc6f1b854b1033e1b1be774bad298f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0029-nidoranf.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/nidoranf.gif",
+      "sha256": "5e5e4e598569184a172159209d85c7ad49b5e3d155b8309ac1847c70311b64e9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0030-nidorina.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/nidorina.png",
+      "sha256": "517cf494df0fece4db0580473148efd4f1833748005e83c3105009d68aba6970",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0030-nidorina.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/nidorina.gif",
+      "sha256": "108973032cd8f12e5386064379d3a7dcb8b552dc93873e738acd81147a631510",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0031-nidoqueen.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/nidoqueen.png",
+      "sha256": "25b16e79a595543688b813b95f365bdc7ed106d2aa769185fbefa4d0e32cc55c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0031-nidoqueen.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/nidoqueen.gif",
+      "sha256": "fc37df4443dbd6a62ca6e99db823c1cb5c17db97712803ab4f9bf16c3c9cf472",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0032-nidoranm.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/nidoranm.png",
+      "sha256": "3c0cc5dfdd062b77dd5f9e5b1a3f62bef7dbf21fd760a2db2cd0de7c737d11ca",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0032-nidoranm.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/nidoranm.gif",
+      "sha256": "8e9130f77b2f0a17403ce5ea4be6bc919f50591c7a584ddeb8a0427fd64e32cc",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0033-nidorino.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/nidorino.png",
+      "sha256": "1084eb8bca94cb64251e23e4203009f76b54ffbbe8f1cdb4d47ae57144a5d173",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0033-nidorino.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/nidorino.gif",
+      "sha256": "ea319706b266b0c9c5f5dd726b32a280f93b1a83bc7434c1fde6e10d7632d207",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0034-nidoking.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/nidoking.png",
+      "sha256": "fa3c786194d18eba83985541c1d7aea07531b4c01b063b2bb1573971623e02e9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0034-nidoking.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/nidoking.gif",
+      "sha256": "1e7dcd57f0fd435e6b1fa8f0e6bf684a24e32b2f4c5153ab875693256cdddfbb",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0035-clefairy.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/clefairy.png",
+      "sha256": "716941a3bf948058c890466cf5ae993fae03d731390d0abae920d389b600f9de",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0035-clefairy.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/clefairy.gif",
+      "sha256": "43598c1a542f920d65263bf4c753d772b6d42939ef0e0619476fa4464bbef4a3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0036-clefable.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/clefable.png",
+      "sha256": "987d89ea8837d537b0b42be096c273c4da6eacc8353d9d2f31b2afb2ac4b286c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0036-clefable.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/clefable.gif",
+      "sha256": "46e907f4dd1867011fd1f0a84cd7ed70abe4cb91433da968edf3bc5364301b25",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0037-vulpix.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/vulpix.png",
+      "sha256": "f69a695b41a4dd1a3306bcb2bdd144d92b781ee33c2a5757226f8801af4aed8c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0037-vulpix.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/vulpix.gif",
+      "sha256": "c2af363a404b2b060bbeb81adda1778753e42f74c4b0c23d7e516707feb18fd6",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0038-ninetales.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/ninetales.png",
+      "sha256": "f5c0f170ea279b86cdaaaca0ec451f92eda8ef184ff2f9f899e764f6b7ada428",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0038-ninetales.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/ninetales.gif",
+      "sha256": "832af4a02403036449cedce05c683583ef74b6e13a43553597e21017a302f948",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0039-jigglypuff.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/jigglypuff.png",
+      "sha256": "358f61373ffec783ac334087c3ca399fec6ce6ae09735e1b4fa68ab9367cad92",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0039-jigglypuff.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/jigglypuff.gif",
+      "sha256": "95a0e9cee17315933e685fd0bc2be52cfe7ad90cfafa6ac6c7c77d49c28187cf",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0040-wigglytuff.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/wigglytuff.png",
+      "sha256": "c0337947ae7782b424afd15bfae9690e51284a7f8e0d09c6a9fa14465cb7643a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0040-wigglytuff.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/wigglytuff.gif",
+      "sha256": "31ecad7bfae70357a8d4e53cb26c2c55c4166a31a286e6dd2b1ff1fac8440cc8",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0041-zubat.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/zubat.png",
+      "sha256": "acd868d2979d87f0fc01f436258f2984845cb24c1ab9f23daac01c9c29eb2bb9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0041-zubat.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/zubat.gif",
+      "sha256": "af807eca9843ef5fadc5705d7b3dfd064746c35384052dcfcafed5d8b4306620",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0042-golbat.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/golbat.png",
+      "sha256": "da9c3f5add5763d2a7c390000cd00b73dc5f4c389cf73d09e58ba8e7954c798b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0042-golbat.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/golbat.gif",
+      "sha256": "fafa341e4f7269426006e94e31f2cdbb89664a229b330a137d6d3aaf6c9726af",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0043-oddish.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/oddish.png",
+      "sha256": "df37f6b24420274d641805296dbd29fa0eb0ed4ac431cbd7bae77c4773239007",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0043-oddish.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/oddish.gif",
+      "sha256": "0efa0614541b3e0af0f9c7928867e559945b6ff5c5cec63a86652dc7cacae3ad",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0044-gloom.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/gloom.png",
+      "sha256": "269bcea93fbb6faea6d4a37c95ff413d0dc31359515d1d54437733a1d1ba475d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0044-gloom.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/gloom.gif",
+      "sha256": "d46cb7b4ded42a1aea5e4b94048e7f42f301ef9f91f873cbbfabe06235f07ce9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0045-vileplume.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/vileplume.png",
+      "sha256": "a4da246602799aa5d2a4569b2f0b06ce106956f30710ba534046772a0ab94642",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0045-vileplume.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/vileplume.gif",
+      "sha256": "718c55263dfbf2fb64696646248b417e9d0949d82af137e49e5e79bc4400fb0d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0046-paras.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/paras.png",
+      "sha256": "2b1cc07de7f949fd16f1217783c2208cf0a6927b611d8862e15f9493222d5e04",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0046-paras.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/paras.gif",
+      "sha256": "8c973f9a57ef3bf5bda9ac9c4df43a9228f52abd6f80ac29c6c6d01df74424a5",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0047-parasect.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/parasect.png",
+      "sha256": "7c36ad69272d0c7e13acadb97f9d484cfdeb615daea2e8ca8505c2d393a32f70",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0047-parasect.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/parasect.gif",
+      "sha256": "5f89636e600d548187fa949c9788fb73bb1ef59449a7efede931dd69d27ed8ed",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0048-venonat.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/venonat.png",
+      "sha256": "dc64b5f94993a73ffa72ee7d9b1d5667a0bc6d6ba51a61628f7786e2eabae93e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0048-venonat.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/venonat.gif",
+      "sha256": "5a47271a91e6eb4d10170ea5bed12a6822b1b834d21d206d0ba25a253ff3680b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0049-venomoth.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/venomoth.png",
+      "sha256": "c39f50603c76c885143b65bc3a57bed8edec4335892e0868694760899fa7ba41",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0049-venomoth.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/venomoth.gif",
+      "sha256": "46cff287d6db2b2eec927fcfcc814c2f38a3e74e4f7ce2004e86628421244bdf",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0050-diglett.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/diglett.png",
+      "sha256": "fa6bbe5a941176a8ff22922fc965b0e2dcd1cc215090bff6522ebc026adc9664",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0050-diglett.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/diglett.gif",
+      "sha256": "332caa5b6f3ffdac791e4d7211a00baabaab6a610420a481024e40652e5392e5",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0051-dugtrio.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/dugtrio.png",
+      "sha256": "18a8f8c60e64800ac4952b355d2f5efb58f1f6bdb629285542e4b5282b10c1df",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0051-dugtrio.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/dugtrio.gif",
+      "sha256": "5e724ce1d5afcabc9c533c3f77d30f0c1fcc5838718ce1c3c1951c5ec4447b33",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0052-meowth.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/meowth.png",
+      "sha256": "a475a894e6ed5b43b93a57ffa459475f14e2c1773f78ab8e29c7474751aabf13",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0052-meowth.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/meowth.gif",
+      "sha256": "00bc917ce684f9d13ce887fcbff66646dc63d10495ee45201a0ffbd385083da1",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0053-persian.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/persian.png",
+      "sha256": "9865b9512b462c6fe2d13ee5407b013409cb3a682ec681617500ae4763e188c8",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0053-persian.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/persian.gif",
+      "sha256": "2226c68bf5e713226cfb5880e5002dc4a51a0d74d4e9ea0ec61d4be04fad225f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
       "path": "素材/立绘/0054-psyduck.png",
       "url": "https://play.pokemonshowdown.com/sprites/gen5/psyduck.png",
       "sha256": "bcacd8841fbb3099dafdc73c747e3cfa3e24bfb91c66662ee100370c8f77cd32",
@@ -808,6 +1300,102 @@
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
+      "path": "素材/立绘/0055-golduck.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/golduck.png",
+      "sha256": "e6226b398e38f2402059ba39f7910318d5a395ee45befbc10d8f56c7ea63ce1e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0055-golduck.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/golduck.gif",
+      "sha256": "213e3cae1f1fd009f483ab0ccc043c6cc5ddc4725b82dcebeb361452215abc55",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0056-mankey.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/mankey.png",
+      "sha256": "1d4880173bd6a208973001fb38d3723e8733435577c8fd32153b4c0608ebc866",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0056-mankey.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/mankey.gif",
+      "sha256": "33c6b8f73bec0cef945d1af8dd96d44a159a32445226def778cea71f797f3e17",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0057-primeape.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/primeape.png",
+      "sha256": "7b94864b111401afae18d40dd1687b7d73b25d073f3905dab61f97090e9e816a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0057-primeape.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/primeape.gif",
+      "sha256": "c99ab1dde635ab38ea65b4bb422cb13a11e4be6bcaff158f18a9239de6697ded",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0058-growlithe.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/growlithe.png",
+      "sha256": "e341f5f798a85df7f7dad3a3f67b0342e1fd636106c2f28c549eced38d903273",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0058-growlithe.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/growlithe.gif",
+      "sha256": "83c132fd7437c637e598199e1a900380cc8bb3b00fe8a63ddaff1db4dbdfac8e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0059-arcanine.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/arcanine.png",
+      "sha256": "cc68bb91296326489be2ab83642c22b2f89e43f60f3ea96d48b3fd69562f0211",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0059-arcanine.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/arcanine.gif",
+      "sha256": "9b1629a6bff84554f502fb8b6c54beb6e091f7a43517770cd725d5c7022b3790",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0060-poliwag.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/poliwag.png",
+      "sha256": "ebb2844247b8962f52f6d6fdd660009318b05423d075e96333ac347fe859398f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0060-poliwag.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/poliwag.gif",
+      "sha256": "13408eaf4edd00bd83d962b46a9037a9c46d0792cfc79a6d9d0802e89db7504c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0061-poliwhirl.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/poliwhirl.png",
+      "sha256": "14f254e3d1abdb088fb19fc4f92821945f2786eb277ad5bab1b321c3a1f5299d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0061-poliwhirl.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/poliwhirl.gif",
+      "sha256": "1635ab05b441abd392630bc935abb5ef7836883242c47a736a72ff4d036746be",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0062-poliwrath.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/poliwrath.png",
+      "sha256": "ff1ff4edfe45c507d75e6e46b4c5ec5160e8feb4ef0dfddc4a8e5acd589f231c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0062-poliwrath.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/poliwrath.gif",
+      "sha256": "5c169cf1e2def77fd51a0fdea045338142c9324eba7d7afa0aba1eba38344325",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
       "path": "素材/立绘/0063-abra.png",
       "url": "https://play.pokemonshowdown.com/sprites/gen5/abra.png",
       "sha256": "ed1b057696011786a4d1bc601154216b78f41ddd1295ffb622520110a5615f3f",
@@ -817,6 +1405,18 @@
       "path": "素材/立绘/0063-abra.gif",
       "url": "https://play.pokemonshowdown.com/sprites/gen5ani/abra.gif",
       "sha256": "035b1db2b9e7be1852fe6b3abd4aa8b7b82888def4bf009e80e59d6e25b3550f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0064-kadabra.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/kadabra.png",
+      "sha256": "6928698d5b77f417e3d95228c98886ae929a308bea9854e50052e72b214a9b5e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0064-kadabra.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/kadabra.gif",
+      "sha256": "ddfc43cabb5e1d7fa6e4c3784978d4f58eee278572d32b033fc38fa8ccc37df9",
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
@@ -868,6 +1468,282 @@
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
+      "path": "素材/立绘/0069-bellsprout.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/bellsprout.png",
+      "sha256": "b8715871c1a003483447f1b5492deb727a0c1cbdce0115c358845f6848d3255e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0069-bellsprout.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/bellsprout.gif",
+      "sha256": "9d254ddc809e674987f84e43e9f2c6d06c03cdb1ae091a01b934c2db231e3771",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0070-weepinbell.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/weepinbell.png",
+      "sha256": "c42eb53e0ab4bb9d750ceb103ed120623f61e50490f0b15896a4142066fbef39",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0070-weepinbell.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/weepinbell.gif",
+      "sha256": "7d2edcea5fe6d9b946f59e27e53b2b68f63585ad23e491e4d7110d315449357a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0071-victreebel.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/victreebel.png",
+      "sha256": "79b36ae0cabfe0e303e03a3f3a04b5b964cc758fb37ebd724a0ff39dbfa87beb",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0071-victreebel.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/victreebel.gif",
+      "sha256": "da6b8f87297772bfe5910601ce6cb6c539857806d49d98008cc82202b692131f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0072-tentacool.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/tentacool.png",
+      "sha256": "403073f106ed1781746f328cd29e6873af549f0a66f0ad4c0c58af0784a222c0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0072-tentacool.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/tentacool.gif",
+      "sha256": "e895f8a8b7d999f111b4ec49891f51ac520693ee4b17d3ab57324f1d97507c17",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0073-tentacruel.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/tentacruel.png",
+      "sha256": "b255224d3e2bdb2af7b6eb44c52aa5703ed2971228366f528466ec1edfd8c070",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0073-tentacruel.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/tentacruel.gif",
+      "sha256": "b1766337cbf1d65ad5a458155393f9dad5f4f70ef6072b5718d1945abc8af8ea",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0074-geodude.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/geodude.png",
+      "sha256": "56e8448ff84ade7f8ff981631a95449b1520ed70f49ad93fe280607c368cf127",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0074-geodude.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/geodude.gif",
+      "sha256": "983075713e1cc5ca25f9ab88a6098601f497d7821613fe30598cd8bd6dfd9cd4",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0075-graveler.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/graveler.png",
+      "sha256": "0aec4632231bdd1b25bdeca52e32a9ddd467b6cd556af90c96c31e923f8e19d7",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0075-graveler.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/graveler.gif",
+      "sha256": "217f378f1d881f2725b8fa0894e94793e82edabf50108938d874c1d25a5c27bf",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0076-golem.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/golem.png",
+      "sha256": "92fb695f1d7c858c974fbf738a6c9143acfd721e9c00e9ac7654ae45b9404a0b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0076-golem.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/golem.gif",
+      "sha256": "59d37cec5ad8066ae9433866462b18d8f667c4ead6d6175e67bf120ddbb2cdc2",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0077-ponyta.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/ponyta.png",
+      "sha256": "ded31931e6fe069497fde7575a8b1dd4cf1a0a92c8d571758065c74a063d2764",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0077-ponyta.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/ponyta.gif",
+      "sha256": "f1ce91e2c12e33057e19351d14845d2547a9482a1efdd9c9c70f14d39827cff9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0078-rapidash.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/rapidash.png",
+      "sha256": "e66110608455cfc0d66deaf3c662c3265c46de306c526f5dc689aa9cd49428ea",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0078-rapidash.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/rapidash.gif",
+      "sha256": "8d63f996791ee74a219be53a561555014302c05f26204374d0dc3098c99af334",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0079-slowpoke.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/slowpoke.png",
+      "sha256": "8cc0abe060f845d9e85c9b384763f74ee1049f8dd50ae77488f0a817f8e23533",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0079-slowpoke.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/slowpoke.gif",
+      "sha256": "f71a54ca0c5893d40786fb8918999ed75d6cb2c34e962d31ad4bbc4bf7e66f39",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0080-slowbro.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/slowbro.png",
+      "sha256": "a86b2774b63b3dc111d1b7f89066cc81035c52ee9ea264a9fe814923d66e46ed",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0080-slowbro.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/slowbro.gif",
+      "sha256": "89419d24e953144cc186ee3fd612bd6353aa22fac59386f4019f423efed04e9d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0081-magnemite.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/magnemite.png",
+      "sha256": "8e80dad4cdd9498b26fc4156bbe7319d7a5953f9da56d06b63b91cd6ccb3c805",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0081-magnemite.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/magnemite.gif",
+      "sha256": "f0f664958bb589c82530a06fe4bcf9abbb7959ed91743489a14de9c9f7e5c347",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0082-magneton.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/magneton.png",
+      "sha256": "99af281506579d0a7713e488b20d7600c359519c3647b49ed5a734671ebc23b9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0082-magneton.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/magneton.gif",
+      "sha256": "b572001ad6cd36fd67d763f06473e27ca3dc6e2b8d29e702377f218efa25497e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0083-farfetchd.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/farfetchd.png",
+      "sha256": "6a9deb30bdfed80eb5a172afb04764e434ae719ed99ad1f9bbc794286a658d73",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0083-farfetchd.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/farfetchd.gif",
+      "sha256": "8a7a9ec11eff83b219752b39330712bb081ef71c0333a2cf26f57b4e0c5af252",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0084-doduo.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/doduo.png",
+      "sha256": "bf5fceb3add03fd4b9f0861ffd6a90d6d0e78cb58bc5e7871bbd942e7a8bb548",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0084-doduo.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/doduo.gif",
+      "sha256": "a35c4dd45596356a59fabf110e3d65cd8c00c548787b3cfefaf4d2aff565e641",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0085-dodrio.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/dodrio.png",
+      "sha256": "42624c75dcf57ba7ed77ec99aa97df19b6697137908df906e4be8238acfce343",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0085-dodrio.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/dodrio.gif",
+      "sha256": "6521b95642867ee4381eba4deebdf1e7bc5dfc22791fa7e6b95785277865418b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0086-seel.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/seel.png",
+      "sha256": "b80a606f9f32e08781f9cf1ab9b2af6fa48845f2c88ae97c335fc16909a4315a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0086-seel.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/seel.gif",
+      "sha256": "ee25f478e0e85dda38e15a2e696e25390bec802de58eef1a72a6af641939f278",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0087-dewgong.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/dewgong.png",
+      "sha256": "50cfa03c0d9bf8f9f9bde321d259bf91ab970ad57d24368ffda53b404d2170b8",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0087-dewgong.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/dewgong.gif",
+      "sha256": "664cea91e768a1c232355529ae43c0e590a39c3b939feda955bf4c5ac3e5a550",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0088-grimer.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/grimer.png",
+      "sha256": "232f4be768264436f8258849dfd1e3a7e1991e953941bba0a5c5558279a803af",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0088-grimer.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/grimer.gif",
+      "sha256": "199db823c954d45c52ad99b791f7ea9fec58ebe56b34586cbf425d74690515c1",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0089-muk.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/muk.png",
+      "sha256": "a953f0eedc5f36e88ba5afce82b8fc9f0dc6ae8315d8592e8e952ca0a9d2da37",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0089-muk.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/muk.gif",
+      "sha256": "c0c6140d30c7cf2c046de10128e8ca370bb6603eb04e837b1842857154ff0152",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0090-shellder.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/shellder.png",
+      "sha256": "3a849eb81390dbbdb01ebe4c1b541e7637a2c2950dca3702eed687079d44ccb2",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0090-shellder.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/shellder.gif",
+      "sha256": "e3f308bf59c1549b46424c602e281fb3570f44f7fce3a8c508efed25ef381fad",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0091-cloyster.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/cloyster.png",
+      "sha256": "56c6c5d8ff344777bb750decdb36855f531dbd128feb006c5210e2b19ddac88b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0091-cloyster.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/cloyster.gif",
+      "sha256": "608cf1c78cad3a68792acc5a8dddfc1aab3e609d80cfe1a2dbba2985da55aa7e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
       "path": "素材/立绘/0092-gastly.png",
       "url": "https://play.pokemonshowdown.com/sprites/gen5/gastly.png",
       "sha256": "45c1927245c8d4a721714ce3f03e31fab019db329b7b4cfa69d37fa07bbf562d",
@@ -916,6 +1792,330 @@
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
+      "path": "素材/立绘/0096-drowzee.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/drowzee.png",
+      "sha256": "cadbcd07c7f8613b68ea5592fc2827a3ff3dbf7fe48f407f37f8bca604c223c5",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0096-drowzee.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/drowzee.gif",
+      "sha256": "f32195f8c4587d0b013f240507ae4f1ef3e101c32bae354c4b7db9dc172789de",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0097-hypno.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/hypno.png",
+      "sha256": "fa84be60fa32b635b1b42c9bfea3faaac63124e8ca174fdc7ffa248461f3819e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0097-hypno.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/hypno.gif",
+      "sha256": "52cfc37fa07ecf212f2d168b33aee091406fd96a70aa964226f3b95a141cd401",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0098-krabby.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/krabby.png",
+      "sha256": "79635a1547f4aca0f3a81d707c75100d02f24fa454ab2f1e82a1924d2f6195fc",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0098-krabby.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/krabby.gif",
+      "sha256": "92c47ced6a29fe7a88d2f8ae2311c0874c1133bfe4a0bb95aef93622dc667477",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0099-kingler.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/kingler.png",
+      "sha256": "e51614d69231c752754832d4fb31cf5280a59df4e278be951dc8675044146c87",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0099-kingler.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/kingler.gif",
+      "sha256": "99a9f5f4c9c768b19fe79b9b9af44007fcba4e5909833417562fe4df0f5dfced",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0100-voltorb.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/voltorb.png",
+      "sha256": "3c84bf1eeb09786fff4abb6a3502f09ec6d2dca3dc56cb0a47cdf4d09f194286",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0100-voltorb.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/voltorb.gif",
+      "sha256": "de2986a1115dbdd5d2b01b71df988b2c738d9cb15362057422ef17b691181235",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0101-electrode.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/electrode.png",
+      "sha256": "3731cdf68d4ec3e4f5f0cf841df459726731be9313a13bc377434f49130c47e5",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0101-electrode.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/electrode.gif",
+      "sha256": "29af6fd93e221e83f6104779e2c2797eefd8e4ee5c65d98bf80f809109eb6bd3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0102-exeggcute.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/exeggcute.png",
+      "sha256": "f56194aebe372d4acd32fdbf26c181028569a3206861fd3b0df0bb89ec537f87",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0102-exeggcute.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/exeggcute.gif",
+      "sha256": "0758b9367c6f92d1093802f3ac30126736a22bb01d11c53bb3e6e3ce76463a3c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0103-exeggutor.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/exeggutor.png",
+      "sha256": "5ba12f6ee08d34c38cf1a89737496dcedcd5ce9c645199463ecd44d14b977e66",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0103-exeggutor.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/exeggutor.gif",
+      "sha256": "939ee6e842b19b29b7286dea8a54b3aca6ee5a70049c3708f4daea08e6ff29fd",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0104-cubone.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/cubone.png",
+      "sha256": "d5bb5de7dbbe4c7173a2a4780b717162e64375a760598b2df9902e96c54f9c54",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0104-cubone.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/cubone.gif",
+      "sha256": "abae47db198810f7320fb30303befdfa3ce31e36f18b33a131730fe82b32b64c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0105-marowak.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/marowak.png",
+      "sha256": "3bfc0101406508bf726cef3f0b498193eb3e7021b3cbb57ae5062adc5aa9c1d5",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0105-marowak.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/marowak.gif",
+      "sha256": "9e222b0a6b975ed2fa771c01f4e951446d3f95d18f856a664f35c7220e392cf9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0106-hitmonlee.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/hitmonlee.png",
+      "sha256": "ce4773e0e79edeb1741c1ef81d4243e79a00bfdef91183162d7962e8c92ce883",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0106-hitmonlee.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/hitmonlee.gif",
+      "sha256": "4b2ffd9f15bafc570e0e89b65066fefe892cacaa9664682b1f918d74082dc009",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0107-hitmonchan.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/hitmonchan.png",
+      "sha256": "648e290f3e0af9e77d4455f72253070f7813d1668bffec1e7a5f0f2e91f3c729",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0107-hitmonchan.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/hitmonchan.gif",
+      "sha256": "edc1f473bcb408f345b9d89f9b5beab873634c553ad76a801978ea9dcdc8122a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0108-lickitung.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/lickitung.png",
+      "sha256": "c95cd01f1dd1a3f348a5914db415d53f9b3f2532b20643b1afe641b9419fcf50",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0108-lickitung.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/lickitung.gif",
+      "sha256": "d2fc227aeb743d278f2d39dc9256868add0109e6fe1656ca3e2533269919168a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0109-koffing.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/koffing.png",
+      "sha256": "b1c43df1c3194324bcd63dc05a3337fdb50798303127a02910ce9d16282da8df",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0109-koffing.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/koffing.gif",
+      "sha256": "b39d1cad5e4e7155cd3003fd4f5bc02f6f1b2524451a80297d346962433483ea",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0110-weezing.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/weezing.png",
+      "sha256": "754473d4d60ddea9b447651a8da938b4be1405986576aa5c8e2ae265e6f44dc3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0110-weezing.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif",
+      "sha256": "75eeb1104302d21e66f5be5378f64e0af22aa4722c49cc78a60634d57b5785b0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0111-rhyhorn.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/rhyhorn.png",
+      "sha256": "174ed9ceff01b107b81e30f6ab3726a96da291dbc70c9c8e19c452a1bd61ef98",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0111-rhyhorn.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/rhyhorn.gif",
+      "sha256": "cc9480b5da9c53bacbb6c67c4e91d2d407fc66df8d87c12b51a7a7ae4b88e4f1",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0112-rhydon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/rhydon.png",
+      "sha256": "47d252a8bd73f30371524859723b9c73286cf3caaf9ab7435c0000f3e8b48139",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0112-rhydon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/rhydon.gif",
+      "sha256": "77cf38472cb665c77e6a875fa388a195468d119da4256c638bb313f1b639faee",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0113-chansey.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/chansey.png",
+      "sha256": "7e06c7471c998917bd813dcf6acfc01f5b636d84bf7d6c2081d812dec2393383",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0113-chansey.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/chansey.gif",
+      "sha256": "928bef83e777d4199d09439b512d27c5b94aa69ad5e350378e4af51ac55afa18",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0114-tangela.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/tangela.png",
+      "sha256": "6257ee32242a65c4a74735343d9ebd9158eb24963e92ca78f0eda3551da9237a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0114-tangela.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/tangela.gif",
+      "sha256": "0ef92d7399ca3f63070a2889221155fd55bea55375c0cce0e9ceb70b05c6588b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0115-kangaskhan.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/kangaskhan.png",
+      "sha256": "850342173aa92e3535de4ead2c4bbdd046dd110829beca5b3d16301c9ccca002",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0115-kangaskhan.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/kangaskhan.gif",
+      "sha256": "028bc612ea57383169603654d0a0ec1bb6dd21fbeb91dd67aa6c68f2d22c24dd",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0116-horsea.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/horsea.png",
+      "sha256": "6d252fd73bfbef66dddf7602dbf70d04de965f59ca45808e30ff036775337e95",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0116-horsea.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/horsea.gif",
+      "sha256": "2126f5f59d62c98379eb246ce06caa06122a5e2f81cd0eb9a6d9c8cabe5fdb22",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0117-seadra.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/seadra.png",
+      "sha256": "ca2e1636b2872f36804fc6441904fb2eb7606260ccccdd26eeee779b36018d7c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0117-seadra.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/seadra.gif",
+      "sha256": "dfd7c1c0e6e3a16f9b06cbce82689e27f7bfc083610de6078a8c301a75e85edd",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0118-goldeen.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/goldeen.png",
+      "sha256": "ff5120b100650f6b0409ae6436ad05e86bd307a70d5edfca4467d9171e3cbcf6",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0118-goldeen.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/goldeen.gif",
+      "sha256": "17a135b22d3e0ffdb2540379e4448215cc68097dbe5306667b7597696a6e2797",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0119-seaking.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/seaking.png",
+      "sha256": "4406c061b9dbfb04ffe54d79bdce77d72d8a86517a5e27574563363755ce83c1",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0119-seaking.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/seaking.gif",
+      "sha256": "6d4e15072ae116e1d1b55972d7a502fa9811a8d22ae91deec76bff8dbc22f2b6",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0120-staryu.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/staryu.png",
+      "sha256": "63aa17abe1b3cfbf2cf188d42f34d16b1fc118a6093db4157f3466a08d43dbd4",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0120-staryu.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/staryu.gif",
+      "sha256": "c9c508710d811b482f0d137da9180100d3748d0ce920bfbee60c6e9ea373fd50",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0121-starmie.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/starmie.png",
+      "sha256": "6a3423f05f00081aef172b65125fa5919265148b4321b24ba8eefcc0022c5c78",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0121-starmie.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/starmie.gif",
+      "sha256": "520a2c4eb8e27fe6198cbda7ae370304d289f7baca15b662236974295f2d2c0d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0122-mrmime.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/mrmime.png",
+      "sha256": "cc7d472aa5e8aaf52b4cb8a9ab9edb9f66267a6188d344693301012f19ff276a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0122-mrmime.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/mrmime.gif",
+      "sha256": "e957818b26938ec7fe2aa2dd2b6f854b80d2f9841d5197c8cb7f057ab243ae29",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
       "path": "素材/立绘/0123-scyther.png",
       "url": "https://play.pokemonshowdown.com/sprites/gen5/scyther.png",
       "sha256": "0a62933b5e24fd7a422b263dfb21ef51f175f30a4f8f590e9121ee7584c5525b",
@@ -925,6 +2125,66 @@
       "path": "素材/立绘/0123-scyther.gif",
       "url": "https://play.pokemonshowdown.com/sprites/gen5ani/scyther.gif",
       "sha256": "d1993f110b8d9755b3d80d3e40f9d098997792fba868adf45878278e6f360875",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0124-jynx.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/jynx.png",
+      "sha256": "a16781e1c2a30dd39b6e5f4691e0a06eab57759151d1f581e14213a544bae631",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0124-jynx.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/jynx.gif",
+      "sha256": "b1a63e4ed39c30d02bfda271719cb7daaeb139d5c7f1e830b9e9a611ef339854",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0125-electabuzz.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/electabuzz.png",
+      "sha256": "5e8ea004a2119dfbefebf5917f08b0df74d81e032e8fff9b6949eaa2146aeae4",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0125-electabuzz.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/electabuzz.gif",
+      "sha256": "627d284046a39ea9f892014408c4597c5fba7ac37ee1e44b14c5ec4bd5c30358",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0126-magmar.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/magmar.png",
+      "sha256": "e44d06dbd5047e7d155be3a4b81595825ce353755c35c4199107c14d2602fb65",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0126-magmar.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/magmar.gif",
+      "sha256": "b9bc0ac5cec46efd710f2f50ba11aa21cc46022b7d6ef4307e21ab4d7374a220",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0127-pinsir.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/pinsir.png",
+      "sha256": "6cd86eb8284ca6d31a708ac37ad7907cfe9c494148be4ad475877e0e6ac56fe1",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0127-pinsir.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/pinsir.gif",
+      "sha256": "2d27686dcb5c366875bdacf856ea9c77087e97b1e01f39bffbc36a207aeb11e9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0128-tauros.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/tauros.png",
+      "sha256": "eacd0989938d36169b00ff941c836eff48a49fccfb015a3f1f15e59f3cf37d19",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0128-tauros.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/tauros.gif",
+      "sha256": "53aba5b5164ccb222340106652b90e1e518dd5c913e0a86ff6662f08d13d2289",
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
@@ -949,6 +2209,30 @@
       "path": "素材/立绘/0130-gyarados.gif",
       "url": "https://play.pokemonshowdown.com/sprites/gen5ani/gyarados.gif",
       "sha256": "f947439db16c6592c9734a101a0d3b285a6f5418c9142279674625aaa275fd5a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0131-lapras.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/lapras.png",
+      "sha256": "a2dfd6be355fb64016b081796b0ef49acfc6ab011991e4e95c2c9a283362ba58",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0131-lapras.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/lapras.gif",
+      "sha256": "dfdd2b2a8886e66e0c61293b1ff7139409014a3f67c1bf610f6d799e2aa232c0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0132-ditto.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/ditto.png",
+      "sha256": "c7a05c4aefb9d638b6b59c3cef91b9f2a19f1600b7bce9a051d5942daa3999cc",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0132-ditto.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/ditto.gif",
+      "sha256": "6a5ab9e0745f092e0732c9ef1bebc0e217ea570e4e28aa9dbda9ff79fe0916d0",
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
@@ -997,6 +2281,78 @@
       "path": "素材/立绘/0136-flareon.gif",
       "url": "https://play.pokemonshowdown.com/sprites/gen5ani/flareon.gif",
       "sha256": "7986903ade97b8428e3b5c81b638ef1a0af9c702344fc21b18626825d4da80f1",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0137-porygon.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/porygon.png",
+      "sha256": "4f7a0687154e0d031108b276a03e2b52a2904b4dc07c314462105a039b5d0f51",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0137-porygon.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/porygon.gif",
+      "sha256": "d9ae4cffe7b1eb47da517ed178cf3e96ea602bab33ae6211dee751b99857a3fc",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0138-omanyte.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/omanyte.png",
+      "sha256": "9784ee029646bf1a8eba28044e43e972ea354191186cb8ee63a177f22f617da3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0138-omanyte.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/omanyte.gif",
+      "sha256": "f61df1044ba181ae01fc2a63371a0e2dee6dfc1ff5438399490229b24a61274a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0139-omastar.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/omastar.png",
+      "sha256": "e6cd52cc75cbf118f6618f2b62db94d4c38ff7c2ce2ad9bc6e5a549a1468376f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0139-omastar.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/omastar.gif",
+      "sha256": "962ff12f1542819ea416503791ca8520330d5ca885065b92cdf180f337f7d544",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0140-kabuto.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/kabuto.png",
+      "sha256": "5676a4f861bc4f5f4322629d26c7072df0289caa7b74df32159e89089f1377de",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0140-kabuto.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/kabuto.gif",
+      "sha256": "8a137db736807e83fbb42701d771bdc6082f7fe0dfc7234eaefaf70cdb6cb72f",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0141-kabutops.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/kabutops.png",
+      "sha256": "f1be15bba3e028fedfcac0168ed67e2795ee16f658b99b5e21460e42a5324c1b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0141-kabutops.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/kabutops.gif",
+      "sha256": "fa5d7385a9bf020cb8e35447bbe8102348dff2c5e9bb5357f90a66785bf7f46e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0142-aerodactyl.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/aerodactyl.png",
+      "sha256": "071a8decea77167477545c35ec05633485a64008f3dcc490b90639819f85b9ec",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0142-aerodactyl.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/aerodactyl.gif",
+      "sha256": "f76bf043deaac3a2104d276132918eee7965a92cf384f4f8bff6e53d263d0d2c",
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
@@ -1249,6 +2605,444 @@
       "path": "素材/立绘/0700-sylveon.gif",
       "url": "https://play.pokemonshowdown.com/sprites/gen5ani/sylveon.gif",
       "sha256": "12c2ace0ba31ecc527ae1df491c14d0f29ee502091bdea76e80083e49f395a78",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0154-meganium.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/meganium.png",
+      "sha256": "f7ef6983d25ec53879864e2eca81c99c1c52c1a94c3e46d20c562d6bbb983346",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0154-meganium.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/meganium.gif",
+      "sha256": "d90a07c36005dafa62d9047ba7b66793bd460ae82b0eaeb4c5c686c7f1a3cc63",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0157-typhlosion.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/typhlosion.png",
+      "sha256": "db090ceeae6ccf748436c40d4b3334ab27e227387638957dabb087e8f199eaad",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0157-typhlosion.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif",
+      "sha256": "f8d0002b45639ca0c1a75a483ce44f53bdf8a4b4cec8de1de5e77a94a59bfbfa",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0160-feraligatr.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/feraligatr.png",
+      "sha256": "d33d7a5739c161c86acc0764babd4423dd020d1d9399eacc4bcdcac30e76e23d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0160-feraligatr.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/feraligatr.gif",
+      "sha256": "0f913478eaef6a292ac15085a2ba1033b699565458b8a4fdbbf54a3ee0ed14b6",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0172-pichu.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/pichu.png",
+      "sha256": "0d5ff3144c181adc36eb0c26bb25c37a1542430e4567f6ab96c64c947fddc2af",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0172-pichu.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/pichu.gif",
+      "sha256": "5347051bfda8fcd02ac997af9cbdb27f46f1bb20f4631a8b6213428ad28cba6d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0175-togepi.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/togepi.png",
+      "sha256": "72f95c0e3c7ec55208b80f8b3be6742becceec5f919bb9d742e8242339bf1075",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0175-togepi.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/togepi.gif",
+      "sha256": "7ac1321342b5f7d1fd230726cb53325cd0404d759317103be55dab7812847ed0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0181-ampharos.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/ampharos.png",
+      "sha256": "776df5e38b8d47decf7749bf22f13bf7d192324c6b17bba5ac8e16780857ce8b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0181-ampharos.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/ampharos.gif",
+      "sha256": "c31442c3edee95bd46e196e2145f3659673bc7a8094204a9c735880f5f1dae42",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0184-azumarill.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/azumarill.png",
+      "sha256": "35e9ebb2ab7997a65bbb87ec2b44cfddcb4e8c2ff80f827450b012dd67a8d149",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0184-azumarill.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/azumarill.gif",
+      "sha256": "62a3f5e1f4254caab2c5308bbb51a1dbac7e3f080a1256c8343e4a742c55c268",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0214-heracross.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/heracross.png",
+      "sha256": "c86ce5d0e207bd60e93183f7baa0379ee5feb5f203ecde244a0f70695ec40083",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0214-heracross.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/heracross.gif",
+      "sha256": "6894b724b7ae85f074b8f0a0c807cbc92c4947801feee0e87866ca8d78a53ecf",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0227-skarmory.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/skarmory.png",
+      "sha256": "cd0e93a222f9324923c8a69f30264f702d0c697b1fd94cedbbd7a31a0824e630",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0227-skarmory.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/skarmory.gif",
+      "sha256": "a66139645dde7381dc0b2797bba9168d396a66f99e6797f838d8ff0bc1abd5db",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0229-houndoom.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/houndoom.png",
+      "sha256": "0ba3c38e05f7bd282b084ce655d1986a3a91dc9d99555a3ae906e43e1a190a19",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0229-houndoom.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/houndoom.gif",
+      "sha256": "ed8f5fb3dfb722483ce2be22f20620e5debb8a8e4988a4f39236cc8092b55a2b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0245-suicune.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/suicune.png",
+      "sha256": "dc9056dccb488e7ae43d8a2fa6184fb49ccab3703e488e23ab43aa548a944dbd",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0245-suicune.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/suicune.gif",
+      "sha256": "c33482b176b6be9be05ded2327edaea99ff01ddfaefa963cdabfebe9903fdbee",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0248-tyranitar.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/tyranitar.png",
+      "sha256": "40e6c46fe10c2901b4a3429484141ddac1ded8aee25b785d4f7642b1da7d69de",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0248-tyranitar.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/tyranitar.gif",
+      "sha256": "daefd21386e3334d4385e451c9ea33dff7cef6b85a9f644903c80d00865e17d7",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0249-lugia.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/lugia.png",
+      "sha256": "9cd4b76b29de20956f309711d4ddea1f5a513d0bd52413eb82f01df5777b4fe0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0249-lugia.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/lugia.gif",
+      "sha256": "0c29508c7579acaa9e9a0a453ea74248edf715f7f87a4a160271e7d72c3d90d3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0250-hooh.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/hooh.png",
+      "sha256": "5c3989cc0cdee4d6c6c6ad908eb4e8fb83f070b4926ffe5343949139c91ef452",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0250-hooh.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/hooh.gif",
+      "sha256": "bebbcbb71e795c175cdfc897ad1a0d22cbfcdbc8735a894190f72b17579a19b4",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0251-celebi.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/celebi.png",
+      "sha256": "47dcb64144618e2fed0c1707e3f14a4748d545ae577618791e15cedf2cacde1b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0251-celebi.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/celebi.gif",
+      "sha256": "451a7b2e53fc33742e427c68a06a309a55506408f8d89c5d07a572e2343711f5",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0254-sceptile.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/sceptile.png",
+      "sha256": "e52213de749c38da428b272faea7faaaf74498bc31f9bdc9e0301ea538ee8244",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0254-sceptile.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/sceptile.gif",
+      "sha256": "5129611843e03f7e2520154c1f4df3cefa6a57f4b3da4672eae2652427885b5b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0257-blaziken.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/blaziken.png",
+      "sha256": "35d26ebe30a77bf20e19019c1eafbafc74e003d92487435c8c3a5a08dbd39eba",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0257-blaziken.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/blaziken.gif",
+      "sha256": "4e633c26f044e0437cb4623ee5ea5aed864101bf2ba3eafa88ff4fd920370967",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0260-swampert.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/swampert.png",
+      "sha256": "70ddc81db996d387f5291ec2b8a91130ad7ead1b1308720b9c19a02b8019da43",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0260-swampert.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/swampert.gif",
+      "sha256": "1e0418f3e96bf75da73f8d42ef122b0711a5b626f0b1a26ae3a183a697a81655",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0359-absol.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/absol.png",
+      "sha256": "a1c2cb9ee36d06f0456d7db218480d451dc25ba4847c9812ec9dc92b042ff655",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0359-absol.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/absol.gif",
+      "sha256": "75c61ae5317ac3671eb0f2dfce1a850c699cffc78a68a53d23bc4358da543ba3",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0373-salamence.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/salamence.png",
+      "sha256": "f9130ec7b8f881b4c510fa978eea370de24dc4c781815e8e9e4d5f095322e347",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0373-salamence.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/salamence.gif",
+      "sha256": "79c8d13805ac34c7e6c047082c4e5c5f1b58d42bc2932da5c9069a9b1db7642e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0376-metagross.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/metagross.png",
+      "sha256": "ef81ca82e27e1144d87d69d3cbccef29808d810bfba13bdd87b13395359e577a",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0376-metagross.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/metagross.gif",
+      "sha256": "2961e1cd4f721d479de7793b32263efe2f501b068ef43105dff9f50d29e3a426",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0380-latias.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/latias.png",
+      "sha256": "59368a531fa7104e2b4bb23c12b58c5fc21767b29723a488e38e26fc9b93a4c9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0380-latias.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/latias.gif",
+      "sha256": "9f6c770df91a138f61a0d64cc8846cd71eb60d31e20bc009a6e78d94de436739",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0381-latios.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/latios.png",
+      "sha256": "51d3c40922a57526d2e4ea084d87847ca56231e036a6f867d1869972d12a0aae",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0381-latios.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/latios.gif",
+      "sha256": "96cdf9b7f7ecfa63ab3f2cd055dc5f54cc79ff0fc14336162b0c08b74948a8da",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0384-rayquaza.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/rayquaza.png",
+      "sha256": "b49d6bfbd19d08c839d63a85a8afcd637b0468a0143c615e9e0c49148172552b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0384-rayquaza.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/rayquaza.gif",
+      "sha256": "7f7281481aea122bcff6f073adee6e522e4b62847732674c75e953e475594076",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0385-jirachi.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/jirachi.png",
+      "sha256": "178df72535c47182db099bd6aab2ea4d5f853bba4940ea6c68d2cc1fece70324",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0385-jirachi.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/jirachi.gif",
+      "sha256": "1d8d1e299ecdc012d07d7e0f81a7b3bf5b0d5a0b6608a4f11534b2c32819c5e0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0392-infernape.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/infernape.png",
+      "sha256": "c31987b83b8ca758782e6996f8e8236feda668c71cd380f0c941ba68d82dc040",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0392-infernape.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/infernape.gif",
+      "sha256": "73465d12cb06a1e0e48e117b3353befeb2518a7a5293a21f7ec8d69504fbe6fb",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0445-garchomp.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/garchomp.png",
+      "sha256": "1ceb7b12f9c6e0ffb4fc6e7247aa50fd561789eb7b04927f2f0ff32463915363",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0445-garchomp.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif",
+      "sha256": "6800dffe16e29383a7f3d6fdd60eb63a8b973acf3b00b40239b17084ff671eb9",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0447-riolu.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/riolu.png",
+      "sha256": "cae1e489761f55097afe0504ff1fb4ac162fab9841bd40621148585f51616a1e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0447-riolu.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/riolu.gif",
+      "sha256": "489c510da0e28f97bee50bf0dbb8ffc239057f8d9fc4e377df5905cac12b1b5b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0483-dialga.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/dialga.png",
+      "sha256": "fe5cbfeaee6be5bc54e6f6a18e9c7dfa3b688cb0b21374d698db1cb5e254c7b1",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0483-dialga.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/dialga.gif",
+      "sha256": "b80468caa18f63d8157e78b2b5cd935565f3f651bea3a402e9ebe90ef3280b3d",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0484-palkia.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/palkia.png",
+      "sha256": "ccb3735bad0394309cfdf07e5c5298be2ffdfa4d3190e9bd196416bf73e9fc25",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0484-palkia.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/palkia.gif",
+      "sha256": "c1f92f57b48dbb10bd040dae5228967e82314aed01f1e8f15f7a76d624386c04",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0491-darkrai.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/darkrai.png",
+      "sha256": "c39530d5727b0f596af5ecd244010407c7d984970d282fbabdbea4b91aed6cac",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0491-darkrai.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/darkrai.gif",
+      "sha256": "f0031237eb083656753671047c87b292c477a449e6f42595eeaba3f2d374b102",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0571-zoroark.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/zoroark.png",
+      "sha256": "ab8d453cf8f67be9ca410180725c231501719b7368fe81dea0209d3f745b108c",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0571-zoroark.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/zoroark.gif",
+      "sha256": "f04ca2c8bb13858003158dda3e023b94e613e34b23620249067e54215402863e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0609-chandelure.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/chandelure.png",
+      "sha256": "77972d9147e607fd12b2a2516fbcc9c906da106ff86803042b9b20c00dd31ee4",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0609-chandelure.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/chandelure.gif",
+      "sha256": "f1213be661a8c2d5983ec05fe6bcdfe9ca48fee9cd09a1026a9bed25eb62e63b",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0724-decidueye.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/decidueye.png",
+      "sha256": "db9427e4100de0d073fcf3cdc3a53907bb138eb1a96d26d650232472c4df8cb0",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0727-incineroar.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/incineroar.png",
+      "sha256": "8b67a66a4c3401aceba52f7bac0358d5e0ce964d144c7bd8401041f152901d07",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0727-incineroar.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/incineroar.gif",
+      "sha256": "a398b943a64369d389f5776b6f594a998938b7548789b0a556f54041d689892e",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0778-mimikyu.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/mimikyu.png",
+      "sha256": "5ad8791603e024fb4adc64732cc3b3711eef4b00bb02d8a9b201e86180b19772",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0778-mimikyu.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/mimikyu.gif",
+      "sha256": "59ce0a884efaf83feaa22aaede13b3d564e52a6b89a4e918c49ff49bbc278f38",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0887-dragapult.png",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5/dragapult.png",
+      "sha256": "9ee0ef4f45e85d53f587499ec6e0c48a14af5a989e9cb6680321349660743c96",
+      "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
+    },
+    {
+      "path": "素材/立绘/0887-dragapult.gif",
+      "url": "https://play.pokemonshowdown.com/sprites/gen5ani/dragapult.gif",
+      "sha256": "1e6c6ba9dcf5f72cbd0b2bc46b11894b7cee2376d613b8d4d4cdc926a8c59888",
       "baseline": "source Git blob; CDN immutable-by-digest, no commit URL"
     },
     {
@@ -1676,6 +3470,16 @@
       "palette": "素材/原版数据/下载/lightning_2.png"
     },
     {
+      "path": "招式动画/VA1素材/原版/spark_0__ANIM_TAG_SPARK.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/spark_0.png"
+      ],
+      "sha256": "f85b6be7e4d328f7901be9b5c1331dc8bbca7d5100b13bc4a1d1ff32c092ea22",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/spark.pal"
+    },
+    {
       "path": "招式动画/VA2/原版/air_wave_2__ANIM_TAG_AIR_WAVE_2.png",
       "operation": "palette-index-zero",
       "inputs": [
@@ -1741,16 +3545,6 @@
       "baseline": "source Git blob"
     },
     {
-      "path": "招式动画/VA2/原版/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
-      "operation": "palette-index-zero",
-      "inputs": [
-        "素材/原版数据/下载/ice_crystals_0.png"
-      ],
-      "sha256": "5571dd9d34a946a3de23dd30881642d1630d346550f95eef386233991a3c99f8",
-      "baseline": "source Git blob",
-      "palette": "素材/原版数据/下载/ice_crystals.pal"
-    },
-    {
       "path": "招式动画/VA2/原版/ice_spikes__ANIM_TAG_ICE_SPIKES.png",
       "operation": "palette-index-zero",
       "inputs": [
@@ -1798,30 +3592,12 @@
       "baseline": "source Git blob"
     },
     {
-      "path": "招式动画/VA2/原版/poison_bubble__ANIM_TAG_POISON_BUBBLE.png",
-      "operation": "palette-index-zero",
-      "inputs": [
-        "素材/原版数据/下载/poison_bubble.png"
-      ],
-      "sha256": "011f5bd96b180fa8aae430514c99fb33aac0f71933d7577833384f45f7d4001f",
-      "baseline": "source Git blob"
-    },
-    {
       "path": "招式动画/VA2/原版/razor_leaf__ANIM_TAG_RAZOR_LEAF.png",
       "operation": "palette-index-zero",
       "inputs": [
         "素材/原版数据/下载/razor_leaf.png"
       ],
       "sha256": "f9fa295154ad5ac0a98fac64c7f6eb6be416060a4f2a1fcf91da472ffa714ee0",
-      "baseline": "source Git blob"
-    },
-    {
-      "path": "招式动画/VA2/原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
-      "operation": "palette-index-zero",
-      "inputs": [
-        "素材/原版数据/下载/small_ember.png"
-      ],
-      "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
       "baseline": "source Git blob"
     },
     {
@@ -1985,15 +3761,6 @@
       "palette": "素材/原版数据/下载/whip_hit.pal"
     },
     {
-      "path": "招式动画/VB1原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
-      "operation": "palette-index-zero",
-      "inputs": [
-        "素材/原版数据/下载/small_ember.png"
-      ],
-      "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
-      "baseline": "source Git blob"
-    },
-    {
       "path": "招式动画/VB1原版/torn_metal__ANIM_TAG_TORN_METAL.png",
       "operation": "palette-index-zero",
       "inputs": [
@@ -2002,6 +3769,71 @@
       "sha256": "9366aef73445c1d0d7880c4c6171db61949ca082eb750d11f7532a0aa4b419aa",
       "baseline": "source Git blob",
       "palette": "素材/原版数据/下载/blue_light_wall.pal"
+    },
+    {
+      "path": "招式动画/VB2原版/hands_and_feet__ANIM_TAG_HANDS_AND_FEET.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/hands_and_feet.png"
+      ],
+      "sha256": "43d4d3c3d8cf8463583ce3d47aaa0b8e2e606205ac88e53add472e8febe67f06",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VC原版/blue_star__ANIM_TAG_BLUE_STAR.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/blue_star.png"
+      ],
+      "sha256": "868e22db9f787805880f193058749509c7a3344d6829bf224ebe7e4ba19190d5",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VC原版/gold_ring__ANIM_TAG_GOLD_RING.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/gold_ring.png"
+      ],
+      "sha256": "f159e6de4adfac37c4b5a6c3b864f6ff30906504dd035833fed5e97072c039aa",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VC原版/ice_spikes__ANIM_TAG_ICE_SPIKES.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/ice_spikes.png"
+      ],
+      "sha256": "f4ab94225c530cece2ecdcf275c7cfb3be6b79d5e4acc25b7c37ed13ec7b1b0d",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/ice_crystals.pal"
+    },
+    {
+      "path": "招式动画/VC原版/orbs__ANIM_TAG_ORBS.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/orbs.png"
+      ],
+      "sha256": "33618b641a599eb9302c75581c9eb5d9337fdf28d02e40ddef676e6ccc503973",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VC原版/small_bubbles__ANIM_TAG_SMALL_BUBBLES.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/small_bubbles.png"
+      ],
+      "sha256": "2829fcea0ffa781951e5a4272dc2916fa0c370248b5e58a69c65471c16763a0c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "招式动画/VC原版/spark_0__ANIM_TAG_SPARK.png",
+      "operation": "palette-index-zero",
+      "inputs": [
+        "素材/原版数据/下载/spark_0.png"
+      ],
+      "sha256": "f85b6be7e4d328f7901be9b5c1331dc8bbca7d5100b13bc4a1d1ff32c092ea22",
+      "baseline": "source Git blob",
+      "palette": "素材/原版数据/下载/spark.pal"
     },
     {
       "path": "招式动画/原版/air_wave_2__ANIM_TAG_AIR_WAVE_2.png",
@@ -2029,16 +3861,6 @@
       ],
       "sha256": "b6246515aeda41b1f2006589cb98db156c6c772515569024d97981fee7c73523",
       "baseline": "source Git blob"
-    },
-    {
-      "path": "招式动画/原版/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
-      "operation": "palette-index-zero",
-      "inputs": [
-        "素材/原版数据/下载/ice_crystals_0.png"
-      ],
-      "sha256": "5571dd9d34a946a3de23dd30881642d1630d346550f95eef386233991a3c99f8",
-      "baseline": "source Git blob",
-      "palette": "素材/原版数据/下载/ice_crystals.pal"
     },
     {
       "path": "招式动画/原版/ice_crystals_1__ANIM_TAG_ICE_CRYSTALS.png",
@@ -2098,15 +3920,6 @@
       "baseline": "source Git blob"
     },
     {
-      "path": "招式动画/原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
-      "operation": "palette-index-zero",
-      "inputs": [
-        "素材/原版数据/下载/small_ember.png"
-      ],
-      "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599",
-      "baseline": "source Git blob"
-    },
-    {
       "path": "招式动画/原版/spark_0__ANIM_TAG_SPARK.png",
       "operation": "palette-index-zero",
       "inputs": [
@@ -2123,16 +3936,6 @@
         "素材/原版数据/下载/spark_1.png"
       ],
       "sha256": "b190483f547e2ea155147320711b7b21daef7a709b26bfc208f3e722bbee9fb6",
-      "baseline": "source Git blob",
-      "palette": "素材/原版数据/下载/spark.pal"
-    },
-    {
-      "path": "招式动画/原版/spark_2__ANIM_TAG_SPARK.png",
-      "operation": "palette-index-zero",
-      "inputs": [
-        "素材/原版数据/下载/spark_2.png"
-      ],
-      "sha256": "64ba0284533a7508920c5537028cc338efc474c7eee4044127b881ef64d28edd",
       "baseline": "source Git blob",
       "palette": "素材/原版数据/下载/spark.pal"
     },
@@ -2237,12 +4040,138 @@
       "baseline": "source Git blob"
     },
     {
+      "path": "素材/立绘/0010-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0010-caterpie.gif"
+      ],
+      "sha256": "57b5a2fd7e04d5ad28777c571b40c2385d90ebf65dcaf57026adfff35d5d41bf",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0011-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0011-metapod.gif"
+      ],
+      "sha256": "91adccf641f3c2db5a3a963a388274134fc446306b8d68bbe9db8a844b3034d8",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0012-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0012-butterfree.gif"
+      ],
+      "sha256": "45707d2b17b42bd3d6955db0732548cf65929c62f87f4433ab4c1f8a4ed3e0d9",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0013-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0013-weedle.gif"
+      ],
+      "sha256": "1bd83a8f775aa4f617b62f959bdd0d44782125be48224dcb64837a83786a0d26",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0014-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0014-kakuna.gif"
+      ],
+      "sha256": "5f639a59568493bfdf84caed1b5a64d919153196329b2f4dd7d74dbcdae0e4ed",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0015-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0015-beedrill.gif"
+      ],
+      "sha256": "4fd9b6ce5b7cc888b3488e4169071fdd2969f10c8277f14a31981791ab04258b",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0016-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0016-pidgey.gif"
+      ],
+      "sha256": "b620bcbd7ae4ea56d2444f1533219c6a3256442302ce6d9ca0645b307c74c8b7",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0017-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0017-pidgeotto.gif"
+      ],
+      "sha256": "002aac9da69e6a57741a911acbdca2564422d386cfa3f9a34d71522444b8c48b",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0018-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0018-pidgeot.gif"
+      ],
+      "sha256": "031fcf2bb890bf1c271e70d6463c75bebae44540dbd6d5f68f81361cb928aa70",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0019-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0019-rattata.gif"
+      ],
+      "sha256": "e4b89779caceed6d29af7cdd16785f2e0c5a60c02082235723f4f215f6c3e5fb",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0020-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0020-raticate.gif"
+      ],
+      "sha256": "98e6b28e0dde751bd8b8de91df34ce7c7e43a9e1773b35de444ed94f094a66f7",
+      "baseline": "source Git blob"
+    },
+    {
       "path": "素材/立绘/0021-atlas.png",
       "operation": "gif-portrait-atlas",
       "inputs": [
         "素材/立绘/0021-spearow.gif"
       ],
       "sha256": "43741ae4587b55dcdfa4ac7d216d2c7924dbe1b94b841c84370f29cafcfb1ea6",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0022-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0022-fearow.gif"
+      ],
+      "sha256": "e26fd2f26f25e85dc6a8242c27753bb3f0efcd088a80b30aed717033f785f37b",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0023-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0023-ekans.gif"
+      ],
+      "sha256": "c73ddbad3adf263d4382a78cd1244a0e28a75f5dce6294c15fe65d9662b6a6c0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0024-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0024-arbok.gif"
+      ],
+      "sha256": "810ab87e37163db719de7f91896e91db38fb1d0b9abd58b87807bddef42a9a5d",
       "baseline": "source Git blob"
     },
     {
@@ -2264,6 +4193,249 @@
       "baseline": "source Git blob"
     },
     {
+      "path": "素材/立绘/0027-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0027-sandshrew.gif"
+      ],
+      "sha256": "6c00e3c352c48428c112ea4af36f7e2bb3273a0e74e38676b62b2606ce765cd3",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0028-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0028-sandslash.gif"
+      ],
+      "sha256": "248e485d1484e6f602c6fbb033261db736184efb403cc0dc1afad83f86fdc0aa",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0029-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0029-nidoranf.gif"
+      ],
+      "sha256": "7dc752b1d9afc0c017289e55fa5b4f5f0fd07ec457109573086b8c1b9ec43a71",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0030-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0030-nidorina.gif"
+      ],
+      "sha256": "d267e3c0d7efbc85bfca23e35d3d187b39fd77ee9eaa8e63e0e4251ebf1416a3",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0031-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0031-nidoqueen.gif"
+      ],
+      "sha256": "539c3dba379d8b26e49b5d006b6d554f1688ebac22e310671505cfd516c51ff9",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0032-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0032-nidoranm.gif"
+      ],
+      "sha256": "2555d90bdccfdc25a15df921dd82091135b3eda22409f57813c53316f857b35e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0033-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0033-nidorino.gif"
+      ],
+      "sha256": "5467b40df1f9aa71398d43f49c56b98202577fa1a1219099029b1adbe17486bf",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0034-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0034-nidoking.gif"
+      ],
+      "sha256": "1a37e1211a760b6dab345ac5cdd0ffdc61add717c49662dea03ff0db3979e54c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0035-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0035-clefairy.gif"
+      ],
+      "sha256": "1a2ebe1f1ce3ddfeb92ab85e4810bec57d1e01fb6f6b5e3a151fdac60f33bf33",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0036-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0036-clefable.gif"
+      ],
+      "sha256": "98710402df336807bf314492aff6fbd57810ed7a225ed0fbd6adce24e82f55ea",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0037-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0037-vulpix.gif"
+      ],
+      "sha256": "6a5268a2b4554dac8f90e17364847fedf2f544ac879d47d97f7b23aa3126a3c7",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0038-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0038-ninetales.gif"
+      ],
+      "sha256": "ee4df686c223eba172e374c994774f383533f113af9036c32fd741d224d75eeb",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0039-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0039-jigglypuff.gif"
+      ],
+      "sha256": "79b48ca8f653d70593255c76f87a18b6f4039eebf9930a609823e53663a12750",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0040-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0040-wigglytuff.gif"
+      ],
+      "sha256": "b38f9a6fdd18a3498b6f0df1750c2107e786e078d0abbdd4f0158e4f6139db70",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0041-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0041-zubat.gif"
+      ],
+      "sha256": "8930382f934a7677190ea8ed9070bdb934907e5b7cc7068cde872a8fa61a9358",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0042-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0042-golbat.gif"
+      ],
+      "sha256": "04f50f2cf513f48b568d88cb40c35668861bbe40326dcbfd27c1ed5c6578f317",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0043-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0043-oddish.gif"
+      ],
+      "sha256": "f58832593b24c25e663b381067a1ec1ad25f1e3bfd40cd4dd270c5f1cecaee02",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0044-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0044-gloom.gif"
+      ],
+      "sha256": "846e198b508960030ad54cfe5528656db3e71531ecea2325c30ccc5788a32c72",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0045-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0045-vileplume.gif"
+      ],
+      "sha256": "04b47257adeb84d75384c24d472513299c1341815d4a7ed8e82037b676ba5e4d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0046-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0046-paras.gif"
+      ],
+      "sha256": "7fce61c3255ba16037b9d799e15854d8d26581704953a1647cda26acfa1dabf9",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0047-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0047-parasect.gif"
+      ],
+      "sha256": "ea61bc6f7dc4d1fea3d49fbfc03cd199096a48bcb19123e55d85874ab76b9452",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0048-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0048-venonat.gif"
+      ],
+      "sha256": "6a36753de0b1927adf9fcaa3865874610a8f6adadcb40a6b1e1a0cd70a678489",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0049-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0049-venomoth.gif"
+      ],
+      "sha256": "76e1e53ef4bc8fadf53426c9552f2406ceb55d6cce4712b1d8818530d319cda0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0050-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0050-diglett.gif"
+      ],
+      "sha256": "06493d4fda63908f29ab7e5cdeb6432ff170b80e6856ea6918b063bb64f34915",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0051-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0051-dugtrio.gif"
+      ],
+      "sha256": "e71e7fd46fb293d3d718bf6891e95a4efe02ab4e7db1d351a3fe93718a978402",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0052-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0052-meowth.gif"
+      ],
+      "sha256": "96ac845a2a5b47facfef4d1c50ea634c7830686d2e76c3d07be57b1e509996c4",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0053-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0053-persian.gif"
+      ],
+      "sha256": "72fcd87a0a5b97677003a2c5226fba4f6c63ed4bb2501683bcde03897c85c1a4",
+      "baseline": "source Git blob"
+    },
+    {
       "path": "素材/立绘/0054-atlas.png",
       "operation": "gif-portrait-atlas",
       "inputs": [
@@ -2273,12 +4445,93 @@
       "baseline": "source Git blob"
     },
     {
+      "path": "素材/立绘/0055-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0055-golduck.gif"
+      ],
+      "sha256": "7581f78b93725bf20ed12e799ec3241b927489bcbbf4a38762647bfdbf59f3a1",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0056-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0056-mankey.gif"
+      ],
+      "sha256": "54d9868b3e602877e89e77166089a9bcacb98c0ddd8434dc5c079cb3490677a6",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0057-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0057-primeape.gif"
+      ],
+      "sha256": "85f06d6774b461069117ebd1252037a309bc193e04bda3c6a5d26d2aeeb2b75e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0058-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0058-growlithe.gif"
+      ],
+      "sha256": "fca9c36e7dd75c1e54e0dc1282da7ba0b0cb5f1c192649ad9466fe3e6764a07d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0059-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0059-arcanine.gif"
+      ],
+      "sha256": "92af555c076871076c3464584f47310a4a1433b4b98e137dee4408770ab3d199",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0060-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0060-poliwag.gif"
+      ],
+      "sha256": "6a24271b143075bf316bc1812df2f04f4a0ee8aca3de1394e687fe10f5fbb54a",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0061-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0061-poliwhirl.gif"
+      ],
+      "sha256": "b6da7a1a12484f20616d12b10b80777db46435c944538e5949cb3c40be872662",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0062-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0062-poliwrath.gif"
+      ],
+      "sha256": "74186be701a462f0334a4dc245dd49b4a95da7fc0124db47f39f52dabdad314f",
+      "baseline": "source Git blob"
+    },
+    {
       "path": "素材/立绘/0063-atlas.png",
       "operation": "gif-portrait-atlas",
       "inputs": [
         "素材/立绘/0063-abra.gif"
       ],
       "sha256": "620c6654a3bc276a2bbff8f3a96802dcced608b4ea485f499204e3d489569949",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0064-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0064-kadabra.gif"
+      ],
+      "sha256": "895bcd5c600bef3e17134bd836de94dad343f390f52e648c8d428dab7f26598e",
       "baseline": "source Git blob"
     },
     {
@@ -2318,6 +4571,213 @@
       "baseline": "source Git blob"
     },
     {
+      "path": "素材/立绘/0069-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0069-bellsprout.gif"
+      ],
+      "sha256": "d54f664dfa811294bae40518ed9e3912d35d4471b3bc1c54f61533ea6e271c34",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0070-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0070-weepinbell.gif"
+      ],
+      "sha256": "d6e14ca3e4fd14cd4a2dbb97bfd2dd0daef033f8317d4ea97af1cb7bccf34c1b",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0071-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0071-victreebel.gif"
+      ],
+      "sha256": "8580be4f2dfdc3cfeb539c1a938bebf4cdd58464f65dfed3781beb8384669373",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0072-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0072-tentacool.gif"
+      ],
+      "sha256": "c9a931f49d07c9ec94ff3ea701fb95057f43f9fa834e7bd5abc6583daf0eda1f",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0073-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0073-tentacruel.gif"
+      ],
+      "sha256": "7223314f226a4dcb169142d403d8851d7da21992103c9c72d1fd19c352d28fc6",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0074-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0074-geodude.gif"
+      ],
+      "sha256": "383eb4967925852dac92b3b8eea65841421b260b0bd2d8e2cdc4f6e1b2d4a709",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0075-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0075-graveler.gif"
+      ],
+      "sha256": "923c1a43c057d2c22f2f08276a66886f9ce49eff9bc64b665b479caf95e1321e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0076-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0076-golem.gif"
+      ],
+      "sha256": "8f08e931bdcd2f96aa4d2f60cced0cbfdda662d8d3b906754646c7bdc9c89a21",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0077-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0077-ponyta.gif"
+      ],
+      "sha256": "f600b5083761ed86aff045e753a6ac28d272ad705de465915915efb90c307df4",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0078-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0078-rapidash.gif"
+      ],
+      "sha256": "7ffd9ca652a90d7afe0f1d438a5eed7847537da1fe9bc127f5b2c6c0df502447",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0079-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0079-slowpoke.gif"
+      ],
+      "sha256": "8b947162e9a90824cdedd82ffae05b11ceae28f6f34354ee8e601ebdec742c6b",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0080-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0080-slowbro.gif"
+      ],
+      "sha256": "13f9f6335a1fde28484d5bbcce120253082e32a0c72dbe174ce28fc2903e6ad2",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0081-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0081-magnemite.gif"
+      ],
+      "sha256": "114674570ee741923ec5eb4f02680772b51c8f82bb2aa50e444b88d9b786726e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0082-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0082-magneton.gif"
+      ],
+      "sha256": "496353d1e0af654bc4f240cc423c4ba6f65c597dd3948aa60ae1603c088a4010",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0083-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0083-farfetchd.gif"
+      ],
+      "sha256": "acf7dacac6111d2183fc19906d7a9141958e2d10d0ceac2edbc1c15769b13b78",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0084-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0084-doduo.gif"
+      ],
+      "sha256": "e33d303ad3ab11563954154e804dea6a75c8ebc779f50824f7d9b38cf8f88eea",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0085-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0085-dodrio.gif"
+      ],
+      "sha256": "306e8d51af180871ba4687403d57e4438fb9c5efd5c0788baf79e93d8abc596b",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0086-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0086-seel.gif"
+      ],
+      "sha256": "1ea35af1f165faecced316f235284a26f2309618fc92fd79bd957e57c3ea5c1b",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0087-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0087-dewgong.gif"
+      ],
+      "sha256": "f93e63d0995a476298b4a9321e91a9ac7e0a979bd6f15bf7ef27b0b9707c7b25",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0088-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0088-grimer.gif"
+      ],
+      "sha256": "84193975adfa8d26025b8894c19182338aaf4abf34f6598002445b41221e6682",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0089-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0089-muk.gif"
+      ],
+      "sha256": "3e6069295497382643bf548742e64ff56a995c9d82037af168795eaa7ff44ab5",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0090-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0090-shellder.gif"
+      ],
+      "sha256": "b25e6066782feccd8488f4747f86b318b674df26fe1da04d69b770dac5fdab0e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0091-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0091-cloyster.gif"
+      ],
+      "sha256": "211ea92e8b0f7c9f34f9dc597eaa1b866ddc4ce80e8fa2e6d9482d2994adbb72",
+      "baseline": "source Git blob"
+    },
+    {
       "path": "素材/立绘/0092-atlas.png",
       "operation": "gif-portrait-atlas",
       "inputs": [
@@ -2354,12 +4814,300 @@
       "baseline": "source Git blob"
     },
     {
+      "path": "素材/立绘/0096-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0096-drowzee.gif"
+      ],
+      "sha256": "5703f334b2249b7272d764cef4fb3ba45e9cbf96146defd5d3b9980126abdb90",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0097-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0097-hypno.gif"
+      ],
+      "sha256": "5c2254265e4d4f454c583b4199b64a7555a8051e7ae3b5802e54df96569ece73",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0098-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0098-krabby.gif"
+      ],
+      "sha256": "7b482d88c8d8bb7de7b949e0a4c2cfaac92620a4e1b217fa3e169e25c09aea97",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0099-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0099-kingler.gif"
+      ],
+      "sha256": "b4efdfba944dd498f19d501c071f265beb9258df46b71bafcf58ab7b8554d2ae",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0100-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0100-voltorb.gif"
+      ],
+      "sha256": "e513ddc93e835d97e89c968caf398f66c679aa1f2ed9c8de179ff8e4ebcaac71",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0101-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0101-electrode.gif"
+      ],
+      "sha256": "7a68ce0b8df5700999fde23c09c98d31ae36eb5e3374892af248a253ddf87710",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0102-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0102-exeggcute.gif"
+      ],
+      "sha256": "ffffd1932bd6da372965b373f05a2d04abc766d1481455f6219d62a8bb40ee07",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0103-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0103-exeggutor.gif"
+      ],
+      "sha256": "626978f10a72297c12bec68d1db82c55f5b53c4e504c66b380f436d54cd3f613",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0104-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0104-cubone.gif"
+      ],
+      "sha256": "3c590522fe1958ab20ce157c413412c8c6f0d1a558965e68effceab224fb22de",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0105-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0105-marowak.gif"
+      ],
+      "sha256": "6208c9d4b1bb44f402025aa6cb474bfe5347972393960966a4bf0738282a47ea",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0106-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0106-hitmonlee.gif"
+      ],
+      "sha256": "763ccc61e925ac47491c953e84291061d19f9f451c09acc99e0f1248df8b9fd8",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0107-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0107-hitmonchan.gif"
+      ],
+      "sha256": "f2c512d3e5dba6e1625f62c59877f7df2ca8f2d84c7e32d387f718eede632d68",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0108-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0108-lickitung.gif"
+      ],
+      "sha256": "f6445f5669845c47642ac39492da97a62a45908cdc6f09734ce85fc4eb4b39e5",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0109-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0109-koffing.gif"
+      ],
+      "sha256": "17f7d17db2638216ac9a94144e2364f343c054e34bf79a5bdba7d6d5c7438e11",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0110-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0110-weezing.gif"
+      ],
+      "sha256": "9099fb36a5ad12dc3bcdb7b15ceca443c1e65b835b8fe166823120a30a438704",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0111-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0111-rhyhorn.gif"
+      ],
+      "sha256": "2160210256ddc11d6ca5d4ccdc54e0e85f14f25e440d3ba6553b88af18c3c62d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0112-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0112-rhydon.gif"
+      ],
+      "sha256": "cad15bcc5fadbba42e94620277f73b1953f0f8689d7145dd1df2f31e052311a0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0113-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0113-chansey.gif"
+      ],
+      "sha256": "6cddacea942f44f5cbbda1caa33efa1eb0647a13f8f591d5cbe6b847491c53c4",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0114-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0114-tangela.gif"
+      ],
+      "sha256": "3f618c56e879e440113709c313ace61c3c9acf929d6e29cb068ef21e45229586",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0115-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0115-kangaskhan.gif"
+      ],
+      "sha256": "45e7ef4104ea8c4f1bc81c877e27ece4c382e7b205eba399e27078898b43e72c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0116-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0116-horsea.gif"
+      ],
+      "sha256": "1d5e7b104b10dd9aeaa1bb5338f0d2b43f1023d151a372c705018e10c75e123a",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0117-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0117-seadra.gif"
+      ],
+      "sha256": "dd07afa47599213880bf9a0e16fb60b759df32aec9dc5235d3d275ff5064411e",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0118-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0118-goldeen.gif"
+      ],
+      "sha256": "3d2c17cab13facbdaa43086ab73e7a892e132af86b30bded35d349ffc1a6b23d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0119-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0119-seaking.gif"
+      ],
+      "sha256": "d4aadbe3cdf0980e9640d9cf14c3633450bdbbd0794c59f7a49786a2d78ff1e9",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0120-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0120-staryu.gif"
+      ],
+      "sha256": "3f9ae9e7045898db58c702e4ef9260c2408d29d0873cc0e20ec6885c4f6f07d7",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0121-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0121-starmie.gif"
+      ],
+      "sha256": "473f022d285756a86ffe147775ad45503fd35a9cbc08353030da0884f356b72b",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0122-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0122-mrmime.gif"
+      ],
+      "sha256": "104f55d344112bd2cab21f9d779939d3330357cff6cd1bfbd6c571e57521a09a",
+      "baseline": "source Git blob"
+    },
+    {
       "path": "素材/立绘/0123-atlas.png",
       "operation": "gif-portrait-atlas",
       "inputs": [
         "素材/立绘/0123-scyther.gif"
       ],
       "sha256": "5c908db2b5c5a0f6b23d47a9947118187710e629f8f4a118c3578dc3bc23e8bf",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0124-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0124-jynx.gif"
+      ],
+      "sha256": "16d5b0f0234be994f1f468f4d37640b6bfae9742400567f9d2f126f1e02a8c76",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0125-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0125-electabuzz.gif"
+      ],
+      "sha256": "dc564e9a9d99815f65fb5f4341eeb6cd0625119ebacc24c8ddf31f5d854294d9",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0126-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0126-magmar.gif"
+      ],
+      "sha256": "580554a8d6d20234d5d37151b98e060daf8de420d937f2aff73dbbc37bf617dc",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0127-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0127-pinsir.gif"
+      ],
+      "sha256": "fcded44daff56855b180a8bc08a1d16b078ea75c003ffdbe8f4b667456c788c5",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0128-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0128-tauros.gif"
+      ],
+      "sha256": "c70df60ec1d6d6e720d4e82401abb96016d5e7e2cc1889e93a61fdb0435e38b5",
       "baseline": "source Git blob"
     },
     {
@@ -2378,6 +5126,24 @@
         "素材/立绘/0130-gyarados.gif"
       ],
       "sha256": "7566f384327e983d18e299de6261879f0852b53742e76c235f1fd7633cadbcfa",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0131-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0131-lapras.gif"
+      ],
+      "sha256": "0076edeae07a493890ab03d06dd813a492a6cbe0a1d7adc616509fc74220e7e7",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0132-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0132-ditto.gif"
+      ],
+      "sha256": "959695b59ddd236f5e0628baf7b48909b120d60538ad7198f4af7df089414d5f",
       "baseline": "source Git blob"
     },
     {
@@ -2414,6 +5180,60 @@
         "素材/立绘/0136-flareon.gif"
       ],
       "sha256": "04042fe832611642c7875db13ee7a1adf8c0e7839151b94a60135cbb0d00941d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0137-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0137-porygon.gif"
+      ],
+      "sha256": "9112666e9a9dc54f9d7918007729323452946e16304284a212226ac4150392ef",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0138-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0138-omanyte.gif"
+      ],
+      "sha256": "a3526742be1831389e4d237a2213195462617933ab23c4fa16517aa4cc49caf1",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0139-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0139-omastar.gif"
+      ],
+      "sha256": "aa4265d0cc812f39c03549ffdc416170d8ae3e4c9754f964910ce00c9864847c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0140-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0140-kabuto.gif"
+      ],
+      "sha256": "ac759acff392ef0643798b9ac0e3b776b448b2cdbae40720769e77aa6f6b16a1",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0141-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0141-kabutops.gif"
+      ],
+      "sha256": "1e4fccaf4e9dc22b20ce128918f1f5e15dd8d43d75e53f7069ecea6f8a1f0eee",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0142-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0142-aerodactyl.gif"
+      ],
+      "sha256": "2deae6b679510050e30095f2586e18560727cd253c6c0185e3d2a5f6c683f04f",
       "baseline": "source Git blob"
     },
     {
@@ -2606,6 +5426,330 @@
       "baseline": "source Git blob"
     },
     {
+      "path": "素材/立绘/0154-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0154-meganium.gif"
+      ],
+      "sha256": "c32c49409a2c226d82c51cbe9329247b75694a4e1f0b80c4fa30fc98a38ce704",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0157-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0157-typhlosion.gif"
+      ],
+      "sha256": "436ceeb58a410786fc7c054a333fcd8411f9f75ce5bf6e8644274b0219b164f9",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0160-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0160-feraligatr.gif"
+      ],
+      "sha256": "916b2a90c38882acaf1287b160cb7f2113ec3e9172ef514bf331862df281896d",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0172-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0172-pichu.gif"
+      ],
+      "sha256": "414ce2915fbf7e9e97f5443571072ce0f23d312fd6df7c360c579a6d3276dee7",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0175-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0175-togepi.gif"
+      ],
+      "sha256": "992a05e85a26e01b52d70aa38072d3c756e42f810aaa0636b4dfb9d6add9a149",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0181-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0181-ampharos.gif"
+      ],
+      "sha256": "5a4ee28b4c15fd41f1ffa9427dc5e1462882ac96e420b34ed5d9822aec69bf8c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0184-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0184-azumarill.gif"
+      ],
+      "sha256": "61670957231b539ce43c961c1eb6eb87857882fba44b88a5b604327d1fe28d68",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0214-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0214-heracross.gif"
+      ],
+      "sha256": "dd200fb8b4dfaacf14d45d86d96b1d5638022b5171069432015d47babbaba45a",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0227-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0227-skarmory.gif"
+      ],
+      "sha256": "51fa9758dcaa9b45b7e55614cc6e29e8d32464affa5b041fddb1930c750587b6",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0229-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0229-houndoom.gif"
+      ],
+      "sha256": "1ddc130c660d43674cd4ff51a2fee3255862377a945f5f0e65d98d3ca465a963",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0245-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0245-suicune.gif"
+      ],
+      "sha256": "fae5974d8c77ad5eac3a64c8b1731a2e770879d270bbb3b8e511ca95dbff8195",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0248-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0248-tyranitar.gif"
+      ],
+      "sha256": "9e874b068d4ef6661b116b7b6968d65c797783c8228b7f94c7b0fd69c2e21371",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0249-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0249-lugia.gif"
+      ],
+      "sha256": "9dd5eec787409a196e04e43cf29e911997f3fe4e2c80a7a9f1b59831c4292922",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0250-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0250-hooh.gif"
+      ],
+      "sha256": "2b9581faa6917349e9d1aea506eb5174d0c5ba699677fc5396bd1ad91433a1dc",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0251-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0251-celebi.gif"
+      ],
+      "sha256": "4540914c09e5665c0e37ecfa300649e66da6cab870748310473d6b02de2f0df1",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0254-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0254-sceptile.gif"
+      ],
+      "sha256": "28d4914e2d4008c8e86096e9f66f426bc9c00401ac9a85ea312a380cb3f0c184",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0257-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0257-blaziken.gif"
+      ],
+      "sha256": "8f727947960ccf3be78475d6f64c4ee8eea88d1d8f5e6b6fa095799fbbb4ea5a",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0260-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0260-swampert.gif"
+      ],
+      "sha256": "6421564e05afeea4cd773f3f94e33a2a7452af78f82f615afa97c7456abdd3e1",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0359-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0359-absol.gif"
+      ],
+      "sha256": "20dfb7e64210ae5f0459ded0007b785ac526ebdfba62131376207d034cf3eab3",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0373-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0373-salamence.gif"
+      ],
+      "sha256": "302e1e0d6dc6815a7e743cd849bb23f2f975a4ab48dc70cbf95746f3c93e33e6",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0376-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0376-metagross.gif"
+      ],
+      "sha256": "2d9a7f9a7f77ecd03bd1d1c9a62f76e0a6856851787075fe9b52019e153f6ef4",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0380-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0380-latias.gif"
+      ],
+      "sha256": "21ae97b5c78c0fde9b88132ba226a5c16e8b9a85735c19d6d078d8bc9d471a98",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0381-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0381-latios.gif"
+      ],
+      "sha256": "dc3039aa09066802ab4e36167cc8b17beaba150bca599a9e4fa68780b645c5c5",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0384-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0384-rayquaza.gif"
+      ],
+      "sha256": "4bb80cda8a26f86b22868d244802b56c03da8e8adcfbde78efdff72569114edb",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0385-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0385-jirachi.gif"
+      ],
+      "sha256": "a34532c2f6aaf4e43b9022091ddd9768a5245c674b3e83fdb3e9248723063a78",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0392-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0392-infernape.gif"
+      ],
+      "sha256": "901c814a81aa8775b2e6b54f44fb935e9820d562735d5939ad2075fa0c65ef9c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0445-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0445-garchomp.gif"
+      ],
+      "sha256": "35294714943a6731f16281a3762986363e0c14f827de66f4bb737418d7abe69c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0447-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0447-riolu.gif"
+      ],
+      "sha256": "af310e5d3ca3a6d48593cc78f297bfb0d06cedd61d994b703bb79cb0fe0f14e0",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0483-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0483-dialga.gif"
+      ],
+      "sha256": "78f8199250676707e83e8e2352107c76bf01c3a29f62b45632f84ac6eee2d06c",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0484-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0484-palkia.gif"
+      ],
+      "sha256": "d4542fb5630da10289c11cd73c553e79ec3fd2969f3d3f36a0ee8c843aa37c61",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0491-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0491-darkrai.gif"
+      ],
+      "sha256": "6ad983cf9035be9cb0eaff4cf1a1d7e7d0e1af36bd0188f87666ea7c7c864808",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0571-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0571-zoroark.gif"
+      ],
+      "sha256": "41cb0c155a441d1a4b7f8d02bf2446963995dfd85bf030b6c10781e955ddf0d4",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0609-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0609-chandelure.gif"
+      ],
+      "sha256": "20671a607cf5934558fdefa18c5f49c360cc05f866017095a463949bd9417ac3",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0727-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0727-incineroar.gif"
+      ],
+      "sha256": "17bcc551dbae76b70ea7be3897ed7577ffd42c94df48a540941996dfd25d7f06",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0778-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0778-mimikyu.gif"
+      ],
+      "sha256": "251f11c736eaf79f56bc757755bdf4ac9ad77e20ef780522760b4da94fed88a3",
+      "baseline": "source Git blob"
+    },
+    {
+      "path": "素材/立绘/0887-atlas.png",
+      "operation": "gif-portrait-atlas",
+      "inputs": [
+        "素材/立绘/0887-dragapult.gif"
+      ],
+      "sha256": "55742b93589b05f9bd46e2fb0ef2d1cd7067e1c647e85d1347094c304ea58914",
+      "baseline": "source Git blob"
+    },
+    {
       "path": "招式特效/第1批/原版牙齿/bite-动画.png",
       "operation": "fangs-four-frames",
       "inputs": [
@@ -2649,113 +5793,174 @@
   "postprocess": [
     {
       "script": "招式动画/VA2/制作贴图.py",
-      "sha256": "a482d2d2bd6a686ffa6575e7c2b4f303909ad8cd2ff68f19819743520149d3b4",
+      "sha256": "90e0e4656ae84566146e5a5a2450f5817b977557929b8a7c44ca4397bc8ab683",
       "outputs": [
         {
           "path": "招式动画/VA2/breath.png",
-          "sha256": "dea9bedda0d169b8293b7d44dba9e47938f318d1f3fb055537db02ec2b4a4259"
+          "sha256": "4100d2d8ca2a06d27fa577bdcc8a61e4f3ec32a0581fc9f24046ee058d2c8fff"
         },
         {
           "path": "招式动画/VA2/bubble.png",
-          "sha256": "41e2c94966a4b04477a75ba9555d9f6a2bb24185568ee50e951c213e1a1aaef9"
+          "sha256": "3da752d634a59d0a184159cb3f7032bb7b6b4ac6afbb30d51c07fc1b8f9d9e7f"
         },
         {
           "path": "招式动画/VA2/crescent.png",
-          "sha256": "e3c9bcf9b04f175f736a4de6ef2c4b99c4fed18d095beb5c144047b9dd41c88c"
+          "sha256": "8904e1146ece87e1dbd013db169624aba1f069e1d26c42f3c11c1f7739c221f9"
         },
         {
           "path": "招式动画/VA2/dragon-flare.png",
-          "sha256": "d487e7021616d50ba74a6a38c0fac8d0e9abbe171303698b469613fc6b595a30"
+          "sha256": "8ea49e48a40a758c60415d7d5af0a9e96e532eeb4ff56a7793e76f3596190a08"
         },
         {
           "path": "招式动画/VA2/electric.png",
-          "sha256": "5680d1f5d67fc3b9b4fc326ff7057b72b1e3cbba1d7c5f53da9df6f2652955d5"
+          "sha256": "a610912a34fc0ed103c6f3f94f74b663244ba9cfb41bb8c2c1b7b5f5d485ffe7"
         },
         {
           "path": "招式动画/VA2/flame.png",
-          "sha256": "5c5e2f56b758f6fd5e11441b5f6decb40eb4652a8c2af5a5cb2afdd1340880fb"
+          "sha256": "5923c6ad720a82422b081ff3cc77e7ee6873fd39df1658118a711245f56a6c46"
         },
         {
           "path": "招式动画/VA2/green.png",
-          "sha256": "fe62fb59787388a4a70497f11a705af1530c87f5bc6c186e25f0ec221e72be92"
+          "sha256": "43d9a4050f21edbd13ee332552b91dcb1ac4df29d466290789dfa45e90f1b70e"
         },
         {
           "path": "招式动画/VA2/gust.png",
-          "sha256": "a45642271de3aa6d1c102a94ddbbb43fc5561b2578fce52d486fb4b70c3c1d3f"
+          "sha256": "9ef3a6a2aba68bbacff35ddd58612fadce9a8b9acd02e4e08b2e74a876ee2561"
         },
         {
           "path": "招式动画/VA2/heal.png",
-          "sha256": "5deea9f3f0c51c748c5990a6c94c8ec7bdb5e114c42ea411b89907f3845a3f48"
+          "sha256": "b4ddbb4ba0f1c88ee8f39ef97ca8ff964fa72f40653ea56c559edb1970f07f11"
         },
         {
           "path": "招式动画/VA2/ice.png",
-          "sha256": "53d5956eabc104d13a6bf85d990335301c33a1b7d40af9e97da78dca21e7f100"
+          "sha256": "f10e2c242787c9b130b68a6b048214383660971e4c2c12aff961c04cbf9bf0bc"
         },
         {
           "path": "招式动画/VA2/leaf.png",
-          "sha256": "c37d8839a3ae1dcea5b006e1e1908f687c159b25e7094de0bdef97d8231df96f"
+          "sha256": "bedd5eeb958b105f53d23d8ad642980efd3d91bd33f9cd88eb2cc6558efe454b"
         },
         {
           "path": "招式动画/VA2/needle.png",
-          "sha256": "1244d71af9cff3f210794fb8fa74fc8b048099ae5bedb2b3c4c1900584cda237"
+          "sha256": "5feb8c700f639d31fdfc57beaed9b22dcfcc0cd137f82f1e31812778b5826cd6"
         },
         {
           "path": "招式动画/VA2/orb.png",
-          "sha256": "84cd758bcb095db4ad8be0441c6472ab18fc225643d4f69deca9eaa2e7bfa629"
+          "sha256": "860d3a55bb67d76bc40d70e14f7edea17bfae8c734662199eaefaf519e1a7870"
         },
         {
           "path": "招式动画/VA2/poison.png",
-          "sha256": "e984c35ace61e4ca8ab46c4801bf38e3bb955572b838cd50657dd32ccf4ae030"
+          "sha256": "6aa01db609cb42432ca84f43781412042b5d52b0cbd04341385001040b22bf3d"
         },
         {
           "path": "招式动画/VA2/razor.png",
-          "sha256": "d158ae41e9f1625944ea6b600c760114799956134818c8e62c4f6f53511ab1f2"
+          "sha256": "1a7fe577599e63b0243a1771174252d763b4480a73155f88ce4dadcb75628a69"
         },
         {
           "path": "招式动画/VA2/red.png",
-          "sha256": "b289c3b9adc4f2237802418051acce8da9a1d5e313d668030141c6514d2fff0e"
+          "sha256": "2c21699298f0a3637f174550546189d03d55a3b00cb6f759e2793c804f34105e"
         },
         {
           "path": "招式动画/VA2/ring.png",
-          "sha256": "051b3bc9427f143e59e732ac4e5092a806c2e85ca2bdb7344af4f606d244c9d6"
+          "sha256": "944148c6067188fb1daf7a0792a3a0d4b7fe9007f95aae554b4cd5677d81ce28"
         },
         {
           "path": "招式动画/VA2/sap.png",
-          "sha256": "4490d22f33609982e9634642960b2dbd8a351f04965426cf8ff54992de8c812a"
+          "sha256": "e300ee02ef213419d3f596cb9252b8f5d864228416686480555392082c991417"
         },
         {
           "path": "招式动画/VA2/silver.png",
-          "sha256": "ab7d648c32b920646f27efca5862ba2ff8b568dc768a65e995b03ac272fdad37"
+          "sha256": "443d6f69f8139707b1c3b94ceeaf1014414e593b424315b1125487d9d13e6f6a"
         },
         {
           "path": "招式动画/VA2/spikes.png",
-          "sha256": "89298c12b88b42a6587329918e072f4632a5961c5c95773bf2cb21a5da9d8525"
+          "sha256": "1e264d68ed5b8c88b12c0ab75317b66d576b8ff2797cb45aee5b9ed1a1d26d3b"
         },
         {
           "path": "招式动画/VA2/star.png",
-          "sha256": "f6aa526d7a5afe6eb3591cc7cdd4a069f040e07e2a3c9a49c01667a4e3272ff3"
+          "sha256": "ce72a003973fc44ccb4d593f246f0a1fe4fe09e0e62e798a1e1dd7da1b34df29"
         },
         {
           "path": "招式动画/VA2/triangle.png",
-          "sha256": "a2ded2345b3644fbfbc1995535c3b01aafff46723c21454809ef9b8e595d87d5"
+          "sha256": "c132a11fe2ae189742e72823967bcd589fa45c8ec6026de6691542334b524b4b"
         },
         {
           "path": "招式动画/VA2/water.png",
-          "sha256": "96fca8974aaba98eacee4e8502c01d05123f38032c8d2420299902d3a401ad9e"
+          "sha256": "6159bd12fbdc8837806c864319629e2f391f35b2dc5e6de5fa24f43eb230ec25"
         }
       ]
     }
   ],
   "blockers": [
+    "源立绘下载记录缺失: https://play.pokemonshowdown.com/sprites/gen5ani/decidueye.gif",
     "源提交缺少构建输入: scripts/project.py",
     "源提交缺少构建输入: 图标/favicon-32.png",
     "源提交缺少构建输入: 招式特效/实战绘制.json",
     "源提交缺少构建输入: 招式特效/生图重做/实景预览/构建记录.json",
-    "源提交缺少构建输入: 数值资料/体型校准/来源.json",
     "源提交缺少构建输入: 素材/绿宝石场景/地图索引.json",
     "源提交缺少构建输入: 素材/角色库/原始/type_efficacy.csv",
     "源提交缺少构建输入: 素材/角色库/角色库.json",
-    "源提交缺少构建输入: 素材/角色库/飞行修正/飞行包.json",
-    "尚未完成SpriteCollab角色图集、飞行包和丰缘数据的完整重建配方；禁止宣称整个构建可复现"
+    "尚未完成SpriteCollab角色图集、飞行包和丰缘数据的完整重建配方；禁止宣称整个构建可复现",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VA1素材/原版/gold_ring__ANIM_TAG_BLUE_RING_2.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VA1素材/原版/poison_bubble__ANIM_TAG_POISON_BUBBLE.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VA1素材/原版/rocks__ANIM_TAG_ROCKS.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VA1素材/原版/shadow_ball__ANIM_TAG_SHADOW_BALL.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VA1素材/原版/water_orb__ANIM_TAG_BROWN_ORB.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VA2/原版/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VA2/原版/poison_bubble__ANIM_TAG_POISON_BUBBLE.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VA2/原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VB1原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VB2原版/bird__ANIM_TAG_BIRD.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VB2原版/bone__ANIM_TAG_BONE.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VB2原版/mud_sand_0__ANIM_TAG_MUD_SAND.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VB2原版/rapid_spin__ANIM_TAG_RAPID_SPIN.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VB2原版/rocks__ANIM_TAG_ROCKS.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VB2原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VB2原版/spark_2__ANIM_TAG_SPARK.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VC原版/explosion__ANIM_TAG_EXPLOSION.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VC原版/focus_energy__ANIM_TAG_FOCUS_ENERGY.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VC原版/letter_z__ANIM_TAG_LETTER_Z.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VC原版/mist_cloud__ANIM_TAG_PURPLE_GAS_CLOUD.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VC原版/protect__ANIM_TAG_PROTECT.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VC原版/rocks__ANIM_TAG_ROCKS.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VC原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VC原版/sparkle_1__ANIM_TAG_SPARKLE_2.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/VC原版/warm_rock__ANIM_TAG_WARM_ROCK.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/原版/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "新增动画转换配方缺离线固定来源缓存: 招式动画/原版/spark_2__ANIM_TAG_SPARK.png",
+    "新增动画转换配方缺离线固定来源缓存: 素材/立绘/0724-atlas.png",
+    "角色图集与飞行包完整获取配方待补齐；新增150只署名见 docs/roster-credits.md（冻结游戏内鸣谢来源）"
+  ],
+  "sourceCommit": "a16b5c7b02afb24bcc9222c20566d4b081cbf5bc",
+  "unavailableOfflineRecipes": [
+    "招式动画/VA1素材/原版/gold_ring__ANIM_TAG_BLUE_RING_2.png",
+    "招式动画/VA1素材/原版/poison_bubble__ANIM_TAG_POISON_BUBBLE.png",
+    "招式动画/VA1素材/原版/rocks__ANIM_TAG_ROCKS.png",
+    "招式动画/VA1素材/原版/shadow_ball__ANIM_TAG_SHADOW_BALL.png",
+    "招式动画/VA1素材/原版/water_orb__ANIM_TAG_BROWN_ORB.png",
+    "招式动画/VA2/原版/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
+    "招式动画/VA2/原版/poison_bubble__ANIM_TAG_POISON_BUBBLE.png",
+    "招式动画/VA2/原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "招式动画/VB1原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "招式动画/VB2原版/bird__ANIM_TAG_BIRD.png",
+    "招式动画/VB2原版/bone__ANIM_TAG_BONE.png",
+    "招式动画/VB2原版/mud_sand_0__ANIM_TAG_MUD_SAND.png",
+    "招式动画/VB2原版/rapid_spin__ANIM_TAG_RAPID_SPIN.png",
+    "招式动画/VB2原版/rocks__ANIM_TAG_ROCKS.png",
+    "招式动画/VB2原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "招式动画/VB2原版/spark_2__ANIM_TAG_SPARK.png",
+    "招式动画/VC原版/explosion__ANIM_TAG_EXPLOSION.png",
+    "招式动画/VC原版/focus_energy__ANIM_TAG_FOCUS_ENERGY.png",
+    "招式动画/VC原版/letter_z__ANIM_TAG_LETTER_Z.png",
+    "招式动画/VC原版/mist_cloud__ANIM_TAG_PURPLE_GAS_CLOUD.png",
+    "招式动画/VC原版/protect__ANIM_TAG_PROTECT.png",
+    "招式动画/VC原版/rocks__ANIM_TAG_ROCKS.png",
+    "招式动画/VC原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "招式动画/VC原版/sparkle_1__ANIM_TAG_SPARKLE_2.png",
+    "招式动画/VC原版/warm_rock__ANIM_TAG_WARM_ROCK.png",
+    "招式动画/原版/ice_crystals_0__ANIM_TAG_ICE_CRYSTALS.png",
+    "招式动画/原版/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "招式动画/原版/spark_2__ANIM_TAG_SPARK.png",
+    "素材/立绘/0724-atlas.png"
   ]
 }

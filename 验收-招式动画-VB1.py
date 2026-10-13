@@ -28,6 +28,8 @@ failure = None
 
 def check(name, ok, detail=None):
     checks.append({'name': name, 'ok': bool(ok), 'detail': detail})
+    if not ok:
+        print('FAIL ' + name + ' ' + json.dumps(detail, ensure_ascii=False), flush=True)
 
 
 def sha(path):
@@ -234,10 +236,25 @@ try:
                 initial = reset(mid)
                 page.evaluate('window.vb1Probe.enabled=true')
                 cast(mid)
-                state = hit(initial['enemy']['hp'])['state']
+                contact = hit(initial['enemy']['hp'])
+                state = contact['state']
                 if not state['animation']['bursts']:
                     check(scene+'/'+mid+' pixel contact exists', False)
                     continue
+                if mid == 'lick':
+                    # P6b authorizes the uncut continuous tongue one 120Hz tick before contact.
+                    # Preserve the REAL contact ring/clock; only the tongue raster is pre-contact.
+                    page.evaluate('''b=>{window.vb1LickContact={b,star:window.vb1Probe.star};}''',
+                                  state['animation']['bursts'][-1])
+                    reset(mid)
+                    page.evaluate('window.vb1Probe.enabled=true')
+                    cast(mid)
+                    page.evaluate('''n=>{for(let i=0;i<n;i++)window.__waterTest.step(1/120);
+                      window.__waterTest.step(0);
+                      window.vb1Probe.last={...window.vb1Probe.tongue,b:window.vb1LickContact.b};
+                      window.vb1Probe.star=window.vb1LickContact.star;}''', contact['tick']-1)
+                    check(scene+'/lick sample is exactly one tick before actual contact',
+                          snap()['enemy']['hp'] == initial['enemy']['hp'] and contact['tick'] > 1)
                 px = page.evaluate('window.measureVB1Pixels()')
                 for key in ['composite', 'background', 'mask', 'starMask']:
                     raw = px.pop(key)

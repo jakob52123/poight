@@ -319,7 +319,7 @@ try:
                 raise AssertionError(('no entrance approach', warp))
             call(page, 'arrange', {'ai': False, 'player': {**point, 'hp': 57}})
             call(page, 'step', .01)
-            move(page, key, .16)
+            move(page, key, .16 * 216 / snap(page)['player']['speed'])
             wait(page, '!window.__waterTest.snapshot().environment.warpPending')
             state = snap(page)
             check('Full-world real warp ' + warp['id'], state['environment']['id'] == warp['destScene'])

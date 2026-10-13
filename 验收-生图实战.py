@@ -26,7 +26,7 @@ try:
     if all(walk[(y+dy)*cols+x+dx] for dx in range(-2,3) for dy in range(-2,3)):center=(x,y);break
    if center:break
   assert center;CX,CY=(center[0]+.5)*cell,(center[1]+.5)*cell
-  spec=json.loads((ROOT/'招式特效/实战绘制.json').read_text())['moves'];spec['thunder']={'caster':25};ids=sorted(set(spec)&set(moves));check('57 runtime entries including thunder; do not invent aerialace',len(ids)==57 and 'aerialace' not in moves);check('50 roster /121 moves including harmless Splash',len(catalog['roster'])==50 and len(moves)==121);check('All104 hashed images loaded before play',snapshot(p)['generated']['loaded']==104)
+  spec=json.loads((ROOT/'招式特效/实战绘制.json').read_text())['moves'];spec['thunder']={'caster':25};ids=sorted(set(spec)&set(moves));check('57 runtime entries including thunder; do not invent aerialace',len(ids)==57 and 'aerialace' not in moves);check('authorized roster /121 moves including harmless Splash',len(catalog['roster'])==len(json.loads((ROOT/'首发200.json').read_text())['ids']) and len(moves)==121);check('All104 hashed images loaded before play',snapshot(p)['generated']['loaded']==104)
   default={**snapshot(p)['profile'],'map':'emerald-rustborocity'};roster={c['id']:c for c in catalog['roster']}
   for mid in ids:
    caster=spec[mid]['caster'];prof={**default,'player':caster,'playerMoves':roster[caster]['defaultMoves']};check(mid+' caster loads',p.evaluate('(v)=>window.__waterTest.select(v)',prof))

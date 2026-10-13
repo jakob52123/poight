@@ -1,0 +1,72 @@
+{
+  "license": "AGPL-3.0-or-later; Emerald decomp assets see root NOTICE.md",
+  "originals": [
+    {
+      "file": "shadow_ball__ANIM_TAG_SHADOW_BALL.png",
+      "sha256": "8b2ba5cffa561d8538dde6e73977193546e7955837fd34ce2d16243f97e28317",
+      "source": "ref-moves/还原贴图/shadow_ball__ANIM_TAG_SHADOW_BALL.png"
+    },
+    {
+      "file": "gold_ring__ANIM_TAG_BLUE_RING_2.png",
+      "sha256": "65aef04b356646db0791ab34c8a31d5918c104e37a8097fd44304ac01937fea1",
+      "source": "ref-moves/还原贴图/gold_ring__ANIM_TAG_BLUE_RING_2.png"
+    },
+    {
+      "file": "rocks__ANIM_TAG_ROCKS.png",
+      "sha256": "8344d85ff7f3809dc9b51a17d380ef5a2b830685aeb2810a66cfa1380a9a1fbc",
+      "source": "ref-moves/还原贴图/rocks__ANIM_TAG_ROCKS.png"
+    },
+    {
+      "file": "water_orb__ANIM_TAG_BROWN_ORB.png",
+      "sha256": "17095b8bde864d2476eca19b06a831d2492c10721c5d5505efd47c9fb3fe4f20",
+      "source": "ref-moves/还原贴图/water_orb__ANIM_TAG_BROWN_ORB.png"
+    },
+    {
+      "file": "poison_bubble__ANIM_TAG_POISON_BUBBLE.png",
+      "sha256": "011f5bd96b180fa8aae430514c99fb33aac0f71933d7577833384f45f7d4001f",
+      "source": "ref-moves/还原贴图/poison_bubble__ANIM_TAG_POISON_BUBBLE.png"
+    },
+    {
+      "file": "spark_0__ANIM_TAG_SPARK.png",
+      "sha256": "f85b6be7e4d328f7901be9b5c1331dc8bbca7d5100b13bc4a1d1ff32c092ea22",
+      "source": "ref-moves/还原贴图/spark_0__ANIM_TAG_SPARK.png"
+    }
+  ],
+  "authoredSymbols": [
+    "moonblast",
+    "seedbomb",
+    "powergem",
+    "iceshard",
+    "electroball",
+    "focusblast",
+    "confusion",
+    "storedpower",
+    "dragonpulse",
+    "darkpulse"
+  ],
+  "note": "Later-gen suggestions are adaptations, NOT obtained same-name Emerald animations.",
+  "sprites": {
+    "waterpulse": "7c46338d867b31c7abfda8b6dbcbd4605d85f378f456fa97c16514db643a6623",
+    "energyball": "9e1fe64626e05cbe9eb0f8f9ab4bd35e237c58b3b979ad919f6ee129e7d149f1",
+    "thundershock": "d43c931341104e71900ab823b29498c018e4922a77c936fcc93059bfce873bbf",
+    "rockthrow": "a71e9c3d6be4a1c25569bd4affded4fb3f6692748b9e7c51620bd1744c5e64d3",
+    "mudshot": "4c6fae735714f5075c6b3773b72574f7f01239e4db67410ff6f6c5cd19250ae5",
+    "shadowball": "25896edbf12b60640e88cfe0affde35285eafc060f39851b3b09dc235905cccd",
+    "confusion": "27d00b7795a69a217f9fd367c23b7cc7e3d5c8a846b07b6a999c7876b913e0c8",
+    "dragonpulse": "2ed7a428edaf56f9962ca451ea223157f5ca1b47dc5109a65ba0a79d745bec85",
+    "sludgebomb": "1606b3e370e066e4074a37d005f091a59cf1045eacfbb2bc22bf1155b45327ef",
+    "moonblast": "c3efb315a886e49a6fe6f2c837d91074ed47d89bd1b05fa3e596701bbb9900a7",
+    "brine": "8b018a4c37c42f73697e1d423a6f856aee713ceaef25317284e8e696a22c79e9",
+    "scald": "f4c88cd201d30574e0db3480b1a1927c6ecc30fcd28ff724c2679e59288717ae",
+    "seedbomb": "f04d7cd6e15c18c805f82f002933e64bcf353a27ec611bf81bc1c98c31816db6",
+    "electroball": "63a8c8a82b48810d16319315d4010c9ed202e0a7bc1945a1123fdeb052391715",
+    "iceshard": "dc0daac786d38d6fbab0abbfb8d8d4584027f2f8735ec284150bce81639c8f86",
+    "aurasphere": "f6eb196ce5312a0e0269199baca3e3303905a3de358576953daa032044512d1e",
+    "focusblast": "1d187f8f26952c569842d27a01c208012761c30a0d6515f9ca45eeebac748b72",
+    "powergem": "8569e18bc5f4e9cdcfd2b1f26e5f4f206a3ae5715c2d20dc077b75f42583f34a",
+    "venoshock": "56dbcb06a4bc1788c2a3836aaa32fdf5a02db764704006d9ea728f7e6d864f36",
+    "storedpower": "a5ee6d1fb20e25f37f6bc0de0467132e8646fdf50fdb474954577c498fc4aac5",
+    "darkpulse": "4d2d4a21301a94c0ade832e46f751224e19f480d8d31e53a69c5f729106f82ad",
+    "steam": "5aa212b4f877bec710db91c8793bec7322c861960e20ed6a7a278b3b1098d7bf"
+  }
+}

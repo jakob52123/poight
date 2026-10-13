@@ -8,14 +8,14 @@ from statistics import median
 import hashlib, json, math
 from PIL import Image
 
-LONG_BODY = {95, 130, 147, 148, 208}  # serpentine length, NOT upright standing height
+LONG_BODY = {23, 24, 95, 130, 147, 148, 208, 384}  # serpentine length, NOT upright standing height
 clamp = lambda x, a, b: max(a, min(b, x))
 
 
 def apply(metadata, rows, root, lib):
     directory = root / "数值资料/体型校准"
     source = json.loads((directory / "来源.json").read_text())
-    assert not source["errors"] and source["count"] == 50
+    assert not source["errors"] and source["count"] == len(rows)
     facts = {s["id"]: s for s in source["species"]}
     assert set(facts) == {c["id"] for c in rows}
     lookup = {c["id"]: c for c in rows}
@@ -88,7 +88,9 @@ def apply(metadata, rows, root, lib):
         assert len(shapes) == 8
         # Size dominates locomotion; species speed supplies a modest individual difference.
         # Dash/rush/attack speeds, immunity, resource costs and damage are NOT changed here.
-        walk_speed = round(clamp(210 - 0.78 * (nominal - 48) + 0.12 * (speed - 70), 160, 230))
+        # B2: uniform locomotion factor preserves size/species ordering and all body shapes.
+        # Pikachu: 224 -> 116 px/s = 3.54 heights/s; retains AI's existing 6s opening approach.
+        walk_speed = round(0.52 * round(clamp(210 - 0.78 * (nominal - 48) + 0.12 * (speed - 70), 160, 230)))
         body = {
             "heightMeters": h,
             "weightKg": w,
@@ -124,11 +126,11 @@ def apply(metadata, rows, root, lib):
         "mapping": {
             "normal": "clamp(48 * height_m^.55 * clamp((weight_kg/(20*height_m^3))^.08,.86,1.15),26,86)",
             "serpentine": "longest visible extent = clamp(54*sqrt(length_m/1.8)*clamp((weight_kg/(18*length_m))^.05,.88,1.14),40,128)",
-            "walk": "clamp(round(210-.78*(nominalSize-48)+.12*(baseSpeed-70)),160,230)",
+            "walk": "round(.52*clamp(round(210-.78*(nominalSize-48)+.12*(baseSpeed-70)),160,230))",
             "hurt": "8-direction core ellipses; circular ground footprint capped at20px for48px map cells",
         },
         "unchanged": [
-            "roster50",
+            "original50 profiles; R200 adds 150 using the same mapping",
             "moves120",
             "HP",
             "move damage/cost/CD",

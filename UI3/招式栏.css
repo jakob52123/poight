@@ -1,0 +1,47 @@
+/* Enabled only by the non-touch fine-pointer desktop controller. */
+html[data-move-strip] .hud {
+  padding: 0; border: 0; border-radius: 0; box-shadow: none; background: none;
+  bottom: 26px; color: white;
+}
+html[data-move-strip] #skills { gap: 12px; }
+html[data-move-strip] #battleRail { align-items: flex-start; }
+html[data-move-strip] .skill {
+  width: 52px; height: 72px; min-height: 0; color: #f9fcff; text-shadow: 0 1px 2px #07121f, 1px 0 #07121f, -1px 0 #07121f;
+  padding: 0; border: 0; background: none; opacity: 1;
+}
+html[data-move-strip] .skill::before {
+  content: ""; inset: 0 auto auto 0; width: 52px; height: 52px; box-sizing: border-box;
+  border: 1px solid var(--type); border-radius: 9px; background: rgba(16,24,40,.50);
+  box-shadow: inset 0 1px 0 #ffffff12; outline: none; z-index: 0;
+}
+html[data-move-strip] .skill::after {
+  content: ""; inset: 1px auto auto 1px; width: 50px; height: 50px; border-radius: 8px;
+  background: none; z-index: 2; box-shadow: none;
+}
+html[data-move-strip] .skill.cooling::before { background: rgba(16,24,40,.5); }
+html[data-move-strip] .skill.cooling::after {
+  background: conic-gradient(from -90deg, rgba(6,12,23,.82) calc(var(--cool)*1turn), transparent 0);
+}
+html[data-move-strip] .ui3-icon { position: absolute; inset: 0 auto auto 0; width: 52px; height: 52px; display: grid; place-items: center; z-index: 1; }
+html[data-move-strip] .ui3-icon svg { width: 28px; height: 28px; image-rendering: pixelated; filter: drop-shadow(0 1px 0 #07121f); }
+html[data-move-strip] .skill kbd {
+  top: auto; bottom: 23px; right: 3px; min-width: 0; padding: 0 2px; border: 0; border-radius: 2px;
+  font: 700 10px ui-monospace, monospace; background: #101828b3; color: #fff; box-shadow: none; z-index: 4;
+}
+html[data-move-strip] .skill strong { top: 57px; left: -6px; width: 64px; font-size: 11px; line-height: 14px; color: white; }
+html[data-move-strip] .skill small { display: none; }
+html[data-move-strip] .skill .gba-cd { top: 0; left: 0; width: 52px; height: 52px; font-size: 14px; z-index: 3; text-shadow: 0 1px 3px #000, 0 0 4px #000; }
+html[data-move-strip] .skill.insufficient .ui3-icon { filter: grayscale(1); opacity: .45; }
+html[data-move-strip] .skill.active::before { outline: none; }
+html[data-move-strip] .skill.cast-rejected::before { outline: 1px solid #e36d6d; }
+html[data-move-strip] .skill.ui3-flash::before { animation: ui3-cast-flash .22s ease-out; }
+@keyframes ui3-cast-flash { from { background: #ffffffb0; box-shadow: 0 0 12px var(--type); } to { background: rgba(16,24,40,.5); box-shadow: none; } }
+html[data-move-strip] #gbaResources { position: absolute; left: 50%; transform: translateX(-50%); bottom: 106px; width: 244px; padding: 0; background: none; border: 0; border-radius: 0; box-shadow: none; }
+html[data-move-strip] #gbaResources > div:not(.resource-bar) { display: none; }
+html[data-move-strip] #gbaResources .resource-bar { height: 3px; margin: 0 0 4px; border: 0; background: #10182866; border-radius: 2px; overflow: hidden; }
+html[data-move-strip] #gbaResources .resource-bar:last-child { margin: 0; }
+html[data-move-strip] #gbaKeys {
+  background: none; border: 0; box-shadow: none; padding: 0; bottom: 15px; right: 24px; color: #ffffffc0;
+  font-size: 11px; text-shadow: 0 1px 3px #101828; line-height: 1.5; opacity: 1; transition: opacity .6s;
+}
+html[data-move-strip][data-move-strip-hints="false"] #gbaKeys { opacity: 0; }

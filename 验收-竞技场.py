@@ -47,6 +47,18 @@ def fresh(page):
 
 
 def rebuild():
+    # Jade has no node: opt-in exact local builds keep all variant/HTTP assertions intact.
+    if os.environ.get("POIGHT_PREBUILT_ARENAS"):
+        cache = Path(os.environ["POIGHT_PREBUILT_ARENAS"])
+        index = json.loads((cache / "index.json").read_text())
+        for name, digest in index["inputs"].items():
+            assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest, name
+        key = hashlib.sha256((ROOT / "素材/竞技场/竞技场目录.json").read_bytes()).hexdigest()
+        for name, entry in index["builds"][key].items():
+            data = (cache / entry["file"]).read_bytes()
+            assert hashlib.sha256(data).hexdigest() == entry["sha256"], name
+            (ROOT / name).write_bytes(data)
+        return
     with (OUT / "变体构建.log").open("a") as log:
         subprocess.run([sys.executable, "构建完整版.py"], cwd=ROOT, stdout=log,
                        stderr=subprocess.STDOUT, check=True)

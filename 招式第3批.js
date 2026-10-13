@@ -91,6 +91,14 @@ window.PoightR3GeneratedMoves = class extends window.PoightGeneratedMoves {
     return true;
   }
   charge(ctx, p, m, lift, api) {
+    if (api.animations.enabled && window.PoightVA1Shots[m.id]) {
+      if (!p.attack || p.attack.emitted) return;
+      const anchor = api.animations.anchor(p, m, p.attack.aim, api);
+      const t = Math.min(1, p.attack.age / Math.max(.001, p.attack.hitTime));
+      if (anchor) api.animations.sprite(ctx, "va1-" + m.id, anchor.x, anchor.y,
+        Math.min(16, p.char.body.visibleSize[1] * .25) * t, .2 + t * .4);
+      return;
+    }
     if (api.animations.melee.has(m.id)) {
       api.animations.melee.charge(ctx, p, m, api);
       return;
@@ -121,6 +129,12 @@ window.PoightR3GeneratedMoves = class extends window.PoightGeneratedMoves {
         continue;
       }
       if (!e.m.r3) continue;
+      ctx.save();
+      if (e.mode === "r3return" || e.group?.hit.size) {
+        const target = e.owner === api.player ? api.enemy : api.player;
+        api.animations.clipContactCenters(ctx, [target]);
+      }
+      try {
       const d = this.data[e.id], p = e.owner,
         anchor = api.anchor(p, e.m, e.a ?? p.a);
       e.drawAnchor = anchor;
@@ -149,6 +163,9 @@ window.PoightR3GeneratedMoves = class extends window.PoightGeneratedMoves {
           d.width * scale, d.height * scale, e.age,
           e.id === "waterfall" ? -Math.PI / 2 : e.a, alpha,
           e.id === "surf" ? "bottom" : "center");
+      }
+      } finally {
+        ctx.restore();
       }
     }
   }

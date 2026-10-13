@@ -194,6 +194,8 @@ def m4_reference():
     candidate = (ROOT / '候选试玩.html').read_text()
     start = candidate.index('const DATA = ') + len('const DATA = ')
     data, _ = json.JSONDecoder().raw_decode(candidate[start:])
+    from scripts.roster_fixture import materialize_character_packs
+    materialize_character_packs(data, ROOT)  # R200 lazy transport -> exact legacy fixture shape.
     data.pop('moveAnimations')
     paths = ['世界地图.js', '竞技场.js', '草丛藏身.js', '大地图通行.js', '体型判定.js',
              '生图招式.js', '招式第3批.js', '平衡测试.js', '打击感.js', '瞄准预警.js',
@@ -247,10 +249,11 @@ try:
         # Observe the actual renderer's original texture dispatch, without replacing its drawing.
         page.evaluate('''()=>{
           window.coreDraws=[];
-          const draw=window.PoightMoveAnimations.prototype.sprite;
-          window.PoightMoveAnimations.prototype.sprite=function(ctx,key,x,y,size,...rest){
-            window.coreDraws.push({key,x,y,size,time:this.time});window.coreDraws=window.coreDraws.slice(-300);
-            return draw.call(this,ctx,key,x,y,size,...rest);
+          const draw=window.PoightMoveAnimations.prototype.drawBurst;
+          window.PoightMoveAnimations.prototype.drawBurst=function(ctx,b){
+            window.coreDraws.push({key:b.key,x:b.x,y:b.y,size:b.size,time:this.time});
+            window.coreDraws=window.coreDraws.slice(-300);
+            return draw.call(this,ctx,b);
           };
         }''')
         for mid in CASTERS:
@@ -304,10 +307,10 @@ try:
                 b = hit['animation']['bursts'][-1]
                 check(tag + ' contact same tick as HP and hitstop', b['age'] == 0 and
                       hit['feel']['remaining'] > 0 and abs(b['time']-hit['animation']['time']) < 1e-8)
-                check(tag + ' damage-scaled star with 0.8 body floor', abs(b['size'] - hit['enemy']['body']['visibleSize'][1] *
+                check(tag + ' damage-scaled ring with 0.8 body floor', abs(b['size'] - hit['enemy']['body']['visibleSize'][1] *
                       max(.8, .6 + .4 * (hp-hit['enemy']['hp']) / 35)) < 1e-8)
                 draws = page.evaluate('window.coreDraws')
-                check(tag + ' actual contact star drawn', any(d['key'] == b['key'] and
+                check(tag + ' actual contact ring drawn', any(d['key'] == b['key'] and
                       math.hypot(d['x']-b['x'], d['y']-b['y']) < .01 and d['time'] == b['time'] for d in draws))
                 check(tag + ' previous tick no HP loss', result['previous']['enemy']['hp'] == hp)
                 if mid == 'earthquake':
@@ -382,6 +385,11 @@ try:
             baseline_url = URL + '/?test=1&baseline=M4'
             baseline_html = reference.read_text().replace((ROOT / 'assets').as_uri() + '/', 'assets/')
             page.route(baseline_url, serve_html(baseline_html))
+            # Historical fixture replays the already SHA-validated local bytes,
+            # just like the H1 M4 replay; it must not depend on live cache/queue
+            # behavior while multiple large archival atlases decode concurrently.
+            page.route(URL + '/assets/*', lambda route: route.fulfill(
+                path=ROOT / 'assets' / route.request.url.rsplit('/', 1)[-1]))
             page.goto(baseline_url)
             ready(page)
             select(mid)

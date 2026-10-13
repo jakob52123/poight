@@ -1,0 +1,42 @@
+[
+  {
+    "file": "bone__ANIM_TAG_BONE.png",
+    "source": "../ref-moves/还原贴图/bone__ANIM_TAG_BONE.png",
+    "sha256": "c03cd097ff8b64ffae98d17b3a689b222536f88cfd8b6f75f218998c2488745c"
+  },
+  {
+    "file": "hands_and_feet__ANIM_TAG_HANDS_AND_FEET.png",
+    "source": "../ref-moves/还原贴图/hands_and_feet__ANIM_TAG_HANDS_AND_FEET.png",
+    "sha256": "43d4d3c3d8cf8463583ce3d47aaa0b8e2e606205ac88e53add472e8febe67f06"
+  },
+  {
+    "file": "bird__ANIM_TAG_BIRD.png",
+    "source": "../ref-moves/还原贴图/bird__ANIM_TAG_BIRD.png",
+    "sha256": "c05aaf23931171b632e324371e3e9e0a5f99b44c3b836611e1f4e11f49319982"
+  },
+  {
+    "file": "small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "source": "../ref-moves/还原贴图/small_ember__ANIM_TAG_SMALL_EMBER.png",
+    "sha256": "7131485aacc48039e01faa88d9d0a07574d42ccf9c6a4a5cdb05f417bff0a599"
+  },
+  {
+    "file": "spark_2__ANIM_TAG_SPARK.png",
+    "source": "../ref-moves/还原贴图/spark_2__ANIM_TAG_SPARK.png",
+    "sha256": "64ba0284533a7508920c5537028cc338efc474c7eee4044127b881ef64d28edd"
+  },
+  {
+    "file": "rapid_spin__ANIM_TAG_RAPID_SPIN.png",
+    "source": "../ref-moves/还原贴图/rapid_spin__ANIM_TAG_RAPID_SPIN.png",
+    "sha256": "1b6e55f8756554917b47f2cfc93df873af09e0f55ce854e40262d3cac8d3b7b5"
+  },
+  {
+    "file": "mud_sand_0__ANIM_TAG_MUD_SAND.png",
+    "source": "../ref-moves/还原贴图/mud_sand_0__ANIM_TAG_MUD_SAND.png",
+    "sha256": "67f2bf2bea0a0a148b64ad1daa05bb4958d76ba25d78683cc9bd5f78e12faf5e"
+  },
+  {
+    "file": "rocks__ANIM_TAG_ROCKS.png",
+    "source": "../ref-moves/还原贴图/rocks__ANIM_TAG_ROCKS.png",
+    "sha256": "8344d85ff7f3809dc9b51a17d380ef5a2b830685aeb2810a66cfa1380a9a1fbc"
+  }
+]

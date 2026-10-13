@@ -34,7 +34,8 @@ window.PoightMeleeVB1 = class {
     this.hits = [];
   }
   has(id) {
-    return this.adapter.enabled && Object.hasOwn(window.PoightMeleeVB1.moves, id);
+    // P6 owns Lick's continuous mouth-anchored tongue, including charge/recovery.
+    return this.adapter.enabled && id !== "lick" && Object.hasOwn(window.PoightMeleeVB1.moves, id);
   }
   pose(p) {
     const attack = p.attack;
@@ -156,7 +157,7 @@ window.PoightMeleeVB1 = class {
           Math.sin(a) * size * .3, size * .9);
       }
     } else if (v.shape === "star" || v.shape === "tip") {
-      stamp("star", "gold", 0, 0, size * (v.shape === "tip" ? .65 : 1.1),
+      stamp("star", "gold", 0, 0, size * (v.shape === "tip" ? .85 : 1.1),
         v.shape === "tip" ? angle : 0);
       if (v.shape === "tip") {
         // Emerald Peck has no beak sprite: an elongated sharp impact, not a new bird asset.

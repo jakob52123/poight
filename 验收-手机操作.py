@@ -120,6 +120,9 @@ def main():
         p.locator("#fullscreen").tap()
         check("点全屏才尝试横屏锁且失败静默", p.evaluate(
               "lockCalls.length===1 && lockCalls[0]==='landscape'"))
+        check("GBA菜单打开会暂停且全屏不偷偷恢复", snap(p)["phase"] == "paused")
+        p.locator("#gbaPause").tap()
+        check("GBA显式继续后再比较移动速度", snap(p)["phase"] == "playing")
         cdp = context.new_cdp_session(p)
 
         def send(kind, points):
@@ -260,10 +263,10 @@ def main():
         p.locator("#dashButton").tap()
         state = snap(p)
         check("触屏闪冷却末80ms记忆且不预支资源无敌", state["dashMemory"] is not None
-              and state["player"]["spent"] == 22 and not state["player"]["protected"])
+              and state["player"]["spent"] == 15 and not state["player"]["protected"])
         call(p, "step", .075)
         check("触屏闪记忆在冷却结束执行一次", snap(p)["player"]["dodges"] == 2
-              and snap(p)["player"]["spent"] == 44)
+              and snap(p)["player"]["spent"] == 30)
         for label, move, hurt, age, slow, expected in [
                 ("远程", "thunderbolt", 0, 0, 0, .9),
                 ("近身", "irontail", 0, 0, 0, .75),
@@ -295,15 +298,18 @@ def main():
         p.set_viewport_size({"width": 390, "height": 844})
         p.wait_for_timeout(100)
         state = snap(p)
-        check("转竖屏显示遮罩并暂停且清输入", p.locator("#rotatePhone").is_visible()
-              and state["phase"] == "paused" and state["mobile"]["pointerId"] is None)
+        check("GBA转竖屏可玩且清除旧摇杆输入", not p.locator("#rotatePhone").is_visible()
+              and state["phase"] == "playing" and state["mobile"]["pointerId"] is None)
+        p.locator("#gbaPause").tap()
+        state = snap(p)
         before = (state["elapsed"], state["matchSeconds"], state["player"]["x"])
         call(p, "step", 1)
         state = snap(p)
-        check("竖屏时所有对战时钟位置冻结", before ==
+        check("竖屏显式暂停时所有对战时钟位置冻结", state["phase"] == "paused" and before ==
               (state["elapsed"], state["matchSeconds"], state["player"]["x"]))
         p.screenshot(path=SHOTS / "竖屏遮罩-390x844.png")
         release()
+        p.locator("#gbaPause").tap()
         p.set_viewport_size({"width": 844, "height": 390})
         p.wait_for_timeout(100)
         check("横屏遮罩消失恢复", not p.locator("#rotatePhone").is_visible()
@@ -342,8 +348,8 @@ def main():
         q = portrait.new_page()
         q.on("pageerror", lambda e: ERRORS.append(str(e)))
         ready(q, "")
-        check("选人页竖屏遮罩同样覆盖", q.locator("#setup").evaluate("d=>d.open")
-              and q.locator("#rotatePhone").is_visible())
+        check("GBA选人页竖屏不被遮罩覆盖", q.locator("#setup").evaluate("d=>d.open")
+              and not q.locator("#rotatePhone").is_visible())
         q.set_viewport_size({"width": 844, "height": 390})
         q.wait_for_timeout(100)
         check("选人页横屏可继续选择", not q.locator("#rotatePhone").is_visible()

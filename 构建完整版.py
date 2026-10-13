@@ -14,6 +14,21 @@ from 异常状态数据 import apply as apply_statuses
 from 招式特效.第3批参数 import MOVES as R3_MOVES
 from 招式动画.打包 import build as build_animations, runtime as animation_runtime
 
+def compact_gba_css(text):
+    """Only compact the new presentation sheet; quoted strings and calc spaces survive."""
+    text = re.sub(r"/\*.*?\*/", "", text, flags=re.DOTALL)
+    tokens = re.split(r'''("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')''', text)
+    compact = "".join(token if i % 2 else re.sub(r"\s*([{};,])\s*", r"\1",
+                     re.sub(r":\s+", ":", re.sub(r"\s+", " ", token))) for i, token in enumerate(tokens)).strip()
+    compact = compact.replace("html[data-gba]", "html.gba").replace(
+        "html.gba #setup ", ".gba #setup ").replace(";}", "}")
+    aliases = ""
+    for axis in ("top", "right", "bottom", "left"):
+        compact = compact.replace(f"var(--safe-{axis})", f"var(--s{axis[0]})")
+        aliases += f"--s{axis[0]}:var(--safe-{axis});"
+    return ".gba{" + aliases + "}" + compact
+
+
 ROOT = Path(__file__).resolve().parent
 LIB = ROOT / "素材/角色库"
 ENV = ROOT / "素材/绿宝石场景"
@@ -21,11 +36,14 @@ OUT = ROOT / "assets"
 OUT.mkdir(exist_ok=True)
 sha = lambda b: hashlib.sha256(b).hexdigest()
 all_rows = json.loads((LIB / "角色库.json").read_text())
-selection = json.loads((ROOT / "首发50.json").read_text())
+selection = json.loads((ROOT / "首发200.json").read_text())
 ids = selection["ids"]
-assert selection["limit"] == 50 and len(ids) == len(set(ids)) == 50, "用户硬上限50；不能自行扩充"
-rows = [c for c in all_rows if c["id"] in ids]
-assert len(rows) == 50 and {c["id"] for c in rows} == set(ids)
+# 10-11 本人「50只就够了」由 10-13 北京09:40「拓宽到200」新授权取代。
+# 保留首发50.json；以后再加仍须本人开口，不能自行扩充。
+assert selection["limit"] == 200 and len(ids) == len(set(ids)) == 200, "本人新授权硬上限200"
+by_id = {c["id"]: c for c in all_rows}
+rows = [by_id[n] for n in ids]  # 名单顺序就是选人页顺序，不按图鉴重新排序。
+assert len(rows) == selection["limit"] and {c["id"] for c in rows} == set(ids)
 # 已下载的其他角色只作备用；不进入HTML、资产清单、服务白名单或离线包。
 flights = json.loads((LIB / "飞行修正/飞行包.json").read_text())
 assert {c["id"] for c in rows if 3 in c["types"]} == {int(n) for n in flights}, (
@@ -65,6 +83,7 @@ icons = Image.new("RGBA", (32 * 48, math.ceil(len(rows) / 32) * 48))
 for index, c in enumerate(rows):
     pack = {}
     seen = {}
+    contact_boxes = {}
     for name, a in c["art"].items():
         path = (LIB / a["file"]).resolve()
         assert path.is_relative_to(LIB.resolve())
@@ -93,7 +112,9 @@ for index, c in enumerate(rows):
                 a["frameHeight"] * a["rows"],
             )
             if a["sourceAnimation"] not in seen:
+                contact_boxes[a["sourceAnimation"]] = []
                 for y in range(a["rows"]):
+                    contact_boxes[a["sourceAnimation"]].append([])
                     for x in range(a["frames"]):
                         tile = im.crop(
                             (
@@ -109,6 +130,9 @@ for index, c in enumerate(rows):
                             and 0 < bb[0] < bb[2] < a["frameWidth"]
                             and 0 < bb[1] < bb[3] < a["frameHeight"]
                         ), (c["id"], name, x, y)
+                        # Presentation-only native-frame bounds, also usable under file:// CORS.
+                        opaque = tile.getchannel("A").point(lambda alpha: 255 if alpha >= 128 else 0)
+                        contact_boxes[a["sourceAnimation"]][y].append(opaque.getbbox())
                         cells += 1
                 # PNG lossless palette encoding: preserve exact RGBA pixels while reducing transfer size.
                 colors = im.getcolors(257)
@@ -141,6 +165,7 @@ for index, c in enumerate(rows):
         ]
         pack[name] = {k: a[k] for k in allowed}
         pack[name]["src"] = seen[a["sourceAnimation"]]
+        pack[name]["contactBounds"] = contact_boxes[a["sourceAnimation"]]
         if "bodyOffsets" in a:
             assert len(a["bodyOffsets"]) == a["rows"] and all(
                 len(row) == a["frames"] for row in a["bodyOffsets"]
@@ -281,11 +306,26 @@ credits = [
     "仓库政策或代码许可证不等于取得宝可梦/官方图像商业传播授权。",
     "包含原作和社区美术，仅供个人非商业研究试玩，请勿冒充官方或转售。",
     "部分源动作采用原生浮动或共享方向，不声称每个动作都具有八套独立姿态。不同招式可复用原生发力动作。",
-    "飞行修正：8只飞行系使用原生Hover/振翅/腾空姿态重新编排循环，以躯干锚点移除原地跳跃轨迹。喷火龙、飞天螳螂、快龙使用原生Hop翼姿重编，并非原素材已有完整专用飞行循环；暴鲤龙为无翼空中蜿蜒。不是仅抬高走路贴图。",
+    "飞行修正：24只飞行系使用原生Hover/振翅/腾空姿态重新编排循环，以躯干锚点移除原地跳跃轨迹。喷火龙、飞天螳螂、快龙使用原生Hop翼姿重编，并非原素材已有完整专用飞行循环；暴鲤龙为无翼空中蜿蜒。不是仅抬高走路贴图。",
     "",
 ]
 for c in rows:
     credits.extend([f"#{c['id']:04} {c['name']}", c["credits"].strip(), ""])
+music_catalog = json.loads((ROOT / "素材/音乐/外部BGM.json").read_text())
+credits.extend(["", "战斗音乐（剪辑、循环接缝处理、响度归一化，非原版音量）",
+                "CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+                "CC0: https://creativecommons.org/publicdomain/zero/1.0/"])
+for t in music_catalog:
+    content = (ROOT / t["src"]).read_bytes()
+    assert sha(content) == t["sha256"]
+    output(Path(t["src"]).name, content)
+    if t.get("intro"):
+        intro_content = (ROOT / t["intro"]).read_bytes()
+        assert sha(intro_content) == t["introSHA256"]
+        output(Path(t["intro"]).name, intro_content)
+    credits.extend([t["name"] + " — " + t["author"] + " — " + t["license"], t["url"],
+                    t["attribution"]])
+credits.append("原创：Poight BGM3 · 跃步电光 / 暗棱警报（C/B/R3） · 项目原创合成谱面")
 creditBytes = ("\n".join(credits) + "\n").encode()
 creditFile = output("鸣谢-" + sha(creditBytes)[:12] + ".txt", creditBytes)
 status_assets = apply_statuses(MOVES, ROOT, output)
@@ -300,16 +340,56 @@ for ident, portrait in portraits.items():
     png = (ROOT / "素材/立绘" / portrait["file"]).read_bytes()
     assert sha(png) == portrait["sha256"]
     portrait["src"] = output(f"portrait-{ident}-{sha(png)[:12]}.png", png)
+# A small, indexed first-frame sheet reuses local BW artwork, not fifty animation downloads.
+roster_sheet = Image.new("RGBA", (440, math.ceil(len(rows) / 10) * 44))
+for i, character in enumerate(rows):
+    portrait = portraits[str(character["id"])]
+    with Image.open(ROOT / "素材/立绘" / portrait["file"]) as atlas:
+        thumb = atlas.crop((0, 0, portrait["width"], portrait["height"])).convert("RGBA")
+    thumb = thumb.crop(thumb.getbbox())
+    thumb.thumbnail((44, 44), Image.Resampling.NEAREST)
+    roster_sheet.alpha_composite(thumb, (i % 10 * 44 + (44 - thumb.width) // 2,
+                                       i // 10 * 44 + (44 - thumb.height) // 2))
+roster_buffer = BytesIO()
+roster_sheet.quantize(256, method=Image.Quantize.FASTOCTREE).save(
+    roster_buffer, format="PNG", optimize=True)
+roster_bytes = roster_buffer.getvalue()
+assert len(roster_bytes) < 124000  # R200: four times the roster, one shared sheet.
+roster_file = output(f"portrait-roster-{sha(roster_bytes)[:12]}.png", roster_bytes)
 portrait_json = json.dumps(portraits, ensure_ascii=False, separators=(",", ":")).encode()
 output("portrait-timing.json", portrait_json)
+# R200: per-species animation metadata is loaded only with that fighter.
+# Opaque RGB byte envelopes work under existing connect-src 'none' on HTTP.
+# file:// canvases are tainted, so an offline-only generated literal companion
+# restores file support; no runtime HTTP script downloads or CSP relaxation.
+character_packs = {}
+for ident, art in packed.items():
+    actor = next(c for c in metadata if c["id"] == ident)
+    payload = json.dumps({"art": art, "moveAnchors": actor.get("moveAnchors", {})},
+                         ensure_ascii=False, separators=(",", ":")).encode()
+    output(f"character-{ident:04}-{sha(payload)[:12]}.json", payload)
+    offline = b"window.PoightOfflineArt[" + str(ident).encode() + b"]=" + payload + b";\n"
+    offline_file = output(f"character-offline-{ident:04}-{sha(offline)[:12]}.txt", offline)
+    raw = len(payload).to_bytes(4, "big") + payload
+    width = 128
+    height = math.ceil(len(raw) / (width * 3))
+    envelope = Image.frombytes("RGB", (width, height), raw.ljust(width * height * 3, b"\0"))
+    buf = BytesIO()
+    envelope.save(buf, format="PNG", optimize=True)
+    png = buf.getvalue()
+    character_packs[ident] = {"png": output(f"character-meta-{ident:04}-{sha(png)[:12]}.png", png),
+                              "offline": offline_file}
 data = {
+    "music": [{k: t[k] for k in ("id", "name", "author", "license", "url", "src", "loopStart", "duration", "intro", "introDuration") if k in t}
+              for t in music_catalog],
     "portraits": portraits,
+    "gbaRoster": roster_file,
     "hpMultiplier": HP_MULTIPLIER,
     "defaultDifficulty": DEFAULT_DIFFICULTY,
     "generatedFx": generatedFx,
     "moveAnimations": build_animations(ROOT, output, TYPES),
     "revision3Moves": R3_MOVES,
-    "roster": [{k: v for k, v in c.items() if k != "credits"} for c in metadata],
+    "roster": [{k: v for k, v in c.items() if k not in {"credits", "moveAnchors"}} for c in metadata],
     "moves": MOVES,
     "statusAssets": status_assets,
     "tiers": DIFFICULTIES,
@@ -318,13 +398,21 @@ data = {
     "environment": env,
     "environments": environments,
     "terrains": terrains,
-    "art": packed,
+    "art": {},
+    "characterPacks": character_packs,
     "icons": iconFile,
     "iconColumns": 32,
     "iconOrder": [c["id"] for c in rows],
 }
+build_sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()[:8]
+# EVT has no multiline string literals: trim indentation only, preserve JS newlines/ASI.
+evt_source = "\n".join(line.lstrip(" ") for line in (ROOT / "埋点.js").read_text().splitlines())
+evt_source = evt_source.replace("__EVT_BUILD__", build_sha)
+assert len(evt_source.encode()) <= 8192
 script = (
-    (ROOT / "桥梁通行.js").read_text()
+    evt_source
+    + "\n"
+    + (ROOT / "桥梁通行.js").read_text()
     + "\n"
     + (ROOT / "丰缘接缝.js").read_text()
     + "\n"
@@ -348,6 +436,8 @@ script = (
     + "\n"
     + (ROOT / "招式动画-VA2.js").read_text()
     + "\n"
+    + (ROOT / "招式动画VB2.js").read_text()
+    + "\n"
     + (ROOT / "平衡测试.js").read_text()
     + "\n"
     + (ROOT / "打击感.js").read_text()
@@ -366,6 +456,19 @@ script = (
     + (ROOT / "立绘.js").read_text()
     + "\n"
     + (ROOT / "演示模式.js").read_text()
+    + "\n"
+    + (ROOT / "按需资源.js").read_text()
+    + "\n"
+    + (ROOT / "招式动画VC.js").read_text()
+    + "\n"
+    + (ROOT / "战斗音乐.js").read_text()
+    + "\n"
+    + "\n".join(line.strip() for line in (ROOT / "界面-GBA.js").read_text().splitlines()
+                if not line.lstrip().startswith(("//", "/*")))
+    + "\n"
+    + (ROOT / "UI3/招式栏.js").read_text()
+    + "\n"
+    + (ROOT / "选人页.js").read_text()
     + "\n"
     + (ROOT / "对战.js").read_text()
 )
@@ -409,7 +512,13 @@ result = (
         + "\n"
         + (ROOT / "手机操作.css").read_text()
         + "\n"
-        + (ROOT / "演示模式.css").read_text(),
+        + (ROOT / "演示模式.css").read_text()
+        + "\n"
+        + compact_gba_css((ROOT / "界面-GBA.css").read_text())
+        + "\n"
+        + (ROOT / "UI3/招式栏.css").read_text()
+        + "\n"
+        + compact_gba_css((ROOT / "选人页.css").read_text()),
     )
     .replace("__GAME_SCRIPT__", script)
     .replace("__GAME_FAVICON__", faviconFile)
@@ -418,12 +527,14 @@ assert "__GAME_" not in result and not re.search(
     r'<(?:script|link|img)[^>]+(?:src|href)=["\']https?://', result
 )
 (ROOT / "候选试玩.html").write_text(result)
+assert all(Path(name).suffix in {".png", ".html", ".gz", ".txt", ".json", ".ico", ".webmanifest", ".mp3"}
+           for name in assets), "发布清单不能包含外部 JS/Python；对应源码以 txt 附带"
 report = {
     "candidate": "候选试玩.html",
     "bytes": len(result.encode()),
     "sha256": sha(result.encode()),
     "roster": len(rows),
-    "rosterCap": 50,
+    "rosterCap": selection["limit"],
     "selectedIDs": ids,
     "sourceLibraryOnly": len(all_rows),
     "moves": len(MOVES),
@@ -433,7 +544,7 @@ report = {
     "assets": len(assets),
     "assetsBytes": sum(a["bytes"] for a in assets.values()),
     "bodyProfiles": body_receipt["count"],
-    "sourceRuntime": "页面.html + 界面.css + 街机界面.css + 配招界面.css + 场景界面.css + 选人界面.css + 战斗界面方案.css + 手机操作.css + 演示模式.css + 演示模式.js + 战斗界面方案.js + 手机操作.js + 桥梁通行.js + 丰缘接缝.js + 世界地图.js + 竞技场.js + 构建竞技场.py + 对战.js + 平衡测试.js + 打击感.js + 瞄准预警.js + 手感参数.js + 异常状态.js + 异常状态数据.py + 招式状态表.tsv + 大地图通行.js + 草丛藏身.js + 跳跃.js + 空中判定.py + 生图招式.js + 咬类招式.js + 招式动画引擎.js + 招式动画接入.js + 主角招式外观.js + 招式动画/打包.py + 体型判定.js + 体型数据.py + 游戏数据.py + 素材/绿宝石场景/构建丰缘.py + 素材/绿宝石场景/构建通行.py + 素材/绿宝石场景/桥梁元数据.py",
+    "sourceRuntime": "界面-GBA.js + 界面-GBA.css + 埋点.js + 页面.html + 界面.css + 街机界面.css + 配招界面.css + 场景界面.css + 选人界面.css + 战斗界面方案.css + 手机操作.css + 演示模式.css + 演示模式.js + 战斗界面方案.js + 手机操作.js + 桥梁通行.js + 丰缘接缝.js + 世界地图.js + 竞技场.js + 构建竞技场.py + 按需资源.js + 战斗音乐.js + 对战.js + 平衡测试.js + 打击感.js + 瞄准预警.js + 手感参数.js + 异常状态.js + 异常状态数据.py + 招式状态表.tsv + 大地图通行.js + 草丛藏身.js + 跳跃.js + 空中判定.py + 生图招式.js + 咬类招式.js + 招式动画引擎.js + 招式动画接入.js + 主角招式外观.js + 招式动画/打包.py + 体型判定.js + 体型数据.py + 游戏数据.py + 素材/绿宝石场景/构建丰缘.py + 素材/绿宝石场景/构建通行.py + 素材/绿宝石场景/桥梁元数据.py",
     "scenes": [
         {
             "id": e["id"],

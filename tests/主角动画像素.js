@@ -29,6 +29,24 @@
     }
     return sprite.call(this, ctx, key, x, y, size, ...rest);
   };
+  const burst = core.drawBurst;
+  core.drawBurst = function (ctx, b) {
+    const p = window.heroProbe;
+    const radius = Math.max(b.size, b.height * 1.2) * (1 + b.age / .26 * .15) / 2;
+    const light = this.ringIsLight ? this.ringIsLight(ctx, b, radius) : null;
+    if (p.enabled && p.id === b.id) {
+      if (p.suppress) return;
+      const layer = document.createElement("canvas");
+      layer.width = ctx.canvas.width; layer.height = ctx.canvas.height;
+      const c = layer.getContext("2d"); c.setTransform(ctx.getTransform());
+      burst.call(this, c, b, light);
+      const d = c.getImageData(0, 0, layer.width, layer.height).data;
+      let count = 0;
+      for (let i = 3; i < d.length; i += 4) if (d[i] >= 250) count++;
+      p.contact = { id: b.id, x: b.x, y: b.y, time: this.time, age: b.age, count };
+    }
+    return burst.call(this, ctx, b, light);
+  };
   const proto = window.PoightHeroVisuals.prototype, paint = proto.paint;
   const electrify = proto.electrify;
   proto.electrify = function (ctx, target, ...args) {
@@ -54,6 +72,11 @@
   proto.paint = function (ctx, s) {
     const p = window.heroProbe;
     if (!p.enabled || p.id !== s.id) return paint.call(this, ctx, s);
+    if (s.kind === "thunder" && s.part === "ring" && this.core.ringBackdrop) {
+      const r = Math.max(Math.hypot(s.targetWidth || s.targetHeight, s.targetHeight) * .55,
+        s.targetHeight * .60) + Math.min(.10, Math.max(0, s.since) * .4) * s.targetHeight;
+      s = { ...s, ringLight: this.core.ringBackdrop(ctx, s.ringX, s.ringY, r) < 157 };
+    }
     const customContact = (s.kind === "claw" && s.id === "dragonclaw") ||
       (s.kind === "thunder" && s.part === "ring");
     if (s.kind === p.kind || customContact) {
@@ -64,8 +87,15 @@
       c.setTransform(matrix);
       c.imageSmoothingEnabled = false;
       const flames = [], texture = this.texture, strokes = [], line = this.line;
+      const sweep = document.createElement("canvas");
+      sweep.width = canvas.width; sweep.height = canvas.height;
+      const white = sweep.getContext("2d");
       this.line = function (g, points, width, color) {
         strokes.push({ points, width, color });
+        if (s.part === "ring" && color === "#ffffff") {
+          white.setTransform(g.getTransform()); white.globalAlpha = g.globalAlpha;
+          line.call(this, white, points, width, color);
+        }
         return line.call(this, g, points, width, color);
       };
       this.texture = function (g, key, x, y, size, ...rest) {
@@ -84,7 +114,12 @@
       try { paint.call(this, c, s); } finally { this.texture = texture; this.line = line; }
       const entry = { canvas, matrix, s: { ...s }, flames, strokes };
       if (s.kind !== "thunder" || s.part === "bolt") p.last = entry;
-      if (s.part === "ring") p.ring = entry;
+      if (s.part === "ring") {
+        p.ring = entry;
+        const d = white.getImageData(0, 0, sweep.width, sweep.height).data;
+        p.flashPixels = 0;
+        for (let i = 3; i < d.length; i += 4) if (d[i] > 20) p.flashPixels++;
+      }
       if (customContact) {
         const d = c.getImageData(0, 0, canvas.width, canvas.height).data;
         let count = 0;
@@ -121,6 +156,7 @@
       components.push({ count: queue.length, length: hi - lo + unit, width: nhi - nlo + unit });
     }
     let target = 0, original = 0, ringMin = Infinity, ringMax = -Infinity, center = 0;
+    let radialMin = Infinity, radialMax = -Infinity;
     const game = document.querySelector("#game");
     const full = game.getContext("2d").getImageData(0, 0, w, h).data;
     const raw = p.target?.getContext("2d").getImageData(0, 0, w, h).data;
@@ -133,7 +169,9 @@
       if (s.part !== "ring" || d[i + 3] < 250) continue;
       const q = new DOMPoint(x + .5, y + .5).matrixTransform(inv);
       ringMin = Math.min(ringMin, q.x); ringMax = Math.max(ringMax, q.x);
-      if (Math.hypot(q.x - s.x, (q.y - s.y) / .52) < s.targetHeight * .30) center++;
+      const radius = Math.hypot(q.x - s.ringX, q.y - s.ringY);
+      radialMin = Math.min(radialMin, radius); radialMax = Math.max(radialMax, radius);
+      if (radius < s.targetHeight * .30) center++;
     }
     let boltOpaque = 0;
     if (p.id === "thunder" && p.last) {
@@ -144,7 +182,9 @@
       targetPixels: target, originalPixels: original,
       originalFraction: target ? original / target : null, shockAge: p.shockAge,
       ringDiameter: Number.isFinite(ringMin) ? ringMax - ringMin + unit : 0,
-      ringCenterPixels: center };
+      ringInnerDiameter: Number.isFinite(radialMin) ? radialMin * 2 - unit : 0,
+      ringBandWidth: Number.isFinite(radialMin) ? radialMax - radialMin + unit : 0,
+      targetWidth: s.targetWidth, ringCenterPixels: center };
   };
   window.measureHeroPixels = () => {
     const p = window.heroProbe, entry = p.last, api = window.__waterTest;

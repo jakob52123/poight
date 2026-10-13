@@ -146,7 +146,9 @@ with sync_playwright() as pw:
 
     runs = []
     for run in range(2):
-        page = load(desktop, "?demo=1&seed=7&paused=1&loop=0")
+        # Clock-only fixture: unchanged 5/10/15s assertions must not stop at the new earlier KO.
+        # Both existing Splash-only actors isolate clock/seed; default-combat KO tests below stay.
+        page = load(desktop, "?demo=1&seed=7&p1=129&p2=129&paused=1&loop=0")
         states = []
         for seconds in (5, 10, 15):
             page.evaluate("__demo.step(600)")
@@ -271,7 +273,8 @@ with sync_playwright() as pw:
     page.on("pageerror", lambda e: errors.append(str(e)))
     page.goto(URL + "?test=1", timeout=120000)
     wait(page, "window.__waterTest?.snapshot().artReady")
-    check("normal touch portrait retains rotate mask", page.evaluate("document.querySelector('#rotatePhone').matches(':popover-open')"))
+    check("normal GBA touch portrait is unobstructed", page.evaluate(
+        "!document.querySelector('#rotatePhone').matches(':popover-open') && __waterTest.snapshot().mobile.portrait && !__waterTest.snapshot().mobile.blockedPortrait"))
     check("normal mode has no demo API", page.evaluate("typeof window.__demo === 'undefined'"))
     page.close()
     touch.close()

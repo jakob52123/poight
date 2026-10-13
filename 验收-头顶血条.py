@@ -276,9 +276,10 @@ try:
         h = snap(page)["hud"]["actors"][0]
         b = h["stamina"]["box"]
         check(
-            "Default HUD1 stamina is the top DOM large bar",
-            h["stamina"]["source"] == "dom" and b["width"] >= 100
-            and b["height"] >= 10 and b["y"] < 100,
+            "Default desktop A stamina is the centered thin DOM resource line",
+            h["stamina"]["source"] == "dom" and b["width"] == 244
+            and b["height"] == 3 and b["y"] > 450
+            and abs(b["x"] + b["width"] / 2 - page.viewport_size["width"] / 2) < 1,
         )
         step(page, 5)
         check(
@@ -334,10 +335,13 @@ try:
         reset(page)
         arrange(page, {"enemy": {"hp": 0}})
         step(page, 0.1)
+        check("KO leaves final hit visible before settlement", not page.locator("#matchOverlay").is_visible())
+        page.wait_for_timeout(850)
         check(
-            "Settlement stays DOM with HP numbers",
+            "Settlement stays DOM with HP numbers after 0.8s",
             page.locator("#matchOverlay").is_visible()
-            and "血量" in page.locator("#matchDetail").inner_text(),
+            and "血量" in page.locator(".result-stats").inner_text()
+            and " / " in page.locator(".result-stats").inner_text(),
         )
         check(
             "No horizontal overflow",

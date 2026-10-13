@@ -1,0 +1,74 @@
+[
+  {
+    "path": "招式动画/招式动画.json",
+    "sha256": "db6079354e83af96edb8df732a487a137cbca606a767fe68215f878dff2dac43",
+    "bytes": 833182,
+    "packedSHA256": "0cf58a0f86e97517991f476df0a618474b20f1331ce166db8c4050ebf2658646"
+  },
+  {
+    "path": "招式特效/主角锚点.json",
+    "sha256": "3431ffae99133d4fe17030e3df18c6517a30dc1962948b0f778da748225f0c83",
+    "bytes": 6279813,
+    "packedSHA256": "bf371d11993dc690290198a8f32df8fe9042a29ab83c043bbc096457572fa166"
+  },
+  {
+    "path": "数值资料/体型校准/映射记录.json",
+    "sha256": "1b60cc7c68246289c857947b01da49d0e9aa7913e953a99816a83597baa8c733",
+    "bytes": 254327,
+    "packedSHA256": "030c0f64f03df24b40a9ec913cd6d3b85c12fb9aaeadc47c55406b17d8305543"
+  },
+  {
+    "path": "素材/立绘/图集.json",
+    "sha256": "6cfdb46199092935797217159b542dda1121d712f9cc4c20506cd2ee600b90ef",
+    "bytes": 163813,
+    "packedSHA256": "a1b2d2e1b5358e886c868944f2c4f73663511b361cc22db0b9cdf3f2cc388595"
+  },
+  {
+    "path": "素材/立绘/来源.json",
+    "sha256": "16f920816baa517069eb6475f0951117019a7d01ac215b2a4533191d2fadd600",
+    "bytes": 114947,
+    "packedSHA256": "f6a43ce2b77cc23711a3d5fd58ed26110571cf5095987f044d89f78471789414"
+  },
+  {
+    "path": "tests/B2区间.json",
+    "sha256": "49f3d8414411acaaefc0f83290c0668dedd7d59c50cae93c648f202b2986b083",
+    "bytes": 24452,
+    "packedSHA256": "c910b6a455df9768b39c94243595be2701c4e8394f69eac35fa55cfd38a3e5c5"
+  },
+  {
+    "path": "tests/R200-B2区间.json",
+    "sha256": "800b46b735eebfbe76cf4427f02658ca5d4d92a592d60b350cda00e67d06795c",
+    "bytes": 68192,
+    "packedSHA256": "1323a34793f82bde97b2bfd9422c642fff473989bf274fd280f9c2b0b480114c"
+  },
+  {
+    "path": "招式动画/特效映射.json",
+    "sha256": "46cfe33e36a1aa9293524b1db0ce90a0d2db14c99806439667e9070ae7921433",
+    "bytes": 14437,
+    "packedSHA256": "9cac474b7faa30a98a1ee2ce86c46b52fc388c6949068e637c6c531be9e3d72d"
+  },
+  {
+    "path": "招式特效/确认名单.json",
+    "sha256": "3c69398b9ad0fb132b723dcdbd0a008b4221bd87204d63444de78e6a1351eae9",
+    "bytes": 18965,
+    "packedSHA256": "0572febd4f12c308adf18042bac1f0d04b32c0358f8f613d1f1e864b2b28bd24"
+  },
+  {
+    "path": "招式特效/第2批/图集记录.json",
+    "sha256": "cee3e7f9708bb7df6dd2c82f630996ad99a42ddc142440c519c49e7f560f4eb5",
+    "bytes": 41432,
+    "packedSHA256": "be7a52b72606008c3d95019103dfbac30c98da2a1a873e1c1f7b93aa9a17b845"
+  },
+  {
+    "path": "数值资料/体型校准/来源.json",
+    "sha256": "1534b9bda050f0392527b3c87072bcf9646401abd577b9f7fa6c50f7960374b4",
+    "bytes": 71017,
+    "packedSHA256": "fe97d5d81fa32705db114629efa87598cb071863190da07490dc8def1d0d84ec"
+  },
+  {
+    "path": "素材/绿宝石场景/被全图区块替代.json",
+    "sha256": "a08b219d7853ce972667826130b95e223ea6e8c912f394e5ebd449737f3f9717",
+    "bytes": 13289,
+    "packedSHA256": "fca06e0444cf85dd86f2dda439b9fe0cd25d2a34095cc2a3cf19873a3fd6ecc9"
+  }
+]

@@ -12,7 +12,7 @@
     triattack: { symbol: "triangle", anchor: "mouth" },
     leafstorm: { symbol: "leaf", anchor: "plant" },
     psychocut: { symbol: "crescent", anchor: "head" },
-    hydropump: { beam: true, symbol: "water", color: "#69ffff", ratio: .40, anchor: "mouth" },
+    hydropump: { beam: true, symbol: "water", color: "#45ffff", ratio: .40, anchor: "mouth" },
     solarbeam: { beam: true, symbol: "orb", color: "#ffef35", ratio: .40, anchor: "flower" },
     psybeam: { beam: true, symbol: "ring", color: "#fff520", anchor: "head" },
     dragonbreath: { beam: true, symbol: "breath", color: "#ffd95a", anchor: "mouth" },
@@ -20,7 +20,7 @@
     signalbeam: { beam: true, symbol: "red", color: "#6dff35", anchor: "head" },
     gigadrain: { beam: true, symbol: "sap", color: "#72ff36", anchor: "flower" },
     freezedry: { beam: true, symbol: "ice", color: "#45ffff", anchor: "mouth" },
-    flashcannon: { beam: true, symbol: "silver", color: "#36e9ff", anchor: "cannon" },
+    flashcannon: { beam: true, symbol: "silver", color: "#65ffff", anchor: "cannon" },
   };
   window.PoightVA2Moves = moves;
   const p = window.PoightMoveAnimations.prototype;
@@ -30,6 +30,7 @@
   p.reset = function () {
     old.reset.call(this);
     this.va2Roots = new Map();
+    this.va2Embers = [];
   };
   p.uses = function (id) {
     return this.enabled && (!!moves[id] || old.uses.call(this, id));
@@ -71,12 +72,18 @@
     this.sprite(ctx, "va2-" + key, x, y,
       diameter * spec.width / Math.min(spec.width, spec.height), alpha, angle);
   };
+  p.va2Projectile = function (ctx, key, x, y, extent, alpha = 1, angle = 0) {
+    const spec = this.engine.mapping.effects["va2-" + key];
+    this.va2Symbol(ctx, key, x, y,
+      extent * Math.min(spec.width, spec.height) / Math.max(spec.width, spec.height),
+      alpha, angle);
+  };
   p.path = function (ctx, id, root, front, age, alpha = 1, height = 48) {
     const cfg = this.enabled && moves[id];
     if (!cfg) return old.path.call(this, ctx, id, root, front, age, alpha, height);
     const dx = front.x - root.x, dy = front.y - root.y,
       length = Math.hypot(dx, dy), a = Math.atan2(dy, dx),
-      size = Math.max(14, height * .30) * 1.3;
+      size = height * .36;
     ctx.save();
     ctx.globalAlpha = alpha;
     // The physical front is a hard leading plane: round caps, glow and texture tiles
@@ -91,13 +98,46 @@
     ctx.closePath();
     ctx.clip();
     if (!cfg.beam) {
+      if (id === "ember") {
+        // Three discrete GBA-like tongues. Flicker is drawing-only, never a new shot.
+        const frame = Math.floor(age * 25) % 3;
+        for (let i = 0; i < 3; i++) {
+          const flameHeight = height * [.35, .38, .33][(frame + i) % 3],
+            spec = this.engine.mapping.effects["va2-flame"],
+            diameter = flameHeight * Math.min(spec.width, spec.height) / spec.height,
+            back = flameHeight / 2 + Math.min(length, i * height * .28);
+          this.va2Symbol(ctx, "flame", front.x - ux * back,
+            front.y - uy * back + Math.sin(frame * 2 + i) * height * .025,
+            diameter, alpha, (frame - 1) * .06);
+        }
+        ctx.restore();
+        return;
+      }
+      if (id === "poisonsting") {
+        const spec = this.engine.mapping.effects["va2-needle"],
+          needleLength = height * .35, diameter = needleLength * spec.width / spec.height;
+        // Short contracting wake suggests a brisk dart; head/velocity/contact stay physical.
+        ctx.strokeStyle = "#ff8cf5";
+        ctx.lineWidth = height * .022;
+        ctx.globalAlpha = alpha * .7;
+        ctx.beginPath();
+        ctx.moveTo(front.x - ux * needleLength, front.y - uy * needleLength);
+        const wake = height * (.06 + .025 * (Math.floor(age * 32) % 3));
+        ctx.lineTo(front.x - ux * (needleLength + wake), front.y - uy * (needleLength + wake));
+        ctx.stroke();
+        ctx.globalAlpha = alpha;
+        this.va2Symbol(ctx, "needle", front.x - ux * needleLength / 2,
+          front.y - uy * needleLength / 2, diameter, alpha, a + Math.PI / 2);
+        ctx.restore();
+        return;
+      }
       // Each existing fan projectile has its OWN physical front; never add hit-bearing shots.
       const rotation = ["razorleaf", "leafstorm", "psychocut"].includes(id) ? a
         : id === "poisonsting" ? a + Math.PI / 2 : 0;
       if (id === "bubble") {
         for (let i = 1; i <= 2; i++) {
           const back = Math.min(length, i * size * 1.15);
-          this.va2Symbol(ctx, "bubble", front.x - Math.cos(a) * back,
+          this.va2Projectile(ctx, "bubble", front.x - Math.cos(a) * back,
             front.y - Math.sin(a) * back, size * .78, alpha);
         }
       }
@@ -105,16 +145,16 @@
         for (let i = 0; i < 4; i++) {
           const back = Math.min(length, size * (1.1 + i * .6)),
             offset = Math.sin(age * 14 + i * 2) * size * .65;
-          this.va2Symbol(ctx, cfg.symbol, front.x - Math.cos(a) * back - Math.sin(a) * offset,
+          this.va2Projectile(ctx, cfg.symbol, front.x - Math.cos(a) * back - Math.sin(a) * offset,
             front.y - Math.sin(a) * back + Math.cos(a) * offset, size * .7, alpha,
             id === "leafstorm" ? a + age * 9 + i : age * 4 + i);
         }
       }
       const spec = this.engine.mapping.effects["va2-" + cfg.symbol],
-        scale = size / Math.min(spec.width, spec.height), relative = rotation - a,
+        scale = size / Math.max(spec.width, spec.height), relative = rotation - a,
         half = (Math.abs(Math.cos(relative)) * spec.width +
           Math.abs(Math.sin(relative)) * spec.height) * scale / 2;
-      this.va2Symbol(ctx, cfg.symbol, front.x - ux * half, front.y - uy * half,
+      this.va2Projectile(ctx, cfg.symbol, front.x - ux * half, front.y - uy * half,
         size, alpha, rotation);
       ctx.restore();
       return;
@@ -207,13 +247,39 @@
     const origin = this.va2Roots.get(source);
     if (burst && origin?.id === m.id) burst.va2Root = { ...origin.root };
     if (m.id === "freezedry") this.frost.set(target, .3);
+    if (m.id === "ember" && burst) {
+      // Separate .30s visual lifetime; do not extend the authoritative common burst.
+      this.va2Embers.push({ x: burst.x, y: burst.y, time: this.time,
+        height: target.char.body.visibleSize[1] });
+    }
   };
   p.draw = function (ctx) {
     old.draw.call(this, ctx);
+    ctx.save();
+    this.clipContactCenters(ctx);
+    this.va2Embers = this.va2Embers.filter((b) => this.time - b.time < .3);
+    for (const b of this.va2Embers) {
+      const age = this.time - b.time, frame = Math.floor(age * 25) % 3;
+      for (let i = 0; i < 3; i++) {
+        const spec = this.engine.mapping.effects["va2-flame"],
+          h = b.height * [.25, .29, .27][(frame + i) % 3];
+        this.va2Symbol(ctx, "flame", b.x + (i - 1) * b.height * .22,
+          b.y - (i % 2) * b.height * .20 - age * 10,
+          h * spec.width / spec.height, Math.min(1, (.3 - age) / .06));
+      }
+    }
     for (const b of this.bursts) {
       if (!moves[b.id]) continue;
       const t = b.age / .26, alpha = 1 - t;
-      if (b.id === "gigadrain" && b.va2Root) {
+      if (b.id === "ember") {
+        continue; // Three on-body tongues above, not the former radial color blocks.
+      } else if (b.id === "poisonsting") {
+        for (let i = 0; i < 4; i++) {
+          const a = i * Math.PI / 2 + .4, radius = b.size * (.18 + t * .15);
+          this.va2Symbol(ctx, "poison", b.x + Math.cos(a) * radius,
+            b.y + Math.sin(a) * radius - t * 6, b.size * .16, alpha);
+        }
+      } else if (b.id === "gigadrain" && b.va2Root) {
         // Visible return is conditional on SUCCESSFUL direct damage, not on the cast.
         for (let i = 0; i < 12; i++) {
           const u = Math.min(1, t * 1.8 + i / 18),
@@ -234,7 +300,13 @@
             b.size * .35, alpha);
         }
       } else if (b.id === "hydropump" || b.id === "bubble") {
-        this.sprite(ctx, "core-splash", b.x, b.y, b.size * (1 + t), alpha);
+        // VA2-only bright blue/white spray; do not reuse V1's dark navy splash.
+        for (let i = 0; i < 9; i++) {
+          const a = i * Math.PI * 2 / 9, radius = b.size * (.32 + t * .65);
+          this.va2Projectile(ctx, b.id === "bubble" ? "bubble" : "water",
+            b.x + Math.cos(a) * radius, b.y + Math.sin(a) * radius + t * t * 8,
+            b.size * .20, alpha, a);
+        }
       } else {
         // Outward debris, not six huge copies piled into a generic solid doughnut.
         // The common impact star remains visible in the center for every successful hit.
@@ -248,6 +320,7 @@
         }
       }
     }
+    ctx.restore();
   };
   const generated = window.PoightR3GeneratedMoves.prototype,
     charge = generated.charge, returnFlow = generated.returnFlow;
