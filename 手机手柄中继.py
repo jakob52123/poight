@@ -82,7 +82,7 @@ def upgrade(h):
             now = time.monotonic()
             if now-rate_start >= 1: rate_start = now; count = 0
             count += 1
-            if count > 100: break
+            if count > 200: break
             with LOCK:
                 now = time.monotonic()
                 for code,r in list(ROOMS.items()):
