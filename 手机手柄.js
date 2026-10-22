@@ -61,14 +61,24 @@
       room = $('roomCode').value.trim().toUpperCase(); token = ''; stopped = false; connect();
     };
     const stick = $('padStick'), knob = $('padKnob'); let pointer = null;
+    let moveFrame = null, lastMoveSent = -Infinity;
+    const flushMove = now => {
+      // Cap high-refresh displays too, rather than sending at 120+ Hz.
+      if (now - lastMoveSent < 16) { moveFrame = requestAnimationFrame(flushMove); return; }
+      moveFrame = null; lastMoveSent = now; packet();
+    };
     const move = e => {
       if (pointer !== e.pointerId) return;
       const r = stick.getBoundingClientRect(), dx = e.clientX-r.x-r.width/2, dy=e.clientY-r.y-r.height/2;
       const length = Math.hypot(dx,dy), radius = r.width*.34, gain = Math.min(1,length/radius);
       vector = {x:length ? dx/length*gain:0,y:length ? dy/length*gain:0};
-      knob.style.transform=`translate(${vector.x*radius}px,${vector.y*radius}px)`; packet();
+      knob.style.transform=`translate(${vector.x*radius}px,${vector.y*radius}px)`;
+      if (moveFrame === null) moveFrame = requestAnimationFrame(flushMove);
     };
-    const clear = () => { pointer=null; vector={x:0,y:0};knob.style.transform='none';packet(); };
+    const clear = () => {
+      cancelAnimationFrame(moveFrame); moveFrame = null;
+      pointer=null; vector={x:0,y:0};knob.style.transform='none';packet();
+    };
     stick.onpointerdown = e => {e.preventDefault(); pointer=e.pointerId;stick.setPointerCapture(pointer); move(e);};
     stick.onpointermove = move;
     stick.onpointerup = clear; stick.onpointercancel = clear; stick.onlostpointercapture = clear;
@@ -79,7 +89,9 @@
     window.addEventListener('blur',clear);
     document.addEventListener('visibilitychange',clear);
     // Refresh held state; desktop watchdog releases movement after 700 ms silence.
-    setInterval(() => {if (!document.hidden) packet();},50);
+    setInterval(() => {
+      if (!document.hidden && moveFrame === null && performance.now() - lastMoveSent >= 50) packet();
+    },50);
     if (room) connect();
   } else {
     const attach = mobile => {

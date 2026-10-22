@@ -88,7 +88,7 @@ html[data-selection="S2"][data-touch-game="true"] #setup .setup-credit { min-hei
 /* Keep actions inside their allocated track. Older footer block/flex rules let
    summary text push actions below the clipped dialog (or past its right edge). */
 @media (max-width: 650px), (max-height: 500px) {
-  html[data-gba][data-selection="S2"][data-touch-game] #setup .setup-foot {
+  html[data-gba][data-selection="S2"][data-touch-game="true"] #setup .setup-foot {
     display: grid;
     grid-template-columns: minmax(0,1fr);
     height: auto;
@@ -100,7 +100,7 @@ html[data-selection="S2"][data-touch-game="true"] #setup .setup-credit { min-hei
     z-index: 2;
     background: var(--paper);
   }
-  html[data-gba][data-selection="S2"][data-touch-game] #setup .setup-foot > :not(.setup-actions) { display: none; }
+  html[data-gba][data-selection="S2"][data-touch-game="true"] #setup .setup-foot > :not(.setup-actions) { display: none; }
   html[data-selection="S2"] #setup .setup-actions {
     display: grid;
     grid-template-columns: 44px repeat(3,minmax(0,1fr));
