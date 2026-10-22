@@ -32,6 +32,8 @@ Game code, original move atlases, original arena artwork and gameplay screenshot
 WASD / 方向键移动；J K L I 使用已装备的 1–4 招；Shift / 双击方向闪避；空格跳跃；R 重开；Esc 暂停。手机使用摇杆及技能、跳跃、闪避按钮。
 WASD / arrows: move; J K L I: equipped moves; Shift / double-tap direction: dodge; Space: jump; R: restart; Esc: pause.
 
+手机也可作为电脑端的无线手柄：局域网扫码或输入房间码连接，详见 [手机手柄（v2）](docs/手机手柄.md)（需运行支持 WebSocket 的预览服务，不是纯静态功能）。
+
 ## 本地运行 / Run locally
 
 **目前仓库是代码与原创美术的源码快照，完整可复现构建脚本正在补齐。** 现在建议使用上方在线试玩；不要把源码快照当成已能独立构建的完整游戏。

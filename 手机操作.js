@@ -7,6 +7,10 @@ window.PoightMobile = class {
   }
   constructor(api, mode, demo = false) {
     this.api = api;
+    this.remoteVector = { x: 0, y: 0 };
+    this.remoteAt = 0;
+    window.poightInput = this;
+    window.dispatchEvent(new CustomEvent('poight-input-ready', { detail: this }));
     this.popoverOK = typeof HTMLElement !== "undefined" && "showPopover" in HTMLElement.prototype;
     this.demo = demo;
     this.enabled = window.PoightMobile.touchDevice();
@@ -127,6 +131,24 @@ window.PoightMobile = class {
     if (!this.enabled || this.demo) return;
     try { await screen.orientation?.lock("landscape"); } catch { /* Optional browser support. */ }
   }
+  // Remote is an input source, not a second simulation. Neutralize stale packets.
+  inputVector() {
+    return performance.now() - this.remoteAt < 700 ? this.remoteVector :
+      (this.controls ? this.vector : { x: 0, y: 0 });
+  }
+  remoteInput(packet) {
+    if (document.querySelector('dialog[open]') || this.demo) { this.remoteClear(); return; }
+    const v = { x: Number(packet.x) || 0, y: Number(packet.y) || 0 };
+    const length = Math.hypot(v.x, v.y);
+    if (length > 1) { v.x /= length; v.y /= length; }
+    this.remoteAt = performance.now(); this.remoteVector = v;
+    if (packet.action === 'start') this.api.start();
+    if (!this.api.playing()) return;
+    if (packet.action === 'dash') this.api.dash(v);
+    if (packet.action === 'jump') this.api.jump();
+    if (/^move[0-3]$/.test(packet.action)) this.api.move(Number(packet.action.slice(-1)));
+  }
+  remoteClear() { this.remoteAt = 0; this.remoteVector = { x: 0, y: 0 }; }
   snapshot() {
     return { enabled: this.enabled, portrait: this.portrait, blockedPortrait: this.blockedPortrait,
       pointerId: this.pointerId,

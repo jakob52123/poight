@@ -85,6 +85,36 @@ html[data-selection="S2"][data-touch-game="true"] #setup .setup-credit { min-hei
   html[data-selection="S2"] #setup .fighter-panel .portrait-stage { width: 48px; }
   html[data-selection="S2"] #setup .fighter-panel > strong { font-size: 14px; }
 }
+/* Keep actions inside their allocated track. Older footer block/flex rules let
+   summary text push actions below the clipped dialog (or past its right edge). */
+@media (max-width: 650px), (max-height: 500px) {
+  html[data-gba][data-selection="S2"][data-touch-game] #setup .setup-foot {
+    display: grid;
+    grid-template-columns: minmax(0,1fr);
+    height: auto;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    position: sticky;
+    bottom: env(safe-area-inset-bottom, 0px);
+    z-index: 2;
+    background: var(--paper);
+  }
+  html[data-gba][data-selection="S2"][data-touch-game] #setup .setup-foot > :not(.setup-actions) { display: none; }
+  html[data-selection="S2"] #setup .setup-actions {
+    display: grid;
+    grid-template-columns: 44px repeat(3,minmax(0,1fr));
+    width: 100%;
+    min-width: 0;
+    gap: 4px;
+  }
+  html[data-selection="S2"] #setup .setup-actions button {
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+    padding: 2px;
+  }
+}
 /* Preserve the extreme-height scroll fallback from MOB3. */
 html[data-selection="S2"][data-setup-short="true"] #setup[open] { grid-template-rows: 0 minmax(0,1fr) 44px 0; padding-top: calc(4px + var(--safe-top)); padding-bottom: calc(4px + var(--safe-bottom)); }
 html[data-selection="S2"][data-setup-short="true"] #setup .dex { display: flex; height: auto; }
