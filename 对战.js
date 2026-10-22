@@ -861,7 +861,7 @@
         Number(keys.has("KeyS") || keys.has("ArrowDown")) -
         Number(keys.has("KeyW") || keys.has("ArrowUp")),
       l = hypot(x, y);
-    if (!l && mobile?.controls) return mobile.vector;
+    if (!l && mobile) return mobile.inputVector();
     return { x: l ? x / l : 0, y: l ? y / l : 0 };
   }
   function spend(p, amount) {
@@ -4483,6 +4483,8 @@
   mobile = new window.PoightMobile({
     start: () => { if (phase !== "playing") start(); },
     pause,
+    jump: () => jump.start(player),
+    move: (slot) => queueAttack(slot),
     playing: () => phase === "playing",
     dash: (v) => {
       if (!player || phase !== "playing") return;

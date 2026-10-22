@@ -19,13 +19,14 @@ def build():
     sheets = ['界面.css', '街机界面.css', '配招界面.css', '场景界面.css', '选人界面.css',
               '战斗界面方案.css', '手机操作.css', '演示模式.css', '界面-GBA.css', 'UI3/招式栏.css', '选人页.css']
     def text(f):
-        return subprocess.check_output(['git', 'show', f'HEAD:{f}'], cwd=ROOT).decode() if '--before' in sys.argv else (ROOT/f).read_text()
+        return subprocess.check_output(['git', 'show', f'6a9ccf5:{f}'], cwd=ROOT).decode() if '--before' in sys.argv else (ROOT/f).read_text()
     css = '\n'.join(ns['compact_gba_css'](text(f)) if f in ('界面-GBA.css', '选人页.css') else text(f) for f in sheets)
     source = re.sub(r'<style>.*?</style>', lambda _: '<style>' + css + '</style>', source, count=1, flags=re.S)
     template = (ROOT/'页面.html').read_text()
     a = template.index('<dialog id="setup"'); b = template.index('</dialog>', a)+9
     x = source.index('<dialog id="setup"'); y = source.index('</dialog>', x)+9
-    source = source[:x] + template[a:b] + source[y:]
+    if '--live-markup' not in sys.argv:
+        source = source[:x] + template[a:b] + source[y:]
     x = source.index('window.PoightMobile = class'); y = source.index('\n};', x)+3
     source = source[:x] + (ROOT/'手机操作.js').read_text() + source[y:]
     start = source.index('const DATA = ') + len('const DATA = ')

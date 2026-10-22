@@ -446,6 +446,8 @@ script = (
     + (ROOT / "手感参数.js").read_text()
     + "\n"
     + (ROOT / "手机操作.js").read_text()
+    + "\n" + (ROOT / "vendor/qrcode.js").read_text()
+    + "\n" + (ROOT / "手机手柄.js").read_text()
     + "\n"
     + (ROOT / "战斗界面方案.js").read_text()
     + "\n"
